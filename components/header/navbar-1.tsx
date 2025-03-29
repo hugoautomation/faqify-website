@@ -131,7 +131,7 @@ export default async function Navbar1({ className }: Navbar1Props) {
     <header className={`sticky top-0 w-full z-50 py-4 ${className}`}>
       <div className="container">
         {/* Desktop Menu */}
-        <nav className="hidden justify-between lg:flex">
+        <nav className="hidden justify-between lg:flex items-center">
           <div className="flex items-center gap-6">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
@@ -170,7 +170,11 @@ export default async function Navbar1({ className }: Navbar1Props) {
           </div>
           <div className="flex gap-2">
             {actionItems?.map((item) => (
-              <LinkButton key={item.title} link={item as SanityLink} />
+              <LinkButton
+                key={item.title}
+                size="sm"
+                link={item as SanityLink}
+              />
             ))}
           </div>
         </nav>
