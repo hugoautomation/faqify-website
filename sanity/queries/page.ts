@@ -1,11 +1,11 @@
 import { groq } from "next-sanity";
-import { heroQuery } from "./hero";
+import { hero12Query } from "./hero/hero-12";
 import { faqsQuery } from "./faqs";
 
 export const PAGE_QUERY = groq`
   *[_type == "page" && slug.current == $slug][0]{
     blocks[]{
-      ${heroQuery},
+      ${hero12Query},
       ${faqsQuery},
     },
     meta_title,

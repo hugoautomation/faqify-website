@@ -1,8 +1,8 @@
 import { groq } from "next-sanity";
 
 // @sanity-typegen-ignore
-export const heroQuery = groq`
-  _type == "hero" => {
+export const hero12Query = groq`
+  _type == "hero-12" => {
     _type,
     _key,
     tagLine,
@@ -40,6 +40,32 @@ export const heroQuery = groq`
       },
       alt
     },
-    links,
+    links[]{
+      _key,
+      title,
+      href,
+      target,
+      buttonVariant
+    },
+    techLogos[]{
+      _key,
+      title,
+      link,
+      image{
+        asset->{
+          _id,
+          url,
+          mimeType,
+          metadata {
+            lqip,
+            dimensions {
+              width,
+              height
+            }
+          }
+        },
+        alt
+      }
+    }
   }
 `;

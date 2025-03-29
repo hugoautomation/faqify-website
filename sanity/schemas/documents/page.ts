@@ -38,30 +38,19 @@ export default defineType({
       name: "blocks",
       type: "array",
       group: "content",
-      of: [{ type: "hero" }, { type: "faqs" }],
+      of: [{ type: "hero-12" }, { type: "faqs" }],
       options: {
         insertMenu: {
           groups: [
             {
-              name: "content",
-              title: "Content Sections",
-              of: [
-                "section-header",
-                "split-row",
-                "grid-row",
-                "timeline-row",
-                "full-row",
-              ],
+              name: "hero",
+              title: "Hero Components",
+              of: ["hero-12"],
             },
             {
-              name: "marketing",
-              title: "Marketing Components",
-              of: ["hero", "cta", "logo-cloud", "faqs"],
-            },
-            {
-              name: "blog",
-              title: "Blog Components",
-              of: ["all-posts"],
+              name: "faqs",
+              title: "FAQs Components",
+              of: ["faqs"],
             },
           ],
           views: [
