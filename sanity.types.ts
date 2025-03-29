@@ -258,6 +258,7 @@ export type Settings = {
     _type: "image";
   };
   siteName?: string;
+  description?: string;
   copyright?: BlockContent;
 };
 
@@ -892,7 +893,7 @@ export type POSTS_SLUGS_QUERYResult = Array<{
 
 // Source: ./sanity/queries/settings.ts
 // Variable: SETTINGS_QUERY
-// Query: *[_type == "settings"][0]{  _type,  siteName,  logo{    asset->{      _id,      url,      mimeType,      metadata {        lqip,        dimensions {          width,          height        }      }    },    alt,    width,    height  },  copyright}
+// Query: *[_type == "settings"][0]{  _type,  siteName,  logo{    asset->{      _id,      url,      mimeType,      metadata {        lqip,        dimensions {          width,          height        }      }    },    alt,    width,    height  },  description,  copyright}
 export type SETTINGS_QUERYResult = {
   _type: "settings";
   siteName: string | null;
@@ -913,6 +914,7 @@ export type SETTINGS_QUERYResult = {
     width: number | null;
     height: number | null;
   } | null;
+  description: string | null;
   copyright: BlockContent | null;
 } | null;
 
@@ -929,6 +931,6 @@ declare module "@sanity/client" {
     "*[_type == \"post\" && slug.current == $slug][0]{\n    title,\n    slug,\n    image{\n      ...,\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    author->{\n      name,\n      image {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      }\n    },\n    _createdAt,\n    _updatedAt,\n    meta_title,\n    meta_description,\n    noindex,\n    ogImage {\n      asset->{\n        _id,\n        url,\n        metadata {\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n    }\n}": POST_QUERYResult;
     "*[_type == \"post\" && defined(slug)] | order(_createdAt desc){\n    title,\n    slug,\n    excerpt,\n    image{\n      ...,\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    categories[]->{\n      _id,\n      title,\n    },\n}": POSTS_QUERYResult;
     "*[_type == \"post\" && defined(slug)]{slug}": POSTS_SLUGS_QUERYResult;
-    "*[_type == \"settings\"][0]{\n  _type,\n  siteName,\n  logo{\n    asset->{\n      _id,\n      url,\n      mimeType,\n      metadata {\n        lqip,\n        dimensions {\n          width,\n          height\n        }\n      }\n    },\n    alt,\n    width,\n    height\n  },\n  copyright\n}": SETTINGS_QUERYResult;
+    "*[_type == \"settings\"][0]{\n  _type,\n  siteName,\n  logo{\n    asset->{\n      _id,\n      url,\n      mimeType,\n      metadata {\n        lqip,\n        dimensions {\n          width,\n          height\n        }\n      }\n    },\n    alt,\n    width,\n    height\n  },\n  description,\n  copyright\n}": SETTINGS_QUERYResult;
   }
 }

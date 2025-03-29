@@ -49,7 +49,7 @@ const isLinkGroup = (item: NavigationItem): item is SanityLinkGroup => {
 export default async function Navbar1({ className }: Navbar1Props) {
   const settings = await fetchSanitySettings();
   const navigationItems = await getNavigationItems("header");
-  const actionItems = await getNavigationItems("action-header");
+  const actionItems = await getNavigationItems("header-action");
 
   const renderMenuItem = (item: NavigationItem) => {
     if (isLinkGroup(item)) {
@@ -128,7 +128,9 @@ export default async function Navbar1({ className }: Navbar1Props) {
   };
 
   return (
-    <header className={`sticky top-0 w-full z-50 py-4 ${className}`}>
+    <header
+      className={`sticky top-0 w-full z-50 py-4 bg-background ${className}`}
+    >
       <div className="container">
         {/* Desktop Menu */}
         <nav className="hidden justify-between lg:flex items-center">
