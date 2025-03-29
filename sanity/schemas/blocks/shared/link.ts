@@ -10,6 +10,11 @@ export default defineType({
       type: "string",
     }),
     defineField({
+      name: "description",
+      type: "text",
+      description: "The description of the link. Used for navigation items.",
+    }),
+    defineField({
       name: "href",
       title: "href",
       type: "string",

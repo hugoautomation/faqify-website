@@ -15,7 +15,6 @@ export const buttonVariant = defineType({
   type: "string",
   options: {
     list: BUTTON_VARIANTS.map(({ title, value }) => ({ title, value })),
-    layout: "radio",
   },
   initialValue: "default",
 });

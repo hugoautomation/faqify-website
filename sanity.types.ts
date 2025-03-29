@@ -162,6 +162,14 @@ export type SectionPadding = {
 
 export type ButtonVariant = "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
 
+export type LinkGroup = {
+  _type: "link-group";
+  title?: string;
+  links?: Array<{
+    _key: string;
+  } & Link>;
+};
+
 export type BlockContent = Array<{
   children?: Array<{
     marks?: Array<string>;
@@ -262,7 +270,9 @@ export type Navigation = {
   title?: string;
   links?: Array<{
     _key: string;
-  } & Link>;
+  } & Link | {
+    _key: string;
+  } & LinkGroup>;
   orderRank?: string;
 };
 
@@ -418,6 +428,7 @@ export type Page = {
 export type Link = {
   _type: "link";
   title?: string;
+  description?: string;
   href?: string;
   target?: boolean;
   buttonVariant?: ButtonVariant;
@@ -494,7 +505,7 @@ export type Code = {
   highlightedLines?: Array<number>;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Faqs | Hero12 | SectionPadding | ButtonVariant | BlockContent | Contact | Settings | Navigation | Testimonial | Faq | Category | Post | Author | Page | Link | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug | Code;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Faqs | Hero12 | SectionPadding | ButtonVariant | LinkGroup | BlockContent | Contact | Settings | Navigation | Testimonial | Faq | Category | Post | Author | Page | Link | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug | Code;
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ./app/sitemap.ts
 // Variable: pagesQuery
@@ -551,6 +562,8 @@ export type NAVIGATION_QUERYResult = Array<{
   _key: null;
   title: string | null;
   links: Array<{
+    _key: string;
+  } & LinkGroup | {
     _key: string;
   } & Link> | null;
 }>;

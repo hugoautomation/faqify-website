@@ -37,7 +37,7 @@ export default defineType({
     defineField({
       name: "links",
       type: "array",
-      of: [{ type: "link" }],
+      of: [{ type: "link" }, { type: "link-group" }],
     }),
     orderRankField({ type: "navigation" }),
   ],
