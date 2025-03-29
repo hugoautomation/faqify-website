@@ -4,6 +4,7 @@ import { fetchSanitySettings } from "@/sanity/lib/fetch";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
+import { LinkButton } from "@/components/ui/link-button";
 import type {
   Link as SanityLink,
   LinkGroup as SanityLinkGroup,
@@ -48,6 +49,7 @@ const isLinkGroup = (item: NavigationItem): item is SanityLinkGroup => {
 export default async function Navbar1({ className }: Navbar1Props) {
   const settings = await fetchSanitySettings();
   const navigationItems = await getNavigationItems("header");
+  const actionItems = await getNavigationItems("action-header");
 
   const renderMenuItem = (item: NavigationItem) => {
     if (isLinkGroup(item)) {
@@ -111,6 +113,7 @@ export default async function Navbar1({ className }: Navbar1Props) {
 
     return (
       <Link
+        key={item.title}
         href={item.href || "#"}
         target={item.target ? "_blank" : undefined}
         className={cn(
@@ -164,6 +167,11 @@ export default async function Navbar1({ className }: Navbar1Props) {
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
+          </div>
+          <div className="flex gap-2">
+            {actionItems?.map((item) => (
+              <LinkButton key={item.title} link={item as SanityLink} />
+            ))}
           </div>
         </nav>
 
@@ -246,6 +254,11 @@ export default async function Navbar1({ className }: Navbar1Props) {
                   >
                     {navigationItems?.map((item) => renderMobileMenuItem(item))}
                   </Accordion>
+                  <div className="flex flex-col gap-3">
+                    {actionItems?.map((item) => (
+                      <LinkButton key={item.title} link={item as SanityLink} />
+                    ))}
+                  </div>
                 </div>
               </SheetContent>
             </Sheet>

@@ -9,25 +9,17 @@ export function LinkButton({
   title,
   size = "lg",
   asDiv = false,
-  onClick = () => {},
 }: {
   className?: string;
   link: LinkType;
   title?: string;
   size?: "default" | "sm" | "lg" | "icon";
   asDiv?: boolean;
-  onClick?: () => void;
 }) {
   const buttonVariant = stegaClean(link?.buttonVariant);
 
   return (
-    <Button
-      asChild
-      variant={buttonVariant}
-      className={className}
-      size={size}
-      onClick={onClick}
-    >
+    <Button asChild variant={buttonVariant} className={className} size={size}>
       {asDiv ? (
         <div>{link.title}</div>
       ) : (
