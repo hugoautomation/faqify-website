@@ -17,6 +17,20 @@ export default defineType({
           type: "string",
           title: "Alternative text",
         }),
+        defineField({
+          name: "width",
+          type: "number",
+          title: "Width",
+          description:
+            "The width of the logo. Default is dimensions of the image.",
+        }),
+        defineField({
+          name: "height",
+          type: "number",
+          title: "Height",
+          description:
+            "The height of the logo. Default is dimensions of the image.",
+        }),
       ],
     }),
     defineField({

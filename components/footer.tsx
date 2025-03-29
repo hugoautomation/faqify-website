@@ -21,8 +21,19 @@ export default async function Footer() {
             <Image
               src={urlFor(settings.logo).url()}
               alt={settings.logo.alt ?? ""}
-              width={100}
-              height={25}
+              width={
+                (settings.logo.width as number) ??
+                settings.logo?.asset?.metadata?.dimensions?.width
+              }
+              height={
+                (settings.logo.height as number) ??
+                settings.logo?.asset?.metadata?.dimensions?.height
+              }
+              placeholder={
+                settings.logo.asset?.metadata?.lqip ? "blur" : undefined
+              }
+              blurDataURL={settings.logo.asset?.metadata?.lqip || undefined}
+              quality={100}
               title={settings.siteName || ""}
             />
           ) : (
