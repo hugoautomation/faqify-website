@@ -13,9 +13,9 @@ type FAQProps = Extract<
   { _type: "faqs" }
 >;
 
-export default function FAQs({ padding, border, faqs }: FAQProps) {
+export default function FAQs({ padding, faqs }: FAQProps) {
   return (
-    <SectionContainer padding={padding} border={border}>
+    <SectionContainer padding={padding}>
       {faqs && faqs?.length > 0 && (
         <Accordion className="space-y-4" type="multiple">
           {faqs.map((faq) => (
