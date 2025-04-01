@@ -3,12 +3,13 @@ import { groq } from "next-sanity";
 export const CONTACT_QUERY = groq`*[_type == "contact"][0]{
   tagline,
   title,
-  email,
-  officeHours {
-    days,
-    hours
+  description,
+  contactMethods[]{
+    icon,
+    title,
+    description,
+    link
   },
-  responseTime,
   meta_title,
   meta_description,
   noindex,

@@ -215,12 +215,14 @@ export type Contact = {
   _rev: string;
   tagline?: string;
   title?: string;
-  email?: string;
-  officeHours?: {
-    days?: string;
-    hours?: string;
-  };
-  responseTime?: string;
+  description?: string;
+  contactMethods?: Array<{
+    icon?: "mail" | "messages" | "mapPin" | "phone";
+    title?: string;
+    description?: string;
+    link?: Link;
+    _key: string;
+  }>;
   meta_title?: string;
   meta_description?: string;
   noindex?: boolean;
@@ -528,16 +530,17 @@ export type PostsQueryResult = Array<{
 
 // Source: ./sanity/queries/contact.ts
 // Variable: CONTACT_QUERY
-// Query: *[_type == "contact"][0]{  tagline,  title,  email,  officeHours {    days,    hours  },  responseTime,  meta_title,  meta_description,  noindex,  ogImage {    asset->{      _id,      url,      metadata {        dimensions {          width,          height        }      }    },  }}
+// Query: *[_type == "contact"][0]{  tagline,  title,  description,  contactMethods[]{    icon,    title,    description,    link  },  meta_title,  meta_description,  noindex,  ogImage {    asset->{      _id,      url,      metadata {        dimensions {          width,          height        }      }    },  }}
 export type CONTACT_QUERYResult = {
   tagline: string | null;
   title: string | null;
-  email: string | null;
-  officeHours: {
-    days: string | null;
-    hours: string | null;
-  } | null;
-  responseTime: string | null;
+  description: string | null;
+  contactMethods: Array<{
+    icon: "mail" | "mapPin" | "messages" | "phone" | null;
+    title: string | null;
+    description: string | null;
+    link: Link | null;
+  }> | null;
   meta_title: string | null;
   meta_description: string | null;
   noindex: boolean | null;
@@ -924,7 +927,7 @@ declare module "@sanity/client" {
   interface SanityQueries {
     "\n    *[_type == 'page'] | order(slug.current) {\n      'url': $baseUrl + select(slug.current == 'index' => '', '/' + slug.current),\n      'lastModified': _updatedAt,\n      'changeFrequency': 'daily',\n      'priority': select(\n        slug.current == 'index' => 1,\n        0.5\n      )\n    }\n  ": PagesQueryResult;
     "\n    *[_type == 'post'] | order(_updatedAt desc) {\n      'url': $baseUrl + '/blog/' + slug.current,\n      'lastModified': _updatedAt,\n      'changeFrequency': 'weekly',\n      'priority': 0.7\n    }\n  ": PostsQueryResult;
-    "*[_type == \"contact\"][0]{\n  tagline,\n  title,\n  email,\n  officeHours {\n    days,\n    hours\n  },\n  responseTime,\n  meta_title,\n  meta_description,\n  noindex,\n  ogImage {\n    asset->{\n      _id,\n      url,\n      metadata {\n        dimensions {\n          width,\n          height\n        }\n      }\n    },\n  }\n}": CONTACT_QUERYResult;
+    "*[_type == \"contact\"][0]{\n  tagline,\n  title,\n  description,\n  contactMethods[]{\n    icon,\n    title,\n    description,\n    link\n  },\n  meta_title,\n  meta_description,\n  noindex,\n  ogImage {\n    asset->{\n      _id,\n      url,\n      metadata {\n        dimensions {\n          width,\n          height\n        }\n      }\n    },\n  }\n}": CONTACT_QUERYResult;
     "\n  *[_type == \"navigation\"]{\n    _type,\n    _key,\n    title,\n    links\n  }\n": NAVIGATION_QUERYResult;
     "\n  *[_type == \"page\" && slug.current == $slug][0]{\n    blocks[]{\n      \n  _type == \"hero-12\" => {\n    _type,\n    _key,\n    tagLine,\n    title,\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    links[]{\n      _key,\n      title,\n      href,\n      target,\n      buttonVariant\n    },\n    techLogos[]{\n      _key,\n      title,\n      link,\n      image{\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      }\n    }\n  }\n,\n      \n  _type == \"faqs\" => {\n    _type,\n    _key,\n    padding,\n    border,\n    faqs[]->{\n      _id,\n      title,\n      body[]{\n        ...,\n        _type == \"image\" => {\n          ...,\n          asset->{\n            _id,\n            url,\n            mimeType,\n            metadata {\n              lqip,\n              dimensions {\n                width,\n                height\n              }\n            }\n          }\n        }\n      },\n    },\n  }\n,\n    },\n    meta_title,\n    meta_description,\n    noindex,\n    ogImage {\n      asset->{\n        _id,\n        url,\n        metadata {\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n    }\n  }\n": PAGE_QUERYResult;
     "*[_type == \"page\" && defined(slug)]{slug}": PAGES_SLUGS_QUERYResult;

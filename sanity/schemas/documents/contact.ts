@@ -21,7 +21,7 @@ export default defineType({
       name: "tagline",
       type: "string",
       group: "content",
-      description: "The tagline shown above the title (e.g. 'Get in Touch')",
+      description: "The tagline shown above the title (e.g. 'Reach Us')",
       validation: (Rule) => Rule.required().error("Tagline is required"),
     }),
     defineField({
@@ -32,36 +32,54 @@ export default defineType({
       validation: (Rule) => Rule.required().error("Title is required"),
     }),
     defineField({
-      name: "email",
-      type: "string",
+      name: "description",
+      type: "text",
       group: "content",
-      description: "Contact email address",
-      validation: (Rule) =>
-        Rule.required().email().error("A valid email address is required"),
+      description: "The description text below the title",
+      validation: (Rule) => Rule.required().error("Description is required"),
     }),
     defineField({
-      name: "officeHours",
-      type: "object",
+      name: "contactMethods",
+      type: "array",
       group: "content",
-      fields: [
-        defineField({
-          name: "days",
-          type: "string",
-          validation: (Rule) => Rule.required(),
-        }),
-        defineField({
-          name: "hours",
-          type: "string",
-          validation: (Rule) => Rule.required(),
-        }),
+      of: [
+        {
+          type: "object",
+          fields: [
+            defineField({
+              name: "icon",
+              type: "string",
+              options: {
+                list: [
+                  { title: "Mail", value: "mail" },
+                  { title: "Messages", value: "messages" },
+                  { title: "Map Pin", value: "mapPin" },
+                  { title: "Phone", value: "phone" },
+                ],
+              },
+              validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: "title",
+              type: "string",
+              validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: "description",
+              type: "text",
+            }),
+            defineField({
+              name: "link",
+              type: "link",
+            }),
+          ],
+        },
       ],
-    }),
-    defineField({
-      name: "responseTime",
-      type: "string",
-      group: "content",
-      description: "Expected response time message",
-      validation: (Rule) => Rule.required(),
+      validation: (Rule) =>
+        Rule.required()
+          .min(1)
+          .max(4)
+          .error("At least 1 contact method is required, and no more than 4"),
     }),
     defineField({
       name: "meta_title",
@@ -92,12 +110,12 @@ export default defineType({
   preview: {
     select: {
       title: "title",
-      email: "email",
+      tagline: "tagline",
     },
-    prepare({ title, email }) {
+    prepare({ title, tagline }) {
       return {
         title: "Contact Page Settings",
-        subtitle: email,
+        subtitle: tagline,
       };
     },
   },

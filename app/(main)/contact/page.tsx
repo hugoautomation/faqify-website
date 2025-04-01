@@ -1,7 +1,6 @@
-import { TextRoll } from "@/components/ui/text-roll";
-import { Badge } from "@/components/ui/badge";
-import { Mail } from "lucide-react";
+import { Mail, MapPin, MessagesSquare, Phone } from "lucide-react";
 import { ContactForm } from "@/components/forms/contact-form";
+import { LinkButton } from "@/components/ui/link-button";
 import { submitContactForm } from "@/app/actions/contact-form";
 import { fetchSanityContact } from "@/sanity/lib/fetch";
 import { generatePageMetadata } from "@/sanity/lib/metadata";
@@ -21,59 +20,71 @@ export async function generateMetadata(props: {
 export default async function ContactPage() {
   const contact = await fetchSanityContact();
 
+  const getIcon = (icon: string | null) => {
+    switch (icon) {
+      case "mail":
+        return <Mail className="mb-3 h-6 w-auto" />;
+      case "messages":
+        return <MessagesSquare className="mb-3 h-6 w-auto" />;
+      case "mapPin":
+        return <MapPin className="mb-3 h-6 w-auto" />;
+      case "phone":
+        return <Phone className="mb-3 h-6 w-auto" />;
+      default:
+        return null;
+    }
+  };
+
   return (
-    <div className="container px-0">
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto]">
-        <div className="relative">
-          <div className="p-8 lg:p-16 lg:pl-24">
-            <div className="max-w-2xl">
-              <div className="mb-8">
-                <Badge variant="outline" className="h-8">
-                  {contact?.tagline}
-                </Badge>
-                <h1 className="text-4xl lg:text-5xl font-bold mt-6 relative">
-                  <TextRoll>{contact?.title || ""}</TextRoll>
-                </h1>
-              </div>
-
-              <ContactForm onSubmit={submitContactForm} />
-            </div>
-          </div>
+    <section className="py-16 xl:py-20">
+      <div className="container">
+        <div className="mb-14">
+          {contact?.tagline && (
+            <span className="text-sm font-semibold">{contact.tagline}</span>
+          )}
+          {contact?.title && (
+            <h1 className="mt-1 mb-3 text-3xl font-semibold text-balance md:text-4xl">
+              {contact.title}
+            </h1>
+          )}
+          {contact?.description && (
+            <p className="text-lg text-muted-foreground">
+              {contact.description}
+            </p>
+          )}
         </div>
-
-        {/* Side Info Section */}
-        <div className="border-t lg:border-t-0 p-8 lg:p-16 relative">
-          <div className="space-y-8">
-            <div className="border p-6 relative group hover:border-primary/50 transition-colors">
-              <h3 className="font-medium mb-2">Email Us</h3>
-              <a
-                href="mailto:hello@example.com"
-                className="text-sm text-primary/70 hover:text-primary flex items-center gap-2"
-              >
-                <Mail size={14} />
-                {contact?.email}
-              </a>
-              <div className="absolute -top-1 -right-1 w-full h-full border border-primary -z-10" />
-            </div>
-
-            <div className="border p-6 relative group hover:border-primary/50 transition-colors bg-primary/5">
-              <h3 className="font-medium mb-2">Office Hours</h3>
-              <p className="text-sm text-primary/70">
-                {contact?.officeHours?.days}
-                <br />
-                {contact?.officeHours?.hours}
-              </p>
-              <div className="absolute -top-1 -right-1 w-full h-full border border-primary -z-10" />
-            </div>
-
-            <div className="border p-6 relative group hover:border-primary/50 transition-colors">
-              <h3 className="font-medium mb-2">Response Time</h3>
-              <p className="text-sm text-primary/70">{contact?.responseTime}</p>
-              <div className="absolute -top-1 -right-1 w-full h-full border border-primary -z-10" />
-            </div>
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div className="grid gap-10 sm:grid-cols-2">
+            {contact?.contactMethods?.map((method, index) => (
+              <div key={index}>
+                {method.icon && getIcon(method.icon)}
+                {method.title && (
+                  <p className="mb-2 text-lg font-semibold">{method.title}</p>
+                )}
+                {method.description && (
+                  <p className="mb-3 text-muted-foreground">
+                    {method.description}
+                  </p>
+                )}
+                {method.link && (
+                  <LinkButton
+                    size="sm"
+                    link={method.link}
+                    className={
+                      method.link.buttonVariant === "link"
+                        ? "font-semibold text-base p-0"
+                        : ""
+                    }
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="mx-auto flex w-full flex-col gap-6 rounded-lg bg-muted p-10 lg:max-w-[29rem]">
+            <ContactForm onSubmit={submitContactForm} />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

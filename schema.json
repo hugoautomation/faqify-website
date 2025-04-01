@@ -1372,40 +1372,80 @@
         },
         "optional": true
       },
-      "email": {
+      "description": {
         "type": "objectAttribute",
         "value": {
           "type": "string"
         },
         "optional": true
       },
-      "officeHours": {
+      "contactMethods": {
         "type": "objectAttribute",
         "value": {
-          "type": "object",
-          "attributes": {
-            "days": {
-              "type": "objectAttribute",
-              "value": {
-                "type": "string"
+          "type": "array",
+          "of": {
+            "type": "object",
+            "attributes": {
+              "icon": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "union",
+                  "of": [
+                    {
+                      "type": "string",
+                      "value": "mail"
+                    },
+                    {
+                      "type": "string",
+                      "value": "messages"
+                    },
+                    {
+                      "type": "string",
+                      "value": "mapPin"
+                    },
+                    {
+                      "type": "string",
+                      "value": "phone"
+                    }
+                  ]
+                },
+                "optional": true
               },
-              "optional": true
+              "title": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              },
+              "description": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              },
+              "link": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "inline",
+                  "name": "link"
+                },
+                "optional": true
+              }
             },
-            "hours": {
-              "type": "objectAttribute",
-              "value": {
-                "type": "string"
-              },
-              "optional": true
+            "rest": {
+              "type": "object",
+              "attributes": {
+                "_key": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
             }
           }
-        },
-        "optional": true
-      },
-      "responseTime": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
         },
         "optional": true
       },
