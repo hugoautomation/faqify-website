@@ -38,7 +38,7 @@ export default defineType({
       name: "blocks",
       type: "array",
       group: "content",
-      of: [{ type: "hero-12" }, { type: "faqs" }],
+      of: [{ type: "hero-12" }, { type: "faqs" }, { type: "logos-1" }],
       options: {
         insertMenu: {
           groups: [
@@ -51,6 +51,11 @@ export default defineType({
               name: "faqs",
               title: "FAQs Components",
               of: ["faqs"],
+            },
+            {
+              name: "logos",
+              title: "Logos Components",
+              of: ["logos-1"],
             },
           ],
           views: [

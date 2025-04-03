@@ -19,6 +19,7 @@ import sectionPadding from "./schemas/blocks/shared/section-padding";
 // Schema UI objects
 import hero12 from "./schemas/blocks/hero/hero-12";
 import faqs from "./schemas/blocks/faqs";
+import logos1 from "./schemas/blocks/logos/logos1";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -41,5 +42,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     // blocks
     hero12,
     faqs,
+    logos1,
   ],
 };

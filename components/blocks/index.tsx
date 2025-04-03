@@ -1,6 +1,7 @@
 import { PAGE_QUERYResult } from "@/sanity.types";
 import Hero12 from "@/components/blocks/hero-12";
 import FAQs from "@/components/blocks/faqs";
+import Logos1 from "@/components/blocks/logos1";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 
@@ -9,6 +10,7 @@ const componentMap: {
 } = {
   "hero-12": Hero12,
   faqs: FAQs,
+  "logos-1": Logos1,
 };
 
 export default function Blocks({ blocks }: { blocks: Block[] }) {

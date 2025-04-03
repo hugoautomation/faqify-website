@@ -16,7 +16,7 @@ export default function SectionContainer({
   return (
     <div
       className={cn(
-        "border-primary container",
+        "container",
         padding?.top ? "pt-16 xl:pt-20" : undefined,
         padding?.bottom ? "pb-16 xl:pb-20" : undefined,
         className
