@@ -1,7 +1,7 @@
 import { groq } from "next-sanity";
 import { sectionHeaderQuery } from "./section-header";
 import { hero12Query } from "./hero/hero-12";
-import { faqsQuery } from "./faqs";
+import { faq1Query } from "./faq/faq1";
 import { logos1Query } from "./logos/logos-1";
 
 export const PAGE_QUERY = groq`
@@ -9,7 +9,7 @@ export const PAGE_QUERY = groq`
     blocks[]{
       ${sectionHeaderQuery},
       ${hero12Query},
-      ${faqsQuery},
+      ${faq1Query},
       ${logos1Query},
     },
     meta_title,

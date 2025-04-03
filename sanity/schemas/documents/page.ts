@@ -41,7 +41,7 @@ export default defineType({
       of: [
         { type: "section-header" },
         { type: "hero-12" },
-        { type: "faqs" },
+        { type: "faq-1" },
         { type: "logos-1" },
       ],
       options: {
@@ -58,9 +58,9 @@ export default defineType({
               of: ["hero-12"],
             },
             {
-              name: "faqs",
-              title: "FAQs Components",
-              of: ["faqs"],
+              name: "faq",
+              title: "FAQ Components",
+              of: ["faq-1"],
             },
             {
               name: "logos",

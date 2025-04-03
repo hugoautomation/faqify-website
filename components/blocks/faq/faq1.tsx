@@ -10,10 +10,10 @@ import { PAGE_QUERYResult } from "@/sanity.types";
 
 type FAQProps = Extract<
   NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number],
-  { _type: "faqs" }
+  { _type: "faq-1" }
 >;
 
-export default function FAQs({ padding, faqs }: FAQProps) {
+export default function FAQ1({ padding, faqs }: FAQProps) {
   return (
     <SectionContainer padding={padding}>
       {faqs && faqs?.length > 0 && (

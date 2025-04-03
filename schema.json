@@ -440,7 +440,7 @@
     }
   },
   {
-    "name": "faqs",
+    "name": "faq-1",
     "type": "type",
     "value": {
       "type": "object",
@@ -449,7 +449,7 @@
           "type": "objectAttribute",
           "value": {
             "type": "string",
-            "value": "faqs"
+            "value": "faq-1"
           }
         },
         "padding": {
@@ -2726,7 +2726,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "faqs"
+                  "name": "faq-1"
                 }
               },
               {

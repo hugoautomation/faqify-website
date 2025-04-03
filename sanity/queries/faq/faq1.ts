@@ -1,8 +1,8 @@
 import { groq } from "next-sanity";
 
 // @sanity-typegen-ignore
-export const faqsQuery = groq`
-  _type == "faqs" => {
+export const faq1Query = groq`
+  _type == "faq-1" => {
     _type,
     _key,
     padding,
