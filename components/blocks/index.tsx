@@ -1,4 +1,5 @@
 import { PAGE_QUERYResult } from "@/sanity.types";
+import SectionHeader from "@/components/blocks/section-header";
 import Hero12 from "@/components/blocks/hero-12";
 import FAQs from "@/components/blocks/faqs";
 import Logos1 from "@/components/blocks/logos1";
@@ -8,6 +9,7 @@ type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 const componentMap: {
   [K in Block["_type"]]: React.ComponentType<Extract<Block, { _type: K }>>;
 } = {
+  "section-header": SectionHeader,
   "hero-12": Hero12,
   faqs: FAQs,
   "logos-1": Logos1,

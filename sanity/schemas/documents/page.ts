@@ -38,10 +38,20 @@ export default defineType({
       name: "blocks",
       type: "array",
       group: "content",
-      of: [{ type: "hero-12" }, { type: "faqs" }, { type: "logos-1" }],
+      of: [
+        { type: "section-header" },
+        { type: "hero-12" },
+        { type: "faqs" },
+        { type: "logos-1" },
+      ],
       options: {
         insertMenu: {
           groups: [
+            {
+              name: "section-header",
+              title: "Section Header",
+              of: ["section-header"],
+            },
             {
               name: "hero",
               title: "Hero Components",

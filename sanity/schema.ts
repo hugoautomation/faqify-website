@@ -17,6 +17,7 @@ import linkGroup from "./schemas/blocks/shared/link-group";
 import { buttonVariant } from "./schemas/blocks/shared/button-variant";
 import sectionPadding from "./schemas/blocks/shared/section-padding";
 // Schema UI objects
+import sectionHeader from "./schemas/blocks/section-header";
 import hero12 from "./schemas/blocks/hero/hero-12";
 import faqs from "./schemas/blocks/faqs";
 import logos1 from "./schemas/blocks/logos/logos1";
@@ -40,6 +41,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     buttonVariant,
     sectionPadding,
     // blocks
+    sectionHeader,
     hero12,
     faqs,
     logos1,

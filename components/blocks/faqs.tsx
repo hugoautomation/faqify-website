@@ -15,20 +15,22 @@ type FAQProps = Extract<
 
 export default function FAQs({ padding, faqs }: FAQProps) {
   return (
-    <SectionContainer padding={padding} className="max-w-3xl">
+    <SectionContainer padding={padding}>
       {faqs && faqs?.length > 0 && (
-        <Accordion type="single" collapsible>
-          {faqs.map((faq) => (
-            <AccordionItem key={faq.title} value={`item-${faq._id}`}>
-              <AccordionTrigger className="font-semibold hover:no-underline">
-                {faq.title}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                <PortableTextRenderer value={faq.body || []} />
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <div className="max-w-3xl mx-auto">
+          <Accordion type="single" collapsible>
+            {faqs.map((faq) => (
+              <AccordionItem key={faq.title} value={`item-${faq._id}`}>
+                <AccordionTrigger className="font-semibold hover:no-underline">
+                  {faq.title}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  <PortableTextRenderer value={faq.body || []} />
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       )}
     </SectionContainer>
   );
