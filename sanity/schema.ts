@@ -18,7 +18,7 @@ import { buttonVariant } from "./schemas/blocks/shared/button-variant";
 import sectionPadding from "./schemas/blocks/shared/section-padding";
 // Schema UI objects
 import sectionHeader from "./schemas/blocks/section-header";
-import hero12 from "./schemas/blocks/hero/hero-12";
+import hero12 from "./schemas/blocks/hero/hero12";
 import faq1 from "./schemas/blocks/faq/faq1";
 import logos1 from "./schemas/blocks/logos/logos1";
 import feature1 from "./schemas/blocks/feature/feature1";
