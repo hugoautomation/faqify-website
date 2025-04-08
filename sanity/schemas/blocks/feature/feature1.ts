@@ -4,7 +4,7 @@ import { SquareSplitHorizontal } from "lucide-react";
 export default defineType({
   name: "feature-1",
   type: "object",
-  title: "Feature 1",
+  title: "Feature 1 / 2",
   description: "Feature 1: Feature with split columns.",
   icon: SquareSplitHorizontal,
   fields: [
@@ -37,7 +37,7 @@ export default defineType({
     },
     prepare({ title0, title1 }) {
       return {
-        title: "Feature 1",
+        title: "Feature 1 / 2",
         subtitle: title0 || title1 || "No Title",
       };
     },
