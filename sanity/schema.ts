@@ -21,6 +21,9 @@ import sectionHeader from "./schemas/blocks/section-header";
 import hero12 from "./schemas/blocks/hero/hero-12";
 import faq1 from "./schemas/blocks/faq/faq1";
 import logos1 from "./schemas/blocks/logos/logos1";
+import feature1 from "./schemas/blocks/feature/feature1";
+import featureContent from "./schemas/blocks/feature/feature-content";
+import featureImage from "./schemas/blocks/feature/feature-image";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -45,5 +48,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     hero12,
     faq1,
     logos1,
+    feature1,
+    featureContent,
+    featureImage,
   ],
 };

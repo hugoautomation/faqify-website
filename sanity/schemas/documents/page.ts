@@ -43,6 +43,7 @@ export default defineType({
         { type: "hero-12" },
         { type: "faq-1" },
         { type: "logos-1" },
+        { type: "feature-1" },
       ],
       options: {
         insertMenu: {

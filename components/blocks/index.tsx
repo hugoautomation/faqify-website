@@ -3,6 +3,7 @@ import SectionHeader from "@/components/blocks/section-header";
 import Hero12 from "@/components/blocks/hero-12";
 import Logos1 from "@/components/blocks/logos1";
 import FAQ1 from "@/components/blocks/faq/faq1";
+import Feature1 from "@/components/blocks/feature/feature1";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 
@@ -13,6 +14,7 @@ const componentMap: {
   "hero-12": Hero12,
   "faq-1": FAQ1,
   "logos-1": Logos1,
+  "feature-1": Feature1,
 };
 
 export default function Blocks({ blocks }: { blocks: Block[] }) {

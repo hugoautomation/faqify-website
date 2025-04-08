@@ -1,0 +1,31 @@
+import { groq } from "next-sanity";
+
+// @sanity-typegen-ignore
+export const featureContentQuery = groq`
+  _type == "feature-content" => {
+    _type,
+    _key,
+    padding,
+    tagLine,
+    title,
+    body[]{
+      ...,
+      _type == "image" => {
+        ...,
+        asset->{
+          _id,
+          url,
+          mimeType,
+          metadata {
+            lqip,
+            dimensions {
+              width,
+              height
+            }
+          }
+        }
+      }
+    },
+    links,
+  }
+`;
