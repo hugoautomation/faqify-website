@@ -3,6 +3,7 @@ import SectionHeader from "@/components/blocks/section-header";
 import Hero12 from "@/components/blocks/hero12";
 import Logos1 from "@/components/blocks/logos1";
 import FAQ1 from "@/components/blocks/faq/faq1";
+// Feature 1
 import Feature1 from "@/components/blocks/feature/feature1";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];

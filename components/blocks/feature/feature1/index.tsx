@@ -16,7 +16,7 @@ const componentMap: {
   "feature-image": FeatureImage,
 };
 
-export default function SplitRow({ padding, columns }: Feature1) {
+export default function Feature1({ padding, columns }: Feature1) {
   return (
     <SectionContainer padding={padding}>
       {columns && columns?.length > 0 && (
