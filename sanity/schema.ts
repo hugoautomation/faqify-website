@@ -25,6 +25,9 @@ import logos1 from "./schemas/blocks/logos/logos1";
 import feature1 from "./schemas/blocks/feature/feature1";
 import featureContent from "./schemas/blocks/feature/feature1/feature-content";
 import featureImage from "./schemas/blocks/feature/feature1/feature-image";
+// Feature 3
+import feature3 from "./schemas/blocks/feature/feature3";
+import feature3Card from "./schemas/blocks/feature/feature3/feature3-card";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -53,5 +56,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     feature1,
     featureContent,
     featureImage,
+    // Feature 3
+    feature3,
+    feature3Card,
   ],
 };

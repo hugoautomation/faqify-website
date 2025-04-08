@@ -44,6 +44,7 @@ export default defineType({
         { type: "faq-1" },
         { type: "logos-1" },
         { type: "feature-1" },
+        { type: "feature-3" },
       ],
       options: {
         insertMenu: {
@@ -67,6 +68,11 @@ export default defineType({
               name: "logos",
               title: "Logos Components",
               of: ["logos-1"],
+            },
+            {
+              name: "feature",
+              title: "Feature Components",
+              of: ["feature-1", "feature-3"],
             },
           ],
           views: [
