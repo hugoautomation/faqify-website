@@ -8,4 +8,7 @@ export const ICON_VARIANTS = [
   { title: "WandSparkles", value: "wand-sparkles" },
   { title: "MessagesSquare", value: "messages-square" },
   { title: "Zap", value: "zap" },
+  { title: "Infinity", value: "infinity" },
+  { title: "ZoomIn", value: "zoom-in" },
+  { title: "Timer", value: "timer" },
 ];

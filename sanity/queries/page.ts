@@ -5,6 +5,7 @@ import { faq1Query } from "./faq/faq1";
 import { logos1Query } from "./logos/logos1";
 import { feature1Query } from "./feature/feature1";
 import { feature3Query } from "./feature/feature3";
+import { feature15Query } from "./feature/feature15";
 export const PAGE_QUERY = groq`
   *[_type == "page" && slug.current == $slug][0]{
     blocks[]{
@@ -14,6 +15,7 @@ export const PAGE_QUERY = groq`
       ${logos1Query},
       ${feature1Query},
       ${feature3Query},
+      ${feature15Query},
     },
     meta_title,
     meta_description,
