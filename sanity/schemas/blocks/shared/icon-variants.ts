@@ -6,4 +6,6 @@ export const ICON_VARIANTS = [
   { title: "Play", value: "play" },
   { title: "Sparkles", value: "sparkles" },
   { title: "WandSparkles", value: "wand-sparkles" },
+  { title: "MessagesSquare", value: "messages-square" },
+  { title: "Zap", value: "zap" },
 ];

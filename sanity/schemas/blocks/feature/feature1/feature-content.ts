@@ -1,5 +1,6 @@
 import { defineField, defineType } from "sanity";
 import { TextQuote } from "lucide-react";
+import { ICON_VARIANTS } from "@/sanity/schemas/blocks/shared/icon-variants";
 
 export default defineType({
   name: "feature-content",
@@ -11,6 +12,15 @@ export default defineType({
     defineField({
       name: "padding",
       type: "section-padding",
+    }),
+    defineField({
+      name: "iconVariant",
+      type: "string",
+      title: "Icon Variant",
+      options: {
+        list: ICON_VARIANTS.map(({ title, value }) => ({ title, value })),
+      },
+      initialValue: "none",
     }),
     defineField({
       name: "tagLine",

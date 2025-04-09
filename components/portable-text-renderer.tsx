@@ -4,6 +4,7 @@ import Link from "next/link";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import { Highlight, themes } from "prism-react-renderer";
 import { CopyButton } from "@/components/ui/copy-button";
+import { Check } from "lucide-react";
 
 const portableTextComponents: PortableTextProps["components"] = {
   types: {
@@ -109,10 +110,9 @@ const portableTextComponents: PortableTextProps["components"] = {
     bullet: ({ children }) => (
       <ul
         style={{
-          paddingLeft: "1.5rem",
+          listStyle: "none",
+          paddingLeft: "1rem",
           marginBottom: "1rem",
-          listStyleType: "disc",
-          listStylePosition: "inside",
         }}
       >
         {children}
@@ -133,7 +133,17 @@ const portableTextComponents: PortableTextProps["components"] = {
   },
   listItem: {
     bullet: ({ children }) => (
-      <li style={{ marginBottom: "0.5rem" }}>{children}</li>
+      <li
+        style={{
+          marginBottom: "0.5rem",
+          display: "flex",
+          alignItems: "flex-start",
+          gap: "0.5rem",
+        }}
+      >
+        <Check size={16} className="mt-1 flex-shrink-0" />
+        <span style={{ flex: 1 }}>{children}</span>
+      </li>
     ),
     number: ({ children }) => (
       <li style={{ marginBottom: "0.5rem" }}>{children}</li>

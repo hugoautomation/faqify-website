@@ -3,6 +3,7 @@ import PortableTextRenderer from "@/components/portable-text-renderer";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import TagLine from "@/components/ui/tag-line";
+import Icon from "@/components/icon";
 import { createElement } from "react";
 import { PAGE_QUERYResult } from "@/sanity.types";
 
@@ -15,6 +16,7 @@ type FeatureContent = Extract<
 
 export default function FeatureContent({
   padding,
+  iconVariant,
   tagLine,
   title,
   body,
@@ -28,14 +30,17 @@ export default function FeatureContent({
       )}
     >
       <div className="flex flex-col items-start">
-        {tagLine && <TagLine title={tagLine} element="h2" />}
+        {iconVariant && iconVariant !== "none" && (
+          <span className="flex mb-6 size-8 items-center justify-center rounded-full bg-accent">
+            <Icon iconVariant={iconVariant} strokeWidth={2} />
+          </span>
+        )}
+        {tagLine && <TagLine title={tagLine} element="h2" className="mb-6" />}
         {title &&
           createElement(
             tagLine ? "h3" : "h2",
             {
-              className: cn(
-                "my-6 mt-0 text-3xl font-bold text-pretty lg:text-4xl"
-              ),
+              className: cn("mb-6 text-3xl font-bold text-pretty lg:text-4xl"),
             },
             title
           )}

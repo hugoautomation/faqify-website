@@ -370,6 +370,14 @@
               {
                 "type": "string",
                 "value": "wand-sparkles"
+              },
+              {
+                "type": "string",
+                "value": "messages-square"
+              },
+              {
+                "type": "string",
+                "value": "zap"
               }
             ]
           },
@@ -610,6 +618,51 @@
           "value": {
             "type": "inline",
             "name": "section-padding"
+          },
+          "optional": true
+        },
+        "iconVariant": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "union",
+            "of": [
+              {
+                "type": "string",
+                "value": "none"
+              },
+              {
+                "type": "string",
+                "value": "code"
+              },
+              {
+                "type": "string",
+                "value": "git-branch"
+              },
+              {
+                "type": "string",
+                "value": "list"
+              },
+              {
+                "type": "string",
+                "value": "play"
+              },
+              {
+                "type": "string",
+                "value": "sparkles"
+              },
+              {
+                "type": "string",
+                "value": "wand-sparkles"
+              },
+              {
+                "type": "string",
+                "value": "messages-square"
+              },
+              {
+                "type": "string",
+                "value": "zap"
+              }
+            ]
           },
           "optional": true
         },

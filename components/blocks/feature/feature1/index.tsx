@@ -20,7 +20,7 @@ export default function Feature1({ padding, columns }: Feature1) {
   return (
     <SectionContainer padding={padding}>
       {columns && columns?.length > 0 && (
-        <div className="grid items-center gap-8 lg:grid-cols-2">
+        <div className="grid items-center gap-8 lg:gap-16 lg:grid-cols-2">
           {columns?.map((column) => {
             const Component = componentMap[column._type];
             if (!Component) {

@@ -6,6 +6,7 @@ export const featureContentQuery = groq`
     _type,
     _key,
     padding,
+    iconVariant,
     tagLine,
     title,
     body[]{
