@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import SectionContainer from "@/components/ui/section-container";
+import TagLine from "@/components/ui/tag-line";
 import { stegaClean } from "next-sanity";
 
 import { PAGE_QUERYResult } from "@/sanity.types";
@@ -29,14 +30,10 @@ export default function SectionHeader({
         )}
       >
         <div>
-          {tagLine && (
-            <h1 className="leading-[0] mb-4">
-              <span className="text-base font-semibold">{tagLine}</span>
-            </h1>
-          )}
+          {tagLine && <TagLine title={tagLine} element="p" className="mb-4" />}
           {title && <h2 className="text-3xl md:text-4xl mb-4">{title}</h2>}
         </div>
-        {description && <p>{description}</p>}
+        {description && <p className="text-muted-foreground">{description}</p>}
       </div>
     </SectionContainer>
   );
