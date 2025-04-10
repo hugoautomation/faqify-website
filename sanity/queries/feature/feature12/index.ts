@@ -7,8 +7,6 @@ export const feature12Query = groq`
     _type,
     _key,
     padding,
-    badge,
-    title,
     tagline,
     columns[]{
       ${feature12CardQuery},

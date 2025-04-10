@@ -631,20 +631,6 @@
           },
           "optional": true
         },
-        "badge": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "string"
-          },
-          "optional": true
-        },
-        "title": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "string"
-          },
-          "optional": true
-        },
         "tagline": {
           "type": "objectAttribute",
           "value": {
@@ -1090,10 +1076,36 @@
           },
           "optional": true
         },
-        "tagLine": {
+        "tag": {
           "type": "objectAttribute",
           "value": {
-            "type": "string"
+            "type": "object",
+            "attributes": {
+              "text": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              },
+              "type": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "union",
+                  "of": [
+                    {
+                      "type": "string",
+                      "value": "title"
+                    },
+                    {
+                      "type": "string",
+                      "value": "badge"
+                    }
+                  ]
+                },
+                "optional": true
+              }
+            }
           },
           "optional": true
         },
@@ -2254,10 +2266,36 @@
           },
           "optional": true
         },
-        "tagLine": {
+        "tag": {
           "type": "objectAttribute",
           "value": {
-            "type": "string"
+            "type": "object",
+            "attributes": {
+              "text": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              },
+              "type": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "union",
+                  "of": [
+                    {
+                      "type": "string",
+                      "value": "title"
+                    },
+                    {
+                      "type": "string",
+                      "value": "badge"
+                    }
+                  ]
+                },
+                "optional": true
+              }
+            }
           },
           "optional": true
         },

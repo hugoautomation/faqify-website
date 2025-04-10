@@ -8,7 +8,7 @@ export const sectionHeaderQuery = groq`
     padding,
     sectionWidth,
     stackAlign,
-    tagLine,
+    tag,
     title,
     description,
   }

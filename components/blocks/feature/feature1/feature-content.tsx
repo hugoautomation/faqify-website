@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import PortableTextRenderer from "@/components/portable-text-renderer";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import TagLine from "@/components/ui/tag-line";
+import Tag from "@/components/ui/tag";
 import Icon from "@/components/icon";
 import { createElement } from "react";
 import { PAGE_QUERYResult } from "@/sanity.types";
@@ -17,7 +17,7 @@ type FeatureContent = Extract<
 export default function FeatureContent({
   padding,
   iconVariant,
-  tagLine,
+  tag,
   title,
   body,
   links,
@@ -35,10 +35,17 @@ export default function FeatureContent({
             <Icon iconVariant={iconVariant} strokeWidth={2} />
           </span>
         )}
-        {tagLine && <TagLine title={tagLine} element="h2" className="mb-6" />}
+        {tag && tag.text && (
+          <Tag
+            title={tag.text || ""}
+            type={tag.type as "title" | "badge"}
+            element="h2"
+            className="mb-6"
+          />
+        )}
         {title &&
           createElement(
-            tagLine ? "h3" : "h2",
+            tag?.text ? "h3" : "h2",
             {
               className: cn("mb-6 text-3xl font-bold text-pretty lg:text-4xl"),
             },

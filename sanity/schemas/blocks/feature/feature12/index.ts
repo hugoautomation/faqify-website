@@ -13,16 +13,6 @@ export default defineType({
       type: "section-padding",
     }),
     defineField({
-      name: "badge",
-      type: "string",
-      title: "Badge",
-    }),
-    defineField({
-      name: "title",
-      type: "string",
-      title: "Title",
-    }),
-    defineField({
       name: "tagline",
       type: "string",
       title: "Tagline",
@@ -35,7 +25,7 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: "title",
+      title: "columns.0.title",
     },
     prepare({ title }) {
       return {

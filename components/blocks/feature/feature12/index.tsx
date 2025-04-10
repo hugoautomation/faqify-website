@@ -4,7 +4,6 @@ import SectionContainer from "@/components/ui/section-container";
 import { PAGE_QUERYResult } from "@/sanity.types";
 import Icon from "@/components/icon";
 
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   type CarouselApi,
@@ -19,13 +18,7 @@ import { Progress } from "@/components/ui/progress";
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 type Feature12 = Extract<Block, { _type: "feature-12" }>;
 
-export default function Feature12({
-  padding,
-  badge,
-  title,
-  tagline,
-  columns,
-}: Feature12) {
+export default function Feature12({ padding, tagline, columns }: Feature12) {
   const [api, setApi] = useState<CarouselApi>();
   const [progress, setProgress] = useState(
     Math.floor(100 / (columns?.length || 0))
@@ -46,15 +39,9 @@ export default function Feature12({
   return (
     <SectionContainer padding={padding}>
       <div className="container max-w-7xl">
-        <div className="mb-10 flex flex-col items-center gap-6 md:mb-20">
-          <Badge variant="outline">{badge}</Badge>
-          <h2 className="mb-2 text-center text-3xl font-semibold lg:text-5xl">
-            {title}
-          </h2>
-        </div>
         <Carousel className="w-full" setApi={setApi}>
           <div className="mb-4 flex justify-between px-1 md:mb-5">
-            <p className="font-medium">Rules</p>
+            {tagline && <p className="font-medium">{tagline}</p>}
             <div className="flex items-center space-x-2">
               <div className="mr-2 hidden items-center gap-3 text-xs text-muted-foreground md:flex">
                 <span>01</span>

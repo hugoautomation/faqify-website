@@ -34,8 +34,22 @@ export default defineType({
       initialValue: "left",
     }),
     defineField({
-      name: "tagLine",
-      type: "string",
+      name: "tag",
+      type: "object",
+      fields: [
+        defineField({
+          name: "text",
+          type: "string",
+        }),
+        defineField({
+          name: "type",
+          type: "string",
+          options: {
+            list: ["title", "badge"],
+          },
+          initialValue: "title",
+        }),
+      ],
     }),
     defineField({
       name: "title",
