@@ -20,6 +20,23 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
   const isNarrow = stegaClean(sectionWidth) === "narrow";
   const align = stegaClean(stackAlign);
+  const titleSize = stegaClean(title?.size) || "default";
+  const titleWeight = stegaClean(title?.weight) || "bold";
+
+  const Element = title?.element || "h2";
+
+  const titleSizeClasses = {
+    small: "text-2xl md:text-3xl",
+    default: "text-3xl md:text-4xl",
+    large: "text-4xl md:text-6xl",
+  }[titleSize];
+
+  const titleWeightClasses = {
+    normal: "font-normal",
+    medium: "font-medium",
+    semibold: "font-semibold",
+    bold: "font-bold",
+  }[titleWeight];
 
   return (
     <SectionContainer padding={padding}>
@@ -38,7 +55,13 @@ export default function SectionHeader({
               className="mb-4"
             />
           )}
-          {title && <h2 className="text-3xl md:text-4xl mb-4">{title}</h2>}
+          {title && title.text && (
+            <Element
+              className={cn(titleSizeClasses, titleWeightClasses, "mb-4")}
+            >
+              {title.text}
+            </Element>
+          )}
         </div>
         {description && <p className="text-muted-foreground">{description}</p>}
       </div>

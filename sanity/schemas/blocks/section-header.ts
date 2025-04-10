@@ -53,7 +53,37 @@ export default defineType({
     }),
     defineField({
       name: "title",
-      type: "string",
+      type: "object",
+      fields: [
+        defineField({
+          name: "text",
+          type: "string",
+        }),
+        defineField({
+          name: "element",
+          type: "string",
+          options: {
+            list: ["h1", "h2", "h3", "h4", "h5", "h6", "p", "div"],
+          },
+          initialValue: "h2",
+        }),
+        defineField({
+          name: "size",
+          type: "string",
+          options: {
+            list: ["small", "default", "large"],
+          },
+          initialValue: "default",
+        }),
+        defineField({
+          name: "weight",
+          type: "string",
+          options: {
+            list: ["normal", "medium", "semibold", "bold"],
+          },
+          initialValue: "bold",
+        }),
+      ],
     }),
     defineField({
       name: "description",
@@ -62,7 +92,7 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: "title",
+      title: "title.text",
     },
     prepare({ title }) {
       return {

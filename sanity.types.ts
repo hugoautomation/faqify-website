@@ -317,7 +317,12 @@ export type SectionHeader = {
     text?: string;
     type?: "title" | "badge";
   };
-  title?: string;
+  title?: {
+    text?: string;
+    element?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "div";
+    size?: "small" | "default" | "large";
+    weight?: "normal" | "medium" | "semibold" | "bold";
+  };
   description?: string;
 };
 
@@ -1072,7 +1077,12 @@ export type PAGE_QUERYResult = {
       text?: string;
       type?: "badge" | "title";
     } | null;
-    title: string | null;
+    title: {
+      text?: string;
+      element?: "div" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p";
+      size?: "default" | "large" | "small";
+      weight?: "bold" | "medium" | "normal" | "semibold";
+    } | null;
     description: string | null;
   }> | null;
   meta_title: string | null;
