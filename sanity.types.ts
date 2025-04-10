@@ -70,7 +70,7 @@ export type Geopoint = {
 
 export type Feature15Card = {
   _type: "feature-15-card";
-  iconVariant?: "none" | "code" | "git-branch" | "list" | "play" | "sparkles" | "wand-sparkles" | "messages-square" | "zap" | "infinity" | "zoom-in" | "timer" | "arrow-down-to-line" | "arrow-up-down" | "redo" | "repeat" | "scaling" | "scan";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "building-2" | "circle-dot" | "code" | "compass" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "wand-sparkles" | "zap" | "zoom-in";
   title?: string;
   description?: string;
 };
@@ -86,7 +86,7 @@ export type Feature15 = {
 
 export type Feature12Card = {
   _type: "feature-12-card";
-  iconVariant?: "none" | "code" | "git-branch" | "list" | "play" | "sparkles" | "wand-sparkles" | "messages-square" | "zap" | "infinity" | "zoom-in" | "timer" | "arrow-down-to-line" | "arrow-up-down" | "redo" | "repeat" | "scaling" | "scan";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "building-2" | "circle-dot" | "code" | "compass" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "wand-sparkles" | "zap" | "zoom-in";
   title?: string;
   description?: string;
 };
@@ -102,7 +102,7 @@ export type Feature12 = {
 
 export type Feature3Card = {
   _type: "feature-3-card";
-  iconVariant?: "none" | "code" | "git-branch" | "list" | "play" | "sparkles" | "wand-sparkles" | "messages-square" | "zap" | "infinity" | "zoom-in" | "timer" | "arrow-down-to-line" | "arrow-up-down" | "redo" | "repeat" | "scaling" | "scan";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "building-2" | "circle-dot" | "code" | "compass" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "wand-sparkles" | "zap" | "zoom-in";
   title?: string;
   description?: string;
   image?: {
@@ -146,7 +146,7 @@ export type FeatureImage = {
 export type FeatureContent = {
   _type: "feature-content";
   padding?: SectionPadding;
-  iconVariant?: "none" | "code" | "git-branch" | "list" | "play" | "sparkles" | "wand-sparkles" | "messages-square" | "zap" | "infinity" | "zoom-in" | "timer" | "arrow-down-to-line" | "arrow-up-down" | "redo" | "repeat" | "scaling" | "scan";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "building-2" | "circle-dot" | "code" | "compass" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "wand-sparkles" | "zap" | "zoom-in";
   tag?: {
     text?: string;
     type?: "title" | "badge";
@@ -824,7 +824,7 @@ export type PAGE_QUERYResult = {
       _type: "feature-content";
       _key: string;
       padding: SectionPadding | null;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "code" | "git-branch" | "infinity" | "list" | "messages-square" | "none" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "wand-sparkles" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "building-2" | "circle-dot" | "code" | "compass" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "none" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "wand-sparkles" | "zap" | "zoom-in" | null;
       tag: {
         text?: string;
         type?: "badge" | "title";
@@ -907,7 +907,7 @@ export type PAGE_QUERYResult = {
     columns: Array<{
       _type: "feature-12-card";
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "code" | "git-branch" | "infinity" | "list" | "messages-square" | "none" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "wand-sparkles" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "building-2" | "circle-dot" | "code" | "compass" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "none" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "wand-sparkles" | "zap" | "zoom-in" | null;
       title: string | null;
       description: string | null;
     }> | null;
@@ -919,7 +919,7 @@ export type PAGE_QUERYResult = {
     columns: Array<{
       _type: "feature-15-card";
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "code" | "git-branch" | "infinity" | "list" | "messages-square" | "none" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "wand-sparkles" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "building-2" | "circle-dot" | "code" | "compass" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "none" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "wand-sparkles" | "zap" | "zoom-in" | null;
       title: string | null;
       description: string | null;
     }> | null;
@@ -930,7 +930,7 @@ export type PAGE_QUERYResult = {
     columns: Array<{
       _type: "feature-3-card";
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "code" | "git-branch" | "infinity" | "list" | "messages-square" | "none" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "wand-sparkles" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "building-2" | "circle-dot" | "code" | "compass" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "none" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "wand-sparkles" | "zap" | "zoom-in" | null;
       title: string | null;
       description: string | null;
       image: {

@@ -1,144 +1,83 @@
 import {
-  Code,
-  GitBranch,
-  List,
-  Play,
-  Sparkles,
-  WandSparkles,
-  MessagesSquare,
-  Zap,
-  Infinity,
-  ZoomIn,
-  Timer,
   ArrowDownToLine,
   ArrowUpDown,
+  Building2,
+  CircleDot,
+  Code,
+  Compass,
+  GitBranch,
+  Home,
+  Infinity,
+  Landmark,
+  LayoutGrid,
+  List,
+  MessagesSquare,
+  Play,
   Redo,
   Repeat,
   Scaling,
   Scan,
+  Sparkles,
+  Timer,
+  WandSparkles,
+  Zap,
+  ZoomIn,
+  LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { stegaClean } from "next-sanity";
+
+type IconProps = {
+  className?: string;
+  iconVariant: string;
+  strokeWidth?: number;
+  size?: number;
+};
+
+// Map of icon names to their components
+const iconComponents: Record<string, LucideIcon> = {
+  code: Code,
+  "git-branch": GitBranch,
+  list: List,
+  play: Play,
+  sparkles: Sparkles,
+  "wand-sparkles": WandSparkles,
+  "messages-square": MessagesSquare,
+  zap: Zap,
+  infinity: Infinity,
+  "zoom-in": ZoomIn,
+  timer: Timer,
+  "arrow-down-to-line": ArrowDownToLine,
+  "arrow-up-down": ArrowUpDown,
+  redo: Redo,
+  repeat: Repeat,
+  scaling: Scaling,
+  scan: Scan,
+  "building-2": Building2,
+  "circle-dot": CircleDot,
+  compass: Compass,
+  home: Home,
+  landmark: Landmark,
+  "layout-grid": LayoutGrid,
+};
 
 export default function Icon({
   className,
   iconVariant,
   strokeWidth = 1,
   size = 4,
-}: {
-  className?: string;
-  iconVariant: string;
-  strokeWidth?: number;
-  size?: number;
-}) {
+}: IconProps) {
   const cleanIconVariant = stegaClean(iconVariant);
 
-  const icons = {
-    code: (
-      <Code
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    "git-branch": (
-      <GitBranch
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    list: (
-      <List
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    play: (
-      <Play
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    sparkles: (
-      <Sparkles
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    "wand-sparkles": (
-      <WandSparkles
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    "messages-square": (
-      <MessagesSquare
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    zap: (
-      <Zap
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    infinity: (
-      <Infinity
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    "zoom-in": (
-      <ZoomIn
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    timer: (
-      <Timer
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    "arrow-down-to-line": (
-      <ArrowDownToLine
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    "arrow-up-down": (
-      <ArrowUpDown
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    redo: (
-      <Redo
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    repeat: (
-      <Repeat
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    scaling: (
-      <Scaling
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-    scan: (
-      <Scan
-        className={cn(`size-${size}`, className)}
-        strokeWidth={strokeWidth}
-      />
-    ),
-  };
+  if (cleanIconVariant === "none" || !iconComponents[cleanIconVariant]) {
+    return null;
+  }
 
-  return cleanIconVariant === "none"
-    ? null
-    : icons[cleanIconVariant as keyof typeof icons];
+  const IconComponent = iconComponents[cleanIconVariant];
+  return (
+    <IconComponent
+      className={cn(`size-${size}`, className)}
+      strokeWidth={strokeWidth}
+    />
+  );
 }

@@ -349,7 +349,27 @@
               },
               {
                 "type": "string",
+                "value": "arrow-down-to-line"
+              },
+              {
+                "type": "string",
+                "value": "arrow-up-down"
+              },
+              {
+                "type": "string",
+                "value": "building-2"
+              },
+              {
+                "type": "string",
+                "value": "circle-dot"
+              },
+              {
+                "type": "string",
                 "value": "code"
+              },
+              {
+                "type": "string",
+                "value": "compass"
               },
               {
                 "type": "string",
@@ -357,27 +377,7 @@
               },
               {
                 "type": "string",
-                "value": "list"
-              },
-              {
-                "type": "string",
-                "value": "play"
-              },
-              {
-                "type": "string",
-                "value": "sparkles"
-              },
-              {
-                "type": "string",
-                "value": "wand-sparkles"
-              },
-              {
-                "type": "string",
-                "value": "messages-square"
-              },
-              {
-                "type": "string",
-                "value": "zap"
+                "value": "home"
               },
               {
                 "type": "string",
@@ -385,19 +385,23 @@
               },
               {
                 "type": "string",
-                "value": "zoom-in"
+                "value": "landmark"
               },
               {
                 "type": "string",
-                "value": "timer"
+                "value": "layout-grid"
               },
               {
                 "type": "string",
-                "value": "arrow-down-to-line"
+                "value": "list"
               },
               {
                 "type": "string",
-                "value": "arrow-up-down"
+                "value": "messages-square"
+              },
+              {
+                "type": "string",
+                "value": "play"
               },
               {
                 "type": "string",
@@ -414,6 +418,26 @@
               {
                 "type": "string",
                 "value": "scan"
+              },
+              {
+                "type": "string",
+                "value": "sparkles"
+              },
+              {
+                "type": "string",
+                "value": "timer"
+              },
+              {
+                "type": "string",
+                "value": "wand-sparkles"
+              },
+              {
+                "type": "string",
+                "value": "zap"
+              },
+              {
+                "type": "string",
+                "value": "zoom-in"
               }
             ]
           },
@@ -523,7 +547,27 @@
               },
               {
                 "type": "string",
+                "value": "arrow-down-to-line"
+              },
+              {
+                "type": "string",
+                "value": "arrow-up-down"
+              },
+              {
+                "type": "string",
+                "value": "building-2"
+              },
+              {
+                "type": "string",
+                "value": "circle-dot"
+              },
+              {
+                "type": "string",
                 "value": "code"
+              },
+              {
+                "type": "string",
+                "value": "compass"
               },
               {
                 "type": "string",
@@ -531,27 +575,7 @@
               },
               {
                 "type": "string",
-                "value": "list"
-              },
-              {
-                "type": "string",
-                "value": "play"
-              },
-              {
-                "type": "string",
-                "value": "sparkles"
-              },
-              {
-                "type": "string",
-                "value": "wand-sparkles"
-              },
-              {
-                "type": "string",
-                "value": "messages-square"
-              },
-              {
-                "type": "string",
-                "value": "zap"
+                "value": "home"
               },
               {
                 "type": "string",
@@ -559,19 +583,23 @@
               },
               {
                 "type": "string",
-                "value": "zoom-in"
+                "value": "landmark"
               },
               {
                 "type": "string",
-                "value": "timer"
+                "value": "layout-grid"
               },
               {
                 "type": "string",
-                "value": "arrow-down-to-line"
+                "value": "list"
               },
               {
                 "type": "string",
-                "value": "arrow-up-down"
+                "value": "messages-square"
+              },
+              {
+                "type": "string",
+                "value": "play"
               },
               {
                 "type": "string",
@@ -588,6 +616,26 @@
               {
                 "type": "string",
                 "value": "scan"
+              },
+              {
+                "type": "string",
+                "value": "sparkles"
+              },
+              {
+                "type": "string",
+                "value": "timer"
+              },
+              {
+                "type": "string",
+                "value": "wand-sparkles"
+              },
+              {
+                "type": "string",
+                "value": "zap"
+              },
+              {
+                "type": "string",
+                "value": "zoom-in"
               }
             ]
           },
@@ -687,7 +735,27 @@
               },
               {
                 "type": "string",
+                "value": "arrow-down-to-line"
+              },
+              {
+                "type": "string",
+                "value": "arrow-up-down"
+              },
+              {
+                "type": "string",
+                "value": "building-2"
+              },
+              {
+                "type": "string",
+                "value": "circle-dot"
+              },
+              {
+                "type": "string",
                 "value": "code"
+              },
+              {
+                "type": "string",
+                "value": "compass"
               },
               {
                 "type": "string",
@@ -695,27 +763,7 @@
               },
               {
                 "type": "string",
-                "value": "list"
-              },
-              {
-                "type": "string",
-                "value": "play"
-              },
-              {
-                "type": "string",
-                "value": "sparkles"
-              },
-              {
-                "type": "string",
-                "value": "wand-sparkles"
-              },
-              {
-                "type": "string",
-                "value": "messages-square"
-              },
-              {
-                "type": "string",
-                "value": "zap"
+                "value": "home"
               },
               {
                 "type": "string",
@@ -723,19 +771,23 @@
               },
               {
                 "type": "string",
-                "value": "zoom-in"
+                "value": "landmark"
               },
               {
                 "type": "string",
-                "value": "timer"
+                "value": "layout-grid"
               },
               {
                 "type": "string",
-                "value": "arrow-down-to-line"
+                "value": "list"
               },
               {
                 "type": "string",
-                "value": "arrow-up-down"
+                "value": "messages-square"
+              },
+              {
+                "type": "string",
+                "value": "play"
               },
               {
                 "type": "string",
@@ -752,6 +804,26 @@
               {
                 "type": "string",
                 "value": "scan"
+              },
+              {
+                "type": "string",
+                "value": "sparkles"
+              },
+              {
+                "type": "string",
+                "value": "timer"
+              },
+              {
+                "type": "string",
+                "value": "wand-sparkles"
+              },
+              {
+                "type": "string",
+                "value": "zap"
+              },
+              {
+                "type": "string",
+                "value": "zoom-in"
               }
             ]
           },
@@ -1006,7 +1078,27 @@
               },
               {
                 "type": "string",
+                "value": "arrow-down-to-line"
+              },
+              {
+                "type": "string",
+                "value": "arrow-up-down"
+              },
+              {
+                "type": "string",
+                "value": "building-2"
+              },
+              {
+                "type": "string",
+                "value": "circle-dot"
+              },
+              {
+                "type": "string",
                 "value": "code"
+              },
+              {
+                "type": "string",
+                "value": "compass"
               },
               {
                 "type": "string",
@@ -1014,27 +1106,7 @@
               },
               {
                 "type": "string",
-                "value": "list"
-              },
-              {
-                "type": "string",
-                "value": "play"
-              },
-              {
-                "type": "string",
-                "value": "sparkles"
-              },
-              {
-                "type": "string",
-                "value": "wand-sparkles"
-              },
-              {
-                "type": "string",
-                "value": "messages-square"
-              },
-              {
-                "type": "string",
-                "value": "zap"
+                "value": "home"
               },
               {
                 "type": "string",
@@ -1042,19 +1114,23 @@
               },
               {
                 "type": "string",
-                "value": "zoom-in"
+                "value": "landmark"
               },
               {
                 "type": "string",
-                "value": "timer"
+                "value": "layout-grid"
               },
               {
                 "type": "string",
-                "value": "arrow-down-to-line"
+                "value": "list"
               },
               {
                 "type": "string",
-                "value": "arrow-up-down"
+                "value": "messages-square"
+              },
+              {
+                "type": "string",
+                "value": "play"
               },
               {
                 "type": "string",
@@ -1071,6 +1147,26 @@
               {
                 "type": "string",
                 "value": "scan"
+              },
+              {
+                "type": "string",
+                "value": "sparkles"
+              },
+              {
+                "type": "string",
+                "value": "timer"
+              },
+              {
+                "type": "string",
+                "value": "wand-sparkles"
+              },
+              {
+                "type": "string",
+                "value": "zap"
+              },
+              {
+                "type": "string",
+                "value": "zoom-in"
               }
             ]
           },

@@ -42,7 +42,7 @@ export default function SectionHeader({
     <SectionContainer padding={padding}>
       <div
         className={cn(
-          align === "center" ? "max-w-3xl text-center mx-auto" : undefined,
+          align === "center" ? "max-w-4xl text-center mx-auto" : undefined,
           isNarrow ? "max-w-3xl mx-auto" : undefined
         )}
       >
