@@ -10,6 +10,12 @@ import {
   Infinity,
   ZoomIn,
   Timer,
+  ArrowDownToLine,
+  ArrowUpDown,
+  Redo,
+  Repeat,
+  Scaling,
+  Scan,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { stegaClean } from "next-sanity";
@@ -90,6 +96,42 @@ export default function Icon({
     ),
     timer: (
       <Timer
+        className={cn(`size-${size}`, className)}
+        strokeWidth={strokeWidth}
+      />
+    ),
+    "arrow-down-to-line": (
+      <ArrowDownToLine
+        className={cn(`size-${size}`, className)}
+        strokeWidth={strokeWidth}
+      />
+    ),
+    "arrow-up-down": (
+      <ArrowUpDown
+        className={cn(`size-${size}`, className)}
+        strokeWidth={strokeWidth}
+      />
+    ),
+    redo: (
+      <Redo
+        className={cn(`size-${size}`, className)}
+        strokeWidth={strokeWidth}
+      />
+    ),
+    repeat: (
+      <Repeat
+        className={cn(`size-${size}`, className)}
+        strokeWidth={strokeWidth}
+      />
+    ),
+    scaling: (
+      <Scaling
+        className={cn(`size-${size}`, className)}
+        strokeWidth={strokeWidth}
+      />
+    ),
+    scan: (
+      <Scan
         className={cn(`size-${size}`, className)}
         strokeWidth={strokeWidth}
       />

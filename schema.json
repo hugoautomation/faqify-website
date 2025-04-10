@@ -390,6 +390,30 @@
               {
                 "type": "string",
                 "value": "timer"
+              },
+              {
+                "type": "string",
+                "value": "arrow-down-to-line"
+              },
+              {
+                "type": "string",
+                "value": "arrow-up-down"
+              },
+              {
+                "type": "string",
+                "value": "redo"
+              },
+              {
+                "type": "string",
+                "value": "repeat"
+              },
+              {
+                "type": "string",
+                "value": "scaling"
+              },
+              {
+                "type": "string",
+                "value": "scan"
               }
             ]
           },
@@ -476,6 +500,184 @@
     }
   },
   {
+    "name": "feature-12-card",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "feature-12-card"
+          }
+        },
+        "iconVariant": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "union",
+            "of": [
+              {
+                "type": "string",
+                "value": "none"
+              },
+              {
+                "type": "string",
+                "value": "code"
+              },
+              {
+                "type": "string",
+                "value": "git-branch"
+              },
+              {
+                "type": "string",
+                "value": "list"
+              },
+              {
+                "type": "string",
+                "value": "play"
+              },
+              {
+                "type": "string",
+                "value": "sparkles"
+              },
+              {
+                "type": "string",
+                "value": "wand-sparkles"
+              },
+              {
+                "type": "string",
+                "value": "messages-square"
+              },
+              {
+                "type": "string",
+                "value": "zap"
+              },
+              {
+                "type": "string",
+                "value": "infinity"
+              },
+              {
+                "type": "string",
+                "value": "zoom-in"
+              },
+              {
+                "type": "string",
+                "value": "timer"
+              },
+              {
+                "type": "string",
+                "value": "arrow-down-to-line"
+              },
+              {
+                "type": "string",
+                "value": "arrow-up-down"
+              },
+              {
+                "type": "string",
+                "value": "redo"
+              },
+              {
+                "type": "string",
+                "value": "repeat"
+              },
+              {
+                "type": "string",
+                "value": "scaling"
+              },
+              {
+                "type": "string",
+                "value": "scan"
+              }
+            ]
+          },
+          "optional": true
+        },
+        "title": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "description": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        }
+      }
+    }
+  },
+  {
+    "name": "feature-12",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "feature-12"
+          }
+        },
+        "padding": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "inline",
+            "name": "section-padding"
+          },
+          "optional": true
+        },
+        "badge": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "title": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "tagline": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "columns": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "array",
+            "of": {
+              "type": "object",
+              "attributes": {
+                "_key": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              },
+              "rest": {
+                "type": "inline",
+                "name": "feature-12-card"
+              }
+            }
+          },
+          "optional": true
+        }
+      }
+    }
+  },
+  {
     "name": "feature-3-card",
     "type": "type",
     "value": {
@@ -540,6 +742,30 @@
               {
                 "type": "string",
                 "value": "timer"
+              },
+              {
+                "type": "string",
+                "value": "arrow-down-to-line"
+              },
+              {
+                "type": "string",
+                "value": "arrow-up-down"
+              },
+              {
+                "type": "string",
+                "value": "redo"
+              },
+              {
+                "type": "string",
+                "value": "repeat"
+              },
+              {
+                "type": "string",
+                "value": "scaling"
+              },
+              {
+                "type": "string",
+                "value": "scan"
               }
             ]
           },
@@ -835,6 +1061,30 @@
               {
                 "type": "string",
                 "value": "timer"
+              },
+              {
+                "type": "string",
+                "value": "arrow-down-to-line"
+              },
+              {
+                "type": "string",
+                "value": "arrow-up-down"
+              },
+              {
+                "type": "string",
+                "value": "redo"
+              },
+              {
+                "type": "string",
+                "value": "repeat"
+              },
+              {
+                "type": "string",
+                "value": "scaling"
+              },
+              {
+                "type": "string",
+                "value": "scan"
               }
             ]
           },
@@ -3689,6 +3939,21 @@
                 "rest": {
                   "type": "inline",
                   "name": "feature-3"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "feature-12"
                 }
               },
               {

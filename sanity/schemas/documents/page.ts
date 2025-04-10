@@ -45,6 +45,7 @@ export default defineType({
         { type: "logos-1" },
         { type: "feature-1" },
         { type: "feature-3" },
+        { type: "feature-12" },
         { type: "feature-15" },
       ],
       options: {
@@ -73,7 +74,7 @@ export default defineType({
             {
               name: "feature",
               title: "Feature Components",
-              of: ["feature-1", "feature-3", "feature-15"],
+              of: ["feature-1", "feature-3", "feature-12", "feature-15"],
             },
           ],
           views: [

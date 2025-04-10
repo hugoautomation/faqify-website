@@ -11,4 +11,10 @@ export const ICON_VARIANTS = [
   { title: "Infinity", value: "infinity" },
   { title: "ZoomIn", value: "zoom-in" },
   { title: "Timer", value: "timer" },
+  { title: "ArrowDownToLine", value: "arrow-down-to-line" },
+  { title: "ArrowUpDown", value: "arrow-up-down" },
+  { title: "Redo", value: "redo" },
+  { title: "Repeat", value: "repeat" },
+  { title: "Scaling", value: "scaling" },
+  { title: "Scan", value: "scan" },
 ];
