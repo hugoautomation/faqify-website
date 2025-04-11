@@ -7,6 +7,8 @@ import { feature1Query } from "./feature/feature1";
 import { feature3Query } from "./feature/feature3";
 import { feature12Query } from "./feature/feature12";
 import { feature15Query } from "./feature/feature15";
+import { feature202Query } from "./feature/feature202";
+
 export const PAGE_QUERY = groq`
   *[_type == "page" && slug.current == $slug][0]{
     blocks[]{
@@ -18,6 +20,7 @@ export const PAGE_QUERY = groq`
       ${feature3Query},
       ${feature12Query},
       ${feature15Query},
+      ${feature202Query},
     },
     meta_title,
     meta_description,
