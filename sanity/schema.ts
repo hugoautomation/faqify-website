@@ -13,6 +13,7 @@ import contact from "./schemas/documents/contact";
 // Schema UI shared objects
 import blockContent from "./schemas/blocks/shared/block-content";
 import link from "./schemas/blocks/shared/link";
+import linkIcon from "./schemas/blocks/shared/link-icon";
 import linkGroup from "./schemas/blocks/shared/link-group";
 import { buttonVariant } from "./schemas/blocks/shared/button-variant";
 import sectionPadding from "./schemas/blocks/shared/section-padding";
@@ -56,6 +57,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     // shared objects
     blockContent,
     link,
+    linkIcon,
     linkGroup,
     buttonVariant,
     sectionPadding,

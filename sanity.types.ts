@@ -397,7 +397,17 @@ export type LinkGroup = {
   title?: string;
   links?: Array<{
     _key: string;
-  } & Link>;
+  } & LinkIcon>;
+};
+
+export type LinkIcon = {
+  _type: "link-icon";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "building-2" | "circle-dot" | "code" | "compass" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in";
+  title?: string;
+  description?: string;
+  href?: string;
+  target?: boolean;
+  buttonVariant?: ButtonVariant;
 };
 
 export type BlockContent = Array<{
@@ -677,7 +687,6 @@ export type Page = {
 export type Link = {
   _type: "link";
   title?: string;
-  description?: string;
   href?: string;
   target?: boolean;
   buttonVariant?: ButtonVariant;
@@ -754,7 +763,7 @@ export type Code = {
   highlightedLines?: Array<number>;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Feature202Card | Feature202 | Feature117Card | Feature117 | Feature15Card | Feature15 | Feature12Card | Feature12 | Feature3Card | Feature3 | FeatureImage | FeatureContent | Feature1 | Logos1 | Faq1 | Hero12 | SectionHeader | SectionPadding | ButtonVariant | LinkGroup | BlockContent | Contact | Settings | Navigation | Testimonial | Faq | Category | Post | Author | Page | Link | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug | Code;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Feature202Card | Feature202 | Feature117Card | Feature117 | Feature15Card | Feature15 | Feature12Card | Feature12 | Feature3Card | Feature3 | FeatureImage | FeatureContent | Feature1 | Logos1 | Faq1 | Hero12 | SectionHeader | SectionPadding | ButtonVariant | LinkGroup | LinkIcon | BlockContent | Contact | Settings | Navigation | Testimonial | Faq | Category | Post | Author | Page | Link | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug | Code;
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ./app/sitemap.ts
 // Variable: pagesQuery

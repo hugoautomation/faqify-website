@@ -3156,9 +3156,170 @@
               },
               "rest": {
                 "type": "inline",
-                "name": "link"
+                "name": "link-icon"
               }
             }
+          },
+          "optional": true
+        }
+      }
+    }
+  },
+  {
+    "name": "link-icon",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "link-icon"
+          }
+        },
+        "iconVariant": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "union",
+            "of": [
+              {
+                "type": "string",
+                "value": "none"
+              },
+              {
+                "type": "string",
+                "value": "arrow-down-to-line"
+              },
+              {
+                "type": "string",
+                "value": "arrow-up-down"
+              },
+              {
+                "type": "string",
+                "value": "building-2"
+              },
+              {
+                "type": "string",
+                "value": "circle-dot"
+              },
+              {
+                "type": "string",
+                "value": "code"
+              },
+              {
+                "type": "string",
+                "value": "compass"
+              },
+              {
+                "type": "string",
+                "value": "git-branch"
+              },
+              {
+                "type": "string",
+                "value": "home"
+              },
+              {
+                "type": "string",
+                "value": "infinity"
+              },
+              {
+                "type": "string",
+                "value": "landmark"
+              },
+              {
+                "type": "string",
+                "value": "layout-grid"
+              },
+              {
+                "type": "string",
+                "value": "list"
+              },
+              {
+                "type": "string",
+                "value": "messages-square"
+              },
+              {
+                "type": "string",
+                "value": "play"
+              },
+              {
+                "type": "string",
+                "value": "redo"
+              },
+              {
+                "type": "string",
+                "value": "repeat"
+              },
+              {
+                "type": "string",
+                "value": "scaling"
+              },
+              {
+                "type": "string",
+                "value": "scan"
+              },
+              {
+                "type": "string",
+                "value": "sparkles"
+              },
+              {
+                "type": "string",
+                "value": "timer"
+              },
+              {
+                "type": "string",
+                "value": "users"
+              },
+              {
+                "type": "string",
+                "value": "wand-sparkles"
+              },
+              {
+                "type": "string",
+                "value": "zap"
+              },
+              {
+                "type": "string",
+                "value": "zoom-in"
+              }
+            ]
+          },
+          "optional": true
+        },
+        "title": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "description": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "href": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "target": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "boolean"
+          },
+          "optional": true
+        },
+        "buttonVariant": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "inline",
+            "name": "button-variant"
           },
           "optional": true
         }
@@ -4891,13 +5052,6 @@
           }
         },
         "title": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "string"
-          },
-          "optional": true
-        },
-        "description": {
           "type": "objectAttribute",
           "value": {
             "type": "string"

@@ -5,9 +5,11 @@ import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
 import { LinkButton } from "@/components/ui/link-button";
+import Icon from "@/components/icon";
 import type {
   Link as SanityLink,
   LinkGroup as SanityLinkGroup,
+  LinkIcon as SanityLinkIcon,
 } from "@/sanity.types";
 import { cn } from "@/lib/utils";
 import { stegaClean } from "next-sanity";
@@ -36,7 +38,7 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
-type NavigationItem = SanityLink | SanityLinkGroup;
+type NavigationItem = SanityLink | SanityLinkGroup | SanityLinkIcon;
 
 interface Navbar1Props {
   className?: string;
@@ -275,7 +277,7 @@ export default async function Navbar1({ className }: Navbar1Props) {
   );
 }
 
-const SubMenuLink = ({ item }: { item: SanityLink }) => {
+const SubMenuLink = ({ item }: { item: SanityLink | SanityLinkIcon }) => {
   return (
     <Link
       href={item.href || "#"}
@@ -283,13 +285,18 @@ const SubMenuLink = ({ item }: { item: SanityLink }) => {
       target={item.target ? "_blank" : undefined}
     >
       <div className="text-foreground">
-        <Book className="size-5 shrink-0" />
+        <Icon
+          iconVariant={(item as SanityLinkIcon).iconVariant || "none"}
+          size={5}
+          strokeWidth={2}
+          className="shrink-0"
+        />
       </div>
       <div>
         <div className="text-sm font-semibold">{item.title}</div>
-        {item.description && (
+        {(item as SanityLinkIcon).description && (
           <p className="text-sm leading-snug text-muted-foreground">
-            {item.description}
+            {(item as SanityLinkIcon).description}
           </p>
         )}
       </div>

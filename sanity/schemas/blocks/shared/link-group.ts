@@ -13,7 +13,7 @@ export default defineType({
     defineField({
       name: "links",
       type: "array",
-      of: [{ type: "link" }],
+      of: [{ type: "link-icon" }],
     }),
   ],
 });
