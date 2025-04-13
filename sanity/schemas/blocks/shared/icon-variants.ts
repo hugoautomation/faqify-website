@@ -20,6 +20,7 @@ export const ICON_VARIANTS = [
   { title: "Scan", value: "scan" },
   { title: "Sparkles", value: "sparkles" },
   { title: "Timer", value: "timer" },
+  { title: "Users", value: "users" },
   { title: "WandSparkles", value: "wand-sparkles" },
   { title: "Zap", value: "zap" },
   { title: "ZoomIn", value: "zoom-in" },

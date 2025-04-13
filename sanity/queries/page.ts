@@ -7,6 +7,7 @@ import { feature1Query } from "./feature/feature1";
 import { feature3Query } from "./feature/feature3";
 import { feature12Query } from "./feature/feature12";
 import { feature15Query } from "./feature/feature15";
+import { feature117Query } from "./feature/feature117";
 import { feature202Query } from "./feature/feature202";
 
 export const PAGE_QUERY = groq`
@@ -20,6 +21,7 @@ export const PAGE_QUERY = groq`
       ${feature3Query},
       ${feature12Query},
       ${feature15Query},
+      ${feature117Query},
       ${feature202Query},
     },
     meta_title,
