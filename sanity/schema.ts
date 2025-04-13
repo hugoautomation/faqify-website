@@ -41,6 +41,9 @@ import feature66Card from "./schemas/blocks/feature/feature66/feature66-card";
 // Feature 117
 import feature117 from "./schemas/blocks/feature/feature117";
 import feature117Card from "./schemas/blocks/feature/feature117/feature117-card";
+// Feature 157
+import feature157 from "./schemas/blocks/feature/feature157";
+import feature157Card from "./schemas/blocks/feature/feature157/feature157-card";
 // Feature 202
 import feature202 from "./schemas/blocks/feature/feature202";
 import feature202Card from "./schemas/blocks/feature/feature202/feature202-card";
@@ -88,6 +91,9 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     // Feature 117
     feature117,
     feature117Card,
+    // Feature 157
+    feature157,
+    feature157Card,
     // Feature 202
     feature202,
     feature202Card,

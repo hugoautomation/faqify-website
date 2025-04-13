@@ -49,6 +49,7 @@ export default defineType({
         { type: "feature-15" },
         { type: "feature-66" },
         { type: "feature-117" },
+        { type: "feature-157" },
         { type: "feature-202" },
       ],
       options: {
@@ -84,6 +85,7 @@ export default defineType({
                 "feature-15",
                 "feature-66",
                 "feature-117",
+                "feature-157",
                 "feature-202",
               ],
             },
