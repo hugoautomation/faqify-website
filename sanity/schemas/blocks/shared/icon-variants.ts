@@ -6,6 +6,7 @@ export const ICON_VARIANTS = [
   { title: "CircleDot", value: "circle-dot" },
   { title: "Code", value: "code" },
   { title: "Compass", value: "compass" },
+  { title: "ExternalLink", value: "external-link" },
   { title: "GitBranch", value: "git-branch" },
   { title: "Home", value: "home" },
   { title: "Infinity", value: "infinity" },

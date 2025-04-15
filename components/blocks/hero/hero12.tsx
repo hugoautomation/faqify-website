@@ -55,9 +55,9 @@ const Hero12 = ({
             </div>
             {links && links.length > 0 && (
               <div className="mt-6 flex justify-center gap-3">
-                {links.map((link, index) => (
+                {links.map((link) => (
                   <Button
-                    key={link._key || index}
+                    key={link._key}
                     variant={link.buttonVariant || "default"}
                     className={cn(
                       "shadow-sm transition-shadow hover:shadow",
