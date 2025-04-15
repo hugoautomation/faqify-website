@@ -44,6 +44,7 @@ export default defineType({
         { type: "hero-13" },
         { type: "hero-25" },
         { type: "hero-57" },
+        { type: "hero-85" },
         { type: "faq-1" },
         { type: "logos-1" },
         { type: "feature-1" },
@@ -66,7 +67,7 @@ export default defineType({
             {
               name: "hero",
               title: "Hero Components",
-              of: ["hero-12", "hero-13", "hero-25", "hero-57"],
+              of: ["hero-12", "hero-13", "hero-25", "hero-57", "hero-85"],
             },
             {
               name: "faq",

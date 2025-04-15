@@ -4,6 +4,7 @@ import { hero12Query } from "./hero/hero12";
 import { hero13Query } from "./hero/hero13";
 import { hero25Query } from "./hero/hero25";
 import { hero57Query } from "./hero/hero57";
+import { hero85Query } from "./hero/hero85";
 import { faq1Query } from "./faq/faq1";
 import { logos1Query } from "./logos/logos1";
 import { feature1Query } from "./feature/feature1";
@@ -23,6 +24,7 @@ export const PAGE_QUERY = groq`
       ${hero13Query},
       ${hero25Query},
       ${hero57Query},
+      ${hero85Query},
       ${faq1Query},
       ${logos1Query},
       ${feature1Query},
