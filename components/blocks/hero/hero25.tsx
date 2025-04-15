@@ -3,10 +3,8 @@ import { urlFor } from "@/sanity/lib/image";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
-import { PortableText } from "@portabletext/react";
 import Icon from "@/components/icon";
 import { PAGE_QUERYResult } from "@/sanity.types";
-import { Zap } from "lucide-react";
 
 type Hero25Props = Extract<
   NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number],

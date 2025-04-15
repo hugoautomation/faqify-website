@@ -22,6 +22,7 @@ import sectionHeader from "./schemas/blocks/section-header";
 import hero12 from "./schemas/blocks/hero/hero12";
 import hero13 from "./schemas/blocks/hero/hero13";
 import hero25 from "./schemas/blocks/hero/hero25";
+import hero57 from "./schemas/blocks/hero/hero57";
 import faq1 from "./schemas/blocks/faq/faq1";
 import logos1 from "./schemas/blocks/logos/logos1";
 // Feature 1
@@ -74,6 +75,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     hero12,
     hero13,
     hero25,
+    hero57,
     faq1,
     logos1,
     // Feature 1
