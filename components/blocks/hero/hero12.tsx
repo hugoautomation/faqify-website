@@ -1,14 +1,13 @@
-import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import { cn } from "@/lib/utils";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { PortableText } from "@portabletext/react";
 import Icon from "@/components/icon";
 import { PAGE_QUERYResult } from "@/sanity.types";
 
-type Hero1Props = Extract<
+type Hero12Props = Extract<
   NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number],
   { _type: "hero-12" }
 >;
@@ -20,7 +19,7 @@ const Hero12 = ({
   image,
   links,
   techLogos,
-}: Hero1Props) => {
+}: Hero12Props) => {
   return (
     <section className="relative overflow-hidden py-32">
       <div className="absolute inset-x-0 top-0 flex h-full w-full items-center justify-center opacity-100">
@@ -57,29 +56,26 @@ const Hero12 = ({
             {links && links.length > 0 && (
               <div className="mt-6 flex justify-center gap-3">
                 {links.map((link) => (
-                  <Button
+                  <Link
                     key={link._key}
-                    variant={link.buttonVariant || "default"}
+                    href={link.href || "#"}
+                    target={link.target ? "_blank" : undefined}
+                    rel={link.target ? "noopener" : undefined}
                     className={cn(
-                      "shadow-sm transition-shadow hover:shadow",
-                      link.buttonVariant === "outline" && "group"
+                      buttonVariants({
+                        variant: link.buttonVariant || "default",
+                      }),
+                      "shadow-sm transition-shadow hover:shadow group"
                     )}
-                    asChild
                   >
-                    <Link
-                      href={link.href || ""}
-                      target={link.target ? "_blank" : undefined}
-                      rel={link.target ? "noopener noreferrer" : undefined}
-                    >
-                      <div className="flex items-center gap-2">
-                        {link.title}
-                        <Icon
-                          iconVariant={link.iconVariant || "none"}
-                          className="ml-2 h-4 transition-transform group-hover:translate-x-0.5"
-                        />
-                      </div>
-                    </Link>
-                  </Button>
+                    <div className="flex items-center gap-2">
+                      {link.title}
+                      <Icon
+                        iconVariant={link.iconVariant || "none"}
+                        className="ml-2 h-4 transition-transform group-hover:translate-x-0.5"
+                      />
+                    </div>
+                  </Link>
                 ))}
               </div>
             )}
@@ -92,15 +88,15 @@ const Hero12 = ({
                 )}
                 <div className="flex flex-wrap items-center justify-center gap-4">
                   {techLogos.map((logo) => (
-                    <a
+                    <Link
                       key={logo._key}
                       href={logo.link?.href || "#"}
                       className={cn(
                         buttonVariants({ variant: "outline" }),
                         "group flex aspect-square h-12 items-center justify-center p-0"
                       )}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target={logo.link?.target ? "_blank" : undefined}
+                      rel={logo.link?.target ? "noopener" : undefined}
                     >
                       {logo?.image && logo?.image?.asset?._id && (
                         <Image
@@ -112,7 +108,7 @@ const Hero12 = ({
                           quality={100}
                         />
                       )}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>

@@ -66,9 +66,9 @@ export default function FeatureContent({
                 asChild
               >
                 <Link
-                  href={link.href || ""}
+                  href={link.href || "#"}
                   target={link.target ? "_blank" : undefined}
-                  rel={link.target ? "noopener noreferrer" : undefined}
+                  rel={link.target ? "noopener" : undefined}
                 >
                   {link.title}
                 </Link>

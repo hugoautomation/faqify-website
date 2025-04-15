@@ -1,6 +1,7 @@
 import {
   ArrowDownToLine,
   ArrowUpDown,
+  Bell,
   Building2,
   CircleDot,
   Code,
@@ -14,6 +15,7 @@ import {
   List,
   MessagesSquare,
   Play,
+  PlayCircle,
   Redo,
   Repeat,
   Scaling,
@@ -40,6 +42,7 @@ type IconProps = {
 const iconComponents: Record<string, LucideIcon> = {
   "arrow-down-to-line": ArrowDownToLine,
   "arrow-up-down": ArrowUpDown,
+  bell: Bell,
   "building-2": Building2,
   "circle-dot": CircleDot,
   code: Code,
@@ -53,6 +56,7 @@ const iconComponents: Record<string, LucideIcon> = {
   list: List,
   "messages-square": MessagesSquare,
   play: Play,
+  "play-circle": PlayCircle,
   redo: Redo,
   repeat: Repeat,
   scaling: Scaling,
