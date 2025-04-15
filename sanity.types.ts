@@ -70,7 +70,7 @@ export type Geopoint = {
 
 export type Feature202Card = {
   _type: "feature-202-card";
-  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
   title?: string;
   description?: string;
   image?: {
@@ -124,7 +124,7 @@ export type Feature157 = {
 export type Feature117Card = {
   _type: "feature-117-card";
   tag?: {
-    iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in";
+    iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
     text?: string;
   };
   title?: string;
@@ -190,7 +190,7 @@ export type Feature66 = {
 
 export type Feature15Card = {
   _type: "feature-15-card";
-  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
   title?: string;
   description?: string;
 };
@@ -206,7 +206,7 @@ export type Feature15 = {
 
 export type Feature12Card = {
   _type: "feature-12-card";
-  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
   title?: string;
   description?: string;
 };
@@ -222,7 +222,7 @@ export type Feature12 = {
 
 export type Feature3Card = {
   _type: "feature-3-card";
-  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
   title?: string;
   description?: string;
   image?: {
@@ -266,7 +266,7 @@ export type FeatureImage = {
 export type FeatureContent = {
   _type: "feature-content";
   padding?: SectionPadding;
-  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
   tag?: {
     text?: string;
     type?: "title" | "badge";
@@ -354,10 +354,37 @@ export type Faq1 = {
   }>;
 };
 
+export type Hero25 = {
+  _type: "hero-25";
+  image?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: "image";
+  };
+  tagLine?: string;
+  title?: string;
+  links?: Array<{
+    _key: string;
+  } & LinkIcon>;
+  tags?: Array<{
+    iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+    title?: string;
+    _type: "tag";
+    _key: string;
+  }>;
+};
+
 export type Hero13 = {
   _type: "hero-13";
   tag?: {
-    iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in";
+    iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
     title?: string;
   };
   title?: string;
@@ -404,6 +431,18 @@ export type Hero13 = {
 
 export type Hero12 = {
   _type: "hero-12";
+  backgroundImage?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: "image";
+  };
   title?: string;
   body?: Array<{
     children?: Array<{
@@ -512,7 +551,7 @@ export type LinkGroup = {
 
 export type LinkIcon = {
   _type: "link-icon";
-  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
   title?: string;
   description?: string;
   href?: string;
@@ -764,6 +803,8 @@ export type Page = {
     _key: string;
   } & Hero13 | {
     _key: string;
+  } & Hero25 | {
+    _key: string;
   } & Faq1 | {
     _key: string;
   } & Logos1 | {
@@ -879,7 +920,7 @@ export type Code = {
   highlightedLines?: Array<number>;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Feature202Card | Feature202 | Feature157Card | Feature157 | Feature117Card | Feature117 | Feature66Card | Feature66 | Feature15Card | Feature15 | Feature12Card | Feature12 | Feature3Card | Feature3 | FeatureImage | FeatureContent | Feature1 | Logos1 | Faq1 | Hero13 | Hero12 | SectionHeader | SectionPadding | ButtonVariant | LinkGroup | LinkIcon | BlockContent | Contact | Settings | Navigation | Testimonial | Faq | Category | Post | Author | Page | Link | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug | Code;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Feature202Card | Feature202 | Feature157Card | Feature157 | Feature117Card | Feature117 | Feature66Card | Feature66 | Feature15Card | Feature15 | Feature12Card | Feature12 | Feature3Card | Feature3 | FeatureImage | FeatureContent | Feature1 | Logos1 | Faq1 | Hero25 | Hero13 | Hero12 | SectionHeader | SectionPadding | ButtonVariant | LinkGroup | LinkIcon | BlockContent | Contact | Settings | Navigation | Testimonial | Faq | Category | Post | Author | Page | Link | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug | Code;
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ./app/sitemap.ts
 // Variable: pagesQuery
@@ -945,7 +986,7 @@ export type NAVIGATION_QUERYResult = Array<{
 
 // Source: ./sanity/queries/page.ts
 // Variable: PAGE_QUERY
-// Query: *[_type == "page" && slug.current == $slug][0]{    blocks[]{        _type == "section-header" => {    _type,    _key,    padding,    sectionWidth,    stackAlign,    tag,    title,    description,  },        _type == "hero-12" => {    _type,    _key,    tagLine,    title,    body[]{      ...,      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    links[]{      _key,      iconVariant,      title,      href,      target,      buttonVariant    },    techLogos[]{      _key,      title,      link,      image{        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        },        alt      }    }  },        _type == "hero-13" => {    _type,    _key,    tag,    title,    body[]{      ...,      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    links[]{      _key,      iconVariant,      title,      href,      target,      buttonVariant    }  },        _type == "faq-1" => {    _type,    _key,    padding,    border,    faqs[]->{      _id,      title,      body[]{        ...,        _type == "image" => {          ...,          asset->{            _id,            url,            mimeType,            metadata {              lqip,              dimensions {                width,                height              }            }          }        }      },    },  },        _type == "logos-1" => {    _type,    _key,    padding,    title,    images[]{      ...,      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },  },        _type == "feature-1" => {    _type,    _key,    padding,    columns[]{        _type == "feature-content" => {    _type,    _key,    padding,    iconVariant,    tag,    title,    body[]{      ...,      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    links,  },        _type == "feature-image" => {    _type,    _key,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },  },    },  },        _type == "feature-3" => {    _type,    _key,    padding,    columns[]{        _type == "feature-3-card" => {    _type,    _key,    iconVariant,    title,    description,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    }  },    },  },        _type == "feature-12" => {    _type,    _key,    padding,    tagline,    columns[]{        _type == "feature-12-card" => {    _type,    _key,    iconVariant,    title,    description,  },    },  },        _type == "feature-15" => {    _type,    _key,    padding,    gridColumns,    columns[]{        _type == "feature-15-card" => {    _type,    _key,    iconVariant,    title,    description,  },    },  },        _type == "feature-66" => {    _type,    _key,    padding,    columns[]{        _type == "feature-66-card" => {    _type,    _key,    logo{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link  },    },  },        _type == "feature-117" => {    _type,    _key,    padding,    columns[]{        _type == "feature-117-card" => {    _type,    _key,    tag,    title,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link  },    },  },        _type == "feature-157" => {    _type,    _key,    padding,    columns[]{        _type == "feature-157-card" => {    _type,    _key,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link  },    },  },        _type == "feature-202" => {    _type,    _key,    padding,    columns[]{        _type == "feature-202-card" => {    _type,    _key,    iconVariant,    title,    description,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link  },    },  },    },    meta_title,    meta_description,    noindex,    ogImage {      asset->{        _id,        url,        metadata {          dimensions {            width,            height          }        }      },    }  }
+// Query: *[_type == "page" && slug.current == $slug][0]{    blocks[]{        _type == "section-header" => {    _type,    _key,    padding,    sectionWidth,    stackAlign,    tag,    title,    description,  },        _type == "hero-12" => {    _type,    _key,    backgroundImage{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    tagLine,    title,    body[]{      ...,      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    links[]{      _key,      iconVariant,      title,      href,      target,      buttonVariant    },    techLogos[]{      _key,      title,      link,      image{        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        },        alt      }    }  },        _type == "hero-13" => {    _type,    _key,    tag,    title,    body[]{      ...,      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    links[]{      _key,      iconVariant,      title,      href,      target,      buttonVariant    }  },        _type == "hero-25" => {    _type,    _key,    tagLine,    title,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    links[]{      _key,      iconVariant,      title,      href,      target,      buttonVariant    },    tags  },        _type == "faq-1" => {    _type,    _key,    padding,    border,    faqs[]->{      _id,      title,      body[]{        ...,        _type == "image" => {          ...,          asset->{            _id,            url,            mimeType,            metadata {              lqip,              dimensions {                width,                height              }            }          }        }      },    },  },        _type == "logos-1" => {    _type,    _key,    padding,    title,    images[]{      ...,      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },  },        _type == "feature-1" => {    _type,    _key,    padding,    columns[]{        _type == "feature-content" => {    _type,    _key,    padding,    iconVariant,    tag,    title,    body[]{      ...,      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    links,  },        _type == "feature-image" => {    _type,    _key,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },  },    },  },        _type == "feature-3" => {    _type,    _key,    padding,    columns[]{        _type == "feature-3-card" => {    _type,    _key,    iconVariant,    title,    description,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    }  },    },  },        _type == "feature-12" => {    _type,    _key,    padding,    tagline,    columns[]{        _type == "feature-12-card" => {    _type,    _key,    iconVariant,    title,    description,  },    },  },        _type == "feature-15" => {    _type,    _key,    padding,    gridColumns,    columns[]{        _type == "feature-15-card" => {    _type,    _key,    iconVariant,    title,    description,  },    },  },        _type == "feature-66" => {    _type,    _key,    padding,    columns[]{        _type == "feature-66-card" => {    _type,    _key,    logo{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link  },    },  },        _type == "feature-117" => {    _type,    _key,    padding,    columns[]{        _type == "feature-117-card" => {    _type,    _key,    tag,    title,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link  },    },  },        _type == "feature-157" => {    _type,    _key,    padding,    columns[]{        _type == "feature-157-card" => {    _type,    _key,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link  },    },  },        _type == "feature-202" => {    _type,    _key,    padding,    columns[]{        _type == "feature-202-card" => {    _type,    _key,    iconVariant,    title,    description,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link  },    },  },    },    meta_title,    meta_description,    noindex,    ogImage {      asset->{        _id,        url,        metadata {          dimensions {            width,            height          }        }      },    }  }
 export type PAGE_QUERYResult = {
   blocks: Array<{
     _type: "faq-1";
@@ -1011,7 +1052,7 @@ export type PAGE_QUERYResult = {
       _type: "feature-content";
       _key: string;
       padding: SectionPadding | null;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       tag: {
         text?: string;
         type?: "badge" | "title";
@@ -1094,7 +1135,7 @@ export type PAGE_QUERYResult = {
       _type: "feature-117-card";
       _key: string;
       tag: {
-        iconVariant?: "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in";
+        iconVariant?: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
         text?: string;
       } | null;
       title: string | null;
@@ -1123,7 +1164,7 @@ export type PAGE_QUERYResult = {
     columns: Array<{
       _type: "feature-12-card";
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       title: string | null;
       description: string | null;
     }> | null;
@@ -1135,7 +1176,7 @@ export type PAGE_QUERYResult = {
     columns: Array<{
       _type: "feature-15-card";
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       title: string | null;
       description: string | null;
     }> | null;
@@ -1170,7 +1211,7 @@ export type PAGE_QUERYResult = {
     columns: Array<{
       _type: "feature-202-card";
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       title: string | null;
       description: string | null;
       image: {
@@ -1197,7 +1238,7 @@ export type PAGE_QUERYResult = {
     columns: Array<{
       _type: "feature-3-card";
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       title: string | null;
       description: string | null;
       image: {
@@ -1258,6 +1299,21 @@ export type PAGE_QUERYResult = {
   } | {
     _type: "hero-12";
     _key: string;
+    backgroundImage: {
+      asset: {
+        _id: string;
+        url: string | null;
+        mimeType: string | null;
+        metadata: {
+          lqip: string | null;
+          dimensions: {
+            width: number | null;
+            height: number | null;
+          } | null;
+        } | null;
+      } | null;
+      alt: string | null;
+    } | null;
     tagLine: string | null;
     title: string | null;
     body: Array<{
@@ -1324,7 +1380,7 @@ export type PAGE_QUERYResult = {
     } | null;
     links: Array<{
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       title: string | null;
       href: string | null;
       target: boolean | null;
@@ -1354,7 +1410,7 @@ export type PAGE_QUERYResult = {
     _type: "hero-13";
     _key: string;
     tag: {
-      iconVariant?: "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in";
+      iconVariant?: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
       title?: string;
     } | null;
     title: string | null;
@@ -1407,11 +1463,45 @@ export type PAGE_QUERYResult = {
     }> | null;
     links: Array<{
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       title: string | null;
       href: string | null;
       target: boolean | null;
       buttonVariant: ButtonVariant | null;
+    }> | null;
+  } | {
+    _type: "hero-25";
+    _key: string;
+    tagLine: string | null;
+    title: string | null;
+    image: {
+      asset: {
+        _id: string;
+        url: string | null;
+        mimeType: string | null;
+        metadata: {
+          lqip: string | null;
+          dimensions: {
+            width: number | null;
+            height: number | null;
+          } | null;
+        } | null;
+      } | null;
+      alt: string | null;
+    } | null;
+    links: Array<{
+      _key: string;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
+      title: string | null;
+      href: string | null;
+      target: boolean | null;
+      buttonVariant: ButtonVariant | null;
+    }> | null;
+    tags: Array<{
+      iconVariant?: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+      title?: string;
+      _type: "tag";
+      _key: string;
     }> | null;
   } | {
     _type: "logos-1";
@@ -1657,7 +1747,7 @@ declare module "@sanity/client" {
     "\n    *[_type == 'post'] | order(_updatedAt desc) {\n      'url': $baseUrl + '/blog/' + slug.current,\n      'lastModified': _updatedAt,\n      'changeFrequency': 'weekly',\n      'priority': 0.7\n    }\n  ": PostsQueryResult;
     "*[_type == \"contact\"][0]{\n  tagline,\n  title,\n  description,\n  contactMethods[]{\n    icon,\n    title,\n    description,\n    link\n  },\n  meta_title,\n  meta_description,\n  noindex,\n  ogImage {\n    asset->{\n      _id,\n      url,\n      metadata {\n        dimensions {\n          width,\n          height\n        }\n      }\n    },\n  }\n}": CONTACT_QUERYResult;
     "\n  *[_type == \"navigation\"]{\n    _type,\n    _key,\n    title,\n    links\n  }\n": NAVIGATION_QUERYResult;
-    "\n  *[_type == \"page\" && slug.current == $slug][0]{\n    blocks[]{\n      \n  _type == \"section-header\" => {\n    _type,\n    _key,\n    padding,\n    sectionWidth,\n    stackAlign,\n    tag,\n    title,\n    description,\n  }\n,\n      \n  _type == \"hero-12\" => {\n    _type,\n    _key,\n    tagLine,\n    title,\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    links[]{\n      _key,\n      iconVariant,\n      title,\n      href,\n      target,\n      buttonVariant\n    },\n    techLogos[]{\n      _key,\n      title,\n      link,\n      image{\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      }\n    }\n  }\n,\n      \n  _type == \"hero-13\" => {\n    _type,\n    _key,\n    tag,\n    title,\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    links[]{\n      _key,\n      iconVariant,\n      title,\n      href,\n      target,\n      buttonVariant\n    }\n  }\n,\n      \n  _type == \"faq-1\" => {\n    _type,\n    _key,\n    padding,\n    border,\n    faqs[]->{\n      _id,\n      title,\n      body[]{\n        ...,\n        _type == \"image\" => {\n          ...,\n          asset->{\n            _id,\n            url,\n            mimeType,\n            metadata {\n              lqip,\n              dimensions {\n                width,\n                height\n              }\n            }\n          }\n        }\n      },\n    },\n  }\n,\n      \n  _type == \"logos-1\" => {\n    _type,\n    _key,\n    padding,\n    title,\n    images[]{\n      ...,\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n  }\n,\n      \n  _type == \"feature-1\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-content\" => {\n    _type,\n    _key,\n    padding,\n    iconVariant,\n    tag,\n    title,\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    links,\n  }\n,\n      \n  _type == \"feature-image\" => {\n    _type,\n    _key,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-3\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-3-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    }\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-12\" => {\n    _type,\n    _key,\n    padding,\n    tagline,\n    columns[]{\n      \n  _type == \"feature-12-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-15\" => {\n    _type,\n    _key,\n    padding,\n    gridColumns,\n    columns[]{\n      \n  _type == \"feature-15-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-66\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-66-card\" => {\n    _type,\n    _key,\n    logo{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-117\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-117-card\" => {\n    _type,\n    _key,\n    tag,\n    title,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-157\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-157-card\" => {\n    _type,\n    _key,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-202\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-202-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link\n  }\n,\n    },\n  }\n,\n    },\n    meta_title,\n    meta_description,\n    noindex,\n    ogImage {\n      asset->{\n        _id,\n        url,\n        metadata {\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n    }\n  }\n": PAGE_QUERYResult;
+    "\n  *[_type == \"page\" && slug.current == $slug][0]{\n    blocks[]{\n      \n  _type == \"section-header\" => {\n    _type,\n    _key,\n    padding,\n    sectionWidth,\n    stackAlign,\n    tag,\n    title,\n    description,\n  }\n,\n      \n  _type == \"hero-12\" => {\n    _type,\n    _key,\n    backgroundImage{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    tagLine,\n    title,\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    links[]{\n      _key,\n      iconVariant,\n      title,\n      href,\n      target,\n      buttonVariant\n    },\n    techLogos[]{\n      _key,\n      title,\n      link,\n      image{\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      }\n    }\n  }\n,\n      \n  _type == \"hero-13\" => {\n    _type,\n    _key,\n    tag,\n    title,\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    links[]{\n      _key,\n      iconVariant,\n      title,\n      href,\n      target,\n      buttonVariant\n    }\n  }\n,\n      \n  _type == \"hero-25\" => {\n    _type,\n    _key,\n    tagLine,\n    title,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    links[]{\n      _key,\n      iconVariant,\n      title,\n      href,\n      target,\n      buttonVariant\n    },\n    tags\n  }\n,\n      \n  _type == \"faq-1\" => {\n    _type,\n    _key,\n    padding,\n    border,\n    faqs[]->{\n      _id,\n      title,\n      body[]{\n        ...,\n        _type == \"image\" => {\n          ...,\n          asset->{\n            _id,\n            url,\n            mimeType,\n            metadata {\n              lqip,\n              dimensions {\n                width,\n                height\n              }\n            }\n          }\n        }\n      },\n    },\n  }\n,\n      \n  _type == \"logos-1\" => {\n    _type,\n    _key,\n    padding,\n    title,\n    images[]{\n      ...,\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n  }\n,\n      \n  _type == \"feature-1\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-content\" => {\n    _type,\n    _key,\n    padding,\n    iconVariant,\n    tag,\n    title,\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    links,\n  }\n,\n      \n  _type == \"feature-image\" => {\n    _type,\n    _key,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-3\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-3-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    }\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-12\" => {\n    _type,\n    _key,\n    padding,\n    tagline,\n    columns[]{\n      \n  _type == \"feature-12-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-15\" => {\n    _type,\n    _key,\n    padding,\n    gridColumns,\n    columns[]{\n      \n  _type == \"feature-15-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-66\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-66-card\" => {\n    _type,\n    _key,\n    logo{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-117\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-117-card\" => {\n    _type,\n    _key,\n    tag,\n    title,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-157\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-157-card\" => {\n    _type,\n    _key,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-202\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-202-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link\n  }\n,\n    },\n  }\n,\n    },\n    meta_title,\n    meta_description,\n    noindex,\n    ogImage {\n      asset->{\n        _id,\n        url,\n        metadata {\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n    }\n  }\n": PAGE_QUERYResult;
     "*[_type == \"page\" && defined(slug)]{slug}": PAGES_SLUGS_QUERYResult;
     "*[_type == \"post\" && slug.current == $slug][0]{\n    title,\n    slug,\n    image{\n      ...,\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    author->{\n      name,\n      image {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      }\n    },\n    _createdAt,\n    _updatedAt,\n    meta_title,\n    meta_description,\n    noindex,\n    ogImage {\n      asset->{\n        _id,\n        url,\n        metadata {\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n    }\n}": POST_QUERYResult;
     "*[_type == \"post\" && defined(slug)] | order(_createdAt desc){\n    title,\n    slug,\n    excerpt,\n    image{\n      ...,\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    categories[]->{\n      _id,\n      title,\n    },\n}": POSTS_QUERYResult;

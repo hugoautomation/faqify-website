@@ -8,6 +8,19 @@ export default defineType({
   icon: LayoutTemplate,
   fields: [
     defineField({
+      name: "backgroundImage",
+      type: "image",
+      description: "Background image",
+      options: { hotspot: true },
+      fields: [
+        defineField({
+          name: "alt",
+          type: "string",
+          title: "Alternative text",
+        }),
+      ],
+    }),
+    defineField({
       name: "title",
       type: "string",
       validation: (Rule) => Rule.required(),

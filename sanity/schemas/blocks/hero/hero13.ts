@@ -51,7 +51,7 @@ export default defineType({
     },
     prepare({ title, subtitle }) {
       return {
-        title: "Hero 12",
+        title: "Hero 13",
         subtitle: subtitle || title,
       };
     },

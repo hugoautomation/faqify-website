@@ -5,6 +5,21 @@ export const hero12Query = groq`
   _type == "hero-12" => {
     _type,
     _key,
+    backgroundImage{
+      asset->{
+        _id,
+        url,
+        mimeType,
+        metadata {
+          lqip,
+          dimensions {
+            width,
+            height
+          }
+        }
+      },
+      alt
+    },
     tagLine,
     title,
     body[]{

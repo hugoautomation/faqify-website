@@ -13,6 +13,7 @@ type Hero12Props = Extract<
 >;
 
 const Hero12 = ({
+  backgroundImage,
   tagLine,
   title,
   body,
@@ -22,13 +23,17 @@ const Hero12 = ({
 }: Hero12Props) => {
   return (
     <section className="relative overflow-hidden py-32">
-      <div className="absolute inset-x-0 top-0 flex h-full w-full items-center justify-center opacity-100">
-        <img
-          alt="background"
-          src="https://shadcnblocks.com/images/block/patterns/square-alt-grid.svg"
-          className="opacity-90 [mask-image:radial-gradient(75%_75%_at_center,white,transparent)]"
-        />
-      </div>
+      {backgroundImage && (
+        <div className="absolute inset-x-0 top-0 flex h-full w-full items-center justify-center opacity-100">
+          <Image
+            src={urlFor(backgroundImage).url()}
+            alt={backgroundImage.alt || ""}
+            width={1000}
+            height={1000}
+            className="h-full w-full object-cover opacity-90 [mask-image:radial-gradient(75%_75%_at_center,white,transparent)]"
+          />
+        </div>
+      )}
       <div className="relative z-10 container">
         <div className="mx-auto flex max-w-5xl flex-col items-center">
           <div className="flex flex-col items-center gap-6 text-center">

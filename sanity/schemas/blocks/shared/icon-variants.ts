@@ -3,6 +3,7 @@ export const ICON_VARIANTS = [
   { title: "ArrowDownToLine", value: "arrow-down-to-line" },
   { title: "ArrowUpDown", value: "arrow-up-down" },
   { title: "Bell", value: "bell" },
+  { title: "Blocks", value: "blocks" },
   { title: "Building2", value: "building-2" },
   { title: "CircleDot", value: "circle-dot" },
   { title: "Code", value: "code" },
@@ -15,6 +16,7 @@ export const ICON_VARIANTS = [
   { title: "LayoutGrid", value: "layout-grid" },
   { title: "List", value: "list" },
   { title: "MessagesSquare", value: "messages-square" },
+  { title: "MoveRight", value: "move-right" },
   { title: "Play", value: "play" },
   { title: "PlayCircle", value: "play-circle" },
   { title: "Redo", value: "redo" },
@@ -25,6 +27,7 @@ export const ICON_VARIANTS = [
   { title: "Timer", value: "timer" },
   { title: "Users", value: "users" },
   { title: "WandSparkles", value: "wand-sparkles" },
+  { title: "Wrench", value: "wrench" },
   { title: "Zap", value: "zap" },
   { title: "ZoomIn", value: "zoom-in" },
 ];

@@ -2,6 +2,7 @@ import { PAGE_QUERYResult } from "@/sanity.types";
 import SectionHeader from "@/components/blocks/section-header";
 import Hero12 from "@/components/blocks/hero/hero12";
 import Hero13 from "@/components/blocks/hero/hero13";
+import Hero25 from "@/components/blocks/hero/hero25";
 import Logos1 from "@/components/blocks/logos1";
 import FAQ1 from "@/components/blocks/faq/faq1";
 import Feature1 from "@/components/blocks/feature/feature1";
@@ -21,6 +22,7 @@ const componentMap: {
   "section-header": SectionHeader,
   "hero-12": Hero12,
   "hero-13": Hero13,
+  "hero-25": Hero25,
   "faq-1": FAQ1,
   "logos-1": Logos1,
   "feature-1": Feature1,
