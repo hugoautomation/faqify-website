@@ -42,6 +42,7 @@ export const hero12Query = groq`
     },
     links[]{
       _key,
+      iconVariant,
       title,
       href,
       target,

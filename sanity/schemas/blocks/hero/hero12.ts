@@ -33,7 +33,7 @@ export default defineType({
     defineField({
       name: "links",
       type: "array",
-      of: [{ type: "link" }],
+      of: [{ type: "link-icon" }],
       validation: (Rule) => Rule.max(2),
     }),
     defineField({

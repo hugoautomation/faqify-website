@@ -373,6 +373,10 @@
               },
               {
                 "type": "string",
+                "value": "external-link"
+              },
+              {
+                "type": "string",
                 "value": "git-branch"
               },
               {
@@ -776,6 +780,10 @@
                     {
                       "type": "string",
                       "value": "compass"
+                    },
+                    {
+                      "type": "string",
+                      "value": "external-link"
                     },
                     {
                       "type": "string",
@@ -1253,6 +1261,10 @@
               },
               {
                 "type": "string",
+                "value": "external-link"
+              },
+              {
+                "type": "string",
                 "value": "git-branch"
               },
               {
@@ -1455,6 +1467,10 @@
               },
               {
                 "type": "string",
+                "value": "external-link"
+              },
+              {
+                "type": "string",
                 "value": "git-branch"
               },
               {
@@ -1644,6 +1660,10 @@
               {
                 "type": "string",
                 "value": "compass"
+              },
+              {
+                "type": "string",
+                "value": "external-link"
               },
               {
                 "type": "string",
@@ -1991,6 +2011,10 @@
               {
                 "type": "string",
                 "value": "compass"
+              },
+              {
+                "type": "string",
+                "value": "external-link"
               },
               {
                 "type": "string",
@@ -3080,7 +3104,7 @@
               },
               "rest": {
                 "type": "inline",
-                "name": "link"
+                "name": "link-icon"
               }
             }
           },
@@ -3557,6 +3581,10 @@
               {
                 "type": "string",
                 "value": "compass"
+              },
+              {
+                "type": "string",
+                "value": "external-link"
               },
               {
                 "type": "string",

@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { PortableText } from "@portabletext/react";
+import Icon from "@/components/icon";
 import { PAGE_QUERYResult } from "@/sanity.types";
 
 type Hero1Props = Extract<
@@ -70,10 +71,13 @@ const Hero12 = ({
                       target={link.target ? "_blank" : undefined}
                       rel={link.target ? "noopener noreferrer" : undefined}
                     >
-                      {link.title}
-                      {link.target && (
-                        <ExternalLink className="ml-2 h-4 transition-transform group-hover:translate-x-0.5" />
-                      )}
+                      <div className="flex items-center gap-2">
+                        {link.title}
+                        <Icon
+                          iconVariant={link.iconVariant || "none"}
+                          className="ml-2 h-4 transition-transform group-hover:translate-x-0.5"
+                        />
+                      </div>
                     </Link>
                   </Button>
                 ))}
