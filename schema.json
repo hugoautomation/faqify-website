@@ -461,6 +461,10 @@
               },
               {
                 "type": "string",
+                "value": "trophy"
+              },
+              {
+                "type": "string",
                 "value": "timer"
               },
               {
@@ -904,6 +908,10 @@
                     {
                       "type": "string",
                       "value": "star"
+                    },
+                    {
+                      "type": "string",
+                      "value": "trophy"
                     },
                     {
                       "type": "string",
@@ -1421,6 +1429,10 @@
               },
               {
                 "type": "string",
+                "value": "trophy"
+              },
+              {
+                "type": "string",
                 "value": "timer"
               },
               {
@@ -1663,6 +1675,10 @@
               },
               {
                 "type": "string",
+                "value": "trophy"
+              },
+              {
+                "type": "string",
                 "value": "timer"
               },
               {
@@ -1892,6 +1908,10 @@
               {
                 "type": "string",
                 "value": "star"
+              },
+              {
+                "type": "string",
+                "value": "trophy"
               },
               {
                 "type": "string",
@@ -2279,6 +2299,10 @@
               {
                 "type": "string",
                 "value": "star"
+              },
+              {
+                "type": "string",
+                "value": "trophy"
               },
               {
                 "type": "string",
@@ -4269,6 +4293,10 @@
                       },
                       {
                         "type": "string",
+                        "value": "trophy"
+                      },
+                      {
+                        "type": "string",
                         "value": "timer"
                       },
                       {
@@ -4576,6 +4604,10 @@
                       },
                       {
                         "type": "string",
+                        "value": "trophy"
+                      },
+                      {
+                        "type": "string",
                         "value": "timer"
                       },
                       {
@@ -4773,6 +4805,10 @@
                     {
                       "type": "string",
                       "value": "star"
+                    },
+                    {
+                      "type": "string",
+                      "value": "trophy"
                     },
                     {
                       "type": "string",
@@ -6178,6 +6214,10 @@
               {
                 "type": "string",
                 "value": "star"
+              },
+              {
+                "type": "string",
+                "value": "trophy"
               },
               {
                 "type": "string",

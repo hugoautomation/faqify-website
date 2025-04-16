@@ -70,7 +70,7 @@ export type Geopoint = {
 
 export type Feature202Card = {
   _type: "feature-202-card";
-  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "trophy" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
   title?: string;
   description?: string;
   image?: {
@@ -124,7 +124,7 @@ export type Feature157 = {
 export type Feature117Card = {
   _type: "feature-117-card";
   tag?: {
-    iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+    iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "trophy" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
     text?: string;
   };
   title?: string;
@@ -190,7 +190,7 @@ export type Feature66 = {
 
 export type Feature15Card = {
   _type: "feature-15-card";
-  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "trophy" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
   title?: string;
   description?: string;
 };
@@ -206,7 +206,7 @@ export type Feature15 = {
 
 export type Feature12Card = {
   _type: "feature-12-card";
-  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "trophy" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
   title?: string;
   description?: string;
 };
@@ -222,7 +222,7 @@ export type Feature12 = {
 
 export type Feature3Card = {
   _type: "feature-3-card";
-  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "trophy" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
   title?: string;
   description?: string;
   image?: {
@@ -266,7 +266,7 @@ export type FeatureImage = {
 export type FeatureContent = {
   _type: "feature-content";
   padding?: SectionPadding;
-  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "trophy" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
   tag?: {
     text?: string;
     type?: "title" | "badge";
@@ -518,7 +518,7 @@ export type Hero57 = {
     _key: string;
   } & LinkIcon>;
   tags?: Array<{
-    iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+    iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "trophy" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
     title?: string;
     _type: "tag";
     _key: string;
@@ -545,7 +545,7 @@ export type Hero25 = {
     _key: string;
   } & LinkIcon>;
   tags?: Array<{
-    iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+    iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "trophy" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
     title?: string;
     _type: "tag";
     _key: string;
@@ -555,7 +555,7 @@ export type Hero25 = {
 export type Hero13 = {
   _type: "hero-13";
   tag?: {
-    iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+    iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "trophy" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
     title?: string;
   };
   title?: string;
@@ -722,7 +722,7 @@ export type LinkGroup = {
 
 export type LinkIcon = {
   _type: "link-icon";
-  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+  iconVariant?: "none" | "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "circle-dot" | "check-circle-2" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "play" | "play-circle" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "trophy" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
   title?: string;
   description?: string;
   href?: string;
@@ -1229,7 +1229,7 @@ export type PAGE_QUERYResult = {
       _type: "feature-content";
       _key: string;
       padding: SectionPadding | null;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "trophy" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       tag: {
         text?: string;
         type?: "badge" | "title";
@@ -1312,7 +1312,7 @@ export type PAGE_QUERYResult = {
       _type: "feature-117-card";
       _key: string;
       tag: {
-        iconVariant?: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+        iconVariant?: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "trophy" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
         text?: string;
       } | null;
       title: string | null;
@@ -1341,7 +1341,7 @@ export type PAGE_QUERYResult = {
     columns: Array<{
       _type: "feature-12-card";
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "trophy" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       title: string | null;
       description: string | null;
     }> | null;
@@ -1353,7 +1353,7 @@ export type PAGE_QUERYResult = {
     columns: Array<{
       _type: "feature-15-card";
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "trophy" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       title: string | null;
       description: string | null;
     }> | null;
@@ -1388,7 +1388,7 @@ export type PAGE_QUERYResult = {
     columns: Array<{
       _type: "feature-202-card";
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "trophy" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       title: string | null;
       description: string | null;
       image: {
@@ -1415,7 +1415,7 @@ export type PAGE_QUERYResult = {
     columns: Array<{
       _type: "feature-3-card";
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "trophy" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       title: string | null;
       description: string | null;
       image: {
@@ -1557,7 +1557,7 @@ export type PAGE_QUERYResult = {
     } | null;
     links: Array<{
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "trophy" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       title: string | null;
       href: string | null;
       target: boolean | null;
@@ -1587,7 +1587,7 @@ export type PAGE_QUERYResult = {
     _type: "hero-13";
     _key: string;
     tag: {
-      iconVariant?: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+      iconVariant?: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "trophy" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
       title?: string;
     } | null;
     title: string | null;
@@ -1640,7 +1640,7 @@ export type PAGE_QUERYResult = {
     }> | null;
     links: Array<{
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "trophy" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       title: string | null;
       href: string | null;
       target: boolean | null;
@@ -1714,7 +1714,7 @@ export type PAGE_QUERYResult = {
     }> | null;
     links: Array<{
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "trophy" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       title: string | null;
       href: string | null;
       target: boolean | null;
@@ -1746,14 +1746,14 @@ export type PAGE_QUERYResult = {
     } | null;
     links: Array<{
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "trophy" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       title: string | null;
       href: string | null;
       target: boolean | null;
       buttonVariant: ButtonVariant | null;
     }> | null;
     tags: Array<{
-      iconVariant?: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+      iconVariant?: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "trophy" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
       title?: string;
       _type: "tag";
       _key: string;
@@ -1800,7 +1800,7 @@ export type PAGE_QUERYResult = {
     }> | null;
     links: Array<{
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "trophy" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       description: string | null;
       title: string | null;
       href: string | null;
@@ -1808,7 +1808,7 @@ export type PAGE_QUERYResult = {
       buttonVariant: ButtonVariant | null;
     }> | null;
     tags: Array<{
-      iconVariant?: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
+      iconVariant?: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "trophy" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in";
       title?: string;
       _type: "tag";
       _key: string;
@@ -1885,7 +1885,7 @@ export type PAGE_QUERYResult = {
     }> | null;
     links: Array<{
       _key: string;
-      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
+      iconVariant: "arrow-down-to-line" | "arrow-up-down" | "bell" | "blocks" | "building-2" | "check-circle-2" | "circle-dot" | "code" | "compass" | "external-link" | "git-branch" | "globe" | "home" | "infinity" | "landmark" | "layout-grid" | "list" | "lock" | "messages-square" | "move-right" | "none" | "play-circle" | "play" | "redo" | "repeat" | "scaling" | "scan" | "sparkles" | "star" | "timer" | "trophy" | "users" | "wand-sparkles" | "wrench" | "zap" | "zoom-in" | null;
       title: string | null;
       href: string | null;
       target: boolean | null;

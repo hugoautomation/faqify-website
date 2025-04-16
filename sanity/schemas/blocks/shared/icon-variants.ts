@@ -28,6 +28,7 @@ export const ICON_VARIANTS = [
   { title: "Scan", value: "scan" },
   { title: "Sparkles", value: "sparkles" },
   { title: "Star", value: "star" },
+  { title: "Trophy", value: "trophy" },
   { title: "Timer", value: "timer" },
   { title: "Users", value: "users" },
   { title: "WandSparkles", value: "wand-sparkles" },
