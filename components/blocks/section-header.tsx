@@ -1,6 +1,11 @@
+import { Fragment } from "react";
 import { cn } from "@/lib/utils";
 import SectionContainer from "@/components/ui/section-container";
 import Tag from "@/components/ui/tag";
+import { buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
+import { Circle } from "lucide-react";
+import Icon from "@/components/icon";
 import { stegaClean } from "next-sanity";
 
 import { PAGE_QUERYResult } from "@/sanity.types";
@@ -17,6 +22,7 @@ export default function SectionHeader({
   tag,
   title,
   description,
+  links,
 }: SectionHeaderProps) {
   const isNarrow = stegaClean(sectionWidth) === "narrow";
   const align = stegaClean(stackAlign);
@@ -43,27 +49,74 @@ export default function SectionHeader({
       <div
         className={cn(
           align === "center" ? "max-w-4xl text-center mx-auto" : undefined,
-          isNarrow ? "max-w-3xl mx-auto" : undefined
+          isNarrow ? "max-w-3xl mx-auto" : undefined,
+          "flex flex-col gap-4"
         )}
       >
-        <div>
-          {tag && tag.text && (
-            <Tag
-              title={tag.text || ""}
-              type={tag.type as "title" | "badge"}
-              element="p"
-              className="mb-4"
-            />
-          )}
-          {title && title.text && (
-            <Element
-              className={cn(titleSizeClasses, titleWeightClasses, "mb-4")}
-            >
-              {title.text}
-            </Element>
-          )}
-        </div>
+        {tag && tag.text && (
+          <Tag
+            title={tag.text || ""}
+            type={tag.type as "title" | "badge"}
+            element="p"
+          />
+        )}
+        {title && title.text && (
+          <Element className={cn(titleSizeClasses, titleWeightClasses)}>
+            {title.text}
+          </Element>
+        )}
         {description && <p className="text-muted-foreground">{description}</p>}
+        {links && links.length > 0 && (
+          <div
+            className={cn(
+              align === "center" ? "justify-center" : undefined,
+              "flex flex-row flex-wrap items-center gap-4"
+            )}
+          >
+            {links.map((link) => (
+              <Link
+                key={link._key}
+                href={link.href || "#"}
+                target={link.target ? "_blank" : undefined}
+                rel={link.target ? "noopener" : undefined}
+                className={cn(
+                  buttonVariants({
+                    variant: link.buttonVariant || "default",
+                  })
+                )}
+              >
+                <div className="flex items-center gap-2">
+                  {link.title}
+                  <Icon
+                    iconVariant={link.iconVariant || "none"}
+                    strokeWidth={1.5}
+                  />
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+        {links && links.length > 0 && (
+          <div
+            className={cn(
+              align === "center" ? "justify-center" : undefined,
+              "flex flex-wrap items-center gap-3 md:flex-row"
+            )}
+          >
+            {links.map((link, index) => (
+              <Fragment key={link._key}>
+                {link.description && (
+                  <p key={link._key} className="text-sm">
+                    {link.description}
+                  </p>
+                )}
+                {index < links.length - 1 && link.description && (
+                  <Circle className="h-1 w-1" />
+                )}
+              </Fragment>
+            ))}
+          </div>
+        )}
       </div>
     </SectionContainer>
   );

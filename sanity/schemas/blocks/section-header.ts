@@ -89,6 +89,12 @@ export default defineType({
       name: "description",
       type: "text",
     }),
+    defineField({
+      name: "links",
+      type: "array",
+      of: [{ type: "link-icon" }],
+      validation: (Rule) => Rule.max(2),
+    }),
   ],
   preview: {
     select: {

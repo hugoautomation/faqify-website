@@ -93,10 +93,12 @@ const Hero160 = ({
             <div className="flex flex-wrap items-center gap-3 md:flex-row">
               {links.map((link, index) => (
                 <Fragment key={link._key}>
-                  <p key={link._key} className="text-sm text-white/60">
-                    {link.title}
-                  </p>
-                  {index < links.length - 1 && (
+                  {link.description && (
+                    <p key={link._key} className="text-sm text-white/60">
+                      {link.description}
+                    </p>
+                  )}
+                  {index < links.length - 1 && link.description && (
                     <Circle className="h-1 w-1 fill-white/60" />
                   )}
                 </Fragment>

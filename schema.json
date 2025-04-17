@@ -369,11 +369,27 @@
               },
               {
                 "type": "string",
-                "value": "circle-dot"
+                "value": "chevron-right"
+              },
+              {
+                "type": "string",
+                "value": "chevron-left"
+              },
+              {
+                "type": "string",
+                "value": "chevron-down"
+              },
+              {
+                "type": "string",
+                "value": "chevron-up"
               },
               {
                 "type": "string",
                 "value": "check-circle-2"
+              },
+              {
+                "type": "string",
+                "value": "circle-dot"
               },
               {
                 "type": "string",
@@ -833,11 +849,27 @@
                     },
                     {
                       "type": "string",
-                      "value": "circle-dot"
+                      "value": "chevron-right"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-left"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-down"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-up"
                     },
                     {
                       "type": "string",
                       "value": "check-circle-2"
+                    },
+                    {
+                      "type": "string",
+                      "value": "circle-dot"
                     },
                     {
                       "type": "string",
@@ -1372,11 +1404,27 @@
               },
               {
                 "type": "string",
-                "value": "circle-dot"
+                "value": "chevron-right"
+              },
+              {
+                "type": "string",
+                "value": "chevron-left"
+              },
+              {
+                "type": "string",
+                "value": "chevron-down"
+              },
+              {
+                "type": "string",
+                "value": "chevron-up"
               },
               {
                 "type": "string",
                 "value": "check-circle-2"
+              },
+              {
+                "type": "string",
+                "value": "circle-dot"
               },
               {
                 "type": "string",
@@ -1618,11 +1666,27 @@
               },
               {
                 "type": "string",
-                "value": "circle-dot"
+                "value": "chevron-right"
+              },
+              {
+                "type": "string",
+                "value": "chevron-left"
+              },
+              {
+                "type": "string",
+                "value": "chevron-down"
+              },
+              {
+                "type": "string",
+                "value": "chevron-up"
               },
               {
                 "type": "string",
                 "value": "check-circle-2"
+              },
+              {
+                "type": "string",
+                "value": "circle-dot"
               },
               {
                 "type": "string",
@@ -1854,11 +1918,27 @@
               },
               {
                 "type": "string",
-                "value": "circle-dot"
+                "value": "chevron-right"
+              },
+              {
+                "type": "string",
+                "value": "chevron-left"
+              },
+              {
+                "type": "string",
+                "value": "chevron-down"
+              },
+              {
+                "type": "string",
+                "value": "chevron-up"
               },
               {
                 "type": "string",
                 "value": "check-circle-2"
+              },
+              {
+                "type": "string",
+                "value": "circle-dot"
               },
               {
                 "type": "string",
@@ -2259,11 +2339,27 @@
               },
               {
                 "type": "string",
-                "value": "circle-dot"
+                "value": "chevron-right"
+              },
+              {
+                "type": "string",
+                "value": "chevron-left"
+              },
+              {
+                "type": "string",
+                "value": "chevron-down"
+              },
+              {
+                "type": "string",
+                "value": "chevron-up"
               },
               {
                 "type": "string",
                 "value": "check-circle-2"
+              },
+              {
+                "type": "string",
+                "value": "circle-dot"
               },
               {
                 "type": "string",
@@ -3578,11 +3674,27 @@
                     },
                     {
                       "type": "string",
-                      "value": "circle-dot"
+                      "value": "chevron-right"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-left"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-down"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-up"
                     },
                     {
                       "type": "string",
                       "value": "check-circle-2"
+                    },
+                    {
+                      "type": "string",
+                      "value": "circle-dot"
                     },
                     {
                       "type": "string",
@@ -4969,11 +5081,27 @@
                       },
                       {
                         "type": "string",
-                        "value": "circle-dot"
+                        "value": "chevron-right"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-left"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-down"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-up"
                       },
                       {
                         "type": "string",
                         "value": "check-circle-2"
+                      },
+                      {
+                        "type": "string",
+                        "value": "circle-dot"
                       },
                       {
                         "type": "string",
@@ -5287,11 +5415,27 @@
                       },
                       {
                         "type": "string",
-                        "value": "circle-dot"
+                        "value": "chevron-right"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-left"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-down"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-up"
                       },
                       {
                         "type": "string",
                         "value": "check-circle-2"
+                      },
+                      {
+                        "type": "string",
+                        "value": "circle-dot"
                       },
                       {
                         "type": "string",
@@ -5491,11 +5635,27 @@
                     },
                     {
                       "type": "string",
-                      "value": "circle-dot"
+                      "value": "chevron-right"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-left"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-down"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-up"
                     },
                     {
                       "type": "string",
                       "value": "check-circle-2"
+                    },
+                    {
+                      "type": "string",
+                      "value": "circle-dot"
                     },
                     {
                       "type": "string",
@@ -6779,6 +6939,28 @@
             "type": "string"
           },
           "optional": true
+        },
+        "links": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "array",
+            "of": {
+              "type": "object",
+              "attributes": {
+                "_key": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              },
+              "rest": {
+                "type": "inline",
+                "name": "link-icon"
+              }
+            }
+          },
+          "optional": true
         }
       }
     }
@@ -6935,11 +7117,27 @@
               },
               {
                 "type": "string",
-                "value": "circle-dot"
+                "value": "chevron-right"
+              },
+              {
+                "type": "string",
+                "value": "chevron-left"
+              },
+              {
+                "type": "string",
+                "value": "chevron-down"
+              },
+              {
+                "type": "string",
+                "value": "chevron-up"
               },
               {
                 "type": "string",
                 "value": "check-circle-2"
+              },
+              {
+                "type": "string",
+                "value": "circle-dot"
               },
               {
                 "type": "string",
