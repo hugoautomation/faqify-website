@@ -8,7 +8,9 @@ export const CONTACT_QUERY = groq`*[_type == "contact"][0]{
     icon,
     title,
     description,
-    ${linkQuery}
+    link {
+      ${linkQuery}
+    }
   },
   meta_title,
   meta_description,

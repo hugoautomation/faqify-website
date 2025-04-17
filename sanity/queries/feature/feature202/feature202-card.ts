@@ -1,5 +1,5 @@
 import { groq } from "next-sanity";
-
+import { linkQuery } from "../../shared/link";
 // @sanity-typegen-ignore
 export const feature202CardQuery = groq`
   _type == "feature-202-card" => {
@@ -23,6 +23,8 @@ export const feature202CardQuery = groq`
       },
       alt
     },
-    link
+    link {
+      ${linkQuery}
+    }
   }
 `;

@@ -4,6 +4,7 @@ import { LinkButton } from "@/components/ui/link-button";
 import { submitContactForm } from "@/app/actions/contact-form";
 import { fetchSanityContact } from "@/sanity/lib/fetch";
 import { generatePageMetadata } from "@/sanity/lib/metadata";
+import { Link as LinkType } from "@/sanity.types";
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>;
@@ -69,7 +70,7 @@ export default async function ContactPage() {
                 {method.link && (
                   <LinkButton
                     size="sm"
-                    link={method.link}
+                    link={method.link as LinkType}
                     className={
                       method.link.buttonVariant === "link"
                         ? "font-semibold text-base p-0"

@@ -1,4 +1,5 @@
 import { groq } from "next-sanity";
+import { linkQuery } from "../../shared/link";
 
 // @sanity-typegen-ignore
 export const featureContentQuery = groq`
@@ -27,6 +28,8 @@ export const featureContentQuery = groq`
         }
       }
     },
-    links,
+    links[]{
+      ${linkQuery}
+    },
   }
 `;
