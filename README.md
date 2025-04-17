@@ -43,7 +43,6 @@ pnpm install
 - Navigate to API and add CORS origins `http://localhost:3000`
 - Add a new API token with read access (Viewer) and copy the token to .env as `SANITY_API_READ_TOKEN`
 - Copy the project ID and dataset name and paste them to .env as `NEXT_PUBLIC_SANITY_PROJECT_ID`
-- Update `NEXT_PUBLIC_SANITY_DATASET` with `production` if you plan to work with only one dataset, otherwise use `development` and add dataset named `development` at Sanity Manage
 
 #### 3. Run the template locally
 
