@@ -1,4 +1,5 @@
 import { groq } from "next-sanity";
+import { linkQuery } from "../shared/link";
 
 // @sanity-typegen-ignore
 export const hero85Query = groq`
@@ -44,12 +45,7 @@ export const hero85Query = groq`
       alt
     },
     links[]{
-      _key,
-      iconVariant,
-      title,
-      href,
-      target,
-      buttonVariant
-    }
+      ${linkQuery}
+    },
   }
 `;

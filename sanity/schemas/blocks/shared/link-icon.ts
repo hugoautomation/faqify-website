@@ -16,6 +16,19 @@ export default defineType({
       initialValue: "none",
     }),
     defineField({
+      name: "isExternal",
+      type: "boolean",
+      title: "Is External",
+      initialValue: false,
+    }),
+    defineField({
+      name: "internalLink",
+      type: "reference",
+      title: "Internal Link",
+      to: [{ type: "page" }],
+      hidden: ({ parent }) => parent?.isExternal,
+    }),
+    defineField({
       name: "title",
       type: "string",
     }),
@@ -28,11 +41,13 @@ export default defineType({
       name: "href",
       title: "href",
       type: "string",
+      hidden: ({ parent }) => !parent?.isExternal,
     }),
     defineField({
       name: "target",
       type: "boolean",
       title: "Open in new tab",
+      hidden: ({ parent }) => !parent?.isExternal,
     }),
     defineField({
       name: "buttonVariant",

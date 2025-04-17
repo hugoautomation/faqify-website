@@ -1,5 +1,5 @@
 import { groq } from "next-sanity";
-
+import { linkQuery } from "../shared/link";
 // @sanity-typegen-ignore
 export const hero12Query = groq`
   _type == "hero-12" => {
@@ -56,12 +56,7 @@ export const hero12Query = groq`
       alt
     },
     links[]{
-      _key,
-      iconVariant,
-      title,
-      href,
-      target,
-      buttonVariant
+      ${linkQuery}
     },
     techLogos[]{
       _key,

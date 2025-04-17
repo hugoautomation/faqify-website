@@ -1,4 +1,5 @@
 import { groq } from "next-sanity";
+import { linkQuery } from "../shared/link";
 
 // @sanity-typegen-ignore
 export const hero57Query = groq`
@@ -8,28 +9,7 @@ export const hero57Query = groq`
     title,
     body,
     links[]{
-      asset->{
-        _id,
-        url,
-        mimeType,
-        metadata {
-          lqip,
-          dimensions {
-            width,
-            height
-          }
-        }
-      },
-      alt
-    },
-    links[]{
-      _key,
-      iconVariant,
-      description,
-      title,
-      href,
-      target,
-      buttonVariant
+      ${linkQuery}
     },
     tags
   }

@@ -24,7 +24,7 @@ export function LinkButton({
         <div>{link.title}</div>
       ) : (
         <Link
-          href={link.href as string}
+          href={link.href || "#"}
           title={title}
           target={link.target ? "_blank" : undefined}
           rel={link.target ? "noopener" : undefined}

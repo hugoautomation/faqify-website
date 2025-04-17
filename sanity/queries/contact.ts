@@ -1,5 +1,5 @@
 import { groq } from "next-sanity";
-
+import { linkQuery } from "./shared/link";
 export const CONTACT_QUERY = groq`*[_type == "contact"][0]{
   tagline,
   title,
@@ -8,7 +8,7 @@ export const CONTACT_QUERY = groq`*[_type == "contact"][0]{
     icon,
     title,
     description,
-    link
+    ${linkQuery}
   },
   meta_title,
   meta_description,

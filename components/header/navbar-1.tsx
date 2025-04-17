@@ -167,7 +167,9 @@ export default async function Navbar1({ className }: Navbar1Props) {
             <div className="flex items-center">
               <NavigationMenu>
                 <NavigationMenuList>
-                  {navigationItems?.map((item) => renderMenuItem(item))}
+                  {navigationItems?.map((item) =>
+                    renderMenuItem(item as NavigationItem)
+                  )}
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
@@ -260,7 +262,9 @@ export default async function Navbar1({ className }: Navbar1Props) {
                     collapsible
                     className="flex w-full flex-col gap-4"
                   >
-                    {navigationItems?.map((item) => renderMobileMenuItem(item))}
+                    {navigationItems?.map((item) =>
+                      renderMobileMenuItem(item as NavigationItem)
+                    )}
                   </Accordion>
                   <div className="flex flex-col gap-3">
                     {actionItems?.map((item) => (
