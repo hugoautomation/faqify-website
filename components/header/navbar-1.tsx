@@ -73,18 +73,17 @@ export default async function Navbar1({ className }: Navbar1Props) {
 
     return (
       <NavigationMenuItem key={item.title}>
-        <Link href={item.href || "#"} legacyBehavior passHref>
-          <NavigationMenuLink
-            target={item.target ? "_blank" : undefined}
-            className={cn(
-              variant === "ghost"
-                ? "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-                : buttonVariants({ variant: variant, size: "default" })
-            )}
-          >
-            {item.title}
-          </NavigationMenuLink>
-        </Link>
+        <NavigationMenuLink
+          asChild
+          target={item.target ? "_blank" : undefined}
+          className={cn(
+            variant === "ghost"
+              ? "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+              : buttonVariants({ variant: variant, size: "default" })
+          )}
+        >
+          <Link href={item.href || "#"}>{item.title}</Link>
+        </NavigationMenuLink>
       </NavigationMenuItem>
     );
   };
