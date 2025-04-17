@@ -1,10 +1,11 @@
-# Schema UI: Template 1
+# Sanityblocks
 
-Introducing Schema UI Template 1 - a new Sanity Next.js Template that provides production-ready React components with pre-built Sanity schemas and GROQ queries.
+Introducing Sanityblocks - a new Sanity Next.js Template that provides production-ready React components with pre-built Sanity schemas and GROQ queries.
 
 Includes:
 
 - Page Builder;
+- 100+ blocks;
 - Contact Form;
 - Dynamic Navigation;
 - Site Settings;
@@ -12,13 +13,11 @@ Includes:
 - Fully Integrated Sanity Typegen;
 - Cursor Rules to generate GROQ queries, schemas, types and components.
 
-![Screenshot of Sanity Studio using Presentation Tool to do Visual Editing](https://cdn.sanity.io/images/or25v08j/production/e0fddc3a1f756a88e44c177d183f18970de89ff1-1366x693.png)
+![Screenshot of Sanity Studio using Presentation Tool to do Visual Editing](https://cdn.sanity.io/images/qsj7puih/production/1169bd414a1d91b5b7232aad6735b0a86de4288a-1366x692.png)
 
 [![Next.js][next-js]][next-js-url] [![Sanity][sanity]][sanity-url] [![React][react]][react-url] [![Typescript][typescript]][typescript-url] [![Tailwind][tailwind]][tailwind-url] [![Shadcn][shadcn]][shadcn-url]
 
-[Docs](https://schemaui.com/docs) | [Components](https://schemaui.com/docs/components) | [Demo](https://template1.schemaui.com) | [Templates](https://schemaui.com/templates)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fserge-0v%2Fschemaui-template-1&env=NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_SITE_ENV,NEXT_PUBLIC_SANITY_API_VERSION,NEXT_PUBLIC_SANITY_PROJECT_ID,NEXT_PUBLIC_SANITY_DATASET,SANITY_API_READ_TOKEN,RESEND_API_KEY,RESEND_TO_EMAIL,RESEND_FROM_EMAIL&demo-title=Schema%20UI%20Template%201&demo-description=Schema%20UI%20Template%201%20by%20Schema%20UI&demo-url=https%3A%2F%2Ftemplate1.schemaui.com)
+[Docs](https://docs.shadcnblocks.com/) | [Components](https://schemaui.com/docs/components) | [Demo](https://sanityblocks.schemaui.com/) | [Templates](https://schemaui.com/templates)
 
 ## Getting Started
 
@@ -26,24 +25,27 @@ Includes:
 
 #### 1. Initialize template with Sanity CLI
 
-Run the command in your Terminal to initialize this template on your local computer:
+Run the command in your Terminal to clone the repository:
 
 ```bash
-npm create sanity@latest -- --template serge-0v/schemaui-template-1
+git clone https://github.com/serge-0v/sanityblocks.git
 ```
 
-See the documentation if you are [having issues with the CLI](https://www.sanity.io/help/cli-errors).
+#### 2. Install dependencies
 
-This command will:
+```bash
+pnpm install
+```
 
-- Create a new Sanity project
-- Add API Read Token
-- Configure CORS origin for http://localhost:3000
-- Set up environment variables
-- Clone the repository
-- Install dependencies
+#### 3. Create a new Sanity project
 
-#### 2. Run the template locally
+- Navigate to [Sanity](https://www.sanity.io/manage) and create a new project.
+- Navigate to API and add CORS origins `http://localhost:3000`
+- Add a new API token with read access (Viewer) and copy the token to .env as `SANITY_API_READ_TOKEN`
+- Copy the project ID and dataset name and paste them to .env as `NEXT_PUBLIC_SANITY_PROJECT_ID`
+- Update `NEXT_PUBLIC_SANITY_DATASET` with `production` if you plan to work with only one dataset, otherwise use `development` and add dataset named `development` at Sanity Manage
+
+#### 3. Run the template locally
 
 Start the development servers:
 
@@ -51,7 +53,7 @@ Start the development servers:
 pnpm dev
 ```
 
-#### 3. Open the app and sign in to the Studio
+#### 4. Open the app and sign in to the Studio
 
 - Open the Next.js app at [http://localhost:3000](http://localhost:3000)
 - Open the Studio running locally in your browser on [http://localhost:3000/studio](http://localhost:3000/studio). You should now see a screen prompting you to log in to the Studio. Use the same service (Google, GitHub, or email) that you used when you logged in to the CLI.
