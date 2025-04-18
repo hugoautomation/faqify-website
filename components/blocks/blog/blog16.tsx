@@ -38,7 +38,7 @@ export default function Blog16({ padding, posts }: Blog16) {
                   </div>
                 </div>
                 <div className="col-span-2 max-w-xl">
-                  <span className="mb-2 text-sm font-medium text-muted-foreground">
+                  <span className="mb-2 flex items-center gap-2 text-sm font-medium text-muted-foreground">
                     <PostDate date={post._createdAt} />
                     <span className="inline lg:hidden">
                       {" "}
