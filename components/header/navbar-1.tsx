@@ -1,4 +1,3 @@
-import { Book } from "lucide-react";
 import { getNavigationItems } from "@/lib/getNavigationItems";
 import { fetchSanitySettings } from "@/sanity/lib/fetch";
 import { urlFor } from "@/sanity/lib/image";
@@ -12,7 +11,6 @@ import type {
   LinkIcon as SanityLinkIcon,
 } from "@/sanity.types";
 import { cn } from "@/lib/utils";
-import { stegaClean } from "next-sanity";
 
 import {
   Accordion,
@@ -69,17 +67,15 @@ export default async function Navbar1({ className }: Navbar1Props) {
       );
     }
 
-    const variant = stegaClean(item.buttonVariant);
-
     return (
       <NavigationMenuItem key={item.title}>
         <NavigationMenuLink
           asChild
           target={item.target ? "_blank" : undefined}
           className={cn(
-            variant === "ghost"
+            item.buttonVariant === "ghost"
               ? "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-              : buttonVariants({ variant: variant, size: "default" })
+              : buttonVariants({ variant: item.buttonVariant, size: "default" })
           )}
         >
           <Link href={item.href || "#"}>{item.title}</Link>
@@ -110,17 +106,15 @@ export default async function Navbar1({ className }: Navbar1Props) {
       );
     }
 
-    const variant = stegaClean(item.buttonVariant);
-
     return (
       <Link
         key={item.title}
         href={item.href || "#"}
         target={item.target ? "_blank" : undefined}
         className={cn(
-          variant === "ghost"
+          item.buttonVariant === "ghost"
             ? "text-md font-semibold hover:text-accent-foreground"
-            : buttonVariants({ variant: variant, size: "default" })
+            : buttonVariants({ variant: item.buttonVariant, size: "default" })
         )}
       >
         {item.title}

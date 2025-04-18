@@ -10,5 +10,23 @@ export const client = createClient({
   perspective: "published",
   stega: {
     studioUrl: process.env.NEXT_PUBLIC_SITE_URL + "/studio",
+    filter: (props) => {
+      // Disable stega for specific field names that commonly need cleaning
+      const fieldsToDisableStega = [
+        "buttonVariant",
+        "stackAlign",
+        "sectionWidth",
+        "size",
+        "weight",
+        "element",
+        "tag",
+        "iconVariant",
+        "gridColumns",
+      ];
+      if (fieldsToDisableStega.includes(props.sourcePath.at(-1) as string)) {
+        return false;
+      }
+      return props.filterDefault(props);
+    },
   },
 });

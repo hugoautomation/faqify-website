@@ -41,7 +41,6 @@ import {
   LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { stegaClean } from "next-sanity";
 
 type IconProps = {
   className?: string;
@@ -99,13 +98,11 @@ export default function Icon({
   strokeWidth = 1,
   size = 4,
 }: IconProps) {
-  const cleanIconVariant = stegaClean(iconVariant);
-
-  if (cleanIconVariant === "none" || !iconComponents[cleanIconVariant]) {
+  if (iconVariant === "none" || !iconComponents[iconVariant]) {
     return null;
   }
 
-  const IconComponent = iconComponents[cleanIconVariant];
+  const IconComponent = iconComponents[iconVariant];
   return (
     <IconComponent
       className={cn(`size-${size}`, className)}

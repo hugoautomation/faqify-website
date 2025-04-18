@@ -2,7 +2,6 @@ import SectionContainer from "@/components/ui/section-container";
 import { PAGE_QUERYResult } from "@/sanity.types";
 import Feature15Card from "./feature15-card";
 import { cn } from "@/lib/utils";
-import { stegaClean } from "next-sanity";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 type Feature15 = Extract<Block, { _type: "feature-15" }>;
@@ -21,16 +20,14 @@ export default function Feature15({
   columns,
   gridColumns,
 }: Feature15) {
-  const gridColumnsClass = stegaClean(gridColumns);
-
   return (
     <SectionContainer padding={padding}>
       {columns && columns?.length > 0 && (
         <div
           className={cn(
             "mx-auto mt-20 grid gap-6",
-            gridColumnsClass === "grid-cols-2" ? "max-w-5xl" : undefined,
-            `lg:${gridColumnsClass}`
+            gridColumns === "grid-cols-2" ? "max-w-5xl" : undefined,
+            `lg:${gridColumns}`
           )}
         >
           {columns?.map((column) => {

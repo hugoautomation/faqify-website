@@ -163,12 +163,11 @@ defineField({
 - Use TypeScript to ensure type safety between schema and component
 - Extract types from the Sanity query results
 - Implement a `componentMap` to dynamically render child components
-- Use `stegaClean` from `next-sanity` to clean values from Sanity
+- Add design value to stega filter in sanity/lib/client so draft preview works as expected, for example colorVariant
 
 ```tsx
 // Example React component for a parent block
 // components/blocks/parent-component.tsx
-import { stegaClean } from "next-sanity";
 import { PAGE_QUERYResult } from "@/sanity.types";
 import SectionContainer from "@/components/blocks/section-container";
 import ChildComponent1 from "./child-component-1";
@@ -192,10 +191,9 @@ export default function ParentBlock({
   colorVariant,
   children,
 }: ParentBlock) {
-  const color = stegaClean(colorVariant);
 
   return (
-    <SectionContainer color={color} padding={padding}>
+    <SectionContainer color={colorVariant} padding={padding}>
       {children && children?.length > 0 && (
         <div className="grid grid-cols-1 gap-6">
           {children.map((child) => {

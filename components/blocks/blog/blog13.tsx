@@ -1,7 +1,6 @@
 import SectionContainer from "@/components/ui/section-container";
 import { PAGE_QUERYResult } from "@/sanity.types";
 import { cn } from "@/lib/utils";
-import { stegaClean } from "next-sanity";
 import { Badge } from "@/components/ui/badge";
 import { Calendar } from "lucide-react";
 import { ChevronRight } from "lucide-react";
@@ -14,16 +13,14 @@ type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 type Blog13 = Extract<Block, { _type: "blog-13" }>;
 
 export default function Blog13({ padding, posts, gridColumns }: Blog13) {
-  const gridColumnsClass = stegaClean(gridColumns);
-
   return (
     <SectionContainer padding={padding}>
       {posts && posts?.length > 0 && (
         <div
           className={cn(
             "mx-auto grid gap-6",
-            gridColumnsClass === "grid-cols-2" ? "max-w-5xl" : undefined,
-            `lg:${gridColumnsClass}`
+            gridColumns === "grid-cols-2" ? "max-w-5xl" : undefined,
+            `lg:${gridColumns}`
           )}
         >
           {posts.map((post) => (

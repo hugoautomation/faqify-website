@@ -6,7 +6,6 @@ import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { Circle } from "lucide-react";
 import Icon from "@/components/icon";
-import { stegaClean } from "next-sanity";
 
 import { PAGE_QUERYResult } from "@/sanity.types";
 
@@ -24,12 +23,11 @@ export default function SectionHeader({
   description,
   links,
 }: SectionHeaderProps) {
-  const isNarrow = stegaClean(sectionWidth) === "narrow";
-  const align = stegaClean(stackAlign);
-  const titleSize = stegaClean(title?.size) || "default";
-  const titleWeight = stegaClean(title?.weight) || "bold";
-
-  const Element = stegaClean(title?.element) || "h2";
+  const isNarrow = sectionWidth === "narrow";
+  const align = stackAlign;
+  const titleSize = title?.size || "default";
+  const titleWeight = title?.weight || "bold";
+  const Element = title?.element || "h2";
 
   const titleSizeClasses = {
     small: "text-2xl md:text-3xl",

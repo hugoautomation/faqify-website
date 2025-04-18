@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-import { stegaClean } from "next-sanity";
 import PortableTextRenderer from "@/components/portable-text-renderer";
 
 interface Footer2Props {
@@ -63,16 +62,18 @@ export default async function Footer2({ className }: Footer2Props) {
                   <h3 className="text-base mb-4 font-bold">{section.title}</h3>
                   <ul className="space-y-4 text-muted-foreground">
                     {section.links?.map((link) => {
-                      const variant = stegaClean(link.buttonVariant);
                       return (
                         <li key={link.title}>
                           <Link
                             href={link.href || "#"}
                             target={link.target ? "_blank" : undefined}
                             className={cn(
-                              variant === "ghost"
+                              link.buttonVariant === "ghost"
                                 ? "font-medium hover:text-primary"
-                                : buttonVariants({ variant, size: "sm" })
+                                : buttonVariants({
+                                    variant: link.buttonVariant,
+                                    size: "sm",
+                                  })
                             )}
                           >
                             {link.title}
@@ -97,16 +98,18 @@ export default async function Footer2({ className }: Footer2Props) {
             <ul className="flex gap-4">
               {bottomNavItems?.map((link) => {
                 if (link._type !== "link") return null;
-                const variant = stegaClean(link.buttonVariant);
                 return (
                   <li key={link.title}>
                     <Link
                       href={link.href || "#"}
                       target={link.target ? "_blank" : undefined}
                       className={cn(
-                        variant === "ghost"
+                        link.buttonVariant === "ghost"
                           ? "underline hover:text-primary"
-                          : buttonVariants({ variant, size: "sm" })
+                          : buttonVariants({
+                              variant: link.buttonVariant,
+                              size: "sm",
+                            })
                       )}
                     >
                       {link.title}

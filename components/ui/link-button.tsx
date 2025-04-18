@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Link as LinkType } from "@/sanity.types";
-import { stegaClean } from "next-sanity";
 
 export function LinkButton({
   className,
@@ -16,10 +15,13 @@ export function LinkButton({
   size?: "default" | "sm" | "lg" | "icon";
   asDiv?: boolean;
 }) {
-  const buttonVariant = stegaClean(link?.buttonVariant);
-
   return (
-    <Button asChild variant={buttonVariant} className={className} size={size}>
+    <Button
+      asChild
+      variant={link?.buttonVariant}
+      className={className}
+      size={size}
+    >
       {asDiv ? (
         <div>{link.title}</div>
       ) : (
