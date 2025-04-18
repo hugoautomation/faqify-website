@@ -3,10 +3,10 @@ import { FileText } from "lucide-react";
 import { COLS_VARIANTS } from "@/sanity/schemas/blocks/shared/col-variants";
 
 export default defineType({
-  name: "blog-13",
+  name: "blog-4",
   type: "object",
-  title: "Blog 13",
-  description: "Blog 13: Blog posts with grid layout split into 2/3 columns.",
+  title: "Blog 4",
+  description: "Blog 4: Blog posts with grid layout split into 2/3 columns.",
   icon: FileText,
   fields: [
     defineField({
@@ -41,7 +41,7 @@ export default defineType({
     },
     prepare({ title }) {
       return {
-        title: "Blog 13",
+        title: "Blog 4",
         subtitle: title || "No Title",
       };
     },

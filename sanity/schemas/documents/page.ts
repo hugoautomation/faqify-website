@@ -57,6 +57,7 @@ export default defineType({
         { type: "feature-117" },
         { type: "feature-157" },
         { type: "feature-202" },
+        { type: "blog-4" },
         { type: "blog-13" },
       ],
       options: {
@@ -101,7 +102,7 @@ export default defineType({
             },
             {
               name: "blog",
-              of: ["blog-13"],
+              of: ["blog-4", "blog-13"],
             },
           ],
           views: [

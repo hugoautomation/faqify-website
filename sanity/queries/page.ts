@@ -17,6 +17,7 @@ import { feature66Query } from "./feature/feature66";
 import { feature117Query } from "./feature/feature117";
 import { feature157Query } from "./feature/feature157";
 import { feature202Query } from "./feature/feature202";
+import { blog4Query } from "./blog/blog4";
 import { blog13Query } from "./blog/blog13";
 
 export const PAGE_QUERY = groq`
@@ -40,6 +41,7 @@ export const PAGE_QUERY = groq`
       ${feature117Query},
       ${feature157Query},
       ${feature202Query},
+      ${blog4Query},
       ${blog13Query},
     },
     meta_title,

@@ -17,6 +17,7 @@ import Feature66 from "@/components/blocks/feature/feature66";
 import Feature117 from "@/components/blocks/feature/feature117";
 import Feature157 from "@/components/blocks/feature/feature157";
 import Feature202 from "@/components/blocks/feature/feature202";
+import Blog4 from "@/components/blocks/blog/blog4";
 import Blog13 from "@/components/blocks/blog/blog13";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
@@ -42,6 +43,7 @@ const componentMap: {
   "feature-117": Feature117,
   "feature-157": Feature157,
   "feature-202": Feature202,
+  "blog-4": Blog4,
   "blog-13": Blog13,
 };
 

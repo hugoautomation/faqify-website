@@ -53,7 +53,8 @@ import feature157Card from "./schemas/blocks/feature/feature157/feature157-card"
 // Feature 202
 import feature202 from "./schemas/blocks/feature/feature202";
 import feature202Card from "./schemas/blocks/feature/feature202/feature202-card";
-// Blog 13
+// Blog
+import blog4 from "./schemas/blocks/blog/blog-4";
 import blog13 from "./schemas/blocks/blog/blog-13";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -111,7 +112,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     // Feature 202
     feature202,
     feature202Card,
-    // Blog 13
+    // Blog
+    blog4,
     blog13,
   ],
 };
