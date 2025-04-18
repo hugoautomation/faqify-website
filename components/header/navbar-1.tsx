@@ -36,13 +36,17 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
-type NavigationItem = SanityLink | SanityLinkGroup | SanityLinkIcon;
+type NavigationItem = (SanityLink | SanityLinkGroup | SanityLinkIcon) & {
+  _key: string;
+};
 
 interface Navbar1Props {
   className?: string;
 }
 
-const isLinkGroup = (item: NavigationItem): item is SanityLinkGroup => {
+const isLinkGroup = (
+  item: NavigationItem
+): item is SanityLinkGroup & { _key: string } => {
   return item._type === "link-group";
 };
 
@@ -54,11 +58,11 @@ export default async function Navbar1({ className }: Navbar1Props) {
   const renderMenuItem = (item: NavigationItem) => {
     if (isLinkGroup(item)) {
       return (
-        <NavigationMenuItem key={item.title}>
+        <NavigationMenuItem key={item._key}>
           <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
           <NavigationMenuContent className="bg-popover text-popover-foreground min-w-[320px]">
             {item.links?.map((subItem) => (
-              <NavigationMenuLink asChild key={subItem.title}>
+              <NavigationMenuLink asChild key={subItem._key}>
                 <SubMenuLink item={subItem} />
               </NavigationMenuLink>
             ))}
@@ -68,7 +72,7 @@ export default async function Navbar1({ className }: Navbar1Props) {
     }
 
     return (
-      <NavigationMenuItem key={item.title}>
+      <NavigationMenuItem key={item._key}>
         <NavigationMenuLink
           asChild
           target={item.target ? "_blank" : undefined}
@@ -88,7 +92,7 @@ export default async function Navbar1({ className }: Navbar1Props) {
     if (isLinkGroup(item)) {
       return (
         <AccordionItem
-          key={item.title}
+          key={item._key}
           value={item.title || ""}
           className="border-b-0"
         >
@@ -98,7 +102,7 @@ export default async function Navbar1({ className }: Navbar1Props) {
           <AccordionContent className="mt-2">
             <div className="flex flex-col gap-4">
               {item.links?.map((subItem) => (
-                <SubMenuLink key={subItem.title} item={subItem} />
+                <SubMenuLink key={subItem._key} item={subItem} />
               ))}
             </div>
           </AccordionContent>
@@ -108,7 +112,7 @@ export default async function Navbar1({ className }: Navbar1Props) {
 
     return (
       <Link
-        key={item.title}
+        key={item._key}
         href={item.href || "#"}
         target={item.target ? "_blank" : undefined}
         className={cn(
@@ -169,11 +173,7 @@ export default async function Navbar1({ className }: Navbar1Props) {
           </div>
           <div className="flex gap-2">
             {actionItems?.map((item) => (
-              <LinkButton
-                key={item.title}
-                size="sm"
-                link={item as SanityLink}
-              />
+              <LinkButton key={item._key} size="sm" link={item as SanityLink} />
             ))}
           </div>
         </nav>
@@ -261,7 +261,7 @@ export default async function Navbar1({ className }: Navbar1Props) {
                   </Accordion>
                   <div className="flex flex-col gap-3">
                     {actionItems?.map((item) => (
-                      <LinkButton key={item.title} link={item as SanityLink} />
+                      <LinkButton key={item._key} link={item as SanityLink} />
                     ))}
                   </div>
                 </div>

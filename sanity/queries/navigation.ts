@@ -7,7 +7,12 @@ export const NAVIGATION_QUERY = groq`
     _key,
     title,
     links[]{
-      ${linkQuery}
+      ${linkQuery},
+      _type == "link-group" => {
+        links[]{
+          ${linkQuery}
+        }
+      }
     }
   }
 `;

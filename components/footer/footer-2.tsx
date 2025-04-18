@@ -63,7 +63,7 @@ export default async function Footer2({ className }: Footer2Props) {
                   <ul className="space-y-4 text-muted-foreground">
                     {section.links?.map((link) => {
                       return (
-                        <li key={link.title}>
+                        <li key={link._key}>
                           <Link
                             href={link.href || "#"}
                             target={link.target ? "_blank" : undefined}
@@ -99,7 +99,7 @@ export default async function Footer2({ className }: Footer2Props) {
               {bottomNavItems?.map((link) => {
                 if (link._type !== "link") return null;
                 return (
-                  <li key={link.title}>
+                  <li key={link._key}>
                     <Link
                       href={link.href || "#"}
                       target={link.target ? "_blank" : undefined}

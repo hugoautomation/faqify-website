@@ -3,6 +3,7 @@ export const linkQuery = `
     ...,
     "href": select(
       isExternal => href,
+      @.internalLink->slug.current == "index" => "/",
       @.internalLink->slug.current
     )
 `;
