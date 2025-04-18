@@ -1,5 +1,7 @@
 "use client";
-import { Button } from "@/components/ui/button";
+
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 import { useDraftModeEnvironment } from "next-sanity/hooks";
 
@@ -12,10 +14,16 @@ export function DisableDraftMode() {
   }
 
   return (
-    <Button asChild>
-      <a href="/api/draft-mode/disable" className="fixed bottom-4 right-4">
-        Disable Draft Mode
-      </a>
-    </Button>
+    <a
+      className={cn(
+        buttonVariants({
+          size: "lg",
+        }),
+        "fixed bottom-4 right-4"
+      )}
+      href="/api/draft-mode/disable"
+    >
+      Disable Draft Mode
+    </a>
   );
 }

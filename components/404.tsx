@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { TextRoll } from "@/components/ui/text-roll";
 
@@ -10,9 +11,16 @@ export default function Custom404() {
           <TextRoll>Page not found</TextRoll>
         </h1>
         <div className="mt-5 text-center">
-          <Button size="lg" asChild>
-            <Link href="/">Back to Home page</Link>
-          </Button>
+          <Link
+            href="/"
+            className={cn(
+              buttonVariants({
+                size: "lg",
+              })
+            )}
+          >
+            Back to Home page
+          </Link>
         </div>
       </div>
     </div>

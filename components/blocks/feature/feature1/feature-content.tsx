@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import PortableTextRenderer from "@/components/portable-text-renderer";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import Tag from "@/components/ui/tag";
 import Icon from "@/components/icon";
@@ -59,20 +59,20 @@ export default function FeatureContent({
         {links && links.length > 0 && (
           <div className="mt-8 flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
             {links.map((link, index) => (
-              <Button
+              <Link
                 key={link._key || index}
-                variant={link.buttonVariant || "default"}
-                size="lg"
-                asChild
+                className={cn(
+                  buttonVariants({
+                    variant: link.buttonVariant || "default",
+                    size: "lg",
+                  })
+                )}
+                href={link.href || "#"}
+                target={link.target ? "_blank" : undefined}
+                rel={link.target ? "noopener" : undefined}
               >
-                <Link
-                  href={link.href || "#"}
-                  target={link.target ? "_blank" : undefined}
-                  rel={link.target ? "noopener" : undefined}
-                >
-                  {link.title}
-                </Link>
-              </Button>
+                {link.title}
+              </Link>
             ))}
           </div>
         )}
