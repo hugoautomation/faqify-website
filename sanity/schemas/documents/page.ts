@@ -57,18 +57,17 @@ export default defineType({
         { type: "feature-117" },
         { type: "feature-157" },
         { type: "feature-202" },
+        { type: "blog-13" },
       ],
       options: {
         insertMenu: {
           groups: [
             {
               name: "section-header",
-              title: "Section Header",
               of: ["section-header"],
             },
             {
               name: "hero",
-              title: "Hero Components",
               of: [
                 "hero-12",
                 "hero-13",
@@ -81,17 +80,14 @@ export default defineType({
             },
             {
               name: "faq",
-              title: "FAQ Components",
               of: ["faq-1"],
             },
             {
               name: "logos",
-              title: "Logos Components",
               of: ["logos-1"],
             },
             {
               name: "feature",
-              title: "Feature Components",
               of: [
                 "feature-1",
                 "feature-3",
@@ -102,6 +98,10 @@ export default defineType({
                 "feature-157",
                 "feature-202",
               ],
+            },
+            {
+              name: "blog",
+              of: ["blog-13"],
             },
           ],
           views: [
