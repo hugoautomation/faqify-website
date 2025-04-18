@@ -13,7 +13,7 @@ type Hero25Props = Extract<
 
 const Hero25 = ({ tagLine, title, image, links, tags }: Hero25Props) => {
   return (
-    <section className="py-20 md:py-28 lg:py-36">
+    <section className="py-20 md:py-28">
       <div className="container">
         <div className="mx-auto max-w-5xl text-center">
           {image && (

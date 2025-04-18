@@ -24,7 +24,7 @@ type Hero85Props = Extract<
 
 const Hero85 = ({ tag, title, body, images, links }: Hero85Props) => {
   return (
-    <section className="py-32">
+    <section className="py-20">
       <div className="container">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div className="mx-auto">
