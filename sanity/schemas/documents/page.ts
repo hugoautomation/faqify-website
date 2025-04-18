@@ -59,6 +59,7 @@ export default defineType({
         { type: "feature-202" },
         { type: "blog-4" },
         { type: "blog-13" },
+        { type: "blog-16" },
       ],
       options: {
         insertMenu: {
@@ -102,7 +103,7 @@ export default defineType({
             },
             {
               name: "blog",
-              of: ["blog-4", "blog-13"],
+              of: ["blog-4", "blog-13", "blog-16"],
             },
           ],
           views: [

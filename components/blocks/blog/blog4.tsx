@@ -1,13 +1,11 @@
 import SectionContainer from "@/components/ui/section-container";
-import { PAGE_QUERYResult } from "@/sanity.types";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
-import { Calendar } from "lucide-react";
-import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import PostDate from "@/components/post-date";
 import Link from "next/link";
+import { PAGE_QUERYResult } from "@/sanity.types";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];

@@ -19,6 +19,7 @@ import Feature157 from "@/components/blocks/feature/feature157";
 import Feature202 from "@/components/blocks/feature/feature202";
 import Blog4 from "@/components/blocks/blog/blog4";
 import Blog13 from "@/components/blocks/blog/blog13";
+import Blog16 from "@/components/blocks/blog/blog16";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 
@@ -45,6 +46,7 @@ const componentMap: {
   "feature-202": Feature202,
   "blog-4": Blog4,
   "blog-13": Blog13,
+  "blog-16": Blog16,
 };
 
 export default function Blocks({ blocks }: { blocks: Block[] }) {
