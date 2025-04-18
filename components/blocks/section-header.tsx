@@ -29,7 +29,7 @@ export default function SectionHeader({
   const titleSize = stegaClean(title?.size) || "default";
   const titleWeight = stegaClean(title?.weight) || "bold";
 
-  const Element = title?.element || "h2";
+  const Element = stegaClean(title?.element) || "h2";
 
   const titleSizeClasses = {
     small: "text-2xl md:text-3xl",
