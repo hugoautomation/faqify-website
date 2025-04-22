@@ -3,6 +3,11 @@ export const STACK_ALIGN = [
   { title: "Center", value: "center" },
 ];
 
+export const DIRECTION_VARIANTS = [
+  { title: "Column", value: "column" },
+  { title: "Row", value: "row" },
+];
+
 export const SECTION_WIDTH = [
   { title: "Default", value: "default" },
   { title: "Narrow", value: "narrow" },

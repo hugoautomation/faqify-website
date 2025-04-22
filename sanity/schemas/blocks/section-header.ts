@@ -1,6 +1,10 @@
 import { defineField, defineType } from "sanity";
 import { LetterText } from "lucide-react";
-import { STACK_ALIGN, SECTION_WIDTH } from "./shared/layout-variants";
+import {
+  STACK_ALIGN,
+  SECTION_WIDTH,
+  DIRECTION_VARIANTS,
+} from "./shared/layout-variants";
 
 export default defineType({
   name: "section-header",
@@ -32,6 +36,19 @@ export default defineType({
         layout: "radio",
       },
       initialValue: "left",
+    }),
+    defineField({
+      name: "direction",
+      type: "string",
+      title: "Direction",
+      description:
+        "The layout direction between the section header content and links on desktop",
+      options: {
+        list: DIRECTION_VARIANTS.map(({ title, value }) => ({ title, value })),
+        layout: "radio",
+      },
+      initialValue: "column",
+      hidden: ({ parent }) => parent?.sectionWidth === "narrow",
     }),
     defineField({
       name: "tag",

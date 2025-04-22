@@ -7035,6 +7035,23 @@
           },
           "optional": true
         },
+        "direction": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "union",
+            "of": [
+              {
+                "type": "string",
+                "value": "column"
+              },
+              {
+                "type": "string",
+                "value": "row"
+              }
+            ]
+          },
+          "optional": true
+        },
         "tag": {
           "type": "objectAttribute",
           "value": {
