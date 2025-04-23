@@ -4,9 +4,23 @@ import Link from "next/link";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import { Highlight, themes } from "prism-react-renderer";
 import { CopyButton } from "@/components/ui/copy-button";
-import { Check, Lightbulb } from "lucide-react";
+import { Lightbulb } from "lucide-react";
+import { ReactNode } from "react";
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+
+const getTextFromChildren = (children: ReactNode): string => {
+  if (Array.isArray(children)) {
+    return children
+      .map((child) => {
+        if (typeof child === "string") return child;
+        if (typeof child === "number") return String(child);
+        return "";
+      })
+      .join(" ");
+  }
+  return "";
+};
 
 const portableTextComponents: PortableTextProps["components"] = {
   types: {
@@ -81,11 +95,51 @@ const portableTextComponents: PortableTextProps["components"] = {
   },
   block: {
     normal: ({ children }) => <p className="mb-4">{children}</p>,
-    h1: ({ children }) => <h1 className="my-4 font-semibold">{children}</h1>,
-    h2: ({ children }) => <h2 className="my-4 font-semibold">{children}</h2>,
-    h3: ({ children }) => <h3 className="my-4 font-semibold">{children}</h3>,
-    h4: ({ children }) => <h4 className="my-4 font-semibold">{children}</h4>,
-    h5: ({ children }) => <h5 className="my-4 font-semibold">{children}</h5>,
+    h1: ({ children }) => {
+      const text = getTextFromChildren(children);
+      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+      return (
+        <h1 id={id} className="my-4 font-semibold scroll-mt-20">
+          {children}
+        </h1>
+      );
+    },
+    h2: ({ children }) => {
+      const text = getTextFromChildren(children);
+      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+      return (
+        <h2 id={id} className="my-4 font-semibold scroll-mt-20">
+          {children}
+        </h2>
+      );
+    },
+    h3: ({ children }) => {
+      const text = getTextFromChildren(children);
+      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+      return (
+        <h3 id={id} className="my-4 font-semibold scroll-mt-20">
+          {children}
+        </h3>
+      );
+    },
+    h4: ({ children }) => {
+      const text = getTextFromChildren(children);
+      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+      return (
+        <h4 id={id} className="my-4 font-semibold scroll-mt-20">
+          {children}
+        </h4>
+      );
+    },
+    h5: ({ children }) => {
+      const text = getTextFromChildren(children);
+      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+      return (
+        <h5 id={id} className="my-4 font-semibold scroll-mt-20">
+          {children}
+        </h5>
+      );
+    },
     blockquote: ({ children }) => (
       <blockquote className="my-4 border-l-4 border-border pl-4 italic font-medium">
         {children}

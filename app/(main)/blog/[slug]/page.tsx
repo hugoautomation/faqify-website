@@ -12,11 +12,60 @@ import { urlFor } from "@/sanity/lib/image";
 import PostDate from "@/components/post-date";
 import { Separator } from "@/components/ui/separator";
 import { Clock, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { POST_QUERYResult } from "@/sanity.types";
 
 type BreadcrumbLink = {
   label: string;
   href: string;
 };
+
+type Heading = {
+  text: string;
+  level: number;
+  id: string;
+};
+
+type BlockContent = NonNullable<POST_QUERYResult>["body"];
+type Block = NonNullable<BlockContent>[number];
+type TextBlock = Extract<
+  Block,
+  {
+    _type: "block";
+    _key: string;
+    style?: "normal" | "blockquote" | "h1" | "h2" | "h3" | "h4";
+    children?: Array<{
+      _type: "span";
+      _key: string;
+      text?: string;
+      marks?: string[];
+    }>;
+  }
+>;
+
+function extractHeadings(blocks: BlockContent): Heading[] {
+  if (!blocks) return [];
+
+  return blocks
+    .filter((block): block is TextBlock => {
+      return (
+        block._type === "block" &&
+        typeof block.style === "string" &&
+        block.style.startsWith("h") &&
+        Array.isArray((block as TextBlock).children)
+      );
+    })
+    .map((block) => {
+      const text = (block.children || [])
+        .map((child) => child.text || "")
+        .filter(Boolean)
+        .join(" ");
+      return {
+        text: text || "",
+        level: parseInt(block.style?.charAt(1) || "1"),
+        id: text?.toLowerCase().replace(/[^a-z0-9]+/g, "-") || "",
+      };
+    });
+}
 
 export async function generateStaticParams() {
   const posts = await fetchSanityPostsStaticParams();
@@ -66,6 +115,8 @@ export default async function PostPage(props: {
       ]
     : [];
 
+  const headings = extractHeadings(post.body);
+
   return (
     <section className="container py-16 xl:py-20">
       <article>
@@ -106,8 +157,20 @@ export default async function PostPage(props: {
             <div className="sticky top-18 col-span-3 col-start-10 hidden h-fit lg:block">
               <span className="text-lg font-medium">On this page</span>
               <nav className="mt-4 text-sm">
-                <ul className="space-y-1">
-                  <li></li>
+                <ul className="space-y-2">
+                  {headings.map((heading) => (
+                    <li
+                      key={heading.id}
+                      style={{ paddingLeft: `${(heading.level - 1) * 12}px` }}
+                    >
+                      <a
+                        href={`#${heading.id}`}
+                        className="text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        {heading.text}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </nav>
               <Separator className="my-6" />
