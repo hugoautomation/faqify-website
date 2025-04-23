@@ -7,6 +7,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import Link from "next/link";
+import { Home } from "lucide-react";
 
 type BreadcrumbLinkType = {
   label: string;
@@ -20,16 +21,16 @@ const BreadcrumbCustomItem = ({
 }: BreadcrumbLinkType & { isCurrent?: boolean }) => {
   return (
     <>
-      <BreadcrumbItem className="font-bold text-primary">
+      <BreadcrumbItem>
         {!isCurrent ? (
-          <BreadcrumbLink className="hover:text-primary/70" asChild>
+          <BreadcrumbLink asChild>
             <Link href={href}>{label}</Link>
           </BreadcrumbLink>
         ) : (
           <BreadcrumbPage>{label}</BreadcrumbPage>
         )}
       </BreadcrumbItem>
-      {!isCurrent && <BreadcrumbSeparator className="text-primary" />}
+      {!isCurrent && <BreadcrumbSeparator />}
     </>
   );
 };
@@ -40,8 +41,16 @@ export default function Breadcrumbs({
   links: BreadcrumbLinkType[];
 }) {
   return (
-    <Breadcrumb className="border p-4">
+    <Breadcrumb>
       <BreadcrumbList>
+        <BreadcrumbItem>
+          <BreadcrumbLink asChild>
+            <Link href="/" title="Home">
+              <Home className="h-4 w-4" />
+            </Link>
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
         {links.map((link, index) => (
           <BreadcrumbCustomItem
             key={link.label}

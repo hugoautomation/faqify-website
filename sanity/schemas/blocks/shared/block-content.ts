@@ -1,6 +1,7 @@
 import { defineType, defineArrayMember } from "sanity";
-import { SquarePlay } from "lucide-react";
+import { BulbOutlineIcon, PlayIcon } from "@sanity/icons";
 import { YouTubePreview } from "@/sanity/schemas/previews/youtube-preview";
+import { AlertPreview } from "@/sanity/schemas/previews/alert-preview";
 
 export default defineType({
   title: "Block Content",
@@ -60,10 +61,37 @@ export default defineType({
       ],
     }),
     defineArrayMember({
+      name: "alert",
+      type: "object",
+      title: "Alert",
+      icon: BulbOutlineIcon,
+      fields: [
+        {
+          name: "title",
+          type: "string",
+          title: "Title",
+        },
+        {
+          name: "description",
+          type: "text",
+          title: "Description",
+        },
+      ],
+      preview: {
+        select: {
+          title: "title",
+          subtitle: "description",
+        },
+      },
+      components: {
+        preview: AlertPreview,
+      },
+    }),
+    defineArrayMember({
       name: "youtube",
       type: "object",
       title: "YouTube",
-      icon: SquarePlay,
+      icon: PlayIcon,
       fields: [
         {
           name: "videoId",

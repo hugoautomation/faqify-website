@@ -4,7 +4,9 @@ import Link from "next/link";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import { Highlight, themes } from "prism-react-renderer";
 import { CopyButton } from "@/components/ui/copy-button";
-import { Check } from "lucide-react";
+import { Check, Lightbulb } from "lucide-react";
+
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 const portableTextComponents: PortableTextProps["components"] = {
   types: {
@@ -13,7 +15,7 @@ const portableTextComponents: PortableTextProps["components"] = {
       const { lqip, dimensions } = metadata;
       return (
         <Image
-          className="grayscale m-auto"
+          className="m-auto aspect-video rounded-xl"
           src={url}
           alt={value.alt || "Image"}
           width={dimensions.width}
@@ -27,7 +29,7 @@ const portableTextComponents: PortableTextProps["components"] = {
     youtube: ({ value }) => {
       const { videoId } = value;
       return (
-        <div className="aspect-video max-w-[45rem] rounded-xl overflow-hidden mb-4">
+        <div className="aspect-video max-w-180 rounded-xl overflow-hidden mb-4">
           <YouTubeEmbed videoid={videoId} params="rel=0" />
         </div>
       );
@@ -66,25 +68,28 @@ const portableTextComponents: PortableTextProps["components"] = {
         </div>
       );
     },
+    alert: ({ value }) => {
+      const { title, description } = value;
+      return (
+        <Alert className="my-4">
+          <Lightbulb className="h-4 w-4" />
+          {title && <AlertTitle>{title}</AlertTitle>}
+          {description && <AlertDescription>{description}</AlertDescription>}
+        </Alert>
+      );
+    },
   },
   block: {
-    normal: ({ children }) => (
-      <p style={{ marginBottom: "1rem" }}>{children}</p>
-    ),
-    h1: ({ children }) => (
-      <h1 style={{ marginBottom: "1rem", marginTop: "1rem" }}>{children}</h1>
-    ),
-    h2: ({ children }) => (
-      <h2 style={{ marginBottom: "1rem", marginTop: "1rem" }}>{children}</h2>
-    ),
-    h3: ({ children }) => (
-      <h3 style={{ marginBottom: "1rem", marginTop: "1rem" }}>{children}</h3>
-    ),
-    h4: ({ children }) => (
-      <h4 style={{ marginBottom: "1rem", marginTop: "1rem" }}>{children}</h4>
-    ),
-    h5: ({ children }) => (
-      <h5 style={{ marginBottom: "1rem", marginTop: "1rem" }}>{children}</h5>
+    normal: ({ children }) => <p className="mb-4">{children}</p>,
+    h1: ({ children }) => <h1 className="my-4 font-semibold">{children}</h1>,
+    h2: ({ children }) => <h2 className="my-4 font-semibold">{children}</h2>,
+    h3: ({ children }) => <h3 className="my-4 font-semibold">{children}</h3>,
+    h4: ({ children }) => <h4 className="my-4 font-semibold">{children}</h4>,
+    h5: ({ children }) => <h5 className="my-4 font-semibold">{children}</h5>,
+    blockquote: ({ children }) => (
+      <blockquote className="my-4 border-l-4 border-border pl-4 italic font-medium">
+        {children}
+      </blockquote>
     ),
   },
   marks: {
@@ -108,46 +113,15 @@ const portableTextComponents: PortableTextProps["components"] = {
   },
   list: {
     bullet: ({ children }) => (
-      <ul
-        style={{
-          listStyle: "none",
-          paddingLeft: "1rem",
-          marginBottom: "1rem",
-        }}
-      >
-        {children}
-      </ul>
+      <ul className="list-disc pl-4 mb-4">{children}</ul>
     ),
     number: ({ children }) => (
-      <ol
-        style={{
-          paddingLeft: "1.5rem",
-          marginBottom: "1rem",
-          listStyleType: "decimal",
-          listStylePosition: "inside",
-        }}
-      >
-        {children}
-      </ol>
+      <ol className="list-decimal pl-4 mb-4">{children}</ol>
     ),
   },
   listItem: {
-    bullet: ({ children }) => (
-      <li
-        style={{
-          marginBottom: "0.5rem",
-          display: "flex",
-          alignItems: "flex-start",
-          gap: "0.5rem",
-        }}
-      >
-        <Check size={16} className="mt-1 flex-shrink-0" />
-        <span style={{ flex: 1 }}>{children}</span>
-      </li>
-    ),
-    number: ({ children }) => (
-      <li style={{ marginBottom: "0.5rem" }}>{children}</li>
-    ),
+    bullet: ({ children }) => <li className="mb-2">{children}</li>,
+    number: ({ children }) => <li className="mb-2">{children}</li>,
   },
 };
 
