@@ -25,7 +25,7 @@ export default defineType({
       name: "internalLink",
       type: "reference",
       title: "Internal Link",
-      to: [{ type: "page" }],
+      to: [{ type: "page" }, { type: "post" }],
       hidden: ({ parent }) => parent?.isExternal,
     }),
     defineField({
@@ -40,8 +40,13 @@ export default defineType({
     defineField({
       name: "href",
       title: "href",
-      type: "string",
+      type: "url",
       hidden: ({ parent }) => !parent?.isExternal,
+      validation: (Rule) =>
+        Rule.uri({
+          allowRelative: true,
+          scheme: ["http", "https", "mailto", "tel"],
+        }),
     }),
     defineField({
       name: "target",

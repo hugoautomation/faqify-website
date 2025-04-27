@@ -3,7 +3,7 @@ import { urlFor } from "@/sanity/lib/image";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
-import { PortableText } from "@portabletext/react";
+import PortableTextRenderer from "@/components/portable-text-renderer";
 import Icon from "@/components/icon";
 import { PAGE_QUERYResult } from "@/sanity.types";
 
@@ -54,7 +54,7 @@ const Hero12 = ({
               </h1>
               {body && (
                 <div className="mx-auto max-w-3xl text-muted-foreground lg:text-xl">
-                  <PortableText value={body} />
+                  <PortableTextRenderer value={body} />
                 </div>
               )}
             </div>

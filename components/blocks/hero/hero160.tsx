@@ -3,7 +3,7 @@ import { urlFor } from "@/sanity/lib/image";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
-import { PortableText } from "@portabletext/react";
+import PortableTextRenderer from "@/components/portable-text-renderer";
 import Icon from "@/components/icon";
 import { Circle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -61,7 +61,7 @@ const Hero160 = ({
           )}
           {body && (
             <div className="w-full max-w-[51.875rem] text-center text-xl text-white/60">
-              <PortableText value={body} />
+              <PortableTextRenderer value={body} />
             </div>
           )}
           {links && links.length > 0 && (

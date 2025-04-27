@@ -8,7 +8,7 @@ import { urlFor } from "@/sanity/lib/image";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
-import { PortableText } from "@portabletext/react";
+import PortableTextRenderer from "@/components/portable-text-renderer";
 import Icon from "@/components/icon";
 import {
   Carousel,
@@ -39,7 +39,7 @@ const Hero85 = ({ tag, title, body, images, links }: Hero85Props) => {
             )}
             {body && (
               <div className="mx-auto text-muted-foreground lg:text-lg">
-                <PortableText value={body} />
+                <PortableTextRenderer value={body} />
               </div>
             )}
             {links && (

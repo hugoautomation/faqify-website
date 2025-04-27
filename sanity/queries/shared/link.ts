@@ -4,6 +4,7 @@ export const linkQuery = `
     "href": select(
       isExternal => href,
       @.internalLink->slug.current == "index" => "/",
-      @.internalLink->slug.current
+      @.internalLink->_type == "post" => "/blog/" + @.internalLink->slug.current,
+      "/" + @.internalLink->slug.current
     )
 `;

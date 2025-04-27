@@ -354,7 +354,15 @@ export type FeatureContent = {
     style?: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
     listItem?: "bullet" | "number";
     markDefs?: Array<{
+      isExternal?: boolean;
+      internalLink?: {
+        _ref: string;
+        _type: "reference";
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: "page";
+      };
       href?: string;
+      target?: boolean;
       _type: "link";
       _key: string;
     }>;
@@ -373,6 +381,11 @@ export type FeatureContent = {
     crop?: SanityImageCrop;
     alt?: string;
     _type: "image";
+    _key: string;
+  } | {
+    title?: string;
+    description?: string;
+    _type: "alert";
     _key: string;
   } | {
     videoId?: string;
@@ -454,7 +467,15 @@ export type Hero174 = {
     style?: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
     listItem?: "bullet" | "number";
     markDefs?: Array<{
+      isExternal?: boolean;
+      internalLink?: {
+        _ref: string;
+        _type: "reference";
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: "page";
+      };
       href?: string;
+      target?: boolean;
       _type: "link";
       _key: string;
     }>;
@@ -473,6 +494,11 @@ export type Hero174 = {
     crop?: SanityImageCrop;
     alt?: string;
     _type: "image";
+    _key: string;
+  } | {
+    title?: string;
+    description?: string;
+    _type: "alert";
     _key: string;
   } | {
     videoId?: string;
@@ -520,7 +546,15 @@ export type Hero160 = {
     style?: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
     listItem?: "bullet" | "number";
     markDefs?: Array<{
+      isExternal?: boolean;
+      internalLink?: {
+        _ref: string;
+        _type: "reference";
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: "page";
+      };
       href?: string;
+      target?: boolean;
       _type: "link";
       _key: string;
     }>;
@@ -539,6 +573,11 @@ export type Hero160 = {
     crop?: SanityImageCrop;
     alt?: string;
     _type: "image";
+    _key: string;
+  } | {
+    title?: string;
+    description?: string;
+    _type: "alert";
     _key: string;
   } | {
     videoId?: string;
@@ -582,7 +621,15 @@ export type Hero85 = {
     style?: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
     listItem?: "bullet" | "number";
     markDefs?: Array<{
+      isExternal?: boolean;
+      internalLink?: {
+        _ref: string;
+        _type: "reference";
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: "page";
+      };
       href?: string;
+      target?: boolean;
       _type: "link";
       _key: string;
     }>;
@@ -601,6 +648,11 @@ export type Hero85 = {
     crop?: SanityImageCrop;
     alt?: string;
     _type: "image";
+    _key: string;
+  } | {
+    title?: string;
+    description?: string;
+    _type: "alert";
     _key: string;
   } | {
     videoId?: string;
@@ -641,7 +693,15 @@ export type Hero57 = {
     style?: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
     listItem?: "bullet" | "number";
     markDefs?: Array<{
+      isExternal?: boolean;
+      internalLink?: {
+        _ref: string;
+        _type: "reference";
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: "page";
+      };
       href?: string;
+      target?: boolean;
       _type: "link";
       _key: string;
     }>;
@@ -660,6 +720,11 @@ export type Hero57 = {
     crop?: SanityImageCrop;
     alt?: string;
     _type: "image";
+    _key: string;
+  } | {
+    title?: string;
+    description?: string;
+    _type: "alert";
     _key: string;
   } | {
     videoId?: string;
@@ -724,7 +789,15 @@ export type Hero13 = {
     style?: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
     listItem?: "bullet" | "number";
     markDefs?: Array<{
+      isExternal?: boolean;
+      internalLink?: {
+        _ref: string;
+        _type: "reference";
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: "page";
+      };
       href?: string;
+      target?: boolean;
       _type: "link";
       _key: string;
     }>;
@@ -743,6 +816,11 @@ export type Hero13 = {
     crop?: SanityImageCrop;
     alt?: string;
     _type: "image";
+    _key: string;
+  } | {
+    title?: string;
+    description?: string;
+    _type: "alert";
     _key: string;
   } | {
     videoId?: string;
@@ -782,7 +860,15 @@ export type Hero12 = {
     style?: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
     listItem?: "bullet" | "number";
     markDefs?: Array<{
+      isExternal?: boolean;
+      internalLink?: {
+        _ref: string;
+        _type: "reference";
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: "page";
+      };
       href?: string;
+      target?: boolean;
       _type: "link";
       _key: string;
     }>;
@@ -801,6 +887,11 @@ export type Hero12 = {
     crop?: SanityImageCrop;
     alt?: string;
     _type: "image";
+    _key: string;
+  } | {
+    title?: string;
+    description?: string;
+    _type: "alert";
     _key: string;
   } | {
     videoId?: string;
@@ -911,7 +1002,15 @@ export type BlockContent = Array<{
   style?: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
   listItem?: "bullet" | "number";
   markDefs?: Array<{
+    isExternal?: boolean;
+    internalLink?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "page";
+    };
     href?: string;
+    target?: boolean;
     _type: "link";
     _key: string;
   }>;
@@ -930,6 +1029,11 @@ export type BlockContent = Array<{
   crop?: SanityImageCrop;
   alt?: string;
   _type: "image";
+  _key: string;
+} | {
+  title?: string;
+  description?: string;
+  _type: "alert";
   _key: string;
 } | {
   videoId?: string;
@@ -1417,7 +1521,7 @@ export type NAVIGATION_QUERYResult = Array<{
 
 // Source: ./sanity/queries/page.ts
 // Variable: PAGE_QUERY
-// Query: *[_type == "page" && slug.current == $slug][0]{    blocks[]{        _type == "section-header" => {    _type,    _key,    padding,    sectionWidth,    stackAlign,    direction,    tag,    title,    description,    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },  },        _type == "hero-12" => {    _type,    _key,    backgroundImage{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    tagLine,    title,    body[]{      ...,      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },    techLogos[]{      _key,      title,      link,      image{        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        },        alt      }    }  },        _type == "hero-13" => {    _type,    _key,    tag,    title,    body[]{      ...,      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },  },        _type == "hero-25" => {    _type,    _key,    tagLine,    title,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },    tags  },        _type == "hero-57" => {    _type,    _key,    title,    body,    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },    tags  },        _type == "hero-85" => {    _type,    _key,    tag{      title,      description    },    title,    body[]{      ...,      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    images[]{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },  },        _type == "hero-160" => {    _type,    _key,    backgroundImage{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    tag,    title,    body[]{      ...,      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },  },        _type == "hero-174" => {    _type,    _key,    backgroundImage{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    title,    body[]{      ...,      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },    tag  },        _type == "faq-1" => {    _type,    _key,    padding,    border,    faqs[]->{      _id,      title,      body[]{        ...,        _type == "image" => {          ...,          asset->{            _id,            url,            mimeType,            metadata {              lqip,              dimensions {                width,                height              }            }          }        }      },    },  },        _type == "logos-1" => {    _type,    _key,    padding,    title,    images[]{      ...,      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },  },        _type == "feature-1" => {    _type,    _key,    padding,    columns[]{        _type == "feature-content" => {    _type,    _key,    padding,    iconVariant,    tag,    title,    body[]{      ...,      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },  },        _type == "feature-image" => {    _type,    _key,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },  },    },  },        _type == "feature-3" => {    _type,    _key,    padding,    columns[]{        _type == "feature-3-card" => {    _type,    _key,    iconVariant,    title,    description,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    }  },    },  },        _type == "feature-12" => {    _type,    _key,    padding,    tagline,    columns[]{        _type == "feature-12-card" => {    _type,    _key,    iconVariant,    title,    description,  },    },  },        _type == "feature-15" => {    _type,    _key,    padding,    gridColumns,    columns[]{        _type == "feature-15-card" => {    _type,    _key,    iconVariant,    title,    description,  },    },  },        _type == "feature-66" => {    _type,    _key,    padding,    columns[]{        _type == "feature-66-card" => {    _type,    _key,    logo{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link {          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    }  },    },  },        _type == "feature-117" => {    _type,    _key,    padding,    columns[]{        _type == "feature-117-card" => {    _type,    _key,    tag,    title,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link {          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    }  },    },  },        _type == "feature-157" => {    _type,    _key,    padding,    columns[]{        _type == "feature-157-card" => {    _type,    _key,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link {          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    }  },    },  },        _type == "feature-202" => {    _type,    _key,    padding,    columns[]{        _type == "feature-202-card" => {    _type,    _key,    iconVariant,    title,    description,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link {          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    }  },    },  },        _type == "blog-4" => {    _type,    _key,    padding,    gridColumns,    posts[]->{      _id,      _createdAt,      title,      slug,      excerpt,      image{        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        },        alt      },      categories[]->{        _id,        title,      },      author->{        _id,        name,        image{          ...,          asset->{            _id,            url,            mimeType,            metadata {              lqip,              dimensions {                width,                height              }            }          },        }      }    },  },        _type == "blog-7" => {    _type,    _key,    padding,    gridColumns,    posts[]->{      _id,      _createdAt,      title,      slug,      excerpt,      image{        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        },        alt      },    },  },        _type == "blog-13" => {    _type,    _key,    padding,    gridColumns,    posts[]->{      _id,      _createdAt,      title,      slug,      image{        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        },        alt      },      categories[]->{        _id,        title,      },    },  },        _type == "blog-14" => {    _type,    _key,    padding,    gridColumns,    title,    posts[]->{      _id,      _createdAt,      title,      slug,      excerpt,      image{        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        },        alt      },      categories[]->{        _id,        title,      },      author->{        _id,        name,        image{          ...,          asset->{            _id,            url,            mimeType,            metadata {              lqip,              dimensions {                width,                height              }            }          },        }      }    },  },        _type == "blog-16" => {    _type,    _key,    padding,    posts[]->{      _id,      _createdAt,      title,      slug,      categories[]->{        _id,        title,      },      author->{        _id,        name,        title,        image{          ...,          asset->{            _id,            url,            mimeType,            metadata {              lqip,              dimensions {                width,                height              }            }          },        }      }    },  },    },    meta_title,    meta_description,    noindex,    ogImage {      asset->{        _id,        url,        metadata {          dimensions {            width,            height          }        }      },    }  }
+// Query: *[_type == "page" && slug.current == $slug][0]{    blocks[]{        _type == "section-header" => {    _type,    _key,    padding,    sectionWidth,    stackAlign,    direction,    tag,    title,    description,    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },  },        _type == "hero-12" => {    _type,    _key,    backgroundImage{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    tagLine,    title,    body[]{      ...,      markDefs[]{        ...,        _type == "link" => {              _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )        }      },      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },    techLogos[]{      _key,      title,      link,      image{        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        },        alt      }    }  },        _type == "hero-13" => {    _type,    _key,    tag,    title,    body[]{      ...,      markDefs[]{        ...,        _type == "link" => {              _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )        }      },      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },  },        _type == "hero-25" => {    _type,    _key,    tagLine,    title,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },    tags  },        _type == "hero-57" => {    _type,    _key,    title,    body,    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },    tags  },        _type == "hero-85" => {    _type,    _key,    tag{      title,      description    },    title,    body[]{      ...,      markDefs[]{        ...,        _type == "link" => {              _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )        }      },      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    images[]{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },  },        _type == "hero-160" => {    _type,    _key,    backgroundImage{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    tag,    title,    body[]{      ...,      markDefs[]{        ...,        _type == "link" => {              _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )        }      },      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },  },        _type == "hero-174" => {    _type,    _key,    backgroundImage{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    title,    body[]{      ...,      markDefs[]{        ...,        _type == "link" => {              _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )        }      },      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },    tag  },        _type == "faq-1" => {    _type,    _key,    padding,    border,    faqs[]->{      _id,      title,      body[]{        ...,        markDefs[]{          ...,          _type == "link" => {                _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )          }        },        _type == "image" => {          ...,          asset->{            _id,            url,            mimeType,            metadata {              lqip,              dimensions {                width,                height              }            }          }        }      },    },  },        _type == "logos-1" => {    _type,    _key,    padding,    title,    images[]{      ...,      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },  },        _type == "feature-1" => {    _type,    _key,    padding,    columns[]{        _type == "feature-content" => {    _type,    _key,    padding,    iconVariant,    tag,    title,    body[]{      ...,      markDefs[]{        ...,        _type == "link" => {              _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )        }      },      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    links[]{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    },  },        _type == "feature-image" => {    _type,    _key,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },  },    },  },        _type == "feature-3" => {    _type,    _key,    padding,    columns[]{        _type == "feature-3-card" => {    _type,    _key,    iconVariant,    title,    description,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    }  },    },  },        _type == "feature-12" => {    _type,    _key,    padding,    tagline,    columns[]{        _type == "feature-12-card" => {    _type,    _key,    iconVariant,    title,    description,  },    },  },        _type == "feature-15" => {    _type,    _key,    padding,    gridColumns,    columns[]{        _type == "feature-15-card" => {    _type,    _key,    iconVariant,    title,    description,  },    },  },        _type == "feature-66" => {    _type,    _key,    padding,    columns[]{        _type == "feature-66-card" => {    _type,    _key,    logo{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link {          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    }  },    },  },        _type == "feature-117" => {    _type,    _key,    padding,    columns[]{        _type == "feature-117-card" => {    _type,    _key,    tag,    title,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link {          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    }  },    },  },        _type == "feature-157" => {    _type,    _key,    padding,    columns[]{        _type == "feature-157-card" => {    _type,    _key,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link {          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    }  },    },  },        _type == "feature-202" => {    _type,    _key,    padding,    columns[]{        _type == "feature-202-card" => {    _type,    _key,    iconVariant,    title,    description,    image{      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    link {          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )    }  },    },  },        _type == "blog-4" => {    _type,    _key,    padding,    gridColumns,    posts[]->{      _id,      _createdAt,      title,      slug,      excerpt,      image{        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        },        alt      },      categories[]->{        _id,        title,      },      author->{        _id,        name,        image{          ...,          asset->{            _id,            url,            mimeType,            metadata {              lqip,              dimensions {                width,                height              }            }          },        }      }    },  },        _type == "blog-7" => {    _type,    _key,    padding,    gridColumns,    posts[]->{      _id,      _createdAt,      title,      slug,      excerpt,      image{        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        },        alt      },    },  },        _type == "blog-13" => {    _type,    _key,    padding,    gridColumns,    posts[]->{      _id,      _createdAt,      title,      slug,      image{        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        },        alt      },      categories[]->{        _id,        title,      },    },  },        _type == "blog-14" => {    _type,    _key,    padding,    gridColumns,    title,    posts[]->{      _id,      _createdAt,      title,      slug,      excerpt,      image{        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        },        alt      },      categories[]->{        _id,        title,      },      author->{        _id,        name,        image{          ...,          asset->{            _id,            url,            mimeType,            metadata {              lqip,              dimensions {                width,                height              }            }          },        }      }    },  },        _type == "blog-16" => {    _type,    _key,    padding,    posts[]->{      _id,      _createdAt,      title,      slug,      categories[]->{        _id,        title,      },      author->{        _id,        name,        title,        image{          ...,          asset->{            _id,            url,            mimeType,            metadata {              lqip,              dimensions {                width,                height              }            }          },        }      }    },  },    },    meta_title,    meta_description,    noindex,    ogImage {      asset->{        _id,        url,        metadata {          dimensions {            width,            height          }        }      },    }  }
 export type PAGE_QUERYResult = {
   blocks: Array<{
     _type: "blog-13";
@@ -1648,6 +1752,12 @@ export type PAGE_QUERYResult = {
       _id: string;
       title: string | null;
       body: Array<{
+        title?: string;
+        description?: string;
+        _type: "alert";
+        _key: string;
+        markDefs: null;
+      } | {
         children?: Array<{
           marks?: Array<string>;
           text?: string;
@@ -1656,11 +1766,19 @@ export type PAGE_QUERYResult = {
         }>;
         style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "normal";
         listItem?: "bullet" | "number";
-        markDefs?: Array<{
-          href?: string;
+        markDefs: Array<{
+          isExternal?: boolean;
+          internalLink?: {
+            _ref: string;
+            _type: "reference";
+            _weak?: boolean;
+            [internalGroqTypeReferenceTo]?: "page";
+          };
+          href: string | "/" | null;
+          target?: boolean;
           _type: "link";
           _key: string;
-        }>;
+        }> | null;
         level?: number;
         _type: "block";
         _key: string;
@@ -1671,6 +1789,7 @@ export type PAGE_QUERYResult = {
         filename?: string;
         code?: string;
         highlightedLines?: Array<number>;
+        markDefs: null;
       } | {
         asset: {
           _id: string;
@@ -1690,10 +1809,12 @@ export type PAGE_QUERYResult = {
         alt?: string;
         _type: "image";
         _key: string;
+        markDefs: null;
       } | {
         videoId?: string;
         _type: "youtube";
         _key: string;
+        markDefs: null;
       }> | null;
     }> | null;
   } | {
@@ -1711,6 +1832,12 @@ export type PAGE_QUERYResult = {
       } | null;
       title: string | null;
       body: Array<{
+        title?: string;
+        description?: string;
+        _type: "alert";
+        _key: string;
+        markDefs: null;
+      } | {
         children?: Array<{
           marks?: Array<string>;
           text?: string;
@@ -1719,11 +1846,19 @@ export type PAGE_QUERYResult = {
         }>;
         style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "normal";
         listItem?: "bullet" | "number";
-        markDefs?: Array<{
-          href?: string;
+        markDefs: Array<{
+          isExternal?: boolean;
+          internalLink?: {
+            _ref: string;
+            _type: "reference";
+            _weak?: boolean;
+            [internalGroqTypeReferenceTo]?: "page";
+          };
+          href: string | "/" | null;
+          target?: boolean;
           _type: "link";
           _key: string;
-        }>;
+        }> | null;
         level?: number;
         _type: "block";
         _key: string;
@@ -1734,6 +1869,7 @@ export type PAGE_QUERYResult = {
         filename?: string;
         code?: string;
         highlightedLines?: Array<number>;
+        markDefs: null;
       } | {
         asset: {
           _id: string;
@@ -1753,10 +1889,12 @@ export type PAGE_QUERYResult = {
         alt?: string;
         _type: "image";
         _key: string;
+        markDefs: null;
       } | {
         videoId?: string;
         _type: "youtube";
         _key: string;
+        markDefs: null;
       }> | null;
       links: Array<{
         _key: string;
@@ -2040,6 +2178,12 @@ export type PAGE_QUERYResult = {
     tagLine: string | null;
     title: string | null;
     body: Array<{
+      title?: string;
+      description?: string;
+      _type: "alert";
+      _key: string;
+      markDefs: null;
+    } | {
       children?: Array<{
         marks?: Array<string>;
         text?: string;
@@ -2048,11 +2192,19 @@ export type PAGE_QUERYResult = {
       }>;
       style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "normal";
       listItem?: "bullet" | "number";
-      markDefs?: Array<{
-        href?: string;
+      markDefs: Array<{
+        isExternal?: boolean;
+        internalLink?: {
+          _ref: string;
+          _type: "reference";
+          _weak?: boolean;
+          [internalGroqTypeReferenceTo]?: "page";
+        };
+        href: string | "/" | null;
+        target?: boolean;
         _type: "link";
         _key: string;
-      }>;
+      }> | null;
       level?: number;
       _type: "block";
       _key: string;
@@ -2063,6 +2215,7 @@ export type PAGE_QUERYResult = {
       filename?: string;
       code?: string;
       highlightedLines?: Array<number>;
+      markDefs: null;
     } | {
       asset: {
         _id: string;
@@ -2082,10 +2235,12 @@ export type PAGE_QUERYResult = {
       alt?: string;
       _type: "image";
       _key: string;
+      markDefs: null;
     } | {
       videoId?: string;
       _type: "youtube";
       _key: string;
+      markDefs: null;
     }> | null;
     image: {
       asset: {
@@ -2148,6 +2303,12 @@ export type PAGE_QUERYResult = {
     } | null;
     title: string | null;
     body: Array<{
+      title?: string;
+      description?: string;
+      _type: "alert";
+      _key: string;
+      markDefs: null;
+    } | {
       children?: Array<{
         marks?: Array<string>;
         text?: string;
@@ -2156,11 +2317,19 @@ export type PAGE_QUERYResult = {
       }>;
       style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "normal";
       listItem?: "bullet" | "number";
-      markDefs?: Array<{
-        href?: string;
+      markDefs: Array<{
+        isExternal?: boolean;
+        internalLink?: {
+          _ref: string;
+          _type: "reference";
+          _weak?: boolean;
+          [internalGroqTypeReferenceTo]?: "page";
+        };
+        href: string | "/" | null;
+        target?: boolean;
         _type: "link";
         _key: string;
-      }>;
+      }> | null;
       level?: number;
       _type: "block";
       _key: string;
@@ -2171,6 +2340,7 @@ export type PAGE_QUERYResult = {
       filename?: string;
       code?: string;
       highlightedLines?: Array<number>;
+      markDefs: null;
     } | {
       asset: {
         _id: string;
@@ -2190,10 +2360,12 @@ export type PAGE_QUERYResult = {
       alt?: string;
       _type: "image";
       _key: string;
+      markDefs: null;
     } | {
       videoId?: string;
       _type: "youtube";
       _key: string;
+      markDefs: null;
     }> | null;
     links: Array<{
       _key: string;
@@ -2236,6 +2408,12 @@ export type PAGE_QUERYResult = {
     } | null;
     title: string | null;
     body: Array<{
+      title?: string;
+      description?: string;
+      _type: "alert";
+      _key: string;
+      markDefs: null;
+    } | {
       children?: Array<{
         marks?: Array<string>;
         text?: string;
@@ -2244,11 +2422,19 @@ export type PAGE_QUERYResult = {
       }>;
       style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "normal";
       listItem?: "bullet" | "number";
-      markDefs?: Array<{
-        href?: string;
+      markDefs: Array<{
+        isExternal?: boolean;
+        internalLink?: {
+          _ref: string;
+          _type: "reference";
+          _weak?: boolean;
+          [internalGroqTypeReferenceTo]?: "page";
+        };
+        href: string | "/" | null;
+        target?: boolean;
         _type: "link";
         _key: string;
-      }>;
+      }> | null;
       level?: number;
       _type: "block";
       _key: string;
@@ -2259,6 +2445,7 @@ export type PAGE_QUERYResult = {
       filename?: string;
       code?: string;
       highlightedLines?: Array<number>;
+      markDefs: null;
     } | {
       asset: {
         _id: string;
@@ -2278,10 +2465,12 @@ export type PAGE_QUERYResult = {
       alt?: string;
       _type: "image";
       _key: string;
+      markDefs: null;
     } | {
       videoId?: string;
       _type: "youtube";
       _key: string;
+      markDefs: null;
     }> | null;
     links: Array<{
       _key: string;
@@ -2335,6 +2524,12 @@ export type PAGE_QUERYResult = {
     } | null;
     title: string | null;
     body: Array<{
+      title?: string;
+      description?: string;
+      _type: "alert";
+      _key: string;
+      markDefs: null;
+    } | {
       children?: Array<{
         marks?: Array<string>;
         text?: string;
@@ -2343,11 +2538,19 @@ export type PAGE_QUERYResult = {
       }>;
       style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "normal";
       listItem?: "bullet" | "number";
-      markDefs?: Array<{
-        href?: string;
+      markDefs: Array<{
+        isExternal?: boolean;
+        internalLink?: {
+          _ref: string;
+          _type: "reference";
+          _weak?: boolean;
+          [internalGroqTypeReferenceTo]?: "page";
+        };
+        href: string | "/" | null;
+        target?: boolean;
         _type: "link";
         _key: string;
-      }>;
+      }> | null;
       level?: number;
       _type: "block";
       _key: string;
@@ -2358,6 +2561,7 @@ export type PAGE_QUERYResult = {
       filename?: string;
       code?: string;
       highlightedLines?: Array<number>;
+      markDefs: null;
     } | {
       asset: {
         _id: string;
@@ -2377,10 +2581,12 @@ export type PAGE_QUERYResult = {
       alt?: string;
       _type: "image";
       _key: string;
+      markDefs: null;
     } | {
       videoId?: string;
       _type: "youtube";
       _key: string;
+      markDefs: null;
     }> | null;
     links: Array<{
       _key: string;
@@ -2453,6 +2659,11 @@ export type PAGE_QUERYResult = {
     body: Array<{
       _key: string;
     } & Code | {
+      title?: string;
+      description?: string;
+      _type: "alert";
+      _key: string;
+    } | {
       children?: Array<{
         marks?: Array<string>;
         text?: string;
@@ -2462,7 +2673,15 @@ export type PAGE_QUERYResult = {
       style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "normal";
       listItem?: "bullet" | "number";
       markDefs?: Array<{
+        isExternal?: boolean;
+        internalLink?: {
+          _ref: string;
+          _type: "reference";
+          _weak?: boolean;
+          [internalGroqTypeReferenceTo]?: "page";
+        };
         href?: string;
+        target?: boolean;
         _type: "link";
         _key: string;
       }>;
@@ -2519,6 +2738,12 @@ export type PAGE_QUERYResult = {
     } | null;
     title: string | null;
     body: Array<{
+      title?: string;
+      description?: string;
+      _type: "alert";
+      _key: string;
+      markDefs: null;
+    } | {
       children?: Array<{
         marks?: Array<string>;
         text?: string;
@@ -2527,11 +2752,19 @@ export type PAGE_QUERYResult = {
       }>;
       style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "normal";
       listItem?: "bullet" | "number";
-      markDefs?: Array<{
-        href?: string;
+      markDefs: Array<{
+        isExternal?: boolean;
+        internalLink?: {
+          _ref: string;
+          _type: "reference";
+          _weak?: boolean;
+          [internalGroqTypeReferenceTo]?: "page";
+        };
+        href: string | "/" | null;
+        target?: boolean;
         _type: "link";
         _key: string;
-      }>;
+      }> | null;
       level?: number;
       _type: "block";
       _key: string;
@@ -2542,6 +2775,7 @@ export type PAGE_QUERYResult = {
       filename?: string;
       code?: string;
       highlightedLines?: Array<number>;
+      markDefs: null;
     } | {
       asset: {
         _id: string;
@@ -2561,10 +2795,12 @@ export type PAGE_QUERYResult = {
       alt?: string;
       _type: "image";
       _key: string;
+      markDefs: null;
     } | {
       videoId?: string;
       _type: "youtube";
       _key: string;
+      markDefs: null;
     }> | null;
     images: Array<{
       asset: {
@@ -2683,7 +2919,7 @@ export type PAGES_SLUGS_QUERYResult = Array<{
 
 // Source: ./sanity/queries/post.ts
 // Variable: POST_QUERY
-// Query: *[_type == "post" && slug.current == $slug][0]{    title,    slug,    image{      ...,      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    body[]{      ...,      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    author->{      name,      image {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        },        alt      }    },    _createdAt,    _updatedAt,    meta_title,    meta_description,    noindex,    ogImage {      asset->{        _id,        url,        metadata {          dimensions {            width,            height          }        }      },    },    "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180 )}
+// Query: *[_type == "post" && slug.current == $slug][0]{    title,    slug,    image{      ...,      asset->{        _id,        url,        mimeType,        metadata {          lqip,          dimensions {            width,            height          }        }      },      alt    },    body[]{      ...,      markDefs[]{        ...,        _type == "link" => {              _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->slug.current    )        }      },      _type == "image" => {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        }      }    },    author->{      name,      image {        ...,        asset->{          _id,          url,          mimeType,          metadata {            lqip,            dimensions {              width,              height            }          }        },        alt      }    },    _createdAt,    _updatedAt,    meta_title,    meta_description,    noindex,    ogImage {      asset->{        _id,        url,        metadata {          dimensions {            width,            height          }        }      },    },    "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180 )}
 export type POST_QUERYResult = {
   title: string | null;
   slug: Slug | null;
@@ -2707,6 +2943,12 @@ export type POST_QUERYResult = {
     _type: "image";
   } | null;
   body: Array<{
+    title?: string;
+    description?: string;
+    _type: "alert";
+    _key: string;
+    markDefs: null;
+  } | {
     children?: Array<{
       marks?: Array<string>;
       text?: string;
@@ -2715,11 +2957,19 @@ export type POST_QUERYResult = {
     }>;
     style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "normal";
     listItem?: "bullet" | "number";
-    markDefs?: Array<{
-      href?: string;
+    markDefs: Array<{
+      isExternal?: boolean;
+      internalLink?: {
+        _ref: string;
+        _type: "reference";
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: "page";
+      };
+      href: string | "/" | null;
+      target?: boolean;
       _type: "link";
       _key: string;
-    }>;
+    }> | null;
     level?: number;
     _type: "block";
     _key: string;
@@ -2730,6 +2980,7 @@ export type POST_QUERYResult = {
     filename?: string;
     code?: string;
     highlightedLines?: Array<number>;
+    markDefs: null;
   } | {
     asset: {
       _id: string;
@@ -2749,10 +3000,12 @@ export type POST_QUERYResult = {
     alt?: string;
     _type: "image";
     _key: string;
+    markDefs: null;
   } | {
     videoId?: string;
     _type: "youtube";
     _key: string;
+    markDefs: null;
   }> | null;
   author: {
     name: string | null;
@@ -2866,9 +3119,9 @@ declare module "@sanity/client" {
     "\n    *[_type == 'post'] | order(_updatedAt desc) {\n      'url': $baseUrl + '/blog/' + slug.current,\n      'lastModified': _updatedAt,\n      'changeFrequency': 'weekly',\n      'priority': 0.7\n    }\n  ": PostsQueryResult;
     "*[_type == \"contact\"][0]{\n  tagline,\n  title,\n  description,\n  contactMethods[]{\n    icon,\n    title,\n    description,\n    link {\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    }\n  },\n  meta_title,\n  meta_description,\n  noindex,\n  ogImage {\n    asset->{\n      _id,\n      url,\n      metadata {\n        dimensions {\n          width,\n          height\n        }\n      }\n    },\n  }\n}": CONTACT_QUERYResult;
     "\n  *[_type == \"navigation\"]{\n    _type,\n    _key,\n    title,\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n,\n      _type == \"link-group\" => {\n        links[]{\n          \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n        }\n      }\n    }\n  }\n": NAVIGATION_QUERYResult;
-    "\n  *[_type == \"page\" && slug.current == $slug][0]{\n    blocks[]{\n      \n  _type == \"section-header\" => {\n    _type,\n    _key,\n    padding,\n    sectionWidth,\n    stackAlign,\n    direction,\n    tag,\n    title,\n    description,\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n  }\n,\n      \n  _type == \"hero-12\" => {\n    _type,\n    _key,\n    backgroundImage{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    tagLine,\n    title,\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n    techLogos[]{\n      _key,\n      title,\n      link,\n      image{\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      }\n    }\n  }\n,\n      \n  _type == \"hero-13\" => {\n    _type,\n    _key,\n    tag,\n    title,\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n  }\n,\n      \n  _type == \"hero-25\" => {\n    _type,\n    _key,\n    tagLine,\n    title,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n    tags\n  }\n,\n      \n  _type == \"hero-57\" => {\n    _type,\n    _key,\n    title,\n    body,\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n    tags\n  }\n,\n      \n  _type == \"hero-85\" => {\n    _type,\n    _key,\n    tag{\n      title,\n      description\n    },\n    title,\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    images[]{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n  }\n,\n      \n  _type == \"hero-160\" => {\n    _type,\n    _key,\n    backgroundImage{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    tag,\n    title,\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n  }\n,\n      \n  _type == \"hero-174\" => {\n    _type,\n    _key,\n    backgroundImage{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    title,\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n    tag\n  }\n,\n      \n  _type == \"faq-1\" => {\n    _type,\n    _key,\n    padding,\n    border,\n    faqs[]->{\n      _id,\n      title,\n      body[]{\n        ...,\n        _type == \"image\" => {\n          ...,\n          asset->{\n            _id,\n            url,\n            mimeType,\n            metadata {\n              lqip,\n              dimensions {\n                width,\n                height\n              }\n            }\n          }\n        }\n      },\n    },\n  }\n,\n      \n  _type == \"logos-1\" => {\n    _type,\n    _key,\n    padding,\n    title,\n    images[]{\n      ...,\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n  }\n,\n      \n  _type == \"feature-1\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-content\" => {\n    _type,\n    _key,\n    padding,\n    iconVariant,\n    tag,\n    title,\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n  }\n,\n      \n  _type == \"feature-image\" => {\n    _type,\n    _key,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-3\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-3-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    }\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-12\" => {\n    _type,\n    _key,\n    padding,\n    tagline,\n    columns[]{\n      \n  _type == \"feature-12-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-15\" => {\n    _type,\n    _key,\n    padding,\n    gridColumns,\n    columns[]{\n      \n  _type == \"feature-15-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-66\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-66-card\" => {\n    _type,\n    _key,\n    logo{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link {\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    }\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-117\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-117-card\" => {\n    _type,\n    _key,\n    tag,\n    title,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link {\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    }\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-157\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-157-card\" => {\n    _type,\n    _key,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link {\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    }\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-202\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-202-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link {\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    }\n  }\n,\n    },\n  }\n,\n      \n  _type == \"blog-4\" => {\n    _type,\n    _key,\n    padding,\n    gridColumns,\n    posts[]->{\n      _id,\n      _createdAt,\n      title,\n      slug,\n      excerpt,\n      image{\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      },\n      categories[]->{\n        _id,\n        title,\n      },\n      author->{\n        _id,\n        name,\n        image{\n          ...,\n          asset->{\n            _id,\n            url,\n            mimeType,\n            metadata {\n              lqip,\n              dimensions {\n                width,\n                height\n              }\n            }\n          },\n        }\n      }\n    },\n  }\n,\n      \n  _type == \"blog-7\" => {\n    _type,\n    _key,\n    padding,\n    gridColumns,\n    posts[]->{\n      _id,\n      _createdAt,\n      title,\n      slug,\n      excerpt,\n      image{\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      },\n    },\n  }\n,\n      \n  _type == \"blog-13\" => {\n    _type,\n    _key,\n    padding,\n    gridColumns,\n    posts[]->{\n      _id,\n      _createdAt,\n      title,\n      slug,\n      image{\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      },\n      categories[]->{\n        _id,\n        title,\n      },\n    },\n  }\n,\n      \n  _type == \"blog-14\" => {\n    _type,\n    _key,\n    padding,\n    gridColumns,\n    title,\n    posts[]->{\n      _id,\n      _createdAt,\n      title,\n      slug,\n      excerpt,\n      image{\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      },\n      categories[]->{\n        _id,\n        title,\n      },\n      author->{\n        _id,\n        name,\n        image{\n          ...,\n          asset->{\n            _id,\n            url,\n            mimeType,\n            metadata {\n              lqip,\n              dimensions {\n                width,\n                height\n              }\n            }\n          },\n        }\n      }\n    },\n  }\n,\n      \n  _type == \"blog-16\" => {\n    _type,\n    _key,\n    padding,\n    posts[]->{\n      _id,\n      _createdAt,\n      title,\n      slug,\n      categories[]->{\n        _id,\n        title,\n      },\n      author->{\n        _id,\n        name,\n        title,\n        image{\n          ...,\n          asset->{\n            _id,\n            url,\n            mimeType,\n            metadata {\n              lqip,\n              dimensions {\n                width,\n                height\n              }\n            }\n          },\n        }\n      }\n    },\n  }\n,\n    },\n    meta_title,\n    meta_description,\n    noindex,\n    ogImage {\n      asset->{\n        _id,\n        url,\n        metadata {\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n    }\n  }\n": PAGE_QUERYResult;
+    "\n  *[_type == \"page\" && slug.current == $slug][0]{\n    blocks[]{\n      \n  _type == \"section-header\" => {\n    _type,\n    _key,\n    padding,\n    sectionWidth,\n    stackAlign,\n    direction,\n    tag,\n    title,\n    description,\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n  }\n,\n      \n  _type == \"hero-12\" => {\n    _type,\n    _key,\n    backgroundImage{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    tagLine,\n    title,\n    body[]{\n      ...,\n      markDefs[]{\n        ...,\n        _type == \"link\" => {\n          \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n        }\n      },\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n    techLogos[]{\n      _key,\n      title,\n      link,\n      image{\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      }\n    }\n  }\n,\n      \n  _type == \"hero-13\" => {\n    _type,\n    _key,\n    tag,\n    title,\n    body[]{\n      ...,\n      markDefs[]{\n        ...,\n        _type == \"link\" => {\n          \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n        }\n      },\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n  }\n,\n      \n  _type == \"hero-25\" => {\n    _type,\n    _key,\n    tagLine,\n    title,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n    tags\n  }\n,\n      \n  _type == \"hero-57\" => {\n    _type,\n    _key,\n    title,\n    body,\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n    tags\n  }\n,\n      \n  _type == \"hero-85\" => {\n    _type,\n    _key,\n    tag{\n      title,\n      description\n    },\n    title,\n    body[]{\n      ...,\n      markDefs[]{\n        ...,\n        _type == \"link\" => {\n          \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n        }\n      },\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    images[]{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n  }\n,\n      \n  _type == \"hero-160\" => {\n    _type,\n    _key,\n    backgroundImage{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    tag,\n    title,\n    body[]{\n      ...,\n      markDefs[]{\n        ...,\n        _type == \"link\" => {\n          \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n        }\n      },\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n  }\n,\n      \n  _type == \"hero-174\" => {\n    _type,\n    _key,\n    backgroundImage{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    title,\n    body[]{\n      ...,\n      markDefs[]{\n        ...,\n        _type == \"link\" => {\n          \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n        }\n      },\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n    tag\n  }\n,\n      \n  _type == \"faq-1\" => {\n    _type,\n    _key,\n    padding,\n    border,\n    faqs[]->{\n      _id,\n      title,\n      body[]{\n        ...,\n        markDefs[]{\n          ...,\n          _type == \"link\" => {\n            \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n          }\n        },\n        _type == \"image\" => {\n          ...,\n          asset->{\n            _id,\n            url,\n            mimeType,\n            metadata {\n              lqip,\n              dimensions {\n                width,\n                height\n              }\n            }\n          }\n        }\n      },\n    },\n  }\n,\n      \n  _type == \"logos-1\" => {\n    _type,\n    _key,\n    padding,\n    title,\n    images[]{\n      ...,\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n  }\n,\n      \n  _type == \"feature-1\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-content\" => {\n    _type,\n    _key,\n    padding,\n    iconVariant,\n    tag,\n    title,\n    body[]{\n      ...,\n      markDefs[]{\n        ...,\n        _type == \"link\" => {\n          \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n        }\n      },\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    },\n  }\n,\n      \n  _type == \"feature-image\" => {\n    _type,\n    _key,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-3\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-3-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    }\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-12\" => {\n    _type,\n    _key,\n    padding,\n    tagline,\n    columns[]{\n      \n  _type == \"feature-12-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-15\" => {\n    _type,\n    _key,\n    padding,\n    gridColumns,\n    columns[]{\n      \n  _type == \"feature-15-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-66\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-66-card\" => {\n    _type,\n    _key,\n    logo{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link {\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    }\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-117\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-117-card\" => {\n    _type,\n    _key,\n    tag,\n    title,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link {\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    }\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-157\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-157-card\" => {\n    _type,\n    _key,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link {\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    }\n  }\n,\n    },\n  }\n,\n      \n  _type == \"feature-202\" => {\n    _type,\n    _key,\n    padding,\n    columns[]{\n      \n  _type == \"feature-202-card\" => {\n    _type,\n    _key,\n    iconVariant,\n    title,\n    description,\n    image{\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    link {\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n    }\n  }\n,\n    },\n  }\n,\n      \n  _type == \"blog-4\" => {\n    _type,\n    _key,\n    padding,\n    gridColumns,\n    posts[]->{\n      _id,\n      _createdAt,\n      title,\n      slug,\n      excerpt,\n      image{\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      },\n      categories[]->{\n        _id,\n        title,\n      },\n      author->{\n        _id,\n        name,\n        image{\n          ...,\n          asset->{\n            _id,\n            url,\n            mimeType,\n            metadata {\n              lqip,\n              dimensions {\n                width,\n                height\n              }\n            }\n          },\n        }\n      }\n    },\n  }\n,\n      \n  _type == \"blog-7\" => {\n    _type,\n    _key,\n    padding,\n    gridColumns,\n    posts[]->{\n      _id,\n      _createdAt,\n      title,\n      slug,\n      excerpt,\n      image{\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      },\n    },\n  }\n,\n      \n  _type == \"blog-13\" => {\n    _type,\n    _key,\n    padding,\n    gridColumns,\n    posts[]->{\n      _id,\n      _createdAt,\n      title,\n      slug,\n      image{\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      },\n      categories[]->{\n        _id,\n        title,\n      },\n    },\n  }\n,\n      \n  _type == \"blog-14\" => {\n    _type,\n    _key,\n    padding,\n    gridColumns,\n    title,\n    posts[]->{\n      _id,\n      _createdAt,\n      title,\n      slug,\n      excerpt,\n      image{\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      },\n      categories[]->{\n        _id,\n        title,\n      },\n      author->{\n        _id,\n        name,\n        image{\n          ...,\n          asset->{\n            _id,\n            url,\n            mimeType,\n            metadata {\n              lqip,\n              dimensions {\n                width,\n                height\n              }\n            }\n          },\n        }\n      }\n    },\n  }\n,\n      \n  _type == \"blog-16\" => {\n    _type,\n    _key,\n    padding,\n    posts[]->{\n      _id,\n      _createdAt,\n      title,\n      slug,\n      categories[]->{\n        _id,\n        title,\n      },\n      author->{\n        _id,\n        name,\n        title,\n        image{\n          ...,\n          asset->{\n            _id,\n            url,\n            mimeType,\n            metadata {\n              lqip,\n              dimensions {\n                width,\n                height\n              }\n            }\n          },\n        }\n      }\n    },\n  }\n,\n    },\n    meta_title,\n    meta_description,\n    noindex,\n    ogImage {\n      asset->{\n        _id,\n        url,\n        metadata {\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n    }\n  }\n": PAGE_QUERYResult;
     "*[_type == \"page\" && defined(slug)]{slug}": PAGES_SLUGS_QUERYResult;
-    "*[_type == \"post\" && slug.current == $slug][0]{\n    title,\n    slug,\n    image{\n      ...,\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    body[]{\n      ...,\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    author->{\n      name,\n      image {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      }\n    },\n    _createdAt,\n    _updatedAt,\n    meta_title,\n    meta_description,\n    noindex,\n    ogImage {\n      asset->{\n        _id,\n        url,\n        metadata {\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n    },\n    \"estimatedReadingTime\": round(length(pt::text(body)) / 5 / 180 )\n}": POST_QUERYResult;
+    "*[_type == \"post\" && slug.current == $slug][0]{\n    title,\n    slug,\n    image{\n      ...,\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    body[]{\n      ...,\n      markDefs[]{\n        ...,\n        _type == \"link\" => {\n          \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->slug.current\n    )\n\n        }\n      },\n      _type == \"image\" => {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        }\n      }\n    },\n    author->{\n      name,\n      image {\n        ...,\n        asset->{\n          _id,\n          url,\n          mimeType,\n          metadata {\n            lqip,\n            dimensions {\n              width,\n              height\n            }\n          }\n        },\n        alt\n      }\n    },\n    _createdAt,\n    _updatedAt,\n    meta_title,\n    meta_description,\n    noindex,\n    ogImage {\n      asset->{\n        _id,\n        url,\n        metadata {\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n    },\n    \"estimatedReadingTime\": round(length(pt::text(body)) / 5 / 180 )\n}": POST_QUERYResult;
     "*[_type == \"post\" && defined(slug)] | order(_createdAt desc){\n    title,\n    slug,\n    excerpt,\n    image{\n      ...,\n      asset->{\n        _id,\n        url,\n        mimeType,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height\n          }\n        }\n      },\n      alt\n    },\n    categories[]->{\n      _id,\n      title,\n    },\n}": POSTS_QUERYResult;
     "*[_type == \"post\" && defined(slug)]{slug}": POSTS_SLUGS_QUERYResult;
     "*[_type == \"settings\"][0]{\n  _type,\n  siteName,\n  logo{\n    asset->{\n      _id,\n      url,\n      mimeType,\n      metadata {\n        lqip,\n        dimensions {\n          width,\n          height\n        }\n      }\n    },\n    alt,\n    width,\n    height\n  },\n  description,\n  copyright\n}": SETTINGS_QUERYResult;

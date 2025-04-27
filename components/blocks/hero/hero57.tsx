@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
-import { PortableText } from "@portabletext/react";
+import PortableTextRenderer from "@/components/portable-text-renderer";
 import Icon from "@/components/icon";
 import { PAGE_QUERYResult } from "@/sanity.types";
 import { Fragment } from "react";
@@ -57,7 +57,7 @@ const Hero57 = ({ title, body, links, tags }: Hero57Props) => {
         </h1>
         {body && (
           <div className="mx-auto mb-10 max-w-screen-md text-center font-medium text-muted-foreground md:text-xl">
-            <PortableText value={body} />
+            <PortableTextRenderer value={body} />
           </div>
         )}
         {links && (

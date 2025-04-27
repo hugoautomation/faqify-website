@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
-import { PortableText } from "@portabletext/react";
+import PortableTextRenderer from "@/components/portable-text-renderer";
 import Icon from "@/components/icon";
 import { ArrowDown } from "lucide-react";
 import { PAGE_QUERYResult } from "@/sanity.types";
@@ -44,7 +44,7 @@ const Hero174 = ({
             )}
             {body && (
               <div className="text-center text-lg text-balance text-white md:text-2xl">
-                <PortableText value={body} />
+                <PortableTextRenderer value={body} />
               </div>
             )}
             {links && links.length > 0 && (

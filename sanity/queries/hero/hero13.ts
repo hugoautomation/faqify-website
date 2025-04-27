@@ -10,6 +10,12 @@ export const hero13Query = groq`
     title,
     body[]{
       ...,
+      markDefs[]{
+        ...,
+        _type == "link" => {
+          ${linkQuery}
+        }
+      },
       _type == "image" => {
         ...,
         asset->{

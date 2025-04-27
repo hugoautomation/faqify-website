@@ -148,17 +148,12 @@ const portableTextComponents: PortableTextProps["components"] = {
   },
   marks: {
     link: ({ value, children }) => {
-      const isExternal =
-        (value?.href || "").startsWith("http") ||
-        (value?.href || "").startsWith("https") ||
-        (value?.href || "").startsWith("mailto");
-      const target = isExternal ? "_blank" : undefined;
       return (
         <Link
           href={value?.href}
-          target={target}
-          rel={target ? "noopener" : undefined}
-          style={{ textDecoration: "underline" }}
+          target={value.target ? "_blank" : undefined}
+          rel={value.target ? "noopener" : undefined}
+          className="underline"
         >
           {children}
         </Link>

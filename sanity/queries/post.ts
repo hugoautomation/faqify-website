@@ -1,4 +1,5 @@
 import { groq } from "next-sanity";
+import { linkQuery } from "./shared/link";
 
 export const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0]{
     title,
@@ -21,6 +22,12 @@ export const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0]{
     },
     body[]{
       ...,
+      markDefs[]{
+        ...,
+        _type == "link" => {
+          ${linkQuery}
+        }
+      },
       _type == "image" => {
         ...,
         asset->{
