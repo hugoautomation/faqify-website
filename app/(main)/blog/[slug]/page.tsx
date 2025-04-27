@@ -7,11 +7,10 @@ import {
 } from "@/sanity/lib/fetch";
 import { generatePageMetadata } from "@/sanity/lib/metadata";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import PostDate from "@/components/post-date";
 import { Separator } from "@/components/ui/separator";
-import { Clock, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Clock, Facebook, Twitter, Linkedin } from "lucide-react";
 import { POST_QUERYResult } from "@/sanity.types";
 
 type BreadcrumbLink = {
