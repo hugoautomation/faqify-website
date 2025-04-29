@@ -48,6 +48,7 @@ export default defineType({
         { type: "hero-160" },
         { type: "hero-174" },
         { type: "faq-1" },
+        { type: "faq-5" },
         { type: "logos-1" },
         { type: "feature-1" },
         { type: "feature-3" },
@@ -84,7 +85,7 @@ export default defineType({
             },
             {
               name: "faq",
-              of: ["faq-1"],
+              of: ["faq-1", "faq-5"],
             },
             {
               name: "logos",

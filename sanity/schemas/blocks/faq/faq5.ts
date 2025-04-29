@@ -2,7 +2,7 @@ import { defineType, defineField } from "sanity";
 import { ListCollapse } from "lucide-react";
 
 export default defineType({
-  name: "faq-1",
+  name: "faq-5",
   type: "object",
   icon: ListCollapse,
   fields: [
@@ -29,7 +29,7 @@ export default defineType({
     },
     prepare({ title }) {
       return {
-        title: "FAQ 1",
+        title: "FAQ 5",
         subtitle: title || "No Title",
       };
     },
