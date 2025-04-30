@@ -49,6 +49,7 @@ export default defineType({
         { type: "hero-174" },
         { type: "faq-1" },
         { type: "faq-5" },
+        { type: "faq-8" },
         { type: "faq-9" },
         { type: "faq-14" },
         { type: "logos-1" },
@@ -87,7 +88,7 @@ export default defineType({
             },
             {
               name: "faq",
-              of: ["faq-1", "faq-5", "faq-9", "faq-14"],
+              of: ["faq-1", "faq-5", "faq-8", "faq-9", "faq-14"],
             },
             {
               name: "logos",
