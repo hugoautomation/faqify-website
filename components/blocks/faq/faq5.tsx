@@ -13,7 +13,7 @@ export default function FAQ5({ padding, faqs }: FAQProps) {
       {faqs && faqs?.length > 0 && (
         <div className="max-w-2xl mx-auto">
           {faqs.map((faq, index) => (
-            <div key={faq.title} className="mb-8 flex gap-4">
+            <div key={faq._id} className="mb-8 flex gap-4">
               <span className="flex size-6 shrink-0 items-center justify-center rounded-sm bg-secondary font-mono text-xs text-primary">
                 {index + 1}
               </span>

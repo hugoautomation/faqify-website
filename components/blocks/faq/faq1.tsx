@@ -20,7 +20,7 @@ export default function FAQ1({ padding, faqs }: FAQProps) {
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible>
             {faqs.map((faq) => (
-              <AccordionItem key={faq.title} value={`item-${faq._id}`}>
+              <AccordionItem key={faq._id} value={`item-${faq._id}`}>
                 <AccordionTrigger className="font-semibold hover:no-underline">
                   {faq.title}
                 </AccordionTrigger>

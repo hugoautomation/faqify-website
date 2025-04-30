@@ -20,7 +20,7 @@ export default function FAQ9({ padding, faqs }: FAQProps) {
         <Accordion type="multiple">
           {faqs.map((faq) => (
             <AccordionItem
-              key={faq.title}
+              key={faq._id}
               value={`item-${faq._id}`}
               className="mb-2 rounded-md border-b-0 bg-muted px-5 py-2 md:mb-4"
             >

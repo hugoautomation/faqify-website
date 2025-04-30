@@ -7,7 +7,6 @@ export const faq5Query = groq`
     _type,
     _key,
     padding,
-    border,
     faqs[]->{
       _id,
       title,
