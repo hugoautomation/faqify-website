@@ -4,7 +4,7 @@ import { FileText } from "lucide-react";
 export default defineType({
   name: "blog-16",
   type: "object",
-  title: "Blog 16",
+  title: "Blog 16 Featured",
   description: "Blog 16: Blog posts with list layout.",
   icon: FileText,
   fields: [
@@ -30,7 +30,7 @@ export default defineType({
     },
     prepare({ title }) {
       return {
-        title: "Blog 16",
+        title: "Blog 16 Featured",
         subtitle: title || "No Title",
       };
     },

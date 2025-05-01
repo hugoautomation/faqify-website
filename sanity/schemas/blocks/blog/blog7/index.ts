@@ -5,7 +5,7 @@ import { COLS_VARIANTS } from "@/sanity/schemas/blocks/shared/col-variants";
 export default defineType({
   name: "blog-7",
   type: "object",
-  title: "Blog 7",
+  title: "Blog 7 Featured",
   description: "Blog 7: Blog posts with grid layout split into 2/3 columns.",
   icon: FileText,
   fields: [
@@ -41,7 +41,7 @@ export default defineType({
     },
     prepare({ title }) {
       return {
-        title: "Blog 7",
+        title: "Blog 7 Featured",
         subtitle: title || "No Title",
       };
     },
