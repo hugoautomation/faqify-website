@@ -25,9 +25,13 @@ import Feature202 from "@/components/blocks/feature/feature202";
 import Blog4 from "@/components/blocks/blog/blog4";
 import AllPosts4 from "@/components/blocks/blog/blog4/all-posts";
 import Blog7 from "@/components/blocks/blog/blog7";
+import AllPosts7 from "@/components/blocks/blog/blog7/all-posts";
 import Blog13 from "@/components/blocks/blog/blog13";
+import AllPosts13 from "@/components/blocks/blog/blog13/all-posts";
 import Blog14 from "@/components/blocks/blog/blog14";
+import AllPosts14 from "@/components/blocks/blog/blog14/all-posts";
 import Blog16 from "@/components/blocks/blog/blog16";
+import AllPosts16 from "@/components/blocks/blog/blog16/all-posts";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 
@@ -60,9 +64,13 @@ const componentMap: {
   "blog-4": Blog4,
   "all-posts-4": AllPosts4,
   "blog-7": Blog7,
+  "all-posts-7": AllPosts7,
   "blog-13": Blog13,
+  "all-posts-13": AllPosts13,
   "blog-14": Blog14,
+  "all-posts-14": AllPosts14,
   "blog-16": Blog16,
+  "all-posts-16": AllPosts16,
 };
 
 export default function Blocks({

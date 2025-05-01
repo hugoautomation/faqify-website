@@ -62,13 +62,17 @@ import feature202Card from "./schemas/blocks/feature/feature202/feature202-card"
 import blog4 from "./schemas/blocks/blog/blog4";
 import allPosts4 from "./schemas/blocks/blog/blog4/all-posts";
 // Blog 7
-import blog7 from "./schemas/blocks/blog/blog-7";
+import blog7 from "./schemas/blocks/blog/blog7";
+import allPosts7 from "./schemas/blocks/blog/blog7/all-posts";
 // Blog 13
-import blog13 from "./schemas/blocks/blog/blog-13";
+import blog13 from "./schemas/blocks/blog/blog13";
+import allPosts13 from "./schemas/blocks/blog/blog13/all-posts";
 // Blog 14
-import blog14 from "./schemas/blocks/blog/blog-14";
+import blog14 from "./schemas/blocks/blog/blog14";
+import allPosts14 from "./schemas/blocks/blog/blog14/all-posts";
 // Blog 16
-import blog16 from "./schemas/blocks/blog/blog-16";
+import blog16 from "./schemas/blocks/blog/blog16";
+import allPosts16 from "./schemas/blocks/blog/blog16/all-posts";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -135,11 +139,15 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     allPosts4,
     // Blog 7
     blog7,
+    allPosts7,
     // Blog 13
     blog13,
+    allPosts13,
     // Blog 14
     blog14,
+    allPosts14,
     // Blog 16
     blog16,
+    allPosts16,
   ],
 };

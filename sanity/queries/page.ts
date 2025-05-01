@@ -25,9 +25,13 @@ import { feature202Query } from "./feature/feature202";
 import { blog4Query } from "./blog/blog4";
 import { allPosts4Query } from "./blog/blog4/all-posts";
 import { blog7Query } from "./blog/blog7";
+import { allPosts7Query } from "./blog/blog7/all-posts";
 import { blog13Query } from "./blog/blog13";
+import { allPosts13Query } from "./blog/blog13/all-posts";
 import { blog14Query } from "./blog/blog14";
+import { allPosts14Query } from "./blog/blog14/all-posts";
 import { blog16Query } from "./blog/blog16";
+import { allPosts16Query } from "./blog/blog16/all-posts";
 
 export const PAGE_QUERY = groq`
   *[_type == "page" && slug.current == $slug][0]{
@@ -58,9 +62,13 @@ export const PAGE_QUERY = groq`
       ${blog4Query},
       ${allPosts4Query},
       ${blog7Query},
+      ${allPosts7Query},
       ${blog13Query},
+      ${allPosts13Query},
       ${blog14Query},
+      ${allPosts14Query},
       ${blog16Query},
+      ${allPosts16Query},
     },
     meta_title,
     meta_description,

@@ -6,7 +6,6 @@ import { urlFor } from "@/sanity/lib/image";
 import PostDate from "@/components/post-date";
 import Link from "next/link";
 import { PAGE_QUERYResult } from "@/sanity.types";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Calendar, ChevronRight } from "lucide-react";
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 type Blog14 = Extract<Block, { _type: "blog-14" }>;
