@@ -58,11 +58,16 @@ import feature157Card from "./schemas/blocks/feature/feature157/feature157-card"
 // Feature 202
 import feature202 from "./schemas/blocks/feature/feature202";
 import feature202Card from "./schemas/blocks/feature/feature202/feature202-card";
-// Blog
-import blog4 from "./schemas/blocks/blog/blog-4";
+// Blog 4
+import blog4 from "./schemas/blocks/blog/blog4";
+import allPosts4 from "./schemas/blocks/blog/blog4/all-posts";
+// Blog 7
 import blog7 from "./schemas/blocks/blog/blog-7";
+// Blog 13
 import blog13 from "./schemas/blocks/blog/blog-13";
+// Blog 14
 import blog14 from "./schemas/blocks/blog/blog-14";
+// Blog 16
 import blog16 from "./schemas/blocks/blog/blog-16";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -125,11 +130,16 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     // Feature 202
     feature202,
     feature202Card,
-    // Blog
+    // Blog 4
     blog4,
+    allPosts4,
+    // Blog 7
     blog7,
+    // Blog 13
     blog13,
+    // Blog 14
     blog14,
+    // Blog 16
     blog16,
   ],
 };

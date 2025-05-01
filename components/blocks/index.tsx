@@ -23,6 +23,7 @@ import Feature117 from "@/components/blocks/feature/feature117";
 import Feature157 from "@/components/blocks/feature/feature157";
 import Feature202 from "@/components/blocks/feature/feature202";
 import Blog4 from "@/components/blocks/blog/blog4";
+import AllPosts4 from "@/components/blocks/blog/blog4/all-posts";
 import Blog7 from "@/components/blocks/blog/blog7";
 import Blog13 from "@/components/blocks/blog/blog13";
 import Blog14 from "@/components/blocks/blog/blog14";
@@ -57,13 +58,22 @@ const componentMap: {
   "feature-157": Feature157,
   "feature-202": Feature202,
   "blog-4": Blog4,
+  "all-posts-4": AllPosts4,
   "blog-7": Blog7,
   "blog-13": Blog13,
   "blog-14": Blog14,
   "blog-16": Blog16,
 };
 
-export default function Blocks({ blocks }: { blocks: Block[] }) {
+export default function Blocks({
+  blocks,
+  searchParams,
+}: {
+  blocks: Block[];
+  searchParams: Promise<{
+    page?: string;
+  }>;
+}) {
   return (
     <>
       {blocks?.map((block) => {
@@ -75,7 +85,13 @@ export default function Blocks({ blocks }: { blocks: Block[] }) {
           );
           return <div data-type={block._type} key={block._key} />;
         }
-        return <Component {...(block as any)} key={block._key} />;
+        return (
+          <Component
+            {...(block as any)}
+            key={block._key}
+            searchParams={searchParams}
+          />
+        );
       })}
     </>
   );

@@ -29,6 +29,9 @@ export async function generateMetadata(props: {
 
 export default async function Page(props: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{
+    page?: string;
+  }>;
 }) {
   const params = await props.params;
   const page = await fetchSanityPageBySlug({ slug: params.slug });
@@ -37,5 +40,7 @@ export default async function Page(props: {
     notFound();
   }
 
-  return <Blocks blocks={page?.blocks ?? []} />;
+  const pageParams = Promise.resolve((await props.searchParams) || {});
+
+  return <Blocks blocks={page?.blocks ?? []} searchParams={pageParams} />;
 }

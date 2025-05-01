@@ -63,6 +63,7 @@ export default defineType({
         { type: "feature-157" },
         { type: "feature-202" },
         { type: "blog-4" },
+        { type: "all-posts-4" },
         { type: "blog-7" },
         { type: "blog-13" },
         { type: "blog-14" },
@@ -110,7 +111,14 @@ export default defineType({
             },
             {
               name: "blog",
-              of: ["blog-4", "blog-7", "blog-13", "blog-14", "blog-16"],
+              of: [
+                "blog-4",
+                "all-posts-4",
+                "blog-7",
+                "blog-13",
+                "blog-14",
+                "blog-16",
+              ],
             },
           ],
           views: [

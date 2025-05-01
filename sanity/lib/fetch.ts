@@ -7,6 +7,7 @@ import {
   POST_QUERY,
   POSTS_QUERY,
   POSTS_SLUGS_QUERY,
+  POSTS_COUNT_QUERY,
 } from "@/sanity/queries/post";
 import {
   PAGE_QUERYResult,
@@ -52,11 +53,27 @@ export const fetchSanityPagesStaticParams =
     return data;
   };
 
-export const fetchSanityPosts = async (): Promise<POSTS_QUERYResult> => {
+export const fetchSanityPosts = async ({
+  page,
+  limit,
+}: {
+  page?: number;
+  limit: number;
+}): Promise<POSTS_QUERYResult> => {
+  const offset = page && limit ? (page - 1) * limit : 0;
+  const end = offset + limit;
   const { data } = await sanityFetch({
     query: POSTS_QUERY,
+    params: { offset, end },
   });
 
+  return data;
+};
+
+export const fetchSanityPostsCount = async (): Promise<number> => {
+  const { data } = await sanityFetch({
+    query: POSTS_COUNT_QUERY,
+  });
   return data;
 };
 
