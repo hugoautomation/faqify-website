@@ -21,7 +21,7 @@ type Logos9Props = Extract<
 const Logos9 = ({ padding, title, images, testimonials }: Logos9Props) => {
   return (
     <SectionContainer padding={padding}>
-      <div className="container flex flex-col items-center text-center">
+      <div className="flex flex-col items-center text-center">
         {title && (
           <h1 className="my-6 text-lg font-semibold tracking-tight text-foreground">
             {title}

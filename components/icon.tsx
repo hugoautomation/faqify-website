@@ -1,6 +1,7 @@
 import {
   ArrowDownToLine,
   ArrowUpDown,
+  ArrowRight,
   Bell,
   Blocks,
   Building2,
@@ -53,6 +54,7 @@ type IconProps = {
 const iconComponents: Record<string, LucideIcon> = {
   "arrow-down-to-line": ArrowDownToLine,
   "arrow-up-down": ArrowUpDown,
+  "arrow-right": ArrowRight,
   bell: Bell,
   blocks: Blocks,
   "building-2": Building2,

@@ -13,6 +13,7 @@ import { faq8Query } from "./faq/faq8";
 import { faq9Query } from "./faq/faq9";
 import { faq14Query } from "./faq/faq14";
 import { logos1Query } from "./logos/logos1";
+import { logos2Query } from "./logos/logos2";
 import { logos4Query } from "./logos/logos4";
 import { logos9Query } from "./logos/logos9";
 import { feature1Query } from "./feature/feature1";
@@ -51,6 +52,7 @@ export const PAGE_QUERY = groq`
       ${faq9Query},
       ${faq14Query},
       ${logos1Query},
+      ${logos2Query},
       ${logos4Query},
       ${logos9Query},
       ${feature1Query},

@@ -2,6 +2,7 @@ export const ICON_VARIANTS = [
   { title: "None", value: "none" },
   { title: "ArrowDownToLine", value: "arrow-down-to-line" },
   { title: "ArrowUpDown", value: "arrow-up-down" },
+  { title: "ArrowRight", value: "arrow-right" },
   { title: "Bell", value: "bell" },
   { title: "Blocks", value: "blocks" },
   { title: "Building2", value: "building-2" },

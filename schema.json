@@ -892,6 +892,10 @@
               },
               {
                 "type": "string",
+                "value": "arrow-right"
+              },
+              {
+                "type": "string",
                 "value": "bell"
               },
               {
@@ -1369,6 +1373,10 @@
                     {
                       "type": "string",
                       "value": "arrow-up-down"
+                    },
+                    {
+                      "type": "string",
+                      "value": "arrow-right"
                     },
                     {
                       "type": "string",
@@ -1927,6 +1935,10 @@
               },
               {
                 "type": "string",
+                "value": "arrow-right"
+              },
+              {
+                "type": "string",
                 "value": "bell"
               },
               {
@@ -2189,6 +2201,10 @@
               },
               {
                 "type": "string",
+                "value": "arrow-right"
+              },
+              {
+                "type": "string",
                 "value": "bell"
               },
               {
@@ -2438,6 +2454,10 @@
               {
                 "type": "string",
                 "value": "arrow-up-down"
+              },
+              {
+                "type": "string",
+                "value": "arrow-right"
               },
               {
                 "type": "string",
@@ -2859,6 +2879,10 @@
               {
                 "type": "string",
                 "value": "arrow-up-down"
+              },
+              {
+                "type": "string",
+                "value": "arrow-right"
               },
               {
                 "type": "string",
@@ -3742,6 +3766,156 @@
           "value": {
             "type": "inline",
             "name": "section-padding"
+          },
+          "optional": true
+        },
+        "images": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "array",
+            "of": {
+              "type": "object",
+              "attributes": {
+                "asset": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "object",
+                    "attributes": {
+                      "_ref": {
+                        "type": "objectAttribute",
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "_type": {
+                        "type": "objectAttribute",
+                        "value": {
+                          "type": "string",
+                          "value": "reference"
+                        }
+                      },
+                      "_weak": {
+                        "type": "objectAttribute",
+                        "value": {
+                          "type": "boolean"
+                        },
+                        "optional": true
+                      }
+                    },
+                    "dereferencesTo": "sanity.imageAsset"
+                  },
+                  "optional": true
+                },
+                "media": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "unknown"
+                  },
+                  "optional": true
+                },
+                "hotspot": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "inline",
+                    "name": "sanity.imageHotspot"
+                  },
+                  "optional": true
+                },
+                "crop": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "inline",
+                    "name": "sanity.imageCrop"
+                  },
+                  "optional": true
+                },
+                "alt": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string"
+                  },
+                  "optional": true
+                },
+                "_type": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string",
+                    "value": "image"
+                  }
+                }
+              },
+              "rest": {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "optional": true
+        }
+      }
+    }
+  },
+  {
+    "name": "logos-2",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "logos-2"
+          }
+        },
+        "padding": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "inline",
+            "name": "section-padding"
+          },
+          "optional": true
+        },
+        "title": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "description": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "links": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "array",
+            "of": {
+              "type": "object",
+              "attributes": {
+                "_key": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              },
+              "rest": {
+                "type": "inline",
+                "name": "link-icon"
+              }
+            }
           },
           "optional": true
         },
@@ -5153,6 +5327,10 @@
                     {
                       "type": "string",
                       "value": "arrow-up-down"
+                    },
+                    {
+                      "type": "string",
+                      "value": "arrow-right"
                     },
                     {
                       "type": "string",
@@ -6899,6 +7077,10 @@
                       },
                       {
                         "type": "string",
+                        "value": "arrow-right"
+                      },
+                      {
+                        "type": "string",
                         "value": "bell"
                       },
                       {
@@ -7233,6 +7415,10 @@
                       },
                       {
                         "type": "string",
+                        "value": "arrow-right"
+                      },
+                      {
+                        "type": "string",
                         "value": "bell"
                       },
                       {
@@ -7450,6 +7636,10 @@
                     {
                       "type": "string",
                       "value": "arrow-up-down"
+                    },
+                    {
+                      "type": "string",
+                      "value": "arrow-right"
                     },
                     {
                       "type": "string",
@@ -9176,6 +9366,10 @@
               },
               {
                 "type": "string",
+                "value": "arrow-right"
+              },
+              {
+                "type": "string",
                 "value": "bell"
               },
               {
@@ -10825,6 +11019,21 @@
                 "rest": {
                   "type": "inline",
                   "name": "logos-1"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "logos-2"
                 }
               },
               {

@@ -8,6 +8,7 @@ import Hero85 from "@/components/blocks/hero/hero85";
 import Hero160 from "@/components/blocks/hero/hero160";
 import Hero174 from "@/components/blocks/hero/hero174";
 import Logos1 from "@/components/blocks/logo/logos1";
+import Logos2 from "@/components/blocks/logo/logos2";
 import Logos4 from "@/components/blocks/logo/logos4";
 import Logos9 from "@/components/blocks/logo/logos9";
 import FAQ1 from "@/components/blocks/faq/faq1";
@@ -53,6 +54,7 @@ const componentMap: {
   "faq-9": FAQ9,
   "faq-14": FAQ14,
   "logos-1": Logos1,
+  "logos-2": Logos2,
   "logos-4": Logos4,
   "logos-9": Logos9,
   "feature-1": Feature1,

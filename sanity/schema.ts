@@ -32,6 +32,7 @@ import faq8 from "./schemas/blocks/faq/faq8";
 import faq9 from "./schemas/blocks/faq/faq9";
 import faq14 from "./schemas/blocks/faq/faq14";
 import logos1 from "./schemas/blocks/logos/logos1";
+import logos2 from "./schemas/blocks/logos/logos2";
 import logos4 from "./schemas/blocks/logos/logos4";
 import logos9 from "./schemas/blocks/logos/logos9";
 // Feature 1
@@ -109,6 +110,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     faq9,
     faq14,
     logos1,
+    logos2,
     logos4,
     logos9,
     // Feature 1
