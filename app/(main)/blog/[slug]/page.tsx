@@ -86,7 +86,7 @@ export async function generateMetadata(props: {
 
   return generatePageMetadata({
     page: post,
-    slug: `/blog/${params.slug}`,
+    slug: `blog/${params.slug}`,
     type: "post",
   });
 }

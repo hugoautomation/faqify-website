@@ -46,10 +46,10 @@ export async function GET(request: Request) {
       return new Response("Post or page not found", { status: 404 });
     }
 
-    // Load Poppins fonts with different weights
-    const [poppinsRegular, poppinsBold] = await Promise.all([
-      getTtfFont("Poppins", ["wght"], [400]),
-      getTtfFont("Poppins", ["wght"], [700]),
+    // Load fonts with different weights
+    const [fontRegular, fontBold] = await Promise.all([
+      getTtfFont("Inter", ["wght"], [400]),
+      getTtfFont("Inter", ["wght"], [700]),
     ]);
 
     return new ImageResponse(
@@ -61,7 +61,7 @@ export async function GET(request: Request) {
             display: "flex",
             flexDirection: "column",
             backgroundColor: "white",
-            fontFamily: "Poppins",
+            fontFamily: "Inter",
           }}
         >
           <div
@@ -185,16 +185,14 @@ export async function GET(request: Request) {
                 justifyContent: "center",
                 padding: 48,
                 width: "34%",
-                background:
-                  "repeating-linear-gradient(45deg, #f6f6f6 0px, #f6f6f6 2px, transparent 2px, transparent 8px)",
               }}
             >
               {settings?.logo && settings.logo.asset?.url && (
                 <img
                   src={settings.logo.asset.url}
                   alt={settings.logo.alt || ""}
-                  width={200}
-                  height={50}
+                  width={300}
+                  height={42}
                 />
               )}
             </div>
@@ -206,14 +204,14 @@ export async function GET(request: Request) {
         height: 630,
         fonts: [
           {
-            name: "Poppins",
-            data: poppinsRegular,
+            name: "Inter",
+            data: fontRegular,
             style: "normal",
             weight: 400,
           },
           {
-            name: "Poppins",
-            data: poppinsBold,
+            name: "Inter",
+            data: fontBold,
             style: "normal",
             weight: 700,
           },

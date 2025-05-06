@@ -124,8 +124,8 @@ export const getOgImageUrl = ({
   type: "post" | "page";
   slug: string;
 }): string => {
-  // Clean the slug by removing any path segments between slashes (e.g. "blog/my-post" becomes "my-post")
-  const cleanSlug = slug.replace(/\/[^\/]+\//, "");
+  // Clean the slug by removing any path segments before the last slash (e.g. "blog/my-post" becomes "my-post")
+  const cleanSlug = slug.split("/").pop() || slug;
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
   return `${baseUrl}/api/og?type=${type}&slug=${encodeURIComponent(cleanSlug)}`;
