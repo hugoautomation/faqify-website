@@ -60,143 +60,105 @@ export async function GET(request: Request) {
             width: "100%",
             display: "flex",
             flexDirection: "column",
-            backgroundColor: "white",
+            backgroundColor: "#ffffff",
+            padding: "64px",
             fontFamily: "Inter",
           }}
         >
+          {/* Logo */}
+          {settings?.logo && settings.logo.asset?.url && (
+            <img
+              src={settings.logo.asset.url}
+              alt={settings.logo.alt || ""}
+              width={300}
+              height={42}
+              style={{ marginBottom: 48 }}
+            />
+          )}
+
+          {/* Main Content */}
           <div
             style={{
+              flex: 1,
               display: "flex",
-              height: "100%",
-              width: "100%",
-              border: "1px solid black",
+              flexDirection: "column",
+              gap: 24,
             }}
           >
-            {/* Left Content */}
+            {/* Title */}
             <div
               style={{
-                display: "flex",
-                padding: 48,
-                flexDirection: "column",
-                borderRight: "1px solid black",
-                width: "66%",
+                fontSize: 72,
+                fontWeight: "bold",
+                lineHeight: 1.1,
+                color: "#000000",
+                display: "-webkit-box",
+                WebkitLineClamp: "3",
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
               }}
             >
-              {/* Title */}
-              <div
-                style={{
-                  fontSize: 64,
-                  fontWeight: "bold",
-                  lineHeight: 1.1,
-                  padding: "24px 0",
-                  borderBottom: "1px solid black",
-                  height: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  overflow: "hidden",
-                }}
-              >
-                <div
-                  style={{
-                    display: "-webkit-box",
-                    WebkitLineClamp: "3",
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                  }}
-                >
-                  {post?.title || page?.meta_title}
-                </div>
-              </div>
-
-              {/* Description */}
-              <div
-                style={{
-                  fontSize: 24,
-                  padding: "24px 0",
-                  flex: 1,
-                  overflow: "hidden",
-                  display: "-webkit-box",
-                  WebkitLineClamp: "2",
-                  WebkitBoxOrient: "vertical",
-                  textOverflow: "ellipsis",
-                }}
-              >
-                {post?.meta_description || page?.meta_description}
-              </div>
-              {/* Author section */}
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 16,
-                  marginTop: "auto",
-                  padding: "24px 0",
-                }}
-              >
-                {post?.author?.image && post.author.image.asset?._id && (
-                  <img
-                    src={urlFor(post.author.image)
-                      .format("jpg")
-                      .width(48)
-                      .height(48)
-                      .fit("crop")
-                      .url()}
-                    alt={post.author.name || ""}
-                    width="48"
-                    height="48"
-                    style={{
-                      border: "1px solid black",
-                      filter: "grayscale(100%)",
-                    }}
-                  />
-                )}
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: 4,
-                  }}
-                >
-                  {post?.author?.name && (
-                    <div style={{ fontWeight: 500 }}>{post.author.name}</div>
-                  )}
-                  {post && (
-                    <div style={{ color: "#666" }}>
-                      {new Date(post?._createdAt as string).toLocaleDateString(
-                        "en-US",
-                        {
-                          month: "long",
-                          day: "numeric",
-                          year: "numeric",
-                        }
-                      )}
-                    </div>
-                  )}
-                </div>
-              </div>
+              {post?.title || page?.meta_title}
             </div>
 
-            {/* Right Content - Pattern */}
+            {/* Description */}
+            <div
+              style={{
+                fontSize: 32,
+                color: "#666666",
+                display: "-webkit-box",
+                WebkitLineClamp: "2",
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+              }}
+            >
+              {post?.meta_description || page?.meta_description}
+            </div>
+          </div>
+
+          {/* Author Info - Only show for posts */}
+          {post?.author && (
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
-                padding: 48,
-                width: "34%",
+                gap: 16,
+                marginTop: "auto",
               }}
             >
-              {settings?.logo && settings.logo.asset?.url && (
+              {post.author.image && post.author.image.asset?._id && (
                 <img
-                  src={settings.logo.asset.url}
-                  alt={settings.logo.alt || ""}
-                  width={300}
-                  height={42}
+                  src={urlFor(post.author.image)
+                    .format("jpg")
+                    .width(48)
+                    .height(48)
+                    .fit("crop")
+                    .url()}
+                  alt={post.author.name || ""}
+                  width="48"
+                  height="48"
+                  style={{
+                    borderRadius: "50%",
+                  }}
                 />
               )}
+              <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                {post.author.name && (
+                  <div style={{ fontWeight: 500 }}>{post.author.name}</div>
+                )}
+                <div style={{ color: "#666666" }}>
+                  {new Date(post._createdAt as string).toLocaleDateString(
+                    "en-US",
+                    {
+                      month: "long",
+                      day: "numeric",
+                      year: "numeric",
+                    }
+                  )}
+                </div>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       ),
       {
