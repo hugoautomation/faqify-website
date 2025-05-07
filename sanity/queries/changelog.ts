@@ -1,7 +1,7 @@
 import { groq } from "next-sanity";
 import { linkQuery } from "./shared/link";
 
-export const CHANGELOGS_QUERY = groq`*[_type == "changelog" && defined(slug)] | order(date asc){
+export const CHANGELOGS_QUERY = groq`*[_type == "changelog" && defined(slug)] | order(date desc){
     _id,
     title,
     slug,
