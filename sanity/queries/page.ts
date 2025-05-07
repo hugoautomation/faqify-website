@@ -35,6 +35,7 @@ import { allPosts14Query } from "./blog/blog14/all-posts";
 import { blog16Query } from "./blog/blog16";
 import { allPosts16Query } from "./blog/blog16/all-posts";
 import { changelog1Query } from "./blog/changelog/changelog1";
+import { changelog2Query } from "./blog/changelog/changelog2";
 
 export const PAGE_QUERY = groq`
   *[_type == "page" && slug.current == $slug][0]{
@@ -75,6 +76,7 @@ export const PAGE_QUERY = groq`
       ${blog16Query},
       ${allPosts16Query},
       ${changelog1Query},
+      ${changelog2Query},
     },
     meta_title,
     meta_description,
