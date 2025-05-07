@@ -74,6 +74,7 @@ export default defineType({
         { type: "all-posts-14" },
         { type: "blog-16" },
         { type: "all-posts-16" },
+        { type: "changelog-1" },
       ],
       options: {
         insertMenu: {
@@ -129,6 +130,10 @@ export default defineType({
                 "blog-16",
                 "all-posts-16",
               ],
+            },
+            {
+              name: "changelog",
+              of: ["changelog-1"],
             },
           ],
           views: [

@@ -34,6 +34,7 @@ import Blog14 from "@/components/blocks/blog/blog14";
 import AllPosts14 from "@/components/blocks/blog/blog14/all-posts";
 import Blog16 from "@/components/blocks/blog/blog16";
 import AllPosts16 from "@/components/blocks/blog/blog16/all-posts";
+import Changelog1 from "@/components/blocks/changelog/changelog1";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 
@@ -75,6 +76,7 @@ const componentMap: {
   "all-posts-14": AllPosts14,
   "blog-16": Blog16,
   "all-posts-16": AllPosts16,
+  "changelog-1": Changelog1,
 };
 
 export default function Blocks({
@@ -82,7 +84,7 @@ export default function Blocks({
   searchParams,
 }: {
   blocks: Block[];
-  searchParams: Promise<{
+  searchParams?: Promise<{
     page?: string;
   }>;
 }) {

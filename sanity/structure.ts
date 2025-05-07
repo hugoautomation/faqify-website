@@ -8,6 +8,7 @@ import {
   Menu,
   Settings,
   PhoneCall,
+  FileClock,
 } from "lucide-react";
 
 export const structure = (S: any, context: any) =>
@@ -29,13 +30,22 @@ export const structure = (S: any, context: any) =>
             .title("Post")
             .defaultOrdering([{ field: "_createdAt", direction: "desc" }]) // Default ordering
         ),
-      orderableDocumentListDeskItem({
-        type: "category",
-        title: "Categories",
-        icon: BookA,
-        S,
-        context,
-      }),
+      S.listItem()
+        .title("Changelogs")
+        .schemaType("changelog")
+        .child(
+          S.documentTypeList("changelog")
+            .title("Changelog")
+            .defaultOrdering([{ field: "date", direction: "desc" }])
+        ),
+      S.listItem()
+        .title("Categories")
+        .schemaType("category")
+        .child(
+          S.documentTypeList("category")
+            .title("Category")
+            .defaultOrdering([{ field: "title", direction: "asc" }])
+        ),
       orderableDocumentListDeskItem({
         type: "author",
         title: "Authors",

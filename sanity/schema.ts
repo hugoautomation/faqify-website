@@ -9,6 +9,7 @@ import testimonial from "./schemas/documents/testimonial";
 import navigation from "./schemas/documents/navigation";
 import settings from "./schemas/documents/settings";
 import contact from "./schemas/documents/contact";
+import changelog from "./schemas/documents/changelog";
 
 // Schema UI shared objects
 import blockContent from "./schemas/blocks/shared/block-content";
@@ -75,6 +76,8 @@ import allPosts14 from "./schemas/blocks/blog/blog14/all-posts";
 // Blog 16
 import blog16 from "./schemas/blocks/blog/blog16";
 import allPosts16 from "./schemas/blocks/blog/blog16/all-posts";
+// Changelog 1
+import changelog1 from "./schemas/blocks/changelog/changelog1";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -88,6 +91,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     navigation,
     settings,
     contact,
+    changelog,
     // shared objects
     blockContent,
     link,
@@ -153,5 +157,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     // Blog 16
     blog16,
     allPosts16,
+    // Changelog 1
+    changelog1,
   ],
 };

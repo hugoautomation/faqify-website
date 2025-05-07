@@ -9,6 +9,7 @@ import {
   POSTS_SLUGS_QUERY,
   POSTS_COUNT_QUERY,
 } from "@/sanity/queries/post";
+import { CHANGELOGS_QUERY } from "@/sanity/queries/changelog";
 import {
   PAGE_QUERYResult,
   PAGES_SLUGS_QUERYResult,
@@ -18,6 +19,7 @@ import {
   NAVIGATION_QUERYResult,
   SETTINGS_QUERYResult,
   CONTACT_QUERYResult,
+  CHANGELOGS_QUERYResult,
 } from "@/sanity.types";
 
 export const fetchSanityNavigation =
@@ -69,6 +71,15 @@ export const fetchSanityPosts = async ({
 
   return data;
 };
+
+export const fetchSanityChangelogs =
+  async (): Promise<CHANGELOGS_QUERYResult> => {
+    const { data } = await sanityFetch({
+      query: CHANGELOGS_QUERY,
+    });
+
+    return data;
+  };
 
 export const fetchSanityPostsCount = async (): Promise<number> => {
   const { data } = await sanityFetch({
