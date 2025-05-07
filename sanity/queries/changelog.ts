@@ -50,5 +50,6 @@ export const CHANGELOGS_QUERY = groq`*[_type == "changelog" && defined(slug)] | 
     categories[]->{
       _id,
       title,
+      color
     },
 }`;

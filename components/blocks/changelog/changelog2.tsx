@@ -6,12 +6,12 @@ import { PAGE_QUERYResult } from "@/sanity.types";
 import { fetchSanityChangelogs } from "@/sanity/lib/fetch";
 import PortableTextRenderer from "@/components/portable-text-renderer";
 
-type AllChangelogs2Props = Extract<
+type Changelogs2Props = Extract<
   NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number],
   { _type: "changelog-2" }
 >;
 
-export default async function AllPosts4({ padding }: AllChangelogs2Props) {
+export default async function Changelog2({ padding }: Changelogs2Props) {
   const changelogs = await fetchSanityChangelogs();
 
   return (

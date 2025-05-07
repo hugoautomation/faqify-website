@@ -14,6 +14,16 @@ export default defineType({
       type: "string",
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: "color",
+      title: "Color",
+      type: "string",
+      options: {
+        list: ["red", "amber", "green", "blue", "indigo", "purple", "cyan"],
+      },
+      description:
+        "The color of the category. Used for changelog 3 categories.",
+    }),
     orderRankField({ type: "category" }),
   ],
 });

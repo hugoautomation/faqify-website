@@ -79,6 +79,7 @@ import allPosts16 from "./schemas/blocks/blog/blog16/all-posts";
 // Changelog
 import changelog1 from "./schemas/blocks/changelog/changelog1";
 import changelog2 from "./schemas/blocks/changelog/changelog2";
+import changelog3 from "./schemas/blocks/changelog/changelog3";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -161,5 +162,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     // Changelog
     changelog1,
     changelog2,
+    changelog3,
   ],
 };
