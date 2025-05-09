@@ -47,6 +47,26 @@ export const CHANGELOGS_QUERY = groq`*[_type == "changelog" && defined(slug)] | 
       },
       alt
     },
+    author->{
+      name,
+      title,
+      image {
+        ...,
+        asset->{
+          _id,
+          url,
+          mimeType,
+          metadata {
+            lqip,
+            dimensions {
+              width,
+              height
+            }
+          }
+        },
+        alt
+      }
+    },
     categories[]->{
       _id,
       title,

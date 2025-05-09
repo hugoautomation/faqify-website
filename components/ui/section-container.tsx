@@ -3,12 +3,14 @@ import { cn } from "@/lib/utils";
 import { SectionPadding } from "@/sanity.types";
 
 interface SectionContainerProps {
+  withContainer?: boolean;
   padding?: SectionPadding | null;
   children: React.ReactNode;
   className?: string;
 }
 
 export default function SectionContainer({
+  withContainer = true,
   padding,
   children,
   className,
@@ -16,7 +18,7 @@ export default function SectionContainer({
   return (
     <div
       className={cn(
-        "container",
+        withContainer ? "container" : undefined,
         padding?.top ? "pt-16 xl:pt-20" : undefined,
         padding?.bottom ? "pb-16 xl:pb-20" : undefined,
         className
