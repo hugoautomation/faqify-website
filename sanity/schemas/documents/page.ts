@@ -78,6 +78,7 @@ export default defineType({
         { type: "changelog-2" },
         { type: "changelog-3" },
         { type: "changelog-5" },
+        { type: "pricing-1" },
       ],
       options: {
         insertMenu: {
@@ -118,6 +119,10 @@ export default defineType({
                 "feature-157",
                 "feature-202",
               ],
+            },
+            {
+              name: "pricing",
+              of: ["pricing-1"],
             },
             {
               name: "blog",

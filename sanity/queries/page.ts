@@ -38,6 +38,7 @@ import { changelog1Query } from "./blog/changelog/changelog1";
 import { changelog2Query } from "./blog/changelog/changelog2";
 import { changelog3Query } from "./blog/changelog/changelog3";
 import { changelog5Query } from "./blog/changelog/changelog5";
+import { pricing1Query } from "./pricing/pricing1";
 
 export const PAGE_QUERY = groq`
   *[_type == "page" && slug.current == $slug][0]{
@@ -81,6 +82,7 @@ export const PAGE_QUERY = groq`
       ${changelog2Query},
       ${changelog3Query},
       ${changelog5Query},
+      ${pricing1Query},
     },
     meta_title,
     meta_description,
