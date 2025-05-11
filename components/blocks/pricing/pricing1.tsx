@@ -14,7 +14,17 @@ export default function Pricing1({ padding, columns }: Pricing1Props) {
   return (
     <SectionContainer padding={padding}>
       {columns && columns?.length > 0 && (
-        <div className="mx-auto grid max-w-screen-sm rounded-md border lg:max-w-none lg:grid-cols-4 lg:divide-x">
+        <div
+          className={cn(
+            "mx-auto grid rounded-md border lg:divide-x",
+            columns?.length === 1
+              ? "max-w-screen-sm lg:grid-cols-1"
+              : "lg:max-w-none",
+            columns?.length === 2 && "lg:grid-cols-2",
+            columns?.length === 3 && "lg:grid-cols-3",
+            columns?.length === 4 && "lg:grid-cols-4"
+          )}
+        >
           {columns?.map((column) => (
             <div key={column._key} className="h-full">
               <div

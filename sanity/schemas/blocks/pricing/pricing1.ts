@@ -5,7 +5,8 @@ export default defineType({
   name: "pricing-1",
   type: "object",
   title: "Pricing 1",
-  description: "Pricing 1: Pricing cards with grid layout split into columns.",
+  description:
+    "Pricing 1: Pricing cards with grid layout split into 1-4 columns.",
   icon: DollarSign,
   fields: [
     defineField({
@@ -63,6 +64,7 @@ export default defineType({
           ],
         },
       ],
+      validation: (Rule) => Rule.min(1).max(4),
     }),
   ],
   preview: {
