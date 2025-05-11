@@ -2,10 +2,10 @@ import { defineType, defineField } from "sanity";
 import { DollarSign } from "lucide-react";
 
 export default defineType({
-  name: "pricing-1",
+  name: "pricing-2",
   type: "object",
-  title: "Pricing 1",
-  description: "Pricing 1: Pricing cards with grid layout split into columns.",
+  title: "Pricing 2",
+  description: "Pricing 2: Pricing cards with grid layout split into columns.",
   icon: DollarSign,
   fields: [
     defineField({
@@ -21,11 +21,6 @@ export default defineType({
           type: "object",
           fields: [
             defineField({
-              name: "featured",
-              type: "boolean",
-              initialValue: false,
-            }),
-            defineField({
               name: "title",
               type: "string",
             }),
@@ -38,18 +33,18 @@ export default defineType({
               type: "object",
               fields: [
                 defineField({
-                  name: "value",
+                  name: "monthly",
                   type: "number",
                 }),
                 defineField({
-                  name: "note",
-                  type: "string",
+                  name: "yearly",
+                  type: "number",
                 }),
               ],
             }),
             defineField({
               name: "link",
-              type: "link",
+              type: "link-icon",
             }),
             defineField({
               name: "listTitle",
@@ -63,6 +58,7 @@ export default defineType({
           ],
         },
       ],
+      validation: (Rule) => Rule.required().max(2),
     }),
   ],
   preview: {
@@ -71,7 +67,7 @@ export default defineType({
     },
     prepare({ title }) {
       return {
-        title: "Pricing 1",
+        title: "Pricing 2",
         subtitle: title || "No Title",
       };
     },
