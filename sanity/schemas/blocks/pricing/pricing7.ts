@@ -2,16 +2,38 @@ import { defineType, defineField } from "sanity";
 import { DollarSign } from "lucide-react";
 
 export default defineType({
-  name: "pricing-2",
+  name: "pricing-7",
   type: "object",
-  title: "Pricing 2",
+  title: "Pricing 7",
   description:
-    "Pricing 2: Pricing cards with grid layout split into 1-3 columns.",
+    "Pricing 7: Pricing cards with grid layout split into 1-3 columns.",
   icon: DollarSign,
   fields: [
     defineField({
       name: "padding",
       type: "section-padding",
+    }),
+    defineField({
+      name: "badge",
+      type: "object",
+      fields: [
+        defineField({
+          name: "title",
+          type: "string",
+        }),
+        defineField({
+          name: "badge1",
+          type: "string",
+        }),
+        defineField({
+          name: "badge2",
+          type: "string",
+        }),
+        defineField({
+          name: "percentage",
+          type: "number",
+        }),
+      ],
     }),
     defineField({
       name: "columns",
@@ -68,7 +90,7 @@ export default defineType({
     },
     prepare({ title }) {
       return {
-        title: "Pricing 2",
+        title: "Pricing 7",
         subtitle: title || "No Title",
       };
     },

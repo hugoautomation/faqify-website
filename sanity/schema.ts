@@ -84,6 +84,7 @@ import changelog5 from "./schemas/blocks/changelog/changelog5";
 // Pricing
 import pricing1 from "./schemas/blocks/pricing/pricing1";
 import pricing2 from "./schemas/blocks/pricing/pricing2";
+import pricing7 from "./schemas/blocks/pricing/pricing7";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -171,5 +172,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     // Pricing
     pricing1,
     pricing2,
+    pricing7,
   ],
 };

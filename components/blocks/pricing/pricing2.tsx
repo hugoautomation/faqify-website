@@ -40,8 +40,8 @@ export default function Pricing2({ padding, columns }: Pricing2Props) {
   return (
     <SectionContainer padding={padding}>
       {columns && columns?.length > 0 && (
-        <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
-          <div className="flex items-center gap-3 text-lg">
+        <div className="mx-auto flex flex-col items-center gap-6 text-center">
+          <div className="flex items-center gap-3 text-lg max-w-5xl">
             Monthly
             <Switch
               checked={isYearly}
@@ -49,7 +49,14 @@ export default function Pricing2({ padding, columns }: Pricing2Props) {
             />
             Yearly
           </div>
-          <div className="flex flex-col items-stretch gap-6 md:flex-row">
+          <div
+            className={cn(
+              "grid gap-6",
+              columns?.length === 1 && "md:grid-cols-1 max-w-screen-md",
+              columns?.length === 2 && "md:grid-cols-2 max-w-screen-md",
+              columns?.length === 3 && "md:grid-cols-3 max-w-screen-lg"
+            )}
+          >
             {columns?.map((column) => {
               const currentPrice = isYearly
                 ? column.price?.yearly
