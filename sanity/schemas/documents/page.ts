@@ -81,6 +81,7 @@ export default defineType({
         { type: "pricing-1" },
         { type: "pricing-2" },
         { type: "pricing-7" },
+        { type: "pricing-9" },
       ],
       options: {
         insertMenu: {
@@ -124,7 +125,7 @@ export default defineType({
             },
             {
               name: "pricing",
-              of: ["pricing-1", "pricing-2", "pricing-7"],
+              of: ["pricing-1", "pricing-2", "pricing-7", "pricing-9"],
             },
             {
               name: "blog",
