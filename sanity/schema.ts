@@ -86,6 +86,7 @@ import pricing1 from "./schemas/blocks/pricing/pricing1";
 import pricing2 from "./schemas/blocks/pricing/pricing2";
 import pricing7 from "./schemas/blocks/pricing/pricing7";
 import pricing9 from "./schemas/blocks/pricing/pricing9";
+import pricing16 from "./schemas/blocks/pricing/pricing16";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -175,5 +176,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     pricing2,
     pricing7,
     pricing9,
+    pricing16,
   ],
 };
