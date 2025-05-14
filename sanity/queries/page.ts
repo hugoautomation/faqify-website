@@ -43,6 +43,7 @@ import { pricing2Query } from "./pricing/pricing2";
 import { pricing7Query } from "./pricing/pricing7";
 import { pricing9Query } from "./pricing/pricing9";
 import { pricing16Query } from "./pricing/pricing16";
+import { team1Query } from "./team/team1";
 
 export const PAGE_QUERY = groq`
   *[_type == "page" && slug.current == $slug][0]{
@@ -91,6 +92,7 @@ export const PAGE_QUERY = groq`
       ${pricing7Query},
       ${pricing9Query},
       ${pricing16Query},
+      ${team1Query},
     },
     meta_title,
     meta_description,

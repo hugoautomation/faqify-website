@@ -1,14 +1,13 @@
 import { orderableDocumentListDeskItem } from "@sanity/orderable-document-list";
 import {
   Files,
-  BookA,
   User,
   ListCollapse,
   Quote,
   Menu,
   Settings,
   PhoneCall,
-  FileClock,
+  Users,
 } from "lucide-react";
 
 export const structure = (S: any, context: any) =>
@@ -64,6 +63,13 @@ export const structure = (S: any, context: any) =>
         type: "testimonial",
         title: "Testimonials",
         icon: Quote,
+        S,
+        context,
+      }),
+      orderableDocumentListDeskItem({
+        type: "team",
+        title: "Team",
+        icon: Users,
         S,
         context,
       }),

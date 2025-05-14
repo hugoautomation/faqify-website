@@ -10,6 +10,7 @@ import {
   POSTS_COUNT_QUERY,
 } from "@/sanity/queries/post";
 import { CHANGELOGS_QUERY } from "@/sanity/queries/changelog";
+import { TEAM_QUERY } from "@/sanity/queries/team";
 import {
   PAGE_QUERYResult,
   PAGES_SLUGS_QUERYResult,
@@ -20,6 +21,7 @@ import {
   SETTINGS_QUERYResult,
   CONTACT_QUERYResult,
   CHANGELOGS_QUERYResult,
+  TEAM_QUERYResult,
 } from "@/sanity.types";
 
 export const fetchSanityNavigation =
@@ -80,6 +82,13 @@ export const fetchSanityChangelogs =
 
     return data;
   };
+
+export const fetchSanityTeam = async (): Promise<TEAM_QUERYResult> => {
+  const { data } = await sanityFetch({
+    query: TEAM_QUERY,
+  });
+  return data;
+};
 
 export const fetchSanityPostsCount = async (): Promise<number> => {
   const { data } = await sanityFetch({

@@ -10,6 +10,7 @@ import navigation from "./schemas/documents/navigation";
 import settings from "./schemas/documents/settings";
 import contact from "./schemas/documents/contact";
 import changelog from "./schemas/documents/changelog";
+import team from "./schemas/documents/team";
 
 // Schema UI shared objects
 import blockContent from "./schemas/blocks/shared/block-content";
@@ -87,6 +88,8 @@ import pricing2 from "./schemas/blocks/pricing/pricing2";
 import pricing7 from "./schemas/blocks/pricing/pricing7";
 import pricing9 from "./schemas/blocks/pricing/pricing9";
 import pricing16 from "./schemas/blocks/pricing/pricing16";
+// Team
+import team1 from "./schemas/blocks/team/team1";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -101,6 +104,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     settings,
     contact,
     changelog,
+    team,
     // shared objects
     blockContent,
     link,
@@ -177,5 +181,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     pricing7,
     pricing9,
     pricing16,
+    // Team
+    team1,
   ],
 };
