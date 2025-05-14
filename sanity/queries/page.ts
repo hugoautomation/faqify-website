@@ -44,6 +44,12 @@ import { pricing7Query } from "./pricing/pricing7";
 import { pricing9Query } from "./pricing/pricing9";
 import { pricing16Query } from "./pricing/pricing16";
 import { team1Query } from "./team/team1";
+import { team2Query } from "./team/team2";
+import { team3Query } from "./team/team3";
+import { team4Query } from "./team/team4";
+import { team5Query } from "./team/team5";
+import { team6Query } from "./team/team6";
+import { team8Query } from "./team/team8";
 
 export const PAGE_QUERY = groq`
   *[_type == "page" && slug.current == $slug][0]{
@@ -93,6 +99,12 @@ export const PAGE_QUERY = groq`
       ${pricing9Query},
       ${pricing16Query},
       ${team1Query},
+      ${team2Query},
+      ${team3Query},
+      ${team4Query},
+      ${team5Query},
+      ${team6Query},
+      ${team8Query},
     },
     meta_title,
     meta_description,

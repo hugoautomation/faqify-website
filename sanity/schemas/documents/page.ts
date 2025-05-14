@@ -84,6 +84,12 @@ export default defineType({
         { type: "pricing-9" },
         { type: "pricing-16" },
         { type: "team-1" },
+        { type: "team-2" },
+        { type: "team-3" },
+        { type: "team-4" },
+        { type: "team-5" },
+        { type: "team-6" },
+        { type: "team-8" },
       ],
       options: {
         insertMenu: {
@@ -156,7 +162,15 @@ export default defineType({
             },
             {
               name: "team",
-              of: ["team-1"],
+              of: [
+                "team-1",
+                "team-2",
+                "team-3",
+                "team-4",
+                "team-5",
+                "team-6",
+                "team-8",
+              ],
             },
           ],
           views: [

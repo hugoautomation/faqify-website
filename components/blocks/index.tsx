@@ -44,6 +44,7 @@ import Pricing7 from "@/components/blocks/pricing/pricing7";
 import Pricing9 from "@/components/blocks/pricing/pricing9";
 import Pricing16 from "@/components/blocks/pricing/pricing16";
 import Team1 from "@/components/blocks/team/team1";
+import Team2 from "@/components/blocks/team/team2";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 
@@ -95,6 +96,7 @@ const componentMap: {
   "pricing-9": Pricing9,
   "pricing-16": Pricing16,
   "team-1": Team1,
+  "team-2": Team2,
 };
 
 export default function Blocks({

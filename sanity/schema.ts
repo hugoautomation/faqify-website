@@ -90,6 +90,12 @@ import pricing9 from "./schemas/blocks/pricing/pricing9";
 import pricing16 from "./schemas/blocks/pricing/pricing16";
 // Team
 import team1 from "./schemas/blocks/team/team1";
+import team2 from "./schemas/blocks/team/team2";
+import team3 from "./schemas/blocks/team/team3";
+import team4 from "./schemas/blocks/team/team4";
+import team5 from "./schemas/blocks/team/team5";
+import team6 from "./schemas/blocks/team/team6";
+import team8 from "./schemas/blocks/team/team8";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -183,5 +189,11 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     pricing16,
     // Team
     team1,
+    team2,
+    team3,
+    team4,
+    team5,
+    team6,
+    team8,
   ],
 };
