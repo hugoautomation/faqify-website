@@ -48,6 +48,7 @@ import Team2 from "@/components/blocks/team/team2";
 import Team3 from "@/components/blocks/team/team3";
 import Team4 from "@/components/blocks/team/team4";
 import Team5 from "@/components/blocks/team/team5";
+import Team6 from "@/components/blocks/team/team6";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 
@@ -103,6 +104,7 @@ const componentMap: {
   "team-3": Team3,
   "team-4": Team4,
   "team-5": Team5,
+  "team-6": Team6,
 };
 
 export default function Blocks({
