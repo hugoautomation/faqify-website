@@ -98,6 +98,7 @@ import team6 from "./schemas/blocks/team/team6";
 import team8 from "./schemas/blocks/team/team8";
 // Compare
 import compare1 from "./schemas/blocks/compare/compare1";
+import compare2 from "./schemas/blocks/compare/compare2";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -199,5 +200,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     team8,
     // Compare
     compare1,
+    compare2,
   ],
 };

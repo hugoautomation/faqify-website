@@ -38,13 +38,9 @@ export default function Compare1({ padding, images, columns }: Compare1Props) {
                         blurDataURL={image?.asset?.metadata?.lqip || ""}
                         className="h-7 md:h-8"
                         sizes="33vw"
-                        width={
-                          image?.asset?.metadata?.dimensions?.width ||
-                          (index === 0 ? 700 : 150)
-                        }
+                        width={image?.asset?.metadata?.dimensions?.width || 150}
                         height={
-                          image?.asset?.metadata?.dimensions?.height ||
-                          (index === 0 ? 400 : 50)
+                          image?.asset?.metadata?.dimensions?.height || 50
                         }
                         quality={100}
                       />

@@ -51,6 +51,7 @@ import { team5Query } from "./team/team5";
 import { team6Query } from "./team/team6";
 import { team8Query } from "./team/team8";
 import { compare1Query } from "./compare/compare1";
+import { compare2Query } from "./compare/compare2";
 
 export const PAGE_QUERY = groq`
   *[_type == "page" && slug.current == $slug][0]{
@@ -107,6 +108,7 @@ export const PAGE_QUERY = groq`
       ${team6Query},
       ${team8Query},
       ${compare1Query},
+      ${compare2Query},
     },
     meta_title,
     meta_description,
