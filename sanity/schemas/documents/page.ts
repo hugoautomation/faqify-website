@@ -92,6 +92,7 @@ export default defineType({
         { type: "team-8" },
         { type: "compare-1" },
         { type: "compare-2" },
+        { type: "compare-4" },
       ],
       options: {
         insertMenu: {
@@ -176,7 +177,7 @@ export default defineType({
             },
             {
               name: "compare",
-              of: ["compare-1", "compare-2"],
+              of: ["compare-1", "compare-2", "compare-4"],
             },
           ],
           views: [

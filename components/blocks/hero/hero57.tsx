@@ -60,7 +60,7 @@ const Hero57 = ({ title, body, links, tags }: Hero57Props) => {
             <PortableTextRenderer value={body} />
           </div>
         )}
-        {links && (
+        {links && links.length > 0 && (
           <div className="flex flex-col items-center justify-center gap-3 pt-3 pb-12">
             {links.map((link) => (
               <Fragment key={link._key}>
