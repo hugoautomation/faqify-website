@@ -94,6 +94,7 @@ export default defineType({
         { type: "compare-2" },
         { type: "compare-4" },
         { type: "compare-5" },
+        { type: "compare-6" },
       ],
       options: {
         insertMenu: {
@@ -178,7 +179,13 @@ export default defineType({
             },
             {
               name: "compare",
-              of: ["compare-1", "compare-2", "compare-4", "compare-5"],
+              of: [
+                "compare-1",
+                "compare-2",
+                "compare-4",
+                "compare-5",
+                "compare-6",
+              ],
             },
           ],
           views: [
