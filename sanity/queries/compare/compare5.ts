@@ -27,7 +27,9 @@ export const compare5Query = groq`
       },
       title,
       description,
-      ${linkQuery},
+      link {
+        ${linkQuery}
+      },
     },
   }
 `;
