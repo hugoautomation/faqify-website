@@ -40,9 +40,11 @@ export default function Compare5({ padding, columns }: Compare5Props) {
                 )}
                 <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-black via-black/50 to-transparent backdrop-blur-[2px] sm:h-[45%] md:h-[50%]" />
                 <div className="absolute bottom-0 w-full space-y-4 p-4 sm:p-6 lg:p-8 xl:p-10">
-                  <h3 className="text-xl font-semibold text-white sm:text-2xl lg:text-3xl">
-                    {column.title}
-                  </h3>
+                  {column.title && (
+                    <h3 className="text-xl font-semibold text-white sm:text-2xl lg:text-3xl">
+                      {column.title}
+                    </h3>
+                  )}
                   {column.description && (
                     <p className="mt-2 text-sm text-white/80 sm:text-base">
                       {column.description}

@@ -38,7 +38,6 @@ export default defineType({
             defineField({
               name: "title",
               type: "string",
-              validation: (Rule) => Rule.required(),
             }),
             defineField({
               name: "description",
@@ -51,12 +50,12 @@ export default defineType({
           ],
         },
       ],
-      validation: (Rule) => Rule.required().min(1).max(2),
+      validation: (Rule) => Rule.required().max(2),
     }),
   ],
   preview: {
     select: {
-      title: "columns.0.label",
+      title: "columns.0.title",
     },
     prepare({ title }) {
       return {

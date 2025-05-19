@@ -1,5 +1,5 @@
 import { groq } from "next-sanity";
-import { linkQuery } from "../shared/link";
+import { linkQuery } from "@/sanity/queries/shared/link";
 
 // @sanity-typegen-ignore
 export const compare5Query = groq`
