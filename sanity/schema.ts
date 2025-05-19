@@ -100,6 +100,8 @@ import team8 from "./schemas/blocks/team/team8";
 import compare1 from "./schemas/blocks/compare/compare1";
 import compare2 from "./schemas/blocks/compare/compare2";
 import compare4 from "./schemas/blocks/compare/compare4";
+import compare5 from "./schemas/blocks/compare/compare5";
+
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
     // documents
@@ -202,5 +204,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     compare1,
     compare2,
     compare4,
+    compare5,
   ],
 };

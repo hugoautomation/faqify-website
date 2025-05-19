@@ -53,6 +53,7 @@ import Team8 from "@/components/blocks/team/team8";
 import Compare1 from "@/components/blocks/compare/compare1";
 import Compare2 from "@/components/blocks/compare/compare2";
 import Compare4 from "@/components/blocks/compare/compare4";
+import Compare5 from "@/components/blocks/compare/compare5";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 
@@ -113,6 +114,7 @@ const componentMap: {
   "compare-1": Compare1,
   "compare-2": Compare2,
   "compare-4": Compare4,
+  "compare-5": Compare5,
 };
 
 export default function Blocks({

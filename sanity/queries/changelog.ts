@@ -7,7 +7,7 @@ export const CHANGELOGS_QUERY = groq`*[_type == "changelog" && defined(slug)] | 
     slug,
     version,
     date,
-        body[]{
+    body[]{
       ...,
       markDefs[]{
         ...,

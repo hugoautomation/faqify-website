@@ -2,11 +2,10 @@ import { defineType, defineField } from "sanity";
 import { CheckCircle } from "lucide-react";
 
 export default defineType({
-  name: "compare-2",
+  name: "compare-5",
   type: "object",
-  title: "Compare 2",
-  description:
-    "Compare 2: Compare cards with grid layout split into 1-4 columns.",
+  title: "Compare 5",
+  description: "Compare 5: Compare 2 columns with a list of features.",
   icon: CheckCircle,
   fields: [
     defineField({
@@ -22,12 +21,8 @@ export default defineType({
           type: "object",
           fields: [
             defineField({
-              name: "featured",
-              type: "boolean",
-              initialValue: false,
-            }),
-            defineField({
               name: "image",
+              title: "Image",
               type: "image",
               options: {
                 hotspot: true,
@@ -43,41 +38,29 @@ export default defineType({
             defineField({
               name: "title",
               type: "string",
+              validation: (Rule) => Rule.required(),
             }),
             defineField({
-              name: "list",
-              type: "array",
-              of: [
-                {
-                  name: "item",
-                  type: "object",
-                  fields: [
-                    defineField({
-                      name: "title",
-                      type: "string",
-                    }),
-                    defineField({
-                      name: "isMissing",
-                      type: "boolean",
-                      initialValue: false,
-                    }),
-                  ],
-                },
-              ],
+              name: "description",
+              type: "text",
+            }),
+            defineField({
+              name: "link",
+              type: "link",
             }),
           ],
         },
       ],
-      validation: (Rule) => Rule.required().max(4),
+      validation: (Rule) => Rule.required().min(1).max(2),
     }),
   ],
   preview: {
     select: {
-      title: "columns.0.title",
+      title: "columns.0.label",
     },
     prepare({ title }) {
       return {
-        title: "Compare 2",
+        title: "Compare 5",
         subtitle: title || "No Title",
       };
     },
