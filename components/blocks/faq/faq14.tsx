@@ -86,7 +86,7 @@ export default function FAQ14({
   }[titleWeight];
 
   return (
-    <SectionContainer padding={padding} className="relative">
+    <SectionContainer padding={padding} className="relative overflow-hidden">
       <div className="text-center">
         {title && title.text && (
           <Element className={cn(titleSizeClasses, titleWeightClasses)}>
