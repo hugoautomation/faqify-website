@@ -95,6 +95,7 @@ export default defineType({
         { type: "compare-4" },
         { type: "compare-5" },
         { type: "compare-6" },
+        { type: "gallery-1" },
       ],
       options: {
         insertMenu: {
@@ -186,6 +187,10 @@ export default defineType({
                 "compare-5",
                 "compare-6",
               ],
+            },
+            {
+              name: "gallery",
+              of: ["gallery-1"],
             },
           ],
           views: [

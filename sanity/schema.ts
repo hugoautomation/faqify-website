@@ -102,6 +102,8 @@ import compare2 from "./schemas/blocks/compare/compare2";
 import compare4 from "./schemas/blocks/compare/compare4";
 import compare5 from "./schemas/blocks/compare/compare5";
 import compare6 from "./schemas/blocks/compare/compare6";
+// Gallery
+import gallery1 from "./schemas/blocks/gallery/gallery1";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -207,5 +209,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     compare4,
     compare5,
     compare6,
+    // Gallery
+    gallery1,
   ],
 };
