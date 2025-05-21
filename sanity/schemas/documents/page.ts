@@ -97,6 +97,7 @@ export default defineType({
         { type: "compare-6" },
         { type: "gallery-1" },
         { type: "gallery-3" },
+        { type: "gallery-4" },
       ],
       options: {
         insertMenu: {
@@ -191,7 +192,7 @@ export default defineType({
             },
             {
               name: "gallery",
-              of: ["gallery-1", "gallery-3"],
+              of: ["gallery-1", "gallery-3", "gallery-4"],
             },
           ],
           views: [

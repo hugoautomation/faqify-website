@@ -142,12 +142,16 @@ export default function Gallery3({ title, padding, columns }: Gallery3Props) {
                         <Badge>{item.categories[0].title}</Badge>
                       )}
                     </div>
-                    <div className="mb-2 line-clamp-3 pt-4 text-lg font-medium break-words md:mb-3 md:pt-4 md:text-xl lg:pt-4 lg:text-2xl">
-                      {item.title}
-                    </div>
-                    <div className="mb-8 line-clamp-2 text-sm text-muted-foreground md:mb-12 md:text-base lg:mb-9">
-                      {item.description}
-                    </div>
+                    {item.title && (
+                      <div className="mb-2 line-clamp-3 pt-4 text-lg font-medium break-words md:mb-3 md:pt-4 md:text-xl lg:pt-4 lg:text-2xl">
+                        {item.title}
+                      </div>
+                    )}
+                    {item.description && (
+                      <div className="mb-8 line-clamp-2 text-sm text-muted-foreground md:mb-12 md:text-base lg:mb-9">
+                        {item.description}
+                      </div>
+                    )}
                     <div
                       className={cn(
                         buttonVariants({
