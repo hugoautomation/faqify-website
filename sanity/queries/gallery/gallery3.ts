@@ -2,30 +2,17 @@ import { groq } from "next-sanity";
 import { linkQuery } from "@/sanity/queries/shared/link";
 
 // @sanity-typegen-ignore
-export const gallery1Query = groq`
-  _type == "gallery-1" => {
+export const gallery3Query = groq`
+  _type == "gallery-3" => {
     _type,
     _key,
     padding,
+    title,
     columns[]{
       _key,
       title,
+      description,
       image{
-        ...,
-        asset->{
-          _id,
-          url,
-          mimeType,
-          metadata {
-            lqip,
-            dimensions {
-              width,
-              height
-            }
-          }
-        }
-      },
-      logo{
         ...,
         asset->{
           _id,
