@@ -1,5 +1,6 @@
 import { defineField, defineType } from "sanity";
 import { orderRankField } from "@sanity/orderable-document-list";
+import { COLOR_VARIANTS } from "../blocks/shared/color-variants";
 
 export default defineType({
   name: "testimonial",
@@ -9,6 +10,12 @@ export default defineType({
     defineField({
       name: "name",
       type: "string",
+    }),
+    defineField({
+      name: "username",
+      type: "string",
+      description:
+        "The username of the testimonial. Used for gallery 10 testimonials.",
     }),
     defineField({
       name: "company",
@@ -29,6 +36,15 @@ export default defineType({
       name: "rating",
       type: "number",
       validation: (rule) => rule.min(1).max(5),
+    }),
+    defineField({
+      name: "color",
+      title: "Color",
+      type: "string",
+      options: {
+        list: COLOR_VARIANTS.map(({ title, value }) => ({ title, value })),
+      },
+      description: "The color of the card. Used for gallery 10 testimonials.",
     }),
     orderRankField({ type: "testimonial" }),
   ],

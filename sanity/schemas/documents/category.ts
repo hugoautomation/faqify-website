@@ -1,6 +1,7 @@
 import { defineField, defineType } from "sanity";
 import { orderRankField } from "@sanity/orderable-document-list";
 import { BookA } from "lucide-react";
+import { COLOR_VARIANTS } from "../blocks/shared/color-variants";
 
 export default defineType({
   name: "category",
@@ -19,7 +20,7 @@ export default defineType({
       title: "Color",
       type: "string",
       options: {
-        list: ["red", "amber", "green", "blue", "indigo", "purple", "cyan"],
+        list: COLOR_VARIANTS.map(({ title, value }) => ({ title, value })),
       },
       description:
         "The color of the category. Used for changelog 3 categories.",

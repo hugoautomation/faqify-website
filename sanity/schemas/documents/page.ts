@@ -100,6 +100,7 @@ export default defineType({
         { type: "gallery-4" },
         { type: "gallery-8" },
         { type: "gallery-9" },
+        { type: "gallery-10" },
       ],
       options: {
         insertMenu: {
@@ -200,6 +201,7 @@ export default defineType({
                 "gallery-4",
                 "gallery-8",
                 "gallery-9",
+                "gallery-10",
               ],
             },
           ],

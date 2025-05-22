@@ -108,6 +108,7 @@ import gallery3 from "./schemas/blocks/gallery/gallery3";
 import gallery4 from "./schemas/blocks/gallery/gallery4";
 import gallery8 from "./schemas/blocks/gallery/gallery8";
 import gallery9 from "./schemas/blocks/gallery/gallery9";
+import gallery10 from "./schemas/blocks/gallery/gallery10";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -219,5 +220,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     gallery4,
     gallery8,
     gallery9,
+    gallery10,
   ],
 };

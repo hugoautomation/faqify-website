@@ -8,24 +8,12 @@ import { PAGE_QUERYResult } from "@/sanity.types";
 import { fetchSanityChangelogs } from "@/sanity/lib/fetch";
 import PortableTextRenderer from "@/components/portable-text-renderer";
 import { Separator } from "@/components/ui/separator";
+import { getColor } from "@/lib/color";
 
 type Changelogs3Props = Extract<
   NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number],
   { _type: "changelog-3" }
 >;
-
-const getCategoryColor = (color: string) => {
-  const colorMap: Record<string, string> = {
-    red: "bg-red-500",
-    amber: "bg-amber-500",
-    green: "bg-green-500",
-    blue: "bg-blue-500",
-    indigo: "bg-indigo-500",
-    purple: "bg-purple-500",
-    cyan: "bg-cyan-500",
-  };
-  return colorMap[color] || "bg-slate-500";
-};
 
 export default async function Changelog3({ padding }: Changelogs3Props) {
   const changelogs = await fetchSanityChangelogs();
@@ -53,7 +41,7 @@ export default async function Changelog3({ padding }: Changelogs3Props) {
                           <span
                             className={cn(
                               "h-3 w-3 rounded-full",
-                              getCategoryColor(category.color || "")
+                              getColor(category.color || "")
                             )}
                           />
                           <p className="text-sm font-semibold text-primary/80">
