@@ -58,6 +58,7 @@ import { compare6Query } from "./compare/compare6";
 import { gallery1Query } from "./gallery/gallery1";
 import { gallery3Query } from "./gallery/gallery3";
 import { gallery4Query } from "./gallery/gallery4";
+import { gallery8Query } from "./gallery/gallery8";
 
 export const PAGE_QUERY = groq`
   *[_type == "page" && slug.current == $slug][0]{
@@ -121,6 +122,7 @@ export const PAGE_QUERY = groq`
       ${gallery1Query},
       ${gallery3Query},
       ${gallery4Query},
+      ${gallery8Query},
     },
     meta_title,
     meta_description,
