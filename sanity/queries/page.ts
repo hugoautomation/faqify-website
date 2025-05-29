@@ -64,6 +64,7 @@ import { gallery10Query } from "./gallery/gallery10";
 import { timeline3Query } from "./timelines/timeline3";
 import { timeline4Query } from "./timelines/timeline4";
 import { timeline5Query } from "./timelines/timeline5";
+import { timeline6Query } from "./timelines/timeline6";
 
 export const PAGE_QUERY = groq`
   *[_type == "page" && slug.current == $slug][0]{
@@ -133,6 +134,7 @@ export const PAGE_QUERY = groq`
       ${timeline3Query},
       ${timeline4Query},
       ${timeline5Query},
+      ${timeline6Query},
     },
     meta_title,
     meta_description,

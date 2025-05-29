@@ -4,17 +4,17 @@ import SectionContainer from "@/components/ui/section-container";
 import { ColorName, getColor } from "@/lib/color";
 import { PAGE_QUERYResult } from "@/sanity.types";
 
-type Timeline5Props = Extract<
+type Timeline6Props = Extract<
   NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number],
-  { _type: "timeline-5" }
+  { _type: "timeline-6" }
 >;
 
-export default function Timeline5({
+export default function Timeline6({
   padding,
   title,
   description,
   columns,
-}: Timeline5Props) {
+}: Timeline6Props) {
   return (
     <SectionContainer padding={padding}>
       <div className="grid gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16">
@@ -58,30 +58,27 @@ export default function Timeline5({
 
         {columns && columns?.length > 0 && (
           <div className="-mt-8 sm:-mt-12">
-            {columns.map((column, index) => (
+            {columns.map((column) => (
               <div
                 key={column._key}
-                className="relative my-12 overflow-hidden rounded-lg bg-muted px-8 py-16 shadow-none sm:px-12 sm:py-24 lg:px-16 lg:py-32"
+                className="relative flex flex-col justify-center overflow-hidden border-b py-8 shadow-none sm:py-12"
               >
-                <div className="gap-4 sm:gap-6">
-                  <div className="block shrink-0">
+                <div className="flex gap-4 sm:gap-6">
+                  <div className="shrink-0">
                     <Icon
                       iconVariant={column.iconVariant || "none"}
                       size={12}
                       strokeWidth={1.5}
                     />
                   </div>
-                  <div className="absolute top-12 right-12 font-mono text-5xl">
-                    0{index + 1}
-                  </div>
-                  <div className="mt-6">
+                  <div>
                     {column.title && (
-                      <h4 className="mb-2 text-2xl font-semibold text-primary">
+                      <h4 className="mb-2 text-2xl font-semibold text-primary sm:text-3xl">
                         {column.title}
                       </h4>
                     )}
                     {column.description && (
-                      <p className="mt-6 text-xs text-muted-foreground sm:text-base">
+                      <p className="mt-6 text-sm text-muted-foreground sm:text-base">
                         {column.description}
                       </p>
                     )}

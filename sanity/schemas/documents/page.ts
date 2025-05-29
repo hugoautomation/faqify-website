@@ -104,6 +104,7 @@ export default defineType({
         { type: "timeline-3" },
         { type: "timeline-4" },
         { type: "timeline-5" },
+        { type: "timeline-6" },
       ],
       options: {
         insertMenu: {
@@ -188,7 +189,7 @@ export default defineType({
             },
             {
               name: "timeline",
-              of: ["timeline-3", "timeline-4", "timeline-5"],
+              of: ["timeline-3", "timeline-4", "timeline-5", "timeline-6"],
             },
             {
               name: "compare",
