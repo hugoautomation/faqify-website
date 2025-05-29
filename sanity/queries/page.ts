@@ -61,6 +61,7 @@ import { gallery4Query } from "./gallery/gallery4";
 import { gallery8Query } from "./gallery/gallery8";
 import { gallery9Query } from "./gallery/gallery9";
 import { gallery10Query } from "./gallery/gallery10";
+import { timeline3Query } from "./timelines/timeline3";
 import { timeline4Query } from "./timelines/timeline4";
 
 export const PAGE_QUERY = groq`
@@ -128,6 +129,7 @@ export const PAGE_QUERY = groq`
       ${gallery8Query},
       ${gallery9Query},
       ${gallery10Query},
+      ${timeline3Query},
       ${timeline4Query},
     },
     meta_title,

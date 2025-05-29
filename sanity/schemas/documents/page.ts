@@ -101,6 +101,7 @@ export default defineType({
         { type: "gallery-8" },
         { type: "gallery-9" },
         { type: "gallery-10" },
+        { type: "timeline-3" },
         { type: "timeline-4" },
       ],
       options: {
@@ -186,7 +187,7 @@ export default defineType({
             },
             {
               name: "timeline",
-              of: ["timeline-4"],
+              of: ["timeline-3", "timeline-4"],
             },
             {
               name: "compare",
