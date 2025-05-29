@@ -15,7 +15,7 @@ import { urlFor } from "@/sanity/lib/image";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
-import { getColor } from "@/lib/color";
+import { ColorName, getColor } from "@/lib/color";
 import SectionContainer from "@/components/ui/section-container";
 import { PAGE_QUERYResult } from "@/sanity.types";
 
@@ -147,7 +147,10 @@ export default function Gallery4({
                         <div
                           className={cn(
                             "relative flex h-[460px] w-[400px] flex-col items-start justify-end rounded-2xl p-8",
-                            getColor(testimonial.color || "")
+                            getColor({
+                              color: testimonial.color as ColorName,
+                              type: "bg",
+                            })
                           )}
                         >
                           {testimonial.username && (

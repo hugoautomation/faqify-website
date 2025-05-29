@@ -103,6 +103,7 @@ export default defineType({
         { type: "gallery-10" },
         { type: "timeline-3" },
         { type: "timeline-4" },
+        { type: "timeline-5" },
       ],
       options: {
         insertMenu: {
@@ -187,7 +188,7 @@ export default defineType({
             },
             {
               name: "timeline",
-              of: ["timeline-3", "timeline-4"],
+              of: ["timeline-3", "timeline-4", "timeline-5"],
             },
             {
               name: "compare",

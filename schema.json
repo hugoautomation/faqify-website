@@ -1,5 +1,609 @@
 [
   {
+    "name": "timeline-5",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "timeline-5"
+          }
+        },
+        "padding": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "inline",
+            "name": "section-padding"
+          },
+          "optional": true
+        },
+        "title": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "object",
+            "attributes": {
+              "title1": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              },
+              "title2": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              },
+              "iconVariant": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "union",
+                  "of": [
+                    {
+                      "type": "string",
+                      "value": "arrow-down-to-line"
+                    },
+                    {
+                      "type": "string",
+                      "value": "arrow-right"
+                    },
+                    {
+                      "type": "string",
+                      "value": "arrow-up-down"
+                    },
+                    {
+                      "type": "string",
+                      "value": "bell"
+                    },
+                    {
+                      "type": "string",
+                      "value": "blocks"
+                    },
+                    {
+                      "type": "string",
+                      "value": "building-2"
+                    },
+                    {
+                      "type": "string",
+                      "value": "check-circle-2"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-down"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-left"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-right"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-up"
+                    },
+                    {
+                      "type": "string",
+                      "value": "circle-dot"
+                    },
+                    {
+                      "type": "string",
+                      "value": "cloud"
+                    },
+                    {
+                      "type": "string",
+                      "value": "code"
+                    },
+                    {
+                      "type": "string",
+                      "value": "compass"
+                    },
+                    {
+                      "type": "string",
+                      "value": "cpu"
+                    },
+                    {
+                      "type": "string",
+                      "value": "dribbble"
+                    },
+                    {
+                      "type": "string",
+                      "value": "external-link"
+                    },
+                    {
+                      "type": "string",
+                      "value": "git-branch"
+                    },
+                    {
+                      "type": "string",
+                      "value": "github"
+                    },
+                    {
+                      "type": "string",
+                      "value": "globe"
+                    },
+                    {
+                      "type": "string",
+                      "value": "home"
+                    },
+                    {
+                      "type": "string",
+                      "value": "infinity"
+                    },
+                    {
+                      "type": "string",
+                      "value": "landmark"
+                    },
+                    {
+                      "type": "string",
+                      "value": "layout-grid"
+                    },
+                    {
+                      "type": "string",
+                      "value": "layout-list"
+                    },
+                    {
+                      "type": "string",
+                      "value": "linkedin"
+                    },
+                    {
+                      "type": "string",
+                      "value": "list"
+                    },
+                    {
+                      "type": "string",
+                      "value": "locate-fixed"
+                    },
+                    {
+                      "type": "string",
+                      "value": "lock"
+                    },
+                    {
+                      "type": "string",
+                      "value": "messages-square"
+                    },
+                    {
+                      "type": "string",
+                      "value": "move-right"
+                    },
+                    {
+                      "type": "string",
+                      "value": "none"
+                    },
+                    {
+                      "type": "string",
+                      "value": "play"
+                    },
+                    {
+                      "type": "string",
+                      "value": "play-circle"
+                    },
+                    {
+                      "type": "string",
+                      "value": "redo"
+                    },
+                    {
+                      "type": "string",
+                      "value": "repeat"
+                    },
+                    {
+                      "type": "string",
+                      "value": "rocket"
+                    },
+                    {
+                      "type": "string",
+                      "value": "scaling"
+                    },
+                    {
+                      "type": "string",
+                      "value": "scan"
+                    },
+                    {
+                      "type": "string",
+                      "value": "sparkles"
+                    },
+                    {
+                      "type": "string",
+                      "value": "star"
+                    },
+                    {
+                      "type": "string",
+                      "value": "timer"
+                    },
+                    {
+                      "type": "string",
+                      "value": "trophy"
+                    },
+                    {
+                      "type": "string",
+                      "value": "twitter"
+                    },
+                    {
+                      "type": "string",
+                      "value": "users"
+                    },
+                    {
+                      "type": "string",
+                      "value": "wand-sparkles"
+                    },
+                    {
+                      "type": "string",
+                      "value": "wrench"
+                    },
+                    {
+                      "type": "string",
+                      "value": "x-circle"
+                    },
+                    {
+                      "type": "string",
+                      "value": "zap"
+                    },
+                    {
+                      "type": "string",
+                      "value": "zoom-in"
+                    }
+                  ]
+                },
+                "optional": true
+              },
+              "color": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "union",
+                  "of": [
+                    {
+                      "type": "string",
+                      "value": "red"
+                    },
+                    {
+                      "type": "string",
+                      "value": "redLight"
+                    },
+                    {
+                      "type": "string",
+                      "value": "amber"
+                    },
+                    {
+                      "type": "string",
+                      "value": "amberLight"
+                    },
+                    {
+                      "type": "string",
+                      "value": "green"
+                    },
+                    {
+                      "type": "string",
+                      "value": "greenLight"
+                    },
+                    {
+                      "type": "string",
+                      "value": "blue"
+                    },
+                    {
+                      "type": "string",
+                      "value": "blueLight"
+                    },
+                    {
+                      "type": "string",
+                      "value": "indigo"
+                    },
+                    {
+                      "type": "string",
+                      "value": "indigoLight"
+                    },
+                    {
+                      "type": "string",
+                      "value": "purple"
+                    },
+                    {
+                      "type": "string",
+                      "value": "purpleLight"
+                    },
+                    {
+                      "type": "string",
+                      "value": "cyan"
+                    },
+                    {
+                      "type": "string",
+                      "value": "cyanLight"
+                    },
+                    {
+                      "type": "string",
+                      "value": "orange"
+                    },
+                    {
+                      "type": "string",
+                      "value": "orangeLight"
+                    }
+                  ]
+                },
+                "optional": true
+              },
+              "title3": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              }
+            }
+          },
+          "optional": true
+        },
+        "description": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "columns": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "array",
+            "of": {
+              "type": "object",
+              "attributes": {
+                "iconVariant": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "union",
+                    "of": [
+                      {
+                        "type": "string",
+                        "value": "arrow-down-to-line"
+                      },
+                      {
+                        "type": "string",
+                        "value": "arrow-right"
+                      },
+                      {
+                        "type": "string",
+                        "value": "arrow-up-down"
+                      },
+                      {
+                        "type": "string",
+                        "value": "bell"
+                      },
+                      {
+                        "type": "string",
+                        "value": "blocks"
+                      },
+                      {
+                        "type": "string",
+                        "value": "building-2"
+                      },
+                      {
+                        "type": "string",
+                        "value": "check-circle-2"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-down"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-left"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-right"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-up"
+                      },
+                      {
+                        "type": "string",
+                        "value": "circle-dot"
+                      },
+                      {
+                        "type": "string",
+                        "value": "cloud"
+                      },
+                      {
+                        "type": "string",
+                        "value": "code"
+                      },
+                      {
+                        "type": "string",
+                        "value": "compass"
+                      },
+                      {
+                        "type": "string",
+                        "value": "cpu"
+                      },
+                      {
+                        "type": "string",
+                        "value": "dribbble"
+                      },
+                      {
+                        "type": "string",
+                        "value": "external-link"
+                      },
+                      {
+                        "type": "string",
+                        "value": "git-branch"
+                      },
+                      {
+                        "type": "string",
+                        "value": "github"
+                      },
+                      {
+                        "type": "string",
+                        "value": "globe"
+                      },
+                      {
+                        "type": "string",
+                        "value": "home"
+                      },
+                      {
+                        "type": "string",
+                        "value": "infinity"
+                      },
+                      {
+                        "type": "string",
+                        "value": "landmark"
+                      },
+                      {
+                        "type": "string",
+                        "value": "layout-grid"
+                      },
+                      {
+                        "type": "string",
+                        "value": "layout-list"
+                      },
+                      {
+                        "type": "string",
+                        "value": "linkedin"
+                      },
+                      {
+                        "type": "string",
+                        "value": "list"
+                      },
+                      {
+                        "type": "string",
+                        "value": "locate-fixed"
+                      },
+                      {
+                        "type": "string",
+                        "value": "lock"
+                      },
+                      {
+                        "type": "string",
+                        "value": "messages-square"
+                      },
+                      {
+                        "type": "string",
+                        "value": "move-right"
+                      },
+                      {
+                        "type": "string",
+                        "value": "none"
+                      },
+                      {
+                        "type": "string",
+                        "value": "play"
+                      },
+                      {
+                        "type": "string",
+                        "value": "play-circle"
+                      },
+                      {
+                        "type": "string",
+                        "value": "redo"
+                      },
+                      {
+                        "type": "string",
+                        "value": "repeat"
+                      },
+                      {
+                        "type": "string",
+                        "value": "rocket"
+                      },
+                      {
+                        "type": "string",
+                        "value": "scaling"
+                      },
+                      {
+                        "type": "string",
+                        "value": "scan"
+                      },
+                      {
+                        "type": "string",
+                        "value": "sparkles"
+                      },
+                      {
+                        "type": "string",
+                        "value": "star"
+                      },
+                      {
+                        "type": "string",
+                        "value": "timer"
+                      },
+                      {
+                        "type": "string",
+                        "value": "trophy"
+                      },
+                      {
+                        "type": "string",
+                        "value": "twitter"
+                      },
+                      {
+                        "type": "string",
+                        "value": "users"
+                      },
+                      {
+                        "type": "string",
+                        "value": "wand-sparkles"
+                      },
+                      {
+                        "type": "string",
+                        "value": "wrench"
+                      },
+                      {
+                        "type": "string",
+                        "value": "x-circle"
+                      },
+                      {
+                        "type": "string",
+                        "value": "zap"
+                      },
+                      {
+                        "type": "string",
+                        "value": "zoom-in"
+                      }
+                    ]
+                  },
+                  "optional": true
+                },
+                "title": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string"
+                  },
+                  "optional": true
+                },
+                "description": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string"
+                  },
+                  "optional": true
+                },
+                "_type": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string",
+                    "value": "column"
+                  }
+                }
+              },
+              "rest": {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "optional": true
+        }
+      }
+    }
+  },
+  {
     "name": "timeline-4",
     "type": "type",
     "value": {
@@ -56,19 +660,15 @@
                   "of": [
                     {
                       "type": "string",
-                      "value": "none"
-                    },
-                    {
-                      "type": "string",
                       "value": "arrow-down-to-line"
                     },
                     {
                       "type": "string",
-                      "value": "arrow-up-down"
+                      "value": "arrow-right"
                     },
                     {
                       "type": "string",
-                      "value": "arrow-right"
+                      "value": "arrow-up-down"
                     },
                     {
                       "type": "string",
@@ -84,11 +684,7 @@
                     },
                     {
                       "type": "string",
-                      "value": "chevron-right"
-                    },
-                    {
-                      "type": "string",
-                      "value": "chevron-left"
+                      "value": "check-circle-2"
                     },
                     {
                       "type": "string",
@@ -96,15 +692,23 @@
                     },
                     {
                       "type": "string",
+                      "value": "chevron-left"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-right"
+                    },
+                    {
+                      "type": "string",
                       "value": "chevron-up"
                     },
                     {
                       "type": "string",
-                      "value": "check-circle-2"
+                      "value": "circle-dot"
                     },
                     {
                       "type": "string",
-                      "value": "circle-dot"
+                      "value": "cloud"
                     },
                     {
                       "type": "string",
@@ -160,19 +764,19 @@
                     },
                     {
                       "type": "string",
-                      "value": "list"
-                    },
-                    {
-                      "type": "string",
                       "value": "linkedin"
                     },
                     {
                       "type": "string",
-                      "value": "lock"
+                      "value": "list"
                     },
                     {
                       "type": "string",
                       "value": "locate-fixed"
+                    },
+                    {
+                      "type": "string",
+                      "value": "lock"
                     },
                     {
                       "type": "string",
@@ -181,6 +785,10 @@
                     {
                       "type": "string",
                       "value": "move-right"
+                    },
+                    {
+                      "type": "string",
+                      "value": "none"
                     },
                     {
                       "type": "string",
@@ -220,11 +828,11 @@
                     },
                     {
                       "type": "string",
-                      "value": "trophy"
+                      "value": "timer"
                     },
                     {
                       "type": "string",
-                      "value": "timer"
+                      "value": "trophy"
                     },
                     {
                       "type": "string",
@@ -241,6 +849,10 @@
                     {
                       "type": "string",
                       "value": "wrench"
+                    },
+                    {
+                      "type": "string",
+                      "value": "x-circle"
                     },
                     {
                       "type": "string",
@@ -300,19 +912,15 @@
                     "of": [
                       {
                         "type": "string",
-                        "value": "none"
-                      },
-                      {
-                        "type": "string",
                         "value": "arrow-down-to-line"
                       },
                       {
                         "type": "string",
-                        "value": "arrow-up-down"
+                        "value": "arrow-right"
                       },
                       {
                         "type": "string",
-                        "value": "arrow-right"
+                        "value": "arrow-up-down"
                       },
                       {
                         "type": "string",
@@ -328,11 +936,7 @@
                       },
                       {
                         "type": "string",
-                        "value": "chevron-right"
-                      },
-                      {
-                        "type": "string",
-                        "value": "chevron-left"
+                        "value": "check-circle-2"
                       },
                       {
                         "type": "string",
@@ -340,15 +944,23 @@
                       },
                       {
                         "type": "string",
+                        "value": "chevron-left"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-right"
+                      },
+                      {
+                        "type": "string",
                         "value": "chevron-up"
                       },
                       {
                         "type": "string",
-                        "value": "check-circle-2"
+                        "value": "circle-dot"
                       },
                       {
                         "type": "string",
-                        "value": "circle-dot"
+                        "value": "cloud"
                       },
                       {
                         "type": "string",
@@ -404,19 +1016,19 @@
                       },
                       {
                         "type": "string",
-                        "value": "list"
-                      },
-                      {
-                        "type": "string",
                         "value": "linkedin"
                       },
                       {
                         "type": "string",
-                        "value": "lock"
+                        "value": "list"
                       },
                       {
                         "type": "string",
                         "value": "locate-fixed"
+                      },
+                      {
+                        "type": "string",
+                        "value": "lock"
                       },
                       {
                         "type": "string",
@@ -425,6 +1037,10 @@
                       {
                         "type": "string",
                         "value": "move-right"
+                      },
+                      {
+                        "type": "string",
+                        "value": "none"
                       },
                       {
                         "type": "string",
@@ -464,11 +1080,11 @@
                       },
                       {
                         "type": "string",
-                        "value": "trophy"
+                        "value": "timer"
                       },
                       {
                         "type": "string",
-                        "value": "timer"
+                        "value": "trophy"
                       },
                       {
                         "type": "string",
@@ -485,6 +1101,10 @@
                       {
                         "type": "string",
                         "value": "wrench"
+                      },
+                      {
+                        "type": "string",
+                        "value": "x-circle"
                       },
                       {
                         "type": "string",
@@ -973,19 +1593,15 @@
                     "of": [
                       {
                         "type": "string",
-                        "value": "none"
-                      },
-                      {
-                        "type": "string",
                         "value": "arrow-down-to-line"
                       },
                       {
                         "type": "string",
-                        "value": "arrow-up-down"
+                        "value": "arrow-right"
                       },
                       {
                         "type": "string",
-                        "value": "arrow-right"
+                        "value": "arrow-up-down"
                       },
                       {
                         "type": "string",
@@ -1001,11 +1617,7 @@
                       },
                       {
                         "type": "string",
-                        "value": "chevron-right"
-                      },
-                      {
-                        "type": "string",
-                        "value": "chevron-left"
+                        "value": "check-circle-2"
                       },
                       {
                         "type": "string",
@@ -1013,15 +1625,23 @@
                       },
                       {
                         "type": "string",
+                        "value": "chevron-left"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-right"
+                      },
+                      {
+                        "type": "string",
                         "value": "chevron-up"
                       },
                       {
                         "type": "string",
-                        "value": "check-circle-2"
+                        "value": "circle-dot"
                       },
                       {
                         "type": "string",
-                        "value": "circle-dot"
+                        "value": "cloud"
                       },
                       {
                         "type": "string",
@@ -1077,19 +1697,19 @@
                       },
                       {
                         "type": "string",
-                        "value": "list"
-                      },
-                      {
-                        "type": "string",
                         "value": "linkedin"
                       },
                       {
                         "type": "string",
-                        "value": "lock"
+                        "value": "list"
                       },
                       {
                         "type": "string",
                         "value": "locate-fixed"
+                      },
+                      {
+                        "type": "string",
+                        "value": "lock"
                       },
                       {
                         "type": "string",
@@ -1098,6 +1718,10 @@
                       {
                         "type": "string",
                         "value": "move-right"
+                      },
+                      {
+                        "type": "string",
+                        "value": "none"
                       },
                       {
                         "type": "string",
@@ -1137,11 +1761,11 @@
                       },
                       {
                         "type": "string",
-                        "value": "trophy"
+                        "value": "timer"
                       },
                       {
                         "type": "string",
-                        "value": "timer"
+                        "value": "trophy"
                       },
                       {
                         "type": "string",
@@ -1158,6 +1782,10 @@
                       {
                         "type": "string",
                         "value": "wrench"
+                      },
+                      {
+                        "type": "string",
+                        "value": "x-circle"
                       },
                       {
                         "type": "string",
@@ -4950,19 +5578,15 @@
             "of": [
               {
                 "type": "string",
-                "value": "none"
-              },
-              {
-                "type": "string",
                 "value": "arrow-down-to-line"
               },
               {
                 "type": "string",
-                "value": "arrow-up-down"
+                "value": "arrow-right"
               },
               {
                 "type": "string",
-                "value": "arrow-right"
+                "value": "arrow-up-down"
               },
               {
                 "type": "string",
@@ -4978,11 +5602,7 @@
               },
               {
                 "type": "string",
-                "value": "chevron-right"
-              },
-              {
-                "type": "string",
-                "value": "chevron-left"
+                "value": "check-circle-2"
               },
               {
                 "type": "string",
@@ -4990,15 +5610,23 @@
               },
               {
                 "type": "string",
+                "value": "chevron-left"
+              },
+              {
+                "type": "string",
+                "value": "chevron-right"
+              },
+              {
+                "type": "string",
                 "value": "chevron-up"
               },
               {
                 "type": "string",
-                "value": "check-circle-2"
+                "value": "circle-dot"
               },
               {
                 "type": "string",
-                "value": "circle-dot"
+                "value": "cloud"
               },
               {
                 "type": "string",
@@ -5054,19 +5682,19 @@
               },
               {
                 "type": "string",
-                "value": "list"
-              },
-              {
-                "type": "string",
                 "value": "linkedin"
               },
               {
                 "type": "string",
-                "value": "lock"
+                "value": "list"
               },
               {
                 "type": "string",
                 "value": "locate-fixed"
+              },
+              {
+                "type": "string",
+                "value": "lock"
               },
               {
                 "type": "string",
@@ -5075,6 +5703,10 @@
               {
                 "type": "string",
                 "value": "move-right"
+              },
+              {
+                "type": "string",
+                "value": "none"
               },
               {
                 "type": "string",
@@ -5114,11 +5746,11 @@
               },
               {
                 "type": "string",
-                "value": "trophy"
+                "value": "timer"
               },
               {
                 "type": "string",
-                "value": "timer"
+                "value": "trophy"
               },
               {
                 "type": "string",
@@ -5135,6 +5767,10 @@
               {
                 "type": "string",
                 "value": "wrench"
+              },
+              {
+                "type": "string",
+                "value": "x-circle"
               },
               {
                 "type": "string",
@@ -5466,19 +6102,15 @@
                   "of": [
                     {
                       "type": "string",
-                      "value": "none"
-                    },
-                    {
-                      "type": "string",
                       "value": "arrow-down-to-line"
                     },
                     {
                       "type": "string",
-                      "value": "arrow-up-down"
+                      "value": "arrow-right"
                     },
                     {
                       "type": "string",
-                      "value": "arrow-right"
+                      "value": "arrow-up-down"
                     },
                     {
                       "type": "string",
@@ -5494,11 +6126,7 @@
                     },
                     {
                       "type": "string",
-                      "value": "chevron-right"
-                    },
-                    {
-                      "type": "string",
-                      "value": "chevron-left"
+                      "value": "check-circle-2"
                     },
                     {
                       "type": "string",
@@ -5506,15 +6134,23 @@
                     },
                     {
                       "type": "string",
+                      "value": "chevron-left"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-right"
+                    },
+                    {
+                      "type": "string",
                       "value": "chevron-up"
                     },
                     {
                       "type": "string",
-                      "value": "check-circle-2"
+                      "value": "circle-dot"
                     },
                     {
                       "type": "string",
-                      "value": "circle-dot"
+                      "value": "cloud"
                     },
                     {
                       "type": "string",
@@ -5570,19 +6206,19 @@
                     },
                     {
                       "type": "string",
-                      "value": "list"
-                    },
-                    {
-                      "type": "string",
                       "value": "linkedin"
                     },
                     {
                       "type": "string",
-                      "value": "lock"
+                      "value": "list"
                     },
                     {
                       "type": "string",
                       "value": "locate-fixed"
+                    },
+                    {
+                      "type": "string",
+                      "value": "lock"
                     },
                     {
                       "type": "string",
@@ -5591,6 +6227,10 @@
                     {
                       "type": "string",
                       "value": "move-right"
+                    },
+                    {
+                      "type": "string",
+                      "value": "none"
                     },
                     {
                       "type": "string",
@@ -5630,11 +6270,11 @@
                     },
                     {
                       "type": "string",
-                      "value": "trophy"
+                      "value": "timer"
                     },
                     {
                       "type": "string",
-                      "value": "timer"
+                      "value": "trophy"
                     },
                     {
                       "type": "string",
@@ -5651,6 +6291,10 @@
                     {
                       "type": "string",
                       "value": "wrench"
+                    },
+                    {
+                      "type": "string",
+                      "value": "x-circle"
                     },
                     {
                       "type": "string",
@@ -6057,19 +6701,15 @@
             "of": [
               {
                 "type": "string",
-                "value": "none"
-              },
-              {
-                "type": "string",
                 "value": "arrow-down-to-line"
               },
               {
                 "type": "string",
-                "value": "arrow-up-down"
+                "value": "arrow-right"
               },
               {
                 "type": "string",
-                "value": "arrow-right"
+                "value": "arrow-up-down"
               },
               {
                 "type": "string",
@@ -6085,11 +6725,7 @@
               },
               {
                 "type": "string",
-                "value": "chevron-right"
-              },
-              {
-                "type": "string",
-                "value": "chevron-left"
+                "value": "check-circle-2"
               },
               {
                 "type": "string",
@@ -6097,15 +6733,23 @@
               },
               {
                 "type": "string",
+                "value": "chevron-left"
+              },
+              {
+                "type": "string",
+                "value": "chevron-right"
+              },
+              {
+                "type": "string",
                 "value": "chevron-up"
               },
               {
                 "type": "string",
-                "value": "check-circle-2"
+                "value": "circle-dot"
               },
               {
                 "type": "string",
-                "value": "circle-dot"
+                "value": "cloud"
               },
               {
                 "type": "string",
@@ -6161,19 +6805,19 @@
               },
               {
                 "type": "string",
-                "value": "list"
-              },
-              {
-                "type": "string",
                 "value": "linkedin"
               },
               {
                 "type": "string",
-                "value": "lock"
+                "value": "list"
               },
               {
                 "type": "string",
                 "value": "locate-fixed"
+              },
+              {
+                "type": "string",
+                "value": "lock"
               },
               {
                 "type": "string",
@@ -6182,6 +6826,10 @@
               {
                 "type": "string",
                 "value": "move-right"
+              },
+              {
+                "type": "string",
+                "value": "none"
               },
               {
                 "type": "string",
@@ -6221,11 +6869,11 @@
               },
               {
                 "type": "string",
-                "value": "trophy"
+                "value": "timer"
               },
               {
                 "type": "string",
-                "value": "timer"
+                "value": "trophy"
               },
               {
                 "type": "string",
@@ -6242,6 +6890,10 @@
               {
                 "type": "string",
                 "value": "wrench"
+              },
+              {
+                "type": "string",
+                "value": "x-circle"
               },
               {
                 "type": "string",
@@ -6355,19 +7007,15 @@
             "of": [
               {
                 "type": "string",
-                "value": "none"
-              },
-              {
-                "type": "string",
                 "value": "arrow-down-to-line"
               },
               {
                 "type": "string",
-                "value": "arrow-up-down"
+                "value": "arrow-right"
               },
               {
                 "type": "string",
-                "value": "arrow-right"
+                "value": "arrow-up-down"
               },
               {
                 "type": "string",
@@ -6383,11 +7031,7 @@
               },
               {
                 "type": "string",
-                "value": "chevron-right"
-              },
-              {
-                "type": "string",
-                "value": "chevron-left"
+                "value": "check-circle-2"
               },
               {
                 "type": "string",
@@ -6395,15 +7039,23 @@
               },
               {
                 "type": "string",
+                "value": "chevron-left"
+              },
+              {
+                "type": "string",
+                "value": "chevron-right"
+              },
+              {
+                "type": "string",
                 "value": "chevron-up"
               },
               {
                 "type": "string",
-                "value": "check-circle-2"
+                "value": "circle-dot"
               },
               {
                 "type": "string",
-                "value": "circle-dot"
+                "value": "cloud"
               },
               {
                 "type": "string",
@@ -6459,19 +7111,19 @@
               },
               {
                 "type": "string",
-                "value": "list"
-              },
-              {
-                "type": "string",
                 "value": "linkedin"
               },
               {
                 "type": "string",
-                "value": "lock"
+                "value": "list"
               },
               {
                 "type": "string",
                 "value": "locate-fixed"
+              },
+              {
+                "type": "string",
+                "value": "lock"
               },
               {
                 "type": "string",
@@ -6480,6 +7132,10 @@
               {
                 "type": "string",
                 "value": "move-right"
+              },
+              {
+                "type": "string",
+                "value": "none"
               },
               {
                 "type": "string",
@@ -6519,11 +7175,11 @@
               },
               {
                 "type": "string",
-                "value": "trophy"
+                "value": "timer"
               },
               {
                 "type": "string",
-                "value": "timer"
+                "value": "trophy"
               },
               {
                 "type": "string",
@@ -6540,6 +7196,10 @@
               {
                 "type": "string",
                 "value": "wrench"
+              },
+              {
+                "type": "string",
+                "value": "x-circle"
               },
               {
                 "type": "string",
@@ -6643,19 +7303,15 @@
             "of": [
               {
                 "type": "string",
-                "value": "none"
-              },
-              {
-                "type": "string",
                 "value": "arrow-down-to-line"
               },
               {
                 "type": "string",
-                "value": "arrow-up-down"
+                "value": "arrow-right"
               },
               {
                 "type": "string",
-                "value": "arrow-right"
+                "value": "arrow-up-down"
               },
               {
                 "type": "string",
@@ -6671,11 +7327,7 @@
               },
               {
                 "type": "string",
-                "value": "chevron-right"
-              },
-              {
-                "type": "string",
-                "value": "chevron-left"
+                "value": "check-circle-2"
               },
               {
                 "type": "string",
@@ -6683,15 +7335,23 @@
               },
               {
                 "type": "string",
+                "value": "chevron-left"
+              },
+              {
+                "type": "string",
+                "value": "chevron-right"
+              },
+              {
+                "type": "string",
                 "value": "chevron-up"
               },
               {
                 "type": "string",
-                "value": "check-circle-2"
+                "value": "circle-dot"
               },
               {
                 "type": "string",
-                "value": "circle-dot"
+                "value": "cloud"
               },
               {
                 "type": "string",
@@ -6747,19 +7407,19 @@
               },
               {
                 "type": "string",
-                "value": "list"
-              },
-              {
-                "type": "string",
                 "value": "linkedin"
               },
               {
                 "type": "string",
-                "value": "lock"
+                "value": "list"
               },
               {
                 "type": "string",
                 "value": "locate-fixed"
+              },
+              {
+                "type": "string",
+                "value": "lock"
               },
               {
                 "type": "string",
@@ -6768,6 +7428,10 @@
               {
                 "type": "string",
                 "value": "move-right"
+              },
+              {
+                "type": "string",
+                "value": "none"
               },
               {
                 "type": "string",
@@ -6807,11 +7471,11 @@
               },
               {
                 "type": "string",
-                "value": "trophy"
+                "value": "timer"
               },
               {
                 "type": "string",
-                "value": "timer"
+                "value": "trophy"
               },
               {
                 "type": "string",
@@ -6828,6 +7492,10 @@
               {
                 "type": "string",
                 "value": "wrench"
+              },
+              {
+                "type": "string",
+                "value": "x-circle"
               },
               {
                 "type": "string",
@@ -7100,19 +7768,15 @@
             "of": [
               {
                 "type": "string",
-                "value": "none"
-              },
-              {
-                "type": "string",
                 "value": "arrow-down-to-line"
               },
               {
                 "type": "string",
-                "value": "arrow-up-down"
+                "value": "arrow-right"
               },
               {
                 "type": "string",
-                "value": "arrow-right"
+                "value": "arrow-up-down"
               },
               {
                 "type": "string",
@@ -7128,11 +7792,7 @@
               },
               {
                 "type": "string",
-                "value": "chevron-right"
-              },
-              {
-                "type": "string",
-                "value": "chevron-left"
+                "value": "check-circle-2"
               },
               {
                 "type": "string",
@@ -7140,15 +7800,23 @@
               },
               {
                 "type": "string",
+                "value": "chevron-left"
+              },
+              {
+                "type": "string",
+                "value": "chevron-right"
+              },
+              {
+                "type": "string",
                 "value": "chevron-up"
               },
               {
                 "type": "string",
-                "value": "check-circle-2"
+                "value": "circle-dot"
               },
               {
                 "type": "string",
-                "value": "circle-dot"
+                "value": "cloud"
               },
               {
                 "type": "string",
@@ -7204,19 +7872,19 @@
               },
               {
                 "type": "string",
-                "value": "list"
-              },
-              {
-                "type": "string",
                 "value": "linkedin"
               },
               {
                 "type": "string",
-                "value": "lock"
+                "value": "list"
               },
               {
                 "type": "string",
                 "value": "locate-fixed"
+              },
+              {
+                "type": "string",
+                "value": "lock"
               },
               {
                 "type": "string",
@@ -7225,6 +7893,10 @@
               {
                 "type": "string",
                 "value": "move-right"
+              },
+              {
+                "type": "string",
+                "value": "none"
               },
               {
                 "type": "string",
@@ -7264,11 +7936,11 @@
               },
               {
                 "type": "string",
-                "value": "trophy"
+                "value": "timer"
               },
               {
                 "type": "string",
-                "value": "timer"
+                "value": "trophy"
               },
               {
                 "type": "string",
@@ -7285,6 +7957,10 @@
               {
                 "type": "string",
                 "value": "wrench"
+              },
+              {
+                "type": "string",
+                "value": "x-circle"
               },
               {
                 "type": "string",
@@ -9580,19 +10256,15 @@
                   "of": [
                     {
                       "type": "string",
-                      "value": "none"
-                    },
-                    {
-                      "type": "string",
                       "value": "arrow-down-to-line"
                     },
                     {
                       "type": "string",
-                      "value": "arrow-up-down"
+                      "value": "arrow-right"
                     },
                     {
                       "type": "string",
-                      "value": "arrow-right"
+                      "value": "arrow-up-down"
                     },
                     {
                       "type": "string",
@@ -9608,11 +10280,7 @@
                     },
                     {
                       "type": "string",
-                      "value": "chevron-right"
-                    },
-                    {
-                      "type": "string",
-                      "value": "chevron-left"
+                      "value": "check-circle-2"
                     },
                     {
                       "type": "string",
@@ -9620,15 +10288,23 @@
                     },
                     {
                       "type": "string",
+                      "value": "chevron-left"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-right"
+                    },
+                    {
+                      "type": "string",
                       "value": "chevron-up"
                     },
                     {
                       "type": "string",
-                      "value": "check-circle-2"
+                      "value": "circle-dot"
                     },
                     {
                       "type": "string",
-                      "value": "circle-dot"
+                      "value": "cloud"
                     },
                     {
                       "type": "string",
@@ -9684,19 +10360,19 @@
                     },
                     {
                       "type": "string",
-                      "value": "list"
-                    },
-                    {
-                      "type": "string",
                       "value": "linkedin"
                     },
                     {
                       "type": "string",
-                      "value": "lock"
+                      "value": "list"
                     },
                     {
                       "type": "string",
                       "value": "locate-fixed"
+                    },
+                    {
+                      "type": "string",
+                      "value": "lock"
                     },
                     {
                       "type": "string",
@@ -9705,6 +10381,10 @@
                     {
                       "type": "string",
                       "value": "move-right"
+                    },
+                    {
+                      "type": "string",
+                      "value": "none"
                     },
                     {
                       "type": "string",
@@ -9744,11 +10424,11 @@
                     },
                     {
                       "type": "string",
-                      "value": "trophy"
+                      "value": "timer"
                     },
                     {
                       "type": "string",
-                      "value": "timer"
+                      "value": "trophy"
                     },
                     {
                       "type": "string",
@@ -9765,6 +10445,10 @@
                     {
                       "type": "string",
                       "value": "wrench"
+                    },
+                    {
+                      "type": "string",
+                      "value": "x-circle"
                     },
                     {
                       "type": "string",
@@ -11359,19 +12043,15 @@
                     "of": [
                       {
                         "type": "string",
-                        "value": "none"
-                      },
-                      {
-                        "type": "string",
                         "value": "arrow-down-to-line"
                       },
                       {
                         "type": "string",
-                        "value": "arrow-up-down"
+                        "value": "arrow-right"
                       },
                       {
                         "type": "string",
-                        "value": "arrow-right"
+                        "value": "arrow-up-down"
                       },
                       {
                         "type": "string",
@@ -11387,11 +12067,7 @@
                       },
                       {
                         "type": "string",
-                        "value": "chevron-right"
-                      },
-                      {
-                        "type": "string",
-                        "value": "chevron-left"
+                        "value": "check-circle-2"
                       },
                       {
                         "type": "string",
@@ -11399,15 +12075,23 @@
                       },
                       {
                         "type": "string",
+                        "value": "chevron-left"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-right"
+                      },
+                      {
+                        "type": "string",
                         "value": "chevron-up"
                       },
                       {
                         "type": "string",
-                        "value": "check-circle-2"
+                        "value": "circle-dot"
                       },
                       {
                         "type": "string",
-                        "value": "circle-dot"
+                        "value": "cloud"
                       },
                       {
                         "type": "string",
@@ -11463,19 +12147,19 @@
                       },
                       {
                         "type": "string",
-                        "value": "list"
-                      },
-                      {
-                        "type": "string",
                         "value": "linkedin"
                       },
                       {
                         "type": "string",
-                        "value": "lock"
+                        "value": "list"
                       },
                       {
                         "type": "string",
                         "value": "locate-fixed"
+                      },
+                      {
+                        "type": "string",
+                        "value": "lock"
                       },
                       {
                         "type": "string",
@@ -11484,6 +12168,10 @@
                       {
                         "type": "string",
                         "value": "move-right"
+                      },
+                      {
+                        "type": "string",
+                        "value": "none"
                       },
                       {
                         "type": "string",
@@ -11523,11 +12211,11 @@
                       },
                       {
                         "type": "string",
-                        "value": "trophy"
+                        "value": "timer"
                       },
                       {
                         "type": "string",
-                        "value": "timer"
+                        "value": "trophy"
                       },
                       {
                         "type": "string",
@@ -11544,6 +12232,10 @@
                       {
                         "type": "string",
                         "value": "wrench"
+                      },
+                      {
+                        "type": "string",
+                        "value": "x-circle"
                       },
                       {
                         "type": "string",
@@ -11729,19 +12421,15 @@
                     "of": [
                       {
                         "type": "string",
-                        "value": "none"
-                      },
-                      {
-                        "type": "string",
                         "value": "arrow-down-to-line"
                       },
                       {
                         "type": "string",
-                        "value": "arrow-up-down"
+                        "value": "arrow-right"
                       },
                       {
                         "type": "string",
-                        "value": "arrow-right"
+                        "value": "arrow-up-down"
                       },
                       {
                         "type": "string",
@@ -11757,11 +12445,7 @@
                       },
                       {
                         "type": "string",
-                        "value": "chevron-right"
-                      },
-                      {
-                        "type": "string",
-                        "value": "chevron-left"
+                        "value": "check-circle-2"
                       },
                       {
                         "type": "string",
@@ -11769,15 +12453,23 @@
                       },
                       {
                         "type": "string",
+                        "value": "chevron-left"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-right"
+                      },
+                      {
+                        "type": "string",
                         "value": "chevron-up"
                       },
                       {
                         "type": "string",
-                        "value": "check-circle-2"
+                        "value": "circle-dot"
                       },
                       {
                         "type": "string",
-                        "value": "circle-dot"
+                        "value": "cloud"
                       },
                       {
                         "type": "string",
@@ -11833,19 +12525,19 @@
                       },
                       {
                         "type": "string",
-                        "value": "list"
-                      },
-                      {
-                        "type": "string",
                         "value": "linkedin"
                       },
                       {
                         "type": "string",
-                        "value": "lock"
+                        "value": "list"
                       },
                       {
                         "type": "string",
                         "value": "locate-fixed"
+                      },
+                      {
+                        "type": "string",
+                        "value": "lock"
                       },
                       {
                         "type": "string",
@@ -11854,6 +12546,10 @@
                       {
                         "type": "string",
                         "value": "move-right"
+                      },
+                      {
+                        "type": "string",
+                        "value": "none"
                       },
                       {
                         "type": "string",
@@ -11893,11 +12589,11 @@
                       },
                       {
                         "type": "string",
-                        "value": "trophy"
+                        "value": "timer"
                       },
                       {
                         "type": "string",
-                        "value": "timer"
+                        "value": "trophy"
                       },
                       {
                         "type": "string",
@@ -11914,6 +12610,10 @@
                       {
                         "type": "string",
                         "value": "wrench"
+                      },
+                      {
+                        "type": "string",
+                        "value": "x-circle"
                       },
                       {
                         "type": "string",
@@ -11985,19 +12685,15 @@
                   "of": [
                     {
                       "type": "string",
-                      "value": "none"
-                    },
-                    {
-                      "type": "string",
                       "value": "arrow-down-to-line"
                     },
                     {
                       "type": "string",
-                      "value": "arrow-up-down"
+                      "value": "arrow-right"
                     },
                     {
                       "type": "string",
-                      "value": "arrow-right"
+                      "value": "arrow-up-down"
                     },
                     {
                       "type": "string",
@@ -12013,11 +12709,7 @@
                     },
                     {
                       "type": "string",
-                      "value": "chevron-right"
-                    },
-                    {
-                      "type": "string",
-                      "value": "chevron-left"
+                      "value": "check-circle-2"
                     },
                     {
                       "type": "string",
@@ -12025,15 +12717,23 @@
                     },
                     {
                       "type": "string",
+                      "value": "chevron-left"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-right"
+                    },
+                    {
+                      "type": "string",
                       "value": "chevron-up"
                     },
                     {
                       "type": "string",
-                      "value": "check-circle-2"
+                      "value": "circle-dot"
                     },
                     {
                       "type": "string",
-                      "value": "circle-dot"
+                      "value": "cloud"
                     },
                     {
                       "type": "string",
@@ -12089,19 +12789,19 @@
                     },
                     {
                       "type": "string",
-                      "value": "list"
-                    },
-                    {
-                      "type": "string",
                       "value": "linkedin"
                     },
                     {
                       "type": "string",
-                      "value": "lock"
+                      "value": "list"
                     },
                     {
                       "type": "string",
                       "value": "locate-fixed"
+                    },
+                    {
+                      "type": "string",
+                      "value": "lock"
                     },
                     {
                       "type": "string",
@@ -12110,6 +12810,10 @@
                     {
                       "type": "string",
                       "value": "move-right"
+                    },
+                    {
+                      "type": "string",
+                      "value": "none"
                     },
                     {
                       "type": "string",
@@ -12149,11 +12853,11 @@
                     },
                     {
                       "type": "string",
-                      "value": "trophy"
+                      "value": "timer"
                     },
                     {
                       "type": "string",
-                      "value": "timer"
+                      "value": "trophy"
                     },
                     {
                       "type": "string",
@@ -12170,6 +12874,10 @@
                     {
                       "type": "string",
                       "value": "wrench"
+                    },
+                    {
+                      "type": "string",
+                      "value": "x-circle"
                     },
                     {
                       "type": "string",
@@ -16415,6 +17123,21 @@
                   "type": "inline",
                   "name": "timeline-4"
                 }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "timeline-5"
+                }
               }
             ]
           }
@@ -16540,19 +17263,15 @@
             "of": [
               {
                 "type": "string",
-                "value": "none"
-              },
-              {
-                "type": "string",
                 "value": "arrow-down-to-line"
               },
               {
                 "type": "string",
-                "value": "arrow-up-down"
+                "value": "arrow-right"
               },
               {
                 "type": "string",
-                "value": "arrow-right"
+                "value": "arrow-up-down"
               },
               {
                 "type": "string",
@@ -16568,11 +17287,7 @@
               },
               {
                 "type": "string",
-                "value": "chevron-right"
-              },
-              {
-                "type": "string",
-                "value": "chevron-left"
+                "value": "check-circle-2"
               },
               {
                 "type": "string",
@@ -16580,15 +17295,23 @@
               },
               {
                 "type": "string",
+                "value": "chevron-left"
+              },
+              {
+                "type": "string",
+                "value": "chevron-right"
+              },
+              {
+                "type": "string",
                 "value": "chevron-up"
               },
               {
                 "type": "string",
-                "value": "check-circle-2"
+                "value": "circle-dot"
               },
               {
                 "type": "string",
-                "value": "circle-dot"
+                "value": "cloud"
               },
               {
                 "type": "string",
@@ -16644,19 +17367,19 @@
               },
               {
                 "type": "string",
-                "value": "list"
-              },
-              {
-                "type": "string",
                 "value": "linkedin"
               },
               {
                 "type": "string",
-                "value": "lock"
+                "value": "list"
               },
               {
                 "type": "string",
                 "value": "locate-fixed"
+              },
+              {
+                "type": "string",
+                "value": "lock"
               },
               {
                 "type": "string",
@@ -16665,6 +17388,10 @@
               {
                 "type": "string",
                 "value": "move-right"
+              },
+              {
+                "type": "string",
+                "value": "none"
               },
               {
                 "type": "string",
@@ -16704,11 +17431,11 @@
               },
               {
                 "type": "string",
-                "value": "trophy"
+                "value": "timer"
               },
               {
                 "type": "string",
-                "value": "timer"
+                "value": "trophy"
               },
               {
                 "type": "string",
@@ -16725,6 +17452,10 @@
               {
                 "type": "string",
                 "value": "wrench"
+              },
+              {
+                "type": "string",
+                "value": "x-circle"
               },
               {
                 "type": "string",

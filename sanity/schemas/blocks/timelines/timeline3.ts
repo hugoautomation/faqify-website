@@ -1,6 +1,5 @@
 import { defineType, defineField } from "sanity";
 import { Images } from "lucide-react";
-import { ICON_VARIANTS } from "@/sanity/schemas/blocks/shared/icon-variants";
 
 export default defineType({
   name: "timeline-3",

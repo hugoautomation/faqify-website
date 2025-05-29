@@ -8,7 +8,7 @@ import { PAGE_QUERYResult } from "@/sanity.types";
 import { fetchSanityChangelogs } from "@/sanity/lib/fetch";
 import PortableTextRenderer from "@/components/portable-text-renderer";
 import { Separator } from "@/components/ui/separator";
-import { getColor } from "@/lib/color";
+import { ColorName, getColor } from "@/lib/color";
 
 type Changelogs3Props = Extract<
   NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number],
@@ -41,7 +41,10 @@ export default async function Changelog3({ padding }: Changelogs3Props) {
                           <span
                             className={cn(
                               "h-3 w-3 rounded-full",
-                              getColor(category.color || "")
+                              getColor({
+                                color: category.color as ColorName,
+                                type: "bg",
+                              })
                             )}
                           />
                           <p className="text-sm font-semibold text-primary/80">

@@ -1,8 +1,7 @@
 @import "tailwindcss";
+@source inline("{bg,fill}-{red,amber,green,blue,indigo,purple,cyan,orange,slate}-{300,500}");
 
 @plugin "tailwindcss-animate";
-
-@custom-variant dark (&:is(.dark *));
 
 @theme {
   --font-sans: var(--font-sans);
