@@ -61,6 +61,7 @@ import Gallery4 from "@/components/blocks/gallery/gallery4";
 import Gallery8 from "@/components/blocks/gallery/gallery8";
 import Gallery9 from "@/components/blocks/gallery/gallery9";
 import Gallery10 from "@/components/blocks/gallery/gallery10";
+import Timeline4 from "@/components/blocks/timelines/timeline4";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 
@@ -129,6 +130,7 @@ const componentMap: {
   "gallery-8": Gallery8,
   "gallery-9": Gallery9,
   "gallery-10": Gallery10,
+  "timeline-4": Timeline4,
 };
 
 export default function Blocks({

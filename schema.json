@@ -1,6 +1,6 @@
 [
   {
-    "name": "sanity.imagePaletteSwatch",
+    "name": "timeline-4",
     "type": "type",
     "value": {
       "type": "object",
@@ -9,27 +9,252 @@
           "type": "objectAttribute",
           "value": {
             "type": "string",
-            "value": "sanity.imagePaletteSwatch"
+            "value": "timeline-4"
           }
         },
-        "background": {
+        "padding": {
           "type": "objectAttribute",
           "value": {
-            "type": "string"
+            "type": "inline",
+            "name": "section-padding"
           },
           "optional": true
         },
-        "foreground": {
+        "tag": {
           "type": "objectAttribute",
           "value": {
-            "type": "string"
-          },
-          "optional": true
-        },
-        "population": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "number"
+            "type": "object",
+            "attributes": {
+              "text": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              },
+              "type": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "union",
+                  "of": [
+                    {
+                      "type": "string",
+                      "value": "title"
+                    },
+                    {
+                      "type": "string",
+                      "value": "badge"
+                    }
+                  ]
+                },
+                "optional": true
+              },
+              "iconVariant": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "union",
+                  "of": [
+                    {
+                      "type": "string",
+                      "value": "none"
+                    },
+                    {
+                      "type": "string",
+                      "value": "arrow-down-to-line"
+                    },
+                    {
+                      "type": "string",
+                      "value": "arrow-up-down"
+                    },
+                    {
+                      "type": "string",
+                      "value": "arrow-right"
+                    },
+                    {
+                      "type": "string",
+                      "value": "bell"
+                    },
+                    {
+                      "type": "string",
+                      "value": "blocks"
+                    },
+                    {
+                      "type": "string",
+                      "value": "building-2"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-right"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-left"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-down"
+                    },
+                    {
+                      "type": "string",
+                      "value": "chevron-up"
+                    },
+                    {
+                      "type": "string",
+                      "value": "check-circle-2"
+                    },
+                    {
+                      "type": "string",
+                      "value": "circle-dot"
+                    },
+                    {
+                      "type": "string",
+                      "value": "code"
+                    },
+                    {
+                      "type": "string",
+                      "value": "compass"
+                    },
+                    {
+                      "type": "string",
+                      "value": "cpu"
+                    },
+                    {
+                      "type": "string",
+                      "value": "dribbble"
+                    },
+                    {
+                      "type": "string",
+                      "value": "external-link"
+                    },
+                    {
+                      "type": "string",
+                      "value": "git-branch"
+                    },
+                    {
+                      "type": "string",
+                      "value": "github"
+                    },
+                    {
+                      "type": "string",
+                      "value": "globe"
+                    },
+                    {
+                      "type": "string",
+                      "value": "home"
+                    },
+                    {
+                      "type": "string",
+                      "value": "infinity"
+                    },
+                    {
+                      "type": "string",
+                      "value": "landmark"
+                    },
+                    {
+                      "type": "string",
+                      "value": "layout-grid"
+                    },
+                    {
+                      "type": "string",
+                      "value": "layout-list"
+                    },
+                    {
+                      "type": "string",
+                      "value": "list"
+                    },
+                    {
+                      "type": "string",
+                      "value": "linkedin"
+                    },
+                    {
+                      "type": "string",
+                      "value": "lock"
+                    },
+                    {
+                      "type": "string",
+                      "value": "locate-fixed"
+                    },
+                    {
+                      "type": "string",
+                      "value": "messages-square"
+                    },
+                    {
+                      "type": "string",
+                      "value": "move-right"
+                    },
+                    {
+                      "type": "string",
+                      "value": "play"
+                    },
+                    {
+                      "type": "string",
+                      "value": "play-circle"
+                    },
+                    {
+                      "type": "string",
+                      "value": "redo"
+                    },
+                    {
+                      "type": "string",
+                      "value": "repeat"
+                    },
+                    {
+                      "type": "string",
+                      "value": "rocket"
+                    },
+                    {
+                      "type": "string",
+                      "value": "scaling"
+                    },
+                    {
+                      "type": "string",
+                      "value": "scan"
+                    },
+                    {
+                      "type": "string",
+                      "value": "sparkles"
+                    },
+                    {
+                      "type": "string",
+                      "value": "star"
+                    },
+                    {
+                      "type": "string",
+                      "value": "trophy"
+                    },
+                    {
+                      "type": "string",
+                      "value": "timer"
+                    },
+                    {
+                      "type": "string",
+                      "value": "twitter"
+                    },
+                    {
+                      "type": "string",
+                      "value": "users"
+                    },
+                    {
+                      "type": "string",
+                      "value": "wand-sparkles"
+                    },
+                    {
+                      "type": "string",
+                      "value": "wrench"
+                    },
+                    {
+                      "type": "string",
+                      "value": "zap"
+                    },
+                    {
+                      "type": "string",
+                      "value": "zoom-in"
+                    }
+                  ]
+                },
+                "optional": true
+              }
+            }
           },
           "optional": true
         },
@@ -39,286 +264,336 @@
             "type": "string"
           },
           "optional": true
-        }
-      }
-    }
-  },
-  {
-    "name": "sanity.imagePalette",
-    "type": "type",
-    "value": {
-      "type": "object",
-      "attributes": {
-        "_type": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "string",
-            "value": "sanity.imagePalette"
-          }
         },
-        "darkMuted": {
+        "description": {
           "type": "objectAttribute",
           "value": {
-            "type": "inline",
-            "name": "sanity.imagePaletteSwatch"
+            "type": "string"
           },
           "optional": true
         },
-        "lightVibrant": {
+        "columns": {
           "type": "objectAttribute",
           "value": {
-            "type": "inline",
-            "name": "sanity.imagePaletteSwatch"
-          },
-          "optional": true
-        },
-        "darkVibrant": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "inline",
-            "name": "sanity.imagePaletteSwatch"
-          },
-          "optional": true
-        },
-        "vibrant": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "inline",
-            "name": "sanity.imagePaletteSwatch"
-          },
-          "optional": true
-        },
-        "dominant": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "inline",
-            "name": "sanity.imagePaletteSwatch"
-          },
-          "optional": true
-        },
-        "lightMuted": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "inline",
-            "name": "sanity.imagePaletteSwatch"
-          },
-          "optional": true
-        },
-        "muted": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "inline",
-            "name": "sanity.imagePaletteSwatch"
-          },
-          "optional": true
-        }
-      }
-    }
-  },
-  {
-    "name": "sanity.imageDimensions",
-    "type": "type",
-    "value": {
-      "type": "object",
-      "attributes": {
-        "_type": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "string",
-            "value": "sanity.imageDimensions"
-          }
-        },
-        "height": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "number"
-          },
-          "optional": true
-        },
-        "width": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "number"
-          },
-          "optional": true
-        },
-        "aspectRatio": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "number"
-          },
-          "optional": true
-        }
-      }
-    }
-  },
-  {
-    "name": "sanity.fileAsset",
-    "type": "document",
-    "attributes": {
-      "_id": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        }
-      },
-      "_type": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string",
-          "value": "sanity.fileAsset"
-        }
-      },
-      "_createdAt": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        }
-      },
-      "_updatedAt": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        }
-      },
-      "_rev": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        }
-      },
-      "originalFilename": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": true
-      },
-      "label": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": true
-      },
-      "title": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": true
-      },
-      "description": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": true
-      },
-      "altText": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": true
-      },
-      "sha1hash": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": true
-      },
-      "extension": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": true
-      },
-      "mimeType": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": true
-      },
-      "size": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "number"
-        },
-        "optional": true
-      },
-      "assetId": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": true
-      },
-      "uploadId": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": true
-      },
-      "path": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": true
-      },
-      "url": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": true
-      },
-      "source": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "inline",
-          "name": "sanity.assetSourceData"
-        },
-        "optional": true
-      }
-    }
-  },
-  {
-    "name": "geopoint",
-    "type": "type",
-    "value": {
-      "type": "object",
-      "attributes": {
-        "_type": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "string",
-            "value": "geopoint"
-          }
-        },
-        "lat": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "number"
-          },
-          "optional": true
-        },
-        "lng": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "number"
-          },
-          "optional": true
-        },
-        "alt": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "number"
+            "type": "array",
+            "of": {
+              "type": "object",
+              "attributes": {
+                "title": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string"
+                  },
+                  "optional": true
+                },
+                "description": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string"
+                  },
+                  "optional": true
+                },
+                "iconVariant": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "union",
+                    "of": [
+                      {
+                        "type": "string",
+                        "value": "none"
+                      },
+                      {
+                        "type": "string",
+                        "value": "arrow-down-to-line"
+                      },
+                      {
+                        "type": "string",
+                        "value": "arrow-up-down"
+                      },
+                      {
+                        "type": "string",
+                        "value": "arrow-right"
+                      },
+                      {
+                        "type": "string",
+                        "value": "bell"
+                      },
+                      {
+                        "type": "string",
+                        "value": "blocks"
+                      },
+                      {
+                        "type": "string",
+                        "value": "building-2"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-right"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-left"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-down"
+                      },
+                      {
+                        "type": "string",
+                        "value": "chevron-up"
+                      },
+                      {
+                        "type": "string",
+                        "value": "check-circle-2"
+                      },
+                      {
+                        "type": "string",
+                        "value": "circle-dot"
+                      },
+                      {
+                        "type": "string",
+                        "value": "code"
+                      },
+                      {
+                        "type": "string",
+                        "value": "compass"
+                      },
+                      {
+                        "type": "string",
+                        "value": "cpu"
+                      },
+                      {
+                        "type": "string",
+                        "value": "dribbble"
+                      },
+                      {
+                        "type": "string",
+                        "value": "external-link"
+                      },
+                      {
+                        "type": "string",
+                        "value": "git-branch"
+                      },
+                      {
+                        "type": "string",
+                        "value": "github"
+                      },
+                      {
+                        "type": "string",
+                        "value": "globe"
+                      },
+                      {
+                        "type": "string",
+                        "value": "home"
+                      },
+                      {
+                        "type": "string",
+                        "value": "infinity"
+                      },
+                      {
+                        "type": "string",
+                        "value": "landmark"
+                      },
+                      {
+                        "type": "string",
+                        "value": "layout-grid"
+                      },
+                      {
+                        "type": "string",
+                        "value": "layout-list"
+                      },
+                      {
+                        "type": "string",
+                        "value": "list"
+                      },
+                      {
+                        "type": "string",
+                        "value": "linkedin"
+                      },
+                      {
+                        "type": "string",
+                        "value": "lock"
+                      },
+                      {
+                        "type": "string",
+                        "value": "locate-fixed"
+                      },
+                      {
+                        "type": "string",
+                        "value": "messages-square"
+                      },
+                      {
+                        "type": "string",
+                        "value": "move-right"
+                      },
+                      {
+                        "type": "string",
+                        "value": "play"
+                      },
+                      {
+                        "type": "string",
+                        "value": "play-circle"
+                      },
+                      {
+                        "type": "string",
+                        "value": "redo"
+                      },
+                      {
+                        "type": "string",
+                        "value": "repeat"
+                      },
+                      {
+                        "type": "string",
+                        "value": "rocket"
+                      },
+                      {
+                        "type": "string",
+                        "value": "scaling"
+                      },
+                      {
+                        "type": "string",
+                        "value": "scan"
+                      },
+                      {
+                        "type": "string",
+                        "value": "sparkles"
+                      },
+                      {
+                        "type": "string",
+                        "value": "star"
+                      },
+                      {
+                        "type": "string",
+                        "value": "trophy"
+                      },
+                      {
+                        "type": "string",
+                        "value": "timer"
+                      },
+                      {
+                        "type": "string",
+                        "value": "twitter"
+                      },
+                      {
+                        "type": "string",
+                        "value": "users"
+                      },
+                      {
+                        "type": "string",
+                        "value": "wand-sparkles"
+                      },
+                      {
+                        "type": "string",
+                        "value": "wrench"
+                      },
+                      {
+                        "type": "string",
+                        "value": "zap"
+                      },
+                      {
+                        "type": "string",
+                        "value": "zoom-in"
+                      }
+                    ]
+                  },
+                  "optional": true
+                },
+                "image": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "object",
+                    "attributes": {
+                      "asset": {
+                        "type": "objectAttribute",
+                        "value": {
+                          "type": "object",
+                          "attributes": {
+                            "_ref": {
+                              "type": "objectAttribute",
+                              "value": {
+                                "type": "string"
+                              }
+                            },
+                            "_type": {
+                              "type": "objectAttribute",
+                              "value": {
+                                "type": "string",
+                                "value": "reference"
+                              }
+                            },
+                            "_weak": {
+                              "type": "objectAttribute",
+                              "value": {
+                                "type": "boolean"
+                              },
+                              "optional": true
+                            }
+                          },
+                          "dereferencesTo": "sanity.imageAsset"
+                        },
+                        "optional": true
+                      },
+                      "media": {
+                        "type": "objectAttribute",
+                        "value": {
+                          "type": "unknown"
+                        },
+                        "optional": true
+                      },
+                      "hotspot": {
+                        "type": "objectAttribute",
+                        "value": {
+                          "type": "inline",
+                          "name": "sanity.imageHotspot"
+                        },
+                        "optional": true
+                      },
+                      "crop": {
+                        "type": "objectAttribute",
+                        "value": {
+                          "type": "inline",
+                          "name": "sanity.imageCrop"
+                        },
+                        "optional": true
+                      },
+                      "alt": {
+                        "type": "objectAttribute",
+                        "value": {
+                          "type": "string"
+                        },
+                        "optional": true
+                      },
+                      "_type": {
+                        "type": "objectAttribute",
+                        "value": {
+                          "type": "string",
+                          "value": "image"
+                        }
+                      }
+                    }
+                  },
+                  "optional": true
+                },
+                "_type": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string",
+                    "value": "column"
+                  }
+                }
+              },
+              "rest": {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
           },
           "optional": true
         }
@@ -578,6 +853,10 @@
                       },
                       {
                         "type": "string",
+                        "value": "cpu"
+                      },
+                      {
+                        "type": "string",
                         "value": "dribbble"
                       },
                       {
@@ -614,6 +893,10 @@
                       },
                       {
                         "type": "string",
+                        "value": "layout-list"
+                      },
+                      {
+                        "type": "string",
                         "value": "list"
                       },
                       {
@@ -623,6 +906,10 @@
                       {
                         "type": "string",
                         "value": "lock"
+                      },
+                      {
+                        "type": "string",
+                        "value": "locate-fixed"
                       },
                       {
                         "type": "string",
@@ -647,6 +934,10 @@
                       {
                         "type": "string",
                         "value": "repeat"
+                      },
+                      {
+                        "type": "string",
+                        "value": "rocket"
                       },
                       {
                         "type": "string",
@@ -4539,6 +4830,10 @@
               },
               {
                 "type": "string",
+                "value": "cpu"
+              },
+              {
+                "type": "string",
                 "value": "dribbble"
               },
               {
@@ -4575,6 +4870,10 @@
               },
               {
                 "type": "string",
+                "value": "layout-list"
+              },
+              {
+                "type": "string",
                 "value": "list"
               },
               {
@@ -4584,6 +4883,10 @@
               {
                 "type": "string",
                 "value": "lock"
+              },
+              {
+                "type": "string",
+                "value": "locate-fixed"
               },
               {
                 "type": "string",
@@ -4608,6 +4911,10 @@
               {
                 "type": "string",
                 "value": "repeat"
+              },
+              {
+                "type": "string",
+                "value": "rocket"
               },
               {
                 "type": "string",
@@ -5039,6 +5346,10 @@
                     },
                     {
                       "type": "string",
+                      "value": "cpu"
+                    },
+                    {
+                      "type": "string",
                       "value": "dribbble"
                     },
                     {
@@ -5075,6 +5386,10 @@
                     },
                     {
                       "type": "string",
+                      "value": "layout-list"
+                    },
+                    {
+                      "type": "string",
                       "value": "list"
                     },
                     {
@@ -5084,6 +5399,10 @@
                     {
                       "type": "string",
                       "value": "lock"
+                    },
+                    {
+                      "type": "string",
+                      "value": "locate-fixed"
                     },
                     {
                       "type": "string",
@@ -5108,6 +5427,10 @@
                     {
                       "type": "string",
                       "value": "repeat"
+                    },
+                    {
+                      "type": "string",
+                      "value": "rocket"
                     },
                     {
                       "type": "string",
@@ -5614,6 +5937,10 @@
               },
               {
                 "type": "string",
+                "value": "cpu"
+              },
+              {
+                "type": "string",
                 "value": "dribbble"
               },
               {
@@ -5650,6 +5977,10 @@
               },
               {
                 "type": "string",
+                "value": "layout-list"
+              },
+              {
+                "type": "string",
                 "value": "list"
               },
               {
@@ -5659,6 +5990,10 @@
               {
                 "type": "string",
                 "value": "lock"
+              },
+              {
+                "type": "string",
+                "value": "locate-fixed"
               },
               {
                 "type": "string",
@@ -5683,6 +6018,10 @@
               {
                 "type": "string",
                 "value": "repeat"
+              },
+              {
+                "type": "string",
+                "value": "rocket"
               },
               {
                 "type": "string",
@@ -5896,6 +6235,10 @@
               },
               {
                 "type": "string",
+                "value": "cpu"
+              },
+              {
+                "type": "string",
                 "value": "dribbble"
               },
               {
@@ -5932,6 +6275,10 @@
               },
               {
                 "type": "string",
+                "value": "layout-list"
+              },
+              {
+                "type": "string",
                 "value": "list"
               },
               {
@@ -5941,6 +6288,10 @@
               {
                 "type": "string",
                 "value": "lock"
+              },
+              {
+                "type": "string",
+                "value": "locate-fixed"
               },
               {
                 "type": "string",
@@ -5965,6 +6316,10 @@
               {
                 "type": "string",
                 "value": "repeat"
+              },
+              {
+                "type": "string",
+                "value": "rocket"
               },
               {
                 "type": "string",
@@ -6168,6 +6523,10 @@
               },
               {
                 "type": "string",
+                "value": "cpu"
+              },
+              {
+                "type": "string",
                 "value": "dribbble"
               },
               {
@@ -6204,6 +6563,10 @@
               },
               {
                 "type": "string",
+                "value": "layout-list"
+              },
+              {
+                "type": "string",
                 "value": "list"
               },
               {
@@ -6213,6 +6576,10 @@
               {
                 "type": "string",
                 "value": "lock"
+              },
+              {
+                "type": "string",
+                "value": "locate-fixed"
               },
               {
                 "type": "string",
@@ -6237,6 +6604,10 @@
               {
                 "type": "string",
                 "value": "repeat"
+              },
+              {
+                "type": "string",
+                "value": "rocket"
               },
               {
                 "type": "string",
@@ -6609,6 +6980,10 @@
               },
               {
                 "type": "string",
+                "value": "cpu"
+              },
+              {
+                "type": "string",
                 "value": "dribbble"
               },
               {
@@ -6645,6 +7020,10 @@
               },
               {
                 "type": "string",
+                "value": "layout-list"
+              },
+              {
+                "type": "string",
                 "value": "list"
               },
               {
@@ -6654,6 +7033,10 @@
               {
                 "type": "string",
                 "value": "lock"
+              },
+              {
+                "type": "string",
+                "value": "locate-fixed"
               },
               {
                 "type": "string",
@@ -6678,6 +7061,10 @@
               {
                 "type": "string",
                 "value": "repeat"
+              },
+              {
+                "type": "string",
+                "value": "rocket"
               },
               {
                 "type": "string",
@@ -9073,6 +9460,10 @@
                     },
                     {
                       "type": "string",
+                      "value": "cpu"
+                    },
+                    {
+                      "type": "string",
                       "value": "dribbble"
                     },
                     {
@@ -9109,6 +9500,10 @@
                     },
                     {
                       "type": "string",
+                      "value": "layout-list"
+                    },
+                    {
+                      "type": "string",
                       "value": "list"
                     },
                     {
@@ -9118,6 +9513,10 @@
                     {
                       "type": "string",
                       "value": "lock"
+                    },
+                    {
+                      "type": "string",
+                      "value": "locate-fixed"
                     },
                     {
                       "type": "string",
@@ -9142,6 +9541,10 @@
                     {
                       "type": "string",
                       "value": "repeat"
+                    },
+                    {
+                      "type": "string",
+                      "value": "rocket"
                     },
                     {
                       "type": "string",
@@ -10836,6 +11239,10 @@
                       },
                       {
                         "type": "string",
+                        "value": "cpu"
+                      },
+                      {
+                        "type": "string",
                         "value": "dribbble"
                       },
                       {
@@ -10872,6 +11279,10 @@
                       },
                       {
                         "type": "string",
+                        "value": "layout-list"
+                      },
+                      {
+                        "type": "string",
                         "value": "list"
                       },
                       {
@@ -10881,6 +11292,10 @@
                       {
                         "type": "string",
                         "value": "lock"
+                      },
+                      {
+                        "type": "string",
+                        "value": "locate-fixed"
                       },
                       {
                         "type": "string",
@@ -10905,6 +11320,10 @@
                       {
                         "type": "string",
                         "value": "repeat"
+                      },
+                      {
+                        "type": "string",
+                        "value": "rocket"
                       },
                       {
                         "type": "string",
@@ -11190,6 +11609,10 @@
                       },
                       {
                         "type": "string",
+                        "value": "cpu"
+                      },
+                      {
+                        "type": "string",
                         "value": "dribbble"
                       },
                       {
@@ -11226,6 +11649,10 @@
                       },
                       {
                         "type": "string",
+                        "value": "layout-list"
+                      },
+                      {
+                        "type": "string",
                         "value": "list"
                       },
                       {
@@ -11235,6 +11662,10 @@
                       {
                         "type": "string",
                         "value": "lock"
+                      },
+                      {
+                        "type": "string",
+                        "value": "locate-fixed"
                       },
                       {
                         "type": "string",
@@ -11259,6 +11690,10 @@
                       {
                         "type": "string",
                         "value": "repeat"
+                      },
+                      {
+                        "type": "string",
+                        "value": "rocket"
                       },
                       {
                         "type": "string",
@@ -11430,6 +11865,10 @@
                     },
                     {
                       "type": "string",
+                      "value": "cpu"
+                    },
+                    {
+                      "type": "string",
                       "value": "dribbble"
                     },
                     {
@@ -11466,6 +11905,10 @@
                     },
                     {
                       "type": "string",
+                      "value": "layout-list"
+                    },
+                    {
+                      "type": "string",
                       "value": "list"
                     },
                     {
@@ -11475,6 +11918,10 @@
                     {
                       "type": "string",
                       "value": "lock"
+                    },
+                    {
+                      "type": "string",
+                      "value": "locate-fixed"
                     },
                     {
                       "type": "string",
@@ -11499,6 +11946,10 @@
                     {
                       "type": "string",
                       "value": "repeat"
+                    },
+                    {
+                      "type": "string",
+                      "value": "rocket"
                     },
                     {
                       "type": "string",
@@ -14563,6 +15014,14 @@
             {
               "type": "string",
               "value": "cyanLight"
+            },
+            {
+              "type": "string",
+              "value": "orange"
+            },
+            {
+              "type": "string",
+              "value": "orangeLight"
             }
           ]
         },
@@ -14738,6 +15197,14 @@
             {
               "type": "string",
               "value": "cyanLight"
+            },
+            {
+              "type": "string",
+              "value": "orange"
+            },
+            {
+              "type": "string",
+              "value": "orangeLight"
             }
           ]
         },
@@ -15738,6 +16205,21 @@
                   "type": "inline",
                   "name": "gallery-10"
                 }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "timeline-4"
+                }
               }
             ]
           }
@@ -15923,6 +16405,10 @@
               },
               {
                 "type": "string",
+                "value": "cpu"
+              },
+              {
+                "type": "string",
                 "value": "dribbble"
               },
               {
@@ -15959,6 +16445,10 @@
               },
               {
                 "type": "string",
+                "value": "layout-list"
+              },
+              {
+                "type": "string",
                 "value": "list"
               },
               {
@@ -15968,6 +16458,10 @@
               {
                 "type": "string",
                 "value": "lock"
+              },
+              {
+                "type": "string",
+                "value": "locate-fixed"
               },
               {
                 "type": "string",
@@ -15992,6 +16486,10 @@
               {
                 "type": "string",
                 "value": "repeat"
+              },
+              {
+                "type": "string",
+                "value": "rocket"
               },
               {
                 "type": "string",
@@ -16715,7 +17213,52 @@
     }
   },
   {
-    "name": "sanity.imageCrop",
+    "name": "media.tag",
+    "type": "document",
+    "attributes": {
+      "_id": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_type": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string",
+          "value": "media.tag"
+        }
+      },
+      "_createdAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_updatedAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_rev": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "name": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "slug"
+        },
+        "optional": true
+      }
+    }
+  },
+  {
+    "name": "code",
     "type": "type",
     "value": {
       "type": "object",
@@ -16724,31 +17267,187 @@
           "type": "objectAttribute",
           "value": {
             "type": "string",
-            "value": "sanity.imageCrop"
+            "value": "code"
           }
         },
-        "top": {
+        "language": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "filename": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "code": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "highlightedLines": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "array",
+            "of": {
+              "type": "number"
+            }
+          },
+          "optional": true
+        }
+      }
+    }
+  },
+  {
+    "name": "sanity.imagePaletteSwatch",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "sanity.imagePaletteSwatch"
+          }
+        },
+        "background": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "foreground": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "population": {
           "type": "objectAttribute",
           "value": {
             "type": "number"
           },
           "optional": true
         },
-        "bottom": {
+        "title": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        }
+      }
+    }
+  },
+  {
+    "name": "sanity.imagePalette",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "sanity.imagePalette"
+          }
+        },
+        "darkMuted": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "inline",
+            "name": "sanity.imagePaletteSwatch"
+          },
+          "optional": true
+        },
+        "lightVibrant": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "inline",
+            "name": "sanity.imagePaletteSwatch"
+          },
+          "optional": true
+        },
+        "darkVibrant": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "inline",
+            "name": "sanity.imagePaletteSwatch"
+          },
+          "optional": true
+        },
+        "vibrant": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "inline",
+            "name": "sanity.imagePaletteSwatch"
+          },
+          "optional": true
+        },
+        "dominant": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "inline",
+            "name": "sanity.imagePaletteSwatch"
+          },
+          "optional": true
+        },
+        "lightMuted": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "inline",
+            "name": "sanity.imagePaletteSwatch"
+          },
+          "optional": true
+        },
+        "muted": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "inline",
+            "name": "sanity.imagePaletteSwatch"
+          },
+          "optional": true
+        }
+      }
+    }
+  },
+  {
+    "name": "sanity.imageDimensions",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "sanity.imageDimensions"
+          }
+        },
+        "height": {
           "type": "objectAttribute",
           "value": {
             "type": "number"
           },
           "optional": true
         },
-        "left": {
+        "width": {
           "type": "objectAttribute",
           "value": {
             "type": "number"
           },
           "optional": true
         },
-        "right": {
+        "aspectRatio": {
           "type": "objectAttribute",
           "value": {
             "type": "number"
@@ -16799,6 +17498,186 @@
           },
           "optional": true
         }
+      }
+    }
+  },
+  {
+    "name": "sanity.imageCrop",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "sanity.imageCrop"
+          }
+        },
+        "top": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        "bottom": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        "left": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        "right": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "number"
+          },
+          "optional": true
+        }
+      }
+    }
+  },
+  {
+    "name": "sanity.fileAsset",
+    "type": "document",
+    "attributes": {
+      "_id": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_type": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string",
+          "value": "sanity.fileAsset"
+        }
+      },
+      "_createdAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_updatedAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_rev": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "originalFilename": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "label": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "title": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "description": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "altText": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "sha1hash": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "extension": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "mimeType": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "size": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "number"
+        },
+        "optional": true
+      },
+      "assetId": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "uploadId": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "path": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "url": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
+      "source": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "sanity.assetSourceData"
+        },
+        "optional": true
       }
     }
   },
@@ -16947,43 +17826,6 @@
     }
   },
   {
-    "name": "sanity.assetSourceData",
-    "type": "type",
-    "value": {
-      "type": "object",
-      "attributes": {
-        "_type": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "string",
-            "value": "sanity.assetSourceData"
-          }
-        },
-        "name": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "string"
-          },
-          "optional": true
-        },
-        "id": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "string"
-          },
-          "optional": true
-        },
-        "url": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "string"
-          },
-          "optional": true
-        }
-      }
-    }
-  },
-  {
     "name": "sanity.imageMetadata",
     "type": "type",
     "value": {
@@ -17052,47 +17894,39 @@
     }
   },
   {
-    "name": "media.tag",
-    "type": "document",
-    "attributes": {
-      "_id": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        }
-      },
-      "_type": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string",
-          "value": "media.tag"
-        }
-      },
-      "_createdAt": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        }
-      },
-      "_updatedAt": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        }
-      },
-      "_rev": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        }
-      },
-      "name": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "inline",
-          "name": "slug"
+    "name": "geopoint",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "geopoint"
+          }
         },
-        "optional": true
+        "lat": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        "lng": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        "alt": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "number"
+          },
+          "optional": true
+        }
       }
     }
   },
@@ -17127,7 +17961,7 @@
     }
   },
   {
-    "name": "code",
+    "name": "sanity.assetSourceData",
     "type": "type",
     "value": {
       "type": "object",
@@ -17136,37 +17970,27 @@
           "type": "objectAttribute",
           "value": {
             "type": "string",
-            "value": "code"
+            "value": "sanity.assetSourceData"
           }
         },
-        "language": {
+        "name": {
           "type": "objectAttribute",
           "value": {
             "type": "string"
           },
           "optional": true
         },
-        "filename": {
+        "id": {
           "type": "objectAttribute",
           "value": {
             "type": "string"
           },
           "optional": true
         },
-        "code": {
+        "url": {
           "type": "objectAttribute",
           "value": {
             "type": "string"
-          },
-          "optional": true
-        },
-        "highlightedLines": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "array",
-            "of": {
-              "type": "number"
-            }
           },
           "optional": true
         }
