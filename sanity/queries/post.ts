@@ -1,24 +1,12 @@
 import { groq } from "next-sanity";
 import { linkQuery } from "./shared/link";
+import { imageQuery } from "./shared/image";
 
 export const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0]{
     title,
     slug,
     image{
-      ...,
-      asset->{
-        _id,
-        url,
-        mimeType,
-        metadata {
-          lqip,
-          dimensions {
-            width,
-            height
-          }
-        }
-      },
-      alt
+      ${imageQuery}
     },
     body[]{
       ...,
@@ -29,38 +17,13 @@ export const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0]{
         }
       },
       _type == "image" => {
-        ...,
-        asset->{
-          _id,
-          url,
-          mimeType,
-          metadata {
-            lqip,
-            dimensions {
-              width,
-              height
-            }
-          }
-        }
+        ${imageQuery}
       }
     },
     author->{
       name,
       image {
-        ...,
-        asset->{
-          _id,
-          url,
-          mimeType,
-          metadata {
-            lqip,
-            dimensions {
-              width,
-              height
-            }
-          }
-        },
-        alt
+        ${imageQuery}
       }
     },
     _createdAt,
@@ -93,37 +56,11 @@ export const POSTS_QUERY = groq`*[_type == "post" && defined(slug)] | order(_cre
       name,
       title,
       image {
-        ...,
-        asset->{
-          _id,
-          url,
-          mimeType,
-          metadata {
-            lqip,
-            dimensions {
-              width,
-              height
-            }
-          }
-        },
-        alt
+        ${imageQuery}
       }
     },
     image{
-      ...,
-      asset->{
-        _id,
-        url,
-        mimeType,
-        metadata {
-          lqip,
-          dimensions {
-            width,
-            height
-          }
-        }
-      },
-      alt
+      ${imageQuery}
     },
     categories[]->{
       _id,

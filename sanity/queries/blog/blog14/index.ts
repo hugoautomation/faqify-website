@@ -1,4 +1,5 @@
 import { groq } from "next-sanity";
+import { imageQuery } from "@/sanity/queries/shared/image";
 
 // @sanity-typegen-ignore
 export const blog14Query = groq`
@@ -15,20 +16,7 @@ export const blog14Query = groq`
       slug,
       excerpt,
       image{
-        ...,
-        asset->{
-          _id,
-          url,
-          mimeType,
-          metadata {
-            lqip,
-            dimensions {
-              width,
-              height
-            }
-          }
-        },
-        alt
+        ${imageQuery}
       },
       categories[]->{
         _id,
@@ -38,19 +26,7 @@ export const blog14Query = groq`
         _id,
         name,
         image{
-          ...,
-          asset->{
-            _id,
-            url,
-            mimeType,
-            metadata {
-              lqip,
-              dimensions {
-                width,
-                height
-              }
-            }
-          },
+          ${imageQuery}
         }
       }
     },

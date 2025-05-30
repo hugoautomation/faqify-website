@@ -1,24 +1,11 @@
 import { groq } from "next-sanity";
+import { imageQuery } from "./shared/image";
 
 export const SETTINGS_QUERY = groq`*[_type == "settings"][0]{
   _type,
   siteName,
   logo{
-    asset->{
-      _id,
-      url,
-      mimeType,
-      metadata {
-        lqip,
-        dimensions {
-          width,
-          height
-        }
-      }
-    },
-    alt,
-    width,
-    height
+    ${imageQuery}
   },
   description,
   copyright

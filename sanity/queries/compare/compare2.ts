@@ -1,4 +1,5 @@
 import { groq } from "next-sanity";
+import { imageQuery } from "@/sanity/queries/shared/image";
 
 // @sanity-typegen-ignore
 export const compare2Query = groq`
@@ -10,20 +11,7 @@ export const compare2Query = groq`
       _key,
       featured,
       image{
-        ...,
-        asset->{
-          _id,
-          url,
-          mimeType,
-          metadata {
-            lqip,
-            dimensions {
-              width,
-              height
-            }
-          }
-        },
-        alt
+        ${imageQuery}
       },
       title,
       list,

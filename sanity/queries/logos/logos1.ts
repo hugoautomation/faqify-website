@@ -1,4 +1,5 @@
 import { groq } from "next-sanity";
+import { imageQuery } from "../shared/image";
 
 // @sanity-typegen-ignore
 export const logos1Query = groq`
@@ -8,20 +9,7 @@ export const logos1Query = groq`
     padding,
     title,
     images[]{
-      ...,
-      asset->{
-        _id,
-        url,
-        mimeType,
-        metadata {
-          lqip,
-          dimensions {
-            width,
-            height
-          }
-        }
-      },
-      alt
+      ${imageQuery}
     },
   }
 `;

@@ -1,5 +1,6 @@
 import { groq } from "next-sanity";
 import { linkQuery } from "@/sanity/queries/shared/link";
+import { imageQuery } from "@/sanity/queries/shared/image";
 
 // @sanity-typegen-ignore
 export const gallery1Query = groq`
@@ -11,34 +12,10 @@ export const gallery1Query = groq`
       _key,
       title,
       image{
-        ...,
-        asset->{
-          _id,
-          url,
-          mimeType,
-          metadata {
-            lqip,
-            dimensions {
-              width,
-              height
-            }
-          }
-        }
+        ${imageQuery}
       },
       logo{
-        ...,
-        asset->{
-          _id,
-          url,
-          mimeType,
-          metadata {
-            lqip,
-            dimensions {
-              width,
-              height
-            }
-          }
-        }
+        ${imageQuery}
       },
       link{
         ${linkQuery},

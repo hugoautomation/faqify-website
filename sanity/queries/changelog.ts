@@ -1,5 +1,6 @@
 import { groq } from "next-sanity";
 import { linkQuery } from "./shared/link";
+import { imageQuery } from "./shared/image";
 
 export const CHANGELOGS_QUERY = groq`*[_type == "changelog" && defined(slug)] | order(date desc){
     _id,
@@ -16,55 +17,17 @@ export const CHANGELOGS_QUERY = groq`*[_type == "changelog" && defined(slug)] | 
         }
       },
       _type == "image" => {
-        ...,
-        asset->{
-          _id,
-          url,
-          mimeType,
-          metadata {
-            lqip,
-            dimensions {
-              width,
-              height
-            }
-          }
-        }
+        ${imageQuery}
       }
     },
     image{
-      ...,
-      asset->{
-        _id,
-        url,
-        mimeType,
-        metadata {
-          lqip,
-          dimensions {
-            width,
-            height
-          }
-        }
-      },
-      alt
+      ${imageQuery}
     },
     author->{
       name,
       title,
       image {
-        ...,
-        asset->{
-          _id,
-          url,
-          mimeType,
-          metadata {
-            lqip,
-            dimensions {
-              width,
-              height
-            }
-          }
-        },
-        alt
+        ${imageQuery}
       }
     },
     categories[]->{

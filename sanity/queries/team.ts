@@ -1,5 +1,6 @@
 import { groq } from "next-sanity";
 import { linkQuery } from "./shared/link";
+import { imageQuery } from "./shared/image";
 
 export const TEAM_QUERY = groq`*[_type == "team" && defined(slug)] | order(orderRank) {
     _id,
@@ -8,20 +9,7 @@ export const TEAM_QUERY = groq`*[_type == "team" && defined(slug)] | order(order
     description,
     slug,
     image{
-      ...,
-      asset->{
-        _id,
-        url,
-        mimeType,
-        metadata {
-          lqip,
-          dimensions {
-            width,
-            height
-          }
-        }
-      },
-      alt
+      ${imageQuery}
     },
     links[]{
       ${linkQuery}

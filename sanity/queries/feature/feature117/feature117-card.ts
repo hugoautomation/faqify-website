@@ -1,5 +1,6 @@
 import { groq } from "next-sanity";
 import { linkQuery } from "../../shared/link";
+import { imageQuery } from "../../shared/image";
 
 // @sanity-typegen-ignore
 export const feature117CardQuery = groq`
@@ -9,19 +10,7 @@ export const feature117CardQuery = groq`
     tag,
     title,
     image{
-      asset->{
-        _id,
-        url,
-        mimeType,
-        metadata {
-          lqip,
-          dimensions {
-            width,
-            height
-          }
-        }
-      },
-      alt
+      ${imageQuery}
     },
     link {
       ${linkQuery}

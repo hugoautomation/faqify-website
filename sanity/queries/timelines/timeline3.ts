@@ -1,5 +1,6 @@
 import { groq } from "next-sanity";
 import { linkQuery } from "@/sanity/queries/shared/link";
+import { imageQuery } from "@/sanity/queries/shared/image";
 
 // @sanity-typegen-ignore
 export const timeline3Query = groq`
@@ -17,19 +18,7 @@ export const timeline3Query = groq`
       title,
       description,
       image{
-        ...,
-        asset->{
-          _id,
-          url,
-          mimeType,
-          metadata {
-            lqip,
-            dimensions {
-              width,
-              height
-            }
-          }
-        }
+        ${imageQuery}
       },
     },
   }
