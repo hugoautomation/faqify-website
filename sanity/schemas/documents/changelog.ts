@@ -1,5 +1,6 @@
 import { defineField, defineType } from "sanity";
 import { FileClock } from "lucide-react";
+import image from "@/sanity/schemas/blocks/shared/image";
 
 export default defineType({
   name: "changelog",
@@ -40,21 +41,7 @@ export default defineType({
       title: "Body",
       type: "block-content",
     }),
-    defineField({
-      name: "image",
-      title: "Image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        {
-          name: "alt",
-          type: "string",
-          title: "Alternative Text",
-        },
-      ],
-    }),
+    image,
     defineField({
       name: "author",
       title: "Author",

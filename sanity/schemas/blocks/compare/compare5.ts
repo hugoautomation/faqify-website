@@ -1,5 +1,6 @@
 import { defineType, defineField } from "sanity";
 import { CheckCircle } from "lucide-react";
+import image from "@/sanity/schemas/blocks/shared/image";
 
 export default defineType({
   name: "compare-5",
@@ -20,21 +21,7 @@ export default defineType({
           name: "column",
           type: "object",
           fields: [
-            defineField({
-              name: "image",
-              title: "Image",
-              type: "image",
-              options: {
-                hotspot: true,
-              },
-              fields: [
-                {
-                  name: "alt",
-                  type: "string",
-                  title: "Alternative Text",
-                },
-              ],
-            }),
+            image,
             defineField({
               name: "title",
               type: "string",

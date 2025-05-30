@@ -1,5 +1,6 @@
 import { defineType, defineField } from "sanity";
 import { Images } from "lucide-react";
+import image from "@/sanity/schemas/blocks/shared/image";
 
 export default defineType({
   name: "logos-1",
@@ -17,20 +18,7 @@ export default defineType({
     defineField({
       name: "images",
       type: "array",
-      of: [
-        defineField({
-          name: "image",
-          title: "Image",
-          type: "image",
-          fields: [
-            {
-              name: "alt",
-              type: "string",
-              title: "Alternative Text",
-            },
-          ],
-        }),
-      ],
+      of: [image],
     }),
   ],
   preview: {

@@ -1,6 +1,5 @@
 import { defineField, defineType } from "sanity";
 import { TextQuote } from "lucide-react";
-import { ICON_VARIANTS } from "@/sanity/schemas/blocks/shared/icon-variants";
 
 export default defineType({
   name: "feature-66-card",

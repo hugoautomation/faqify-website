@@ -1,5 +1,6 @@
 import { defineField, defineType } from "sanity";
 import { TextQuote } from "lucide-react";
+import image from "@/sanity/schemas/blocks/shared/image";
 
 export default defineType({
   name: "feature-157-card",
@@ -9,21 +10,7 @@ export default defineType({
   description:
     "Feature card with link, title, description, and image background",
   fields: [
-    defineField({
-      name: "image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-      description: "Background image for the card",
-      fields: [
-        {
-          name: "alt",
-          type: "string",
-          title: "Alternative Text",
-        },
-      ],
-    }),
+    image,
     defineField({
       name: "link",
       type: "link-icon",

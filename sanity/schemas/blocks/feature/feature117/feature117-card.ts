@@ -1,6 +1,7 @@
 import { defineField, defineType } from "sanity";
 import { TextQuote } from "lucide-react";
 import { ICON_VARIANTS } from "@/sanity/schemas/blocks/shared/icon-variants";
+import image from "@/sanity/schemas/blocks/shared/image";
 
 export default defineType({
   name: "feature-117-card",
@@ -32,20 +33,7 @@ export default defineType({
       name: "title",
       type: "string",
     }),
-    defineField({
-      name: "image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        {
-          name: "alt",
-          type: "string",
-          title: "Alternative Text",
-        },
-      ],
-    }),
+    image,
     defineField({
       name: "link",
       type: "link",

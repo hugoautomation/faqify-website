@@ -1,6 +1,7 @@
 import { defineField, defineType } from "sanity";
 import { LayoutTemplate } from "lucide-react";
 import { ICON_VARIANTS } from "@/sanity/schemas/blocks/shared/icon-variants";
+import image from "@/sanity/schemas/blocks/shared/image";
 
 export default defineType({
   name: "hero-25",
@@ -9,17 +10,8 @@ export default defineType({
   icon: LayoutTemplate,
   fields: [
     defineField({
-      name: "image",
-      type: "image",
+      ...image,
       description: "Logo or main image",
-      options: { hotspot: true },
-      fields: [
-        defineField({
-          name: "alt",
-          type: "string",
-          title: "Alternative text",
-        }),
-      ],
     }),
     defineField({
       name: "tagLine",

@@ -1,6 +1,7 @@
 import { defineField, defineType } from "sanity";
 import { orderRankField } from "@sanity/orderable-document-list";
 import { COLOR_VARIANTS } from "../blocks/shared/color-variants";
+import image from "@/sanity/schemas/blocks/shared/image";
 
 export default defineType({
   name: "testimonial",
@@ -21,13 +22,7 @@ export default defineType({
       name: "company",
       type: "string",
     }),
-    defineField({
-      name: "image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    }),
+    image,
     defineField({
       name: "text",
       type: "text",

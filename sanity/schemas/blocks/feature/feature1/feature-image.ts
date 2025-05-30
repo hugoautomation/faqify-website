@@ -1,27 +1,13 @@
 import { defineField, defineType } from "sanity";
 import { Image } from "lucide-react";
+import image from "@/sanity/schemas/blocks/shared/image";
 
 export default defineType({
   name: "feature-image",
   type: "object",
   icon: Image,
   description: "Column with full image.",
-  fields: [
-    defineField({
-      name: "image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        {
-          name: "alt",
-          type: "string",
-          title: "Alternative Text",
-        },
-      ],
-    }),
-  ],
+  fields: [image],
   preview: {
     select: {
       title: "image.alt",

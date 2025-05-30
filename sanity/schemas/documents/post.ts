@@ -1,5 +1,6 @@
 import { defineField, defineType } from "sanity";
 import { FileText } from "lucide-react";
+import image from "@/sanity/schemas/blocks/shared/image";
 
 export default defineType({
   name: "post",
@@ -52,22 +53,7 @@ export default defineType({
       group: "settings",
       to: { type: "author" },
     }),
-    defineField({
-      name: "image",
-      title: "Image",
-      type: "image",
-      group: "settings",
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        {
-          name: "alt",
-          type: "string",
-          title: "Alternative Text",
-        },
-      ],
-    }),
+    image,
     defineField({
       name: "categories",
       title: "Categories",

@@ -1,6 +1,7 @@
 import { defineType, defineField } from "sanity";
 import { Images } from "lucide-react";
 import { ICON_VARIANTS } from "@/sanity/schemas/blocks/shared/icon-variants";
+import image from "@/sanity/schemas/blocks/shared/image";
 
 export default defineType({
   name: "gallery-9",
@@ -21,21 +22,7 @@ export default defineType({
           name: "column",
           type: "object",
           fields: [
-            defineField({
-              name: "image",
-              title: "Image",
-              type: "image",
-              options: {
-                hotspot: true,
-              },
-              fields: [
-                {
-                  name: "alt",
-                  type: "string",
-                  title: "Alternative Text",
-                },
-              ],
-            }),
+            image,
             defineField({
               name: "iconVariant",
               type: "string",

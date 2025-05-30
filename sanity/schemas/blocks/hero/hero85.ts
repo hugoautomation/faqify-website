@@ -1,5 +1,6 @@
 import { defineField, defineType } from "sanity";
 import { LayoutTemplate } from "lucide-react";
+import image from "@/sanity/schemas/blocks/shared/image";
 
 export default defineType({
   name: "hero-85",
@@ -44,20 +45,7 @@ export default defineType({
       title: "Images",
       description:
         "Images to display in auto-scrolling carousel, split into two columns. Minimum 8 images required.",
-      of: [
-        {
-          name: "image",
-          type: "image",
-          options: { hotspot: true },
-          fields: [
-            defineField({
-              name: "alt",
-              type: "string",
-              title: "Alternative text",
-            }),
-          ],
-        },
-      ],
+      of: [image],
       validation: (Rule) => Rule.min(8),
     }),
   ],
