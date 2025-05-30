@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
-import { linkQuery } from "./shared/link";
 import { imageQuery } from "./shared/image";
+import { bodyQuery } from "./shared/body";
 
 export const CHANGELOGS_QUERY = groq`*[_type == "changelog" && defined(slug)] | order(date desc){
     _id,
@@ -9,16 +9,7 @@ export const CHANGELOGS_QUERY = groq`*[_type == "changelog" && defined(slug)] | 
     version,
     date,
     body[]{
-      ...,
-      markDefs[]{
-        ...,
-        _type == "link" => {
-          ${linkQuery}
-        }
-      },
-      _type == "image" => {
-        ${imageQuery}
-      }
+      ${bodyQuery}
     },
     image{
       ${imageQuery}

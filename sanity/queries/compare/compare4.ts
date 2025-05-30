@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 import { linkQuery } from "@/sanity/queries/shared/link";
-import { imageQuery } from "@/sanity/queries/shared/image";
+import { bodyQuery } from "@/sanity/queries/shared/body";
 
 // @sanity-typegen-ignore
 export const compare4Query = groq`
@@ -17,16 +17,7 @@ export const compare4Query = groq`
       secondary
     },
     body[]{
-      ...,
-      markDefs[]{
-        ...,
-        _type == "link" => {
-          ${linkQuery}
-        }
-      },
-      _type == "image" => {
-        ${imageQuery}
-      }
+      ${bodyQuery}
     },
     links[]{
       ${linkQuery}

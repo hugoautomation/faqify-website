@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
-import { linkQuery } from "./shared/link";
 import { imageQuery } from "./shared/image";
+import { bodyQuery } from "./shared/body";
 
 export const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0]{
     title,
@@ -9,16 +9,7 @@ export const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0]{
       ${imageQuery}
     },
     body[]{
-      ...,
-      markDefs[]{
-        ...,
-        _type == "link" => {
-          ${linkQuery}
-        }
-      },
-      _type == "image" => {
-        ${imageQuery}
-      }
+      ${bodyQuery}
     },
     author->{
       name,

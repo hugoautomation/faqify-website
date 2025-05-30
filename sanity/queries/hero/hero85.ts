@@ -1,6 +1,7 @@
 import { groq } from "next-sanity";
 import { linkQuery } from "../shared/link";
 import { imageQuery } from "../shared/image";
+import { bodyQuery } from "../shared/body";
 
 // @sanity-typegen-ignore
 export const hero85Query = groq`
@@ -13,16 +14,7 @@ export const hero85Query = groq`
     },
     title,
     body[]{
-      ...,
-      markDefs[]{
-        ...,
-        _type == "link" => {
-          ${linkQuery}
-        }
-      },
-      _type == "image" => {
-        ${imageQuery}
-      }
+      ${bodyQuery}
     },
     images[]{
       ${imageQuery}
