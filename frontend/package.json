@@ -52,6 +52,7 @@
     "zod": "^3.25.51"
   },
   "devDependencies": {
+    "@sanity/client": "^7.4.1",
     "@tailwindcss/postcss": "^4.1.8",
     "@types/node": "^22.15.29",
     "@types/react": "^19.1.6",
