@@ -1,5 +1,6 @@
 import { defineField, defineType } from "sanity";
 import { PhoneCall } from "lucide-react";
+import meta from "@/sanity/schemas/blocks/shared/meta";
 
 export default defineType({
   name: "contact",
@@ -81,31 +82,7 @@ export default defineType({
           .max(4)
           .error("At least 1 contact method is required, and no more than 4"),
     }),
-    defineField({
-      name: "meta_title",
-      title: "Meta Title",
-      type: "string",
-      group: "seo",
-    }),
-    defineField({
-      name: "meta_description",
-      title: "Meta Description",
-      type: "text",
-      group: "seo",
-    }),
-    defineField({
-      name: "noindex",
-      title: "No Index",
-      type: "boolean",
-      initialValue: false,
-      group: "seo",
-    }),
-    defineField({
-      name: "ogImage",
-      title: "Open Graph Image - [1200x630]",
-      type: "image",
-      group: "seo",
-    }),
+    meta,
   ],
   preview: {
     select: {

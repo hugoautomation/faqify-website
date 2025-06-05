@@ -98,7 +98,7 @@ export async function GET(request: Request) {
                 overflow: "hidden",
               }}
             >
-              {post?.title || page?.meta_title}
+              {post?.title || page?.meta?.title}
             </div>
 
             {/* Description */}
@@ -112,7 +112,7 @@ export async function GET(request: Request) {
                 overflow: "hidden",
               }}
             >
-              {post?.meta_description || page?.meta_description}
+              {post?.meta?.description || page?.meta?.description}
             </div>
           </div>
 

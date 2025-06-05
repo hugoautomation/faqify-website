@@ -1,5 +1,7 @@
 import { groq } from "next-sanity";
 import { linkQuery } from "./shared/link";
+import { metaQuery } from "./shared/meta";
+
 export const CONTACT_QUERY = groq`*[_type == "contact"][0]{
   tagline,
   title,
@@ -12,19 +14,5 @@ export const CONTACT_QUERY = groq`*[_type == "contact"][0]{
       ${linkQuery}
     }
   },
-  meta_title,
-  meta_description,
-  noindex,
-  ogImage {
-    asset->{
-      _id,
-      url,
-      metadata {
-        dimensions {
-          width,
-          height
-        }
-      }
-    },
-  }
+  ${metaQuery},
 }`;

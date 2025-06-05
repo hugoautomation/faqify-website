@@ -1,6 +1,7 @@
 import { groq } from "next-sanity";
 import { imageQuery } from "./shared/image";
 import { bodyQuery } from "./shared/body";
+import { metaQuery } from "./shared/meta";
 
 export const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0]{
     title,
@@ -19,22 +20,8 @@ export const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0]{
     },
     _createdAt,
     _updatedAt,
-    meta_title,
-    meta_description,
-    noindex,
-    ogImage {
-      asset->{
-        _id,
-        url,
-        metadata {
-          dimensions {
-            width,
-            height
-          }
-        }
-      },
-    },
-    "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180 )
+    ${metaQuery},
+    "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180 ),
 }`;
 
 export const POSTS_QUERY = groq`*[_type == "post" && defined(slug)] | order(_createdAt desc)[$offset...$end]{

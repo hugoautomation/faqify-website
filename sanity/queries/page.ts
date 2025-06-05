@@ -1,4 +1,5 @@
 import { groq } from "next-sanity";
+import { metaQuery } from "./shared/meta";
 import { sectionHeaderQuery } from "./section-header";
 import { hero12Query } from "./hero/hero12";
 import { hero13Query } from "./hero/hero13";
@@ -136,21 +137,7 @@ export const PAGE_QUERY = groq`
       ${timeline5Query},
       ${timeline6Query},
     },
-    meta_title,
-    meta_description,
-    noindex,
-    ogImage {
-      asset->{
-        _id,
-        url,
-        metadata {
-          dimensions {
-            width,
-            height
-          }
-        }
-      },
-    }
+    ${metaQuery},
   }
 `;
 

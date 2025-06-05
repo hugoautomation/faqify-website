@@ -1,6 +1,7 @@
 import { defineField, defineType } from "sanity";
 import { Files } from "lucide-react";
 import { orderRankField } from "@sanity/orderable-document-list";
+import meta from "@/sanity/schemas/blocks/shared/meta";
 
 export default defineType({
   name: "page",
@@ -223,31 +224,7 @@ export default defineType({
         },
       },
     }),
-    defineField({
-      name: "meta_title",
-      title: "Meta Title",
-      type: "string",
-      group: "seo",
-    }),
-    defineField({
-      name: "meta_description",
-      title: "Meta Description",
-      type: "text",
-      group: "seo",
-    }),
-    defineField({
-      name: "noindex",
-      title: "No Index",
-      type: "boolean",
-      initialValue: false,
-      group: "seo",
-    }),
-    defineField({
-      name: "ogImage",
-      title: "Open Graph Image - [1200x630]",
-      type: "image",
-      group: "seo",
-    }),
+    meta,
     orderRankField({ type: "page" }),
   ],
 });
