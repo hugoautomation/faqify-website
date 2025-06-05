@@ -320,8 +320,6 @@ export const PAGE_QUERY = groq`
       ${splitRowQuery},
       // ... other block queries
     },
-    meta_title,
-    meta_description,
     // ... other page fields
   }
 `;
