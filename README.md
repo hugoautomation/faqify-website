@@ -1,11 +1,11 @@
 # Sanityblocks
 
-Introducing Sanityblocks - a new Sanity Next.js Template that provides production-ready React components with pre-built Sanity schemas and GROQ queries.
+Introducing Sanityblocks - A Sanity CMS Boilerplate with a dynamic page builder.
 
 Includes:
 
 - Page Builder;
-- 100+ blocks;
+- 70+ blocks;
 - Contact Form;
 - Dynamic Navigation;
 - Site Settings;
@@ -17,13 +17,31 @@ Includes:
 
 [![Next.js][next-js]][next-js-url] [![Sanity][sanity]][sanity-url] [![React][react]][react-url] [![Typescript][typescript]][typescript-url] [![Tailwind][tailwind]][tailwind-url] [![Shadcn][shadcn]][shadcn-url]
 
-[Docs](https://docs.shadcnblocks.com/) | [Components](https://schemaui.com/docs/components) | [Demo](https://sanityblocks.schemaui.com/) | [Templates](https://schemaui.com/templates)
+[Docs](https://docs.shadcnblocks.com) | [Components](https://schemaui.com/docs/components) | [Demo](https://sanityblocks.schemaui.com/)
 
 ## Getting Started
 
 ### Installing the template
 
-#### 1. Initialize template with Sanity CLI
+This project uses pnpm as package manager. To install pnpm globally, run the following command:
+
+```bash
+npm install -g pnpm
+```
+
+Login to Sanity CLI:
+
+```bash
+sanity login
+```
+
+#### 1. Install Sanity CLI globally
+
+```bash
+pnpm install --global sanity@latest
+```
+
+#### 2. Clone the repository
 
 Run the command in your Terminal to clone the repository:
 
@@ -34,17 +52,30 @@ git clone https://github.com/serge-0v/sanityblocks.git
 #### 2. Install dependencies
 
 ```bash
+cd sanityblocks
 pnpm install
 ```
+
+This will install the dependencies for both `/frontend` and `/studio` folders.
 
 #### 3. Create a new Sanity project
 
 - Navigate to [Sanity](https://www.sanity.io/manage) and create a new project.
 - Navigate to API and add CORS origins `http://localhost:3000`
-- Add a new API token with read access (Viewer) and copy the token to .env as `SANITY_API_READ_TOKEN`
-- Copy the project ID and dataset name and paste them to .env as `NEXT_PUBLIC_SANITY_PROJECT_ID`
+- Copy `.env.example` to `.env.local` for both `/frontend` and `/studio` folders
+- Add a new API token with read access (Viewer) and copy the token to `.env.local` as `SANITY_API_READ_TOKEN` for `/frontend`
+- Copy the project ID and paste it to `.env.local` as `NEXT_PUBLIC_SANITY_PROJECT_ID` for `/frontend` and `SANITY_STUDIO_PROJECT_ID` for `/studio`
 
-#### 3. Run the template locally
+#### 4. Configuring Resend
+
+To use the contact form, you need to configure Resend.
+
+1. Create a new [Resend account](https://resend.com/signup)
+2. Create a new [API key](https://resend.com/api-keys)
+3. Add new domain to the [domains](https://resend.com/domains)
+4. Set the API key and email address to send andreceive form submissions in the `.env.local` file for `/frontend`
+
+#### 5. Run the template locally
 
 Start the development servers:
 
@@ -52,19 +83,22 @@ Start the development servers:
 pnpm dev
 ```
 
-#### 4. Open the app and sign in to the Studio
+This will start the development servers for both `/frontend` and `/studio` folders.
+
+#### 6. Open the app and sign in to the Studio
 
 - Open the Next.js app at [http://localhost:3000](http://localhost:3000)
-- Open the Studio running locally in your browser on [http://localhost:3000/studio](http://localhost:3000/studio). You should now see a screen prompting you to log in to the Studio. Use the same service (Google, GitHub, or email) that you used when you logged in to the CLI.
+- Open the Studio running locally in your browser on [http://localhost:3333/studio](http://localhost:3333/studio). You should now see a screen prompting you to log in to the Studio. Use the same service (Google, GitHub, or email) that you used when you logged in to the CLI.
 
 ### Adding content with Sanity
 
 #### 1. Import Sample Data (Optional)
 
-Import the demo dataset to get started with sample content:
+Import the demo dataset to get started with sample content. Be careful with the `--replace` flag, it will replace all the existing data in the dataset. This is a good way to get started with the template. You can always delete the dataset and start over. This will make your site look like the demo site: [Demo](https://sanityblocks.schemaui.com/).
 
 ```bash
-npx sanity dataset import sample-data.tar.gz production --replace
+cd studio
+sanity dataset import sample-data.tar.gz production --replace
 ```
 
 #### 2. Publish your first document
@@ -81,20 +115,27 @@ The schema for the `Page` document type is defined in the `sanity/schemas/docume
 
 ### Deploying your application
 
-#### 1. Configure CORS settings
-
-Add your production URL to the CORS Origins in your Sanity project settings to allow your deployed site to communicate with Sanity.
-
-#### 2. Deploy to Vercel
+#### 1. Deploy to Vercel
 
 Deploy your website to Vercel:
 
 1. Create a new repository on [GitHub](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github).
 2. Push your code to GitHub
 3. Create a [new Vercel project](https://vercel.com/new)
-4. Connect your GitHub repository and import the project
+4. Connect your GitHub repository and import the project. Make sure to set the root directory to `/frontend`.
 5. Copy the environment variables from the `.env.local` file and paste them to your Vercel project settings. Vercel supports pasting all variables at once.
 6. Deploy
+
+Deploy the Sanity Studio to Vercel:
+
+1. Create a [new Vercel project](https://vercel.com/new)
+2. Connect your GitHub repository and import the project. Make sure to set the root directory to `/studio`.
+3. Copy the environment variables from the `.env.local` file and paste them to your Vercel project settings. Vercel supports pasting all variables at once.
+4. Deploy
+
+#### 2. Configure CORS settings
+
+Add your domain name for both the Next.js app (for example, `https://yourwebsite.com`) and the Sanity Studio (for example, `https://sanity.yourwebsite.com/`) to the CORS Origins in your Sanity project settings to allow your deployed site to communicate with Sanity.
 
 ### Inviting collaborators
 
@@ -102,39 +143,23 @@ Now that you've deployed your Next.js application and Sanity Studio, you can opt
 
 They will be able to access the deployed Studio, where you can collaborate together on creating content.
 
-### Configuring Resend
-
-To use the contact form, you need to configure Resend.
-
-1. Create a new [Resend account](https://resend.com/signup)
-2. Create a new [API key](https://resend.com/api-keys)
-3. Add new domain to the [domains](https://resend.com/domains)
-4. Set the API key and email address to send andreceive form submissions in the Vercel project settings or in the `.env.local` file
-
 ## Sanity TypeGen
 
 To generate the types, run the following command:
 
 ```bash
-npx sanity schema extract
+pnpm typegen
 ```
 
-This will generate `schema.json` file in the root of the project.
-
-To generate the types, run the following command:
-
-```bash
-npx sanity typegen generate
-```
-
-This will generate the types in the `sanity.types.ts` file in the root of the project.
+This will generate `schema.json` file in the `/studio` folder and `sanity.types.ts` file in the `/frontend` folder.
+You need to run this command every time you make changes to the schema and queries. Or when you create a new document type. Otherwise, you will get type errors for frontend.
 
 ## Environment variables
 
 All environment variables and their descriptions:
 
-- `NEXT_PUBLIC_SITE_URL` - your website url. For example, `https://yourwebsite.com` without trailing slash.
-- `NEXT_PUBLIC_SITE_ENV` - specifies the environment type (development/production) and affects metadata configuration. Setting this to "development" prevents search engine indexing, which is useful for staging environments (e.g., `dev.yourwebsite.com`).
+- `NEXT_PUBLIC_SITE_URL` - your website url. For example, `https://yourwebsite.com` without trailing slash. Used for sitemap.ts , robots.ts , and for client.ts
+- `NEXT_PUBLIC_SITE_ENV` - specifies the environment type (development/production) and affects metadata configuration. Setting this to "development" prevents search engine indexing, which is useful for staging environments (e.g., `staging.yourwebsite.com`).
 - `NEXT_PUBLIC_SANITY_API_VERSION` - your Sanity API version. You don't have to use specific dates, any past or present date is valid, and today's date will always give you the latest version - no need to check release history. For example: YYYY-MM-DD.
 - `NEXT_PUBLIC_SANITY_PROJECT_ID` - your Sanity project ID. For example, abc12345.
 - `NEXT_PUBLIC_SANITY_DATASET` - your Sanity dataset name. For example, production.
