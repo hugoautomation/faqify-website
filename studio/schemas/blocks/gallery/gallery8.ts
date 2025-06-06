@@ -1,6 +1,6 @@
 import { defineType, defineField } from "sanity";
 import { Images } from "lucide-react";
-import image from "@/schemas/blocks/shared/image";
+import image from "../shared/image";
 
 export default defineType({
   name: "gallery-8",

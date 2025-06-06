@@ -1,6 +1,6 @@
-import { defineField, defineType } from "sanity";
+import { defineType } from "sanity";
 import { Image } from "lucide-react";
-import image from "@/schemas/blocks/shared/image";
+import image from "../../shared/image";
 
 export default defineType({
   name: "feature-image",

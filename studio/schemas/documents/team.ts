@@ -1,7 +1,7 @@
 import { defineField, defineType } from "sanity";
 import { orderRankField } from "@sanity/orderable-document-list";
 import { Users } from "lucide-react";
-import image from "@/schemas/blocks/shared/image";
+import image from "../blocks/shared/image";
 
 export default defineType({
   name: "team",

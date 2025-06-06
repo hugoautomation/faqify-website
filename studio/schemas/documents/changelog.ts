@@ -1,6 +1,6 @@
 import { defineField, defineType } from "sanity";
 import { FileClock } from "lucide-react";
-import image from "@/schemas/blocks/shared/image";
+import image from "../blocks/shared/image";
 
 export default defineType({
   name: "changelog",

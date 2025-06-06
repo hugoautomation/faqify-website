@@ -1,6 +1,6 @@
 import { defineField, defineType } from "sanity";
 import { PhoneCall } from "lucide-react";
-import meta from "@/schemas/blocks/shared/meta";
+import meta from "../blocks/shared/meta";
 
 export default defineType({
   name: "contact",

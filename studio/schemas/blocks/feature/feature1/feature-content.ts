@@ -1,6 +1,6 @@
 import { defineField, defineType } from "sanity";
 import { TextQuote } from "lucide-react";
-import { ICON_VARIANTS } from "@/schemas/blocks/shared/icon-variants";
+import { ICON_VARIANTS } from "../../shared/icon-variants";
 
 export default defineType({
   name: "feature-content",

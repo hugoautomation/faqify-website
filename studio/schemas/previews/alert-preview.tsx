@@ -1,6 +1,6 @@
 import type { PreviewProps } from "sanity";
 import { Flex } from "@sanity/ui";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Alert, AlertDescription, AlertTitle } from "../../components/ui/alert";
 import { Lightbulb } from "lucide-react";
 
 export function AlertPreview(props: PreviewProps) {

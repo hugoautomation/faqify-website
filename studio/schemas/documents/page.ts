@@ -1,7 +1,7 @@
 import { defineField, defineType } from "sanity";
 import { Files } from "lucide-react";
 import { orderRankField } from "@sanity/orderable-document-list";
-import meta from "@/schemas/blocks/shared/meta";
+import meta from "../blocks/shared/meta";
 
 export default defineType({
   name: "page",

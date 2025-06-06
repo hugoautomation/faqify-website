@@ -1,7 +1,7 @@
 import { defineType, defineField } from "sanity";
 import { Images } from "lucide-react";
-import { ICON_VARIANTS } from "@/schemas/blocks/shared/icon-variants";
-import image from "@/schemas/blocks/shared/image";
+import { ICON_VARIANTS } from "../shared/icon-variants";
+import image from "../shared/image";
 
 export default defineType({
   name: "timeline-4",

@@ -1,6 +1,6 @@
 import { defineField, defineType } from "sanity";
 import { LayoutTemplate } from "lucide-react";
-import image from "@/schemas/blocks/shared/image";
+import image from "../shared/image";
 
 export default defineType({
   name: "hero-85",

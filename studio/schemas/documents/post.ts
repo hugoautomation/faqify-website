@@ -1,7 +1,7 @@
 import { defineField, defineType } from "sanity";
 import { FileText } from "lucide-react";
-import image from "@/schemas/blocks/shared/image";
-import meta from "@/schemas/blocks/shared/meta";
+import image from "../blocks/shared/image";
+import meta from "../blocks/shared/meta";
 
 export default defineType({
   name: "post",

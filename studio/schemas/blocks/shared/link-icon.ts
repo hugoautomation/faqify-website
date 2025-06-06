@@ -1,5 +1,5 @@
 import { defineField, defineType } from "sanity";
-import { ICON_VARIANTS } from "@/schemas/blocks/shared/icon-variants";
+import { ICON_VARIANTS } from "../shared/icon-variants";
 
 export default defineType({
   name: "link-icon",

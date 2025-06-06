@@ -1,7 +1,7 @@
 import { defineType, defineArrayMember } from "sanity";
 import { BulbOutlineIcon, PlayIcon } from "@sanity/icons";
-import { YouTubePreview } from "@/schemas/previews/youtube-preview";
-import { AlertPreview } from "@/schemas/previews/alert-preview";
+import { YouTubePreview } from "../../previews/youtube-preview";
+import { AlertPreview } from "../../previews/alert-preview";
 
 export default defineType({
   title: "Block Content",

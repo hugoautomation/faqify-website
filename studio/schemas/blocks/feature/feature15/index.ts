@@ -1,6 +1,6 @@
 import { defineType, defineField } from "sanity";
 import { SquareSplitHorizontal } from "lucide-react";
-import { COLS_VARIANTS } from "@/schemas/blocks/shared/col-variants";
+import { COLS_VARIANTS } from "../../shared/col-variants";
 
 export default defineType({
   name: "feature-15",
