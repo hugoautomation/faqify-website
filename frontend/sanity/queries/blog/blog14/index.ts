@@ -1,5 +1,5 @@
 import { groq } from "next-sanity";
-import { imageQuery } from "@/sanity/queries/shared/image";
+import { imageQuery } from "../../shared/image";
 
 // @sanity-typegen-ignore
 export const blog14Query = groq`

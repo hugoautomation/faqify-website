@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
-import { linkQuery } from "@/sanity/queries/shared/link";
-import { imageQuery } from "@/sanity/queries/shared/image";
+import { linkQuery } from "../shared/link";
+import { imageQuery } from "../shared/image";
 
 // @sanity-typegen-ignore
 export const gallery1Query = groq`
