@@ -7,7 +7,7 @@
     "start": "sanity start",
     "build": "sanity build",
     "deploy": "sanity deploy",
-    "typegen": "sanity schema extract && sanity typegen generate",
+    "typegen": "rm -rf schema.json && sanity schema extract && sanity typegen generate",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

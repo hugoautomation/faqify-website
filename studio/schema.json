@@ -16796,7 +16796,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "section-header"
+                  "name": "blog-4"
                 }
               },
               {
@@ -16811,7 +16811,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "hero-12"
+                  "name": "blog-7"
                 }
               },
               {
@@ -16826,7 +16826,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "hero-13"
+                  "name": "blog-13"
                 }
               },
               {
@@ -16841,7 +16841,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "hero-25"
+                  "name": "blog-14"
                 }
               },
               {
@@ -16856,7 +16856,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "hero-57"
+                  "name": "blog-16"
                 }
               },
               {
@@ -16871,7 +16871,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "hero-85"
+                  "name": "all-posts-4"
                 }
               },
               {
@@ -16886,7 +16886,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "hero-160"
+                  "name": "all-posts-7"
                 }
               },
               {
@@ -16901,7 +16901,172 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "hero-174"
+                  "name": "all-posts-13"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "all-posts-14"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "all-posts-16"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "changelog-1"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "changelog-2"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "changelog-3"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "changelog-5"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "compare-1"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "compare-2"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "compare-4"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "compare-5"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "compare-6"
                 }
               },
               {
@@ -16977,66 +17142,6 @@
                 "rest": {
                   "type": "inline",
                   "name": "faq-14"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "logos-1"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "logos-2"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "logos-4"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "logos-9"
                 }
               },
               {
@@ -17171,7 +17276,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "blog-4"
+                  "name": "gallery-1"
                 }
               },
               {
@@ -17186,7 +17291,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "all-posts-4"
+                  "name": "gallery-3"
                 }
               },
               {
@@ -17201,7 +17306,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "blog-7"
+                  "name": "gallery-4"
                 }
               },
               {
@@ -17216,7 +17321,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "all-posts-7"
+                  "name": "gallery-8"
                 }
               },
               {
@@ -17231,7 +17336,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "blog-13"
+                  "name": "gallery-9"
                 }
               },
               {
@@ -17246,7 +17351,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "all-posts-13"
+                  "name": "gallery-10"
                 }
               },
               {
@@ -17261,7 +17366,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "blog-14"
+                  "name": "hero-12"
                 }
               },
               {
@@ -17276,7 +17381,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "all-posts-14"
+                  "name": "hero-13"
                 }
               },
               {
@@ -17291,7 +17396,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "blog-16"
+                  "name": "hero-25"
                 }
               },
               {
@@ -17306,7 +17411,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "all-posts-16"
+                  "name": "hero-57"
                 }
               },
               {
@@ -17321,7 +17426,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "changelog-1"
+                  "name": "hero-85"
                 }
               },
               {
@@ -17336,7 +17441,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "changelog-2"
+                  "name": "hero-160"
                 }
               },
               {
@@ -17351,7 +17456,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "changelog-3"
+                  "name": "hero-174"
                 }
               },
               {
@@ -17366,7 +17471,52 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "changelog-5"
+                  "name": "logos-1"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "logos-2"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "logos-4"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "logos-9"
                 }
               },
               {
@@ -17442,6 +17592,21 @@
                 "rest": {
                   "type": "inline",
                   "name": "pricing-16"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "section-header"
                 }
               },
               {
@@ -17547,171 +17712,6 @@
                 "rest": {
                   "type": "inline",
                   "name": "team-8"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "compare-1"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "compare-2"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "compare-4"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "compare-5"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "compare-6"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "gallery-1"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "gallery-3"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "gallery-4"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "gallery-8"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "gallery-9"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "gallery-10"
                 }
               },
               {
