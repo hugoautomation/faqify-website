@@ -56,7 +56,7 @@ const componentMap: {
 - CONSIDER the order of fields, from most important and relevant first, to least often used last
 
 ```ts
-// ./sanity/schemas/blocks/grid/grid-row.ts
+// studio/schemas/blocks/grid/grid-row.ts
 
 import { defineField, defineType } from "sanity";
 import { LayoutGrid } from "lucide-react";
@@ -167,7 +167,7 @@ defineField({
 
 ```tsx
 // Example React component for a parent block
-// components/blocks/parent-component.tsx
+// frontend/components/blocks/parent-component.tsx
 import { PAGE_QUERYResult } from "@/sanity.types";
 import SectionContainer from "@/components/blocks/section-container";
 import ChildComponent1 from "./child-component-1";
@@ -220,7 +220,7 @@ export default function ParentBlock({
 - ANY schema type that benefits from being reused in multiple document types should be registered as its own custom schema type and located in shared folder.
 
 ```ts
-// ./sanity/schemas/blocks/shared/block-content.ts
+// studio/schemas/blocks/shared/block-content.ts
 
 import { defineField, defineType } from 'sanity'
 
@@ -275,7 +275,7 @@ When asked to write content:
 For parent-child block structures, create separate query fragments for each component type:
 
 ```ts
-// ./sanity/queries/split/split-row.ts
+// frontend/sanity/queries/split/split-row.ts
 import { groq } from "next-sanity";
 import { splitContentQuery } from "./split-content";
 import { splitCardsListQuery } from "./split-cards-list";
@@ -305,7 +305,7 @@ export const splitRowQuery = groq`
 Compose the main page query from individual block query fragments:
 
 ```ts
-// ./sanity/queries/page.ts
+// frontend/sanity/queries/page.ts
 import { groq } from "next-sanity";
 import { hero1Query } from "./hero/hero-1";
 import { hero2Query } from "./hero/hero-2";
@@ -325,36 +325,12 @@ export const PAGE_QUERY = groq`
 `;
 ```
 
-### Image Query Pattern
-
-For consistent image handling, always include asset metadata:
-
-```ts
-// Image query pattern
-image{
-  ...,
-  asset->{
-    _id,
-    url,
-    mimeType,
-    metadata {
-      lqip,
-      dimensions {
-        width,
-        height
-      }
-    }
-  },
-  alt
-}
-```
-
 ### Document Query Pattern
 
 For document queries, follow this pattern:
 
 ```ts
-// ./sanity/queries/post.ts
+// frontend/sanity/queries/post.ts
 import { groq } from "next-sanity";
 
 export const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0]{
