@@ -217,7 +217,7 @@ export default defineType({
           views: [
             {
               name: "grid",
-              previewImageUrl: (block) => `/images/preview/${block}.jpg`,
+              previewImageUrl: (block) => `/static/images/preview/${block}.jpg`,
             },
             { name: "list" },
           ],
