@@ -9,6 +9,7 @@ import {
   PhoneCall,
   Users,
 } from "lucide-react";
+import { defaultDocumentNode } from "./defaultDocumentNode";
 
 export const structure = (S: any, context: any) =>
   S.list()
@@ -78,7 +79,13 @@ export const structure = (S: any, context: any) =>
         .title("Contact")
         .icon(PhoneCall)
         .child(
-          S.editor().id("contact").schemaType("contact").documentId("contact")
+          (
+            defaultDocumentNode(S, { ...context, schemaType: "contact" }) ||
+            S.document()
+          )
+            .id("contact")
+            .schemaType("contact")
+            .documentId("contact")
         ),
       orderableDocumentListDeskItem({
         type: "navigation",

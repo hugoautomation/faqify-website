@@ -13,6 +13,7 @@ import { media } from "sanity-plugin-media";
 import { schema } from "./schema";
 import { resolve } from "./presentation/resolve";
 import { structure } from "./structure";
+import { defaultDocumentNode } from "./defaultDocumentNode";
 import { codeInput } from "@sanity/code-input";
 
 // Define the actions that should be available for singleton documents
@@ -49,7 +50,7 @@ export default defineConfig({
         : input,
   },
   plugins: [
-    structureTool({ structure }),
+    structureTool({ structure, defaultDocumentNode }),
     presentationTool({
       previewUrl: {
         origin: SANITY_STUDIO_PREVIEW_URL,
