@@ -16,7 +16,7 @@ export default defineType({
         Rule.required().custom(async (value, context) => {
           const { document, getClient } = context;
           const client = getClient({
-            apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION!,
+            apiVersion: process.env.SANITY_STUDIO_API_VERSION!,
           });
           const id = document?._id;
 
