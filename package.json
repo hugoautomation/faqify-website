@@ -1,5 +1,6 @@
 {
   "name": "sanityblocks",
+  "version": "1.0.1",
   "description": "SanityBlocks: Next.js + Sanity + shadcnblocks.com",
   "scripts": {
     "dev": "pnpm --parallel -r run dev",
