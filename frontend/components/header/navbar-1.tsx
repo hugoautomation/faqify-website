@@ -11,6 +11,7 @@ import type {
   LinkIcon as SanityLinkIcon,
 } from "@/sanity.types";
 import { cn } from "@/lib/utils";
+import { DialogClose } from "@radix-ui/react-dialog";
 
 import {
   Accordion,
@@ -102,7 +103,9 @@ export default async function Navbar1({ className }: Navbar1Props) {
           <AccordionContent className="mt-2">
             <div className="flex flex-col gap-4">
               {item.links?.map((subItem) => (
-                <SubMenuLink key={subItem._key} item={subItem} />
+                <DialogClose asChild key={subItem._key}>
+                  <SubMenuLink item={subItem} />
+                </DialogClose>
               ))}
             </div>
           </AccordionContent>
