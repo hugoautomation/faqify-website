@@ -20,7 +20,7 @@ import { codeInput } from "@sanity/code-input";
 const singletonActions = new Set(["publish", "discardChanges", "restore"]);
 
 // Define the singleton document types
-const singletonTypes = new Set(["settings", "contact"]);
+const singletonTypes = new Set(["settings", "contact", "banner"]);
 
 const projectId = process.env.SANITY_STUDIO_PROJECT_ID || "your-project-id";
 const dataset = process.env.SANITY_STUDIO_DATASET || "production";

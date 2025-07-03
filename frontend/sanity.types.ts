@@ -1813,6 +1813,17 @@ export type BlockContent = Array<{
   _key: string;
 } & Code>;
 
+export type Banner = {
+  _id: string;
+  _type: "banner";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  description?: string;
+  link?: Link;
+};
+
 export type Team = {
   _id: string;
   _type: "team";
@@ -2425,8 +2436,38 @@ export type SanityAssetSourceData = {
   url?: string;
 };
 
-export type AllSanitySchemaTypes = Timeline6 | Timeline5 | Timeline4 | Timeline3 | Gallery10 | Gallery9 | Gallery8 | Gallery4 | Gallery3 | Gallery1 | Compare6 | Compare5 | Compare4 | Compare2 | Compare1 | Team8 | Team6 | Team5 | Team4 | Team3 | Team2 | Team1 | Pricing16 | Pricing9 | Pricing7 | Pricing2 | Pricing1 | Changelog5 | Changelog3 | Changelog2 | Changelog1 | AllPosts16 | Blog16 | AllPosts14 | Blog14 | AllPosts13 | Blog13 | AllPosts7 | Blog7 | AllPosts4 | Blog4 | Feature202Card | Feature202 | Feature157Card | Feature157 | Feature117Card | Feature117 | Feature66Card | Feature66 | Feature15Card | Feature15 | Feature12Card | Feature12 | Feature3Card | Feature3 | FeatureImage | FeatureContent | Feature1 | Logos9 | Logos4 | Logos2 | Logos1 | Faq14 | Faq9 | Faq8 | Faq5 | Faq1 | Hero174 | Hero160 | Hero85 | Hero57 | Hero25 | Hero13 | Hero12 | SectionHeader | SectionPadding | ButtonVariant | LinkGroup | BlockContent | Team | Changelog | Contact | Settings | Navigation | Testimonial | Faq | Category | Page | LinkIcon | Link | Post | Author | MediaTag | Code | SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityImageHotspot | SanityImageCrop | SanityFileAsset | SanityImageAsset | SanityImageMetadata | Geopoint | Slug | SanityAssetSourceData;
+export type AllSanitySchemaTypes = Timeline6 | Timeline5 | Timeline4 | Timeline3 | Gallery10 | Gallery9 | Gallery8 | Gallery4 | Gallery3 | Gallery1 | Compare6 | Compare5 | Compare4 | Compare2 | Compare1 | Team8 | Team6 | Team5 | Team4 | Team3 | Team2 | Team1 | Pricing16 | Pricing9 | Pricing7 | Pricing2 | Pricing1 | Changelog5 | Changelog3 | Changelog2 | Changelog1 | AllPosts16 | Blog16 | AllPosts14 | Blog14 | AllPosts13 | Blog13 | AllPosts7 | Blog7 | AllPosts4 | Blog4 | Feature202Card | Feature202 | Feature157Card | Feature157 | Feature117Card | Feature117 | Feature66Card | Feature66 | Feature15Card | Feature15 | Feature12Card | Feature12 | Feature3Card | Feature3 | FeatureImage | FeatureContent | Feature1 | Logos9 | Logos4 | Logos2 | Logos1 | Faq14 | Faq9 | Faq8 | Faq5 | Faq1 | Hero174 | Hero160 | Hero85 | Hero57 | Hero25 | Hero13 | Hero12 | SectionHeader | SectionPadding | ButtonVariant | LinkGroup | BlockContent | Banner | Team | Changelog | Contact | Settings | Navigation | Testimonial | Faq | Category | Page | LinkIcon | Link | Post | Author | MediaTag | Code | SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityImageHotspot | SanityImageCrop | SanityFileAsset | SanityImageAsset | SanityImageMetadata | Geopoint | Slug | SanityAssetSourceData;
 export declare const internalGroqTypeReferenceTo: unique symbol;
+// Source: ../frontend/sanity/queries/banner.ts
+// Variable: BANNER_QUERY
+// Query: *[_type == "banner"]{    _type,    _key,    title,    description,    link{          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->_type == "post" => "/blog/" + @.internalLink->slug.current,      "/" + @.internalLink->slug.current    ),    }  }
+export type BANNER_QUERYResult = Array<{
+  _type: "banner";
+  _key: null;
+  title: string | null;
+  description: string | null;
+  link: {
+    _key: null;
+    _type: "link";
+    isExternal?: boolean;
+    internalLink?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "page";
+    } | {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "post";
+    };
+    title?: string;
+    href: string | "/" | null;
+    target?: boolean;
+    buttonVariant?: ButtonVariant;
+  } | null;
+}>;
+
 // Source: ../frontend/sanity/queries/changelog.ts
 // Variable: CHANGELOGS_QUERY
 // Query: *[_type == "changelog" && defined(slug)] | order(date desc){    _id,    title,    slug,    version,    date,    body[]{        ...,  markDefs[]{    ...,    _type == "link" => {          _key,    ...,    "href": select(      isExternal => href,      @.internalLink->slug.current == "index" => "/",      @.internalLink->_type == "post" => "/blog/" + @.internalLink->slug.current,      "/" + @.internalLink->slug.current    )    }  },  _type == "image" => {      ...,  asset->{    _id,    url,    mimeType,    metadata {      lqip,      dimensions {        width,        height      }    }  }  }    },    image{        ...,  asset->{    _id,    url,    mimeType,    metadata {      lqip,      dimensions {        width,        height      }    }  }    },    author->{      name,      title,      image {          ...,  asset->{    _id,    url,    mimeType,    metadata {      lqip,      dimensions {        width,        height      }    }  }      }    },    categories[]->{      _id,      title,      color    },}
@@ -5974,6 +6015,7 @@ export type TEAM_QUERYResult = Array<{
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
+    "\n  *[_type == \"banner\"]{\n    _type,\n    _key,\n    title,\n    description,\n    link{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->_type == \"post\" => \"/blog/\" + @.internalLink->slug.current,\n      \"/\" + @.internalLink->slug.current\n    )\n,\n    }\n  }\n": BANNER_QUERYResult;
     "*[_type == \"changelog\" && defined(slug)] | order(date desc){\n    _id,\n    title,\n    slug,\n    version,\n    date,\n    body[]{\n      \n  ...,\n  markDefs[]{\n    ...,\n    _type == \"link\" => {\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->_type == \"post\" => \"/blog/\" + @.internalLink->slug.current,\n      \"/\" + @.internalLink->slug.current\n    )\n\n    }\n  },\n  _type == \"image\" => {\n    \n  ...,\n  asset->{\n    _id,\n    url,\n    mimeType,\n    metadata {\n      lqip,\n      dimensions {\n        width,\n        height\n      }\n    }\n  }\n\n  }\n\n    },\n    image{\n      \n  ...,\n  asset->{\n    _id,\n    url,\n    mimeType,\n    metadata {\n      lqip,\n      dimensions {\n        width,\n        height\n      }\n    }\n  }\n\n    },\n    author->{\n      name,\n      title,\n      image {\n        \n  ...,\n  asset->{\n    _id,\n    url,\n    mimeType,\n    metadata {\n      lqip,\n      dimensions {\n        width,\n        height\n      }\n    }\n  }\n\n      }\n    },\n    categories[]->{\n      _id,\n      title,\n      color\n    },\n}": CHANGELOGS_QUERYResult;
     "*[_type == \"contact\"][0]{\n  tagline,\n  title,\n  description,\n  contactMethods[]{\n    icon,\n    title,\n    description,\n    link {\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->_type == \"post\" => \"/blog/\" + @.internalLink->slug.current,\n      \"/\" + @.internalLink->slug.current\n    )\n\n    }\n  },\n  \n  meta{\n    title,\n    description,\n    noindex,\n    image{\n      \n  ...,\n  asset->{\n    _id,\n    url,\n    mimeType,\n    metadata {\n      lqip,\n      dimensions {\n        width,\n        height\n      }\n    }\n  }\n\n    }\n  }\n,\n}": CONTACT_QUERYResult;
     "\n  *[_type == \"navigation\"]{\n    _type,\n    _key,\n    title,\n    links[]{\n      \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->_type == \"post\" => \"/blog/\" + @.internalLink->slug.current,\n      \"/\" + @.internalLink->slug.current\n    )\n,\n      _type == \"link-group\" => {\n        links[]{\n          \n    _key,\n    ...,\n    \"href\": select(\n      isExternal => href,\n      @.internalLink->slug.current == \"index\" => \"/\",\n      @.internalLink->_type == \"post\" => \"/blog/\" + @.internalLink->slug.current,\n      \"/\" + @.internalLink->slug.current\n    )\n\n        }\n      }\n    }\n  }\n": NAVIGATION_QUERYResult;
