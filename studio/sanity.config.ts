@@ -30,7 +30,6 @@ const SANITY_STUDIO_PREVIEW_URL =
   process.env.SANITY_STUDIO_PREVIEW_URL || "http://localhost:3000";
 
 export default defineConfig({
-  basePath: "/studio",
   title: "Sanityblocks",
   projectId,
   dataset,
