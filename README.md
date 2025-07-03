@@ -88,7 +88,7 @@ This will start the development servers for both `/frontend` and `/studio` folde
 #### 6. Open the app and sign in to the Studio
 
 - Open the Next.js app at [http://localhost:3000](http://localhost:3000)
-- Open the Studio running locally in your browser on [http://localhost:3333/studio](http://localhost:3333/studio). You should now see a screen prompting you to log in to the Studio. Use the same service (Google, GitHub, or email) that you used when you logged in to the CLI.
+- Open the Studio running locally in your browser on [http://localhost:3333](http://localhost:3333). You should now see a screen prompting you to log in to the Studio. Use the same service (Google, GitHub, or email) that you used when you logged in to the CLI.
 
 ### Adding content with Sanity
 
@@ -160,6 +160,7 @@ All environment variables and their descriptions:
 
 - `NEXT_PUBLIC_SITE_URL` - your website url. For example, `https://yourwebsite.com` without trailing slash. Used for sitemap.ts , robots.ts , and for client.ts
 - `NEXT_PUBLIC_SITE_ENV` - specifies the environment type (development/production) and affects metadata configuration. Setting this to "development" prevents search engine indexing, which is useful for staging environments (e.g., `staging.yourwebsite.com`).
+- `NEXT_PUBLIC_STUDIO_URL` - your Sanity Studio url. For example, `https://sanity.yourwebsite.com` without trailing slash. Used for Draft Mode (Open in Studio Url).
 - `NEXT_PUBLIC_SANITY_API_VERSION` - your Sanity API version. You don't have to use specific dates, any past or present date is valid, and today's date will always give you the latest version - no need to check release history. For example: YYYY-MM-DD.
 - `NEXT_PUBLIC_SANITY_PROJECT_ID` - your Sanity project ID. For example, abc12345.
 - `NEXT_PUBLIC_SANITY_DATASET` - your Sanity dataset name. For example, production.
