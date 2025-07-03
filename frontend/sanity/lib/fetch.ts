@@ -1,5 +1,6 @@
 import { sanityFetch } from "@/sanity/lib/live";
 import { NAVIGATION_QUERY } from "@/sanity/queries/navigation";
+import { BANNER_QUERY } from "@/sanity/queries/banner";
 import { PAGE_QUERY, PAGES_SLUGS_QUERY } from "@/sanity/queries/page";
 import { SETTINGS_QUERY } from "@/sanity/queries/settings";
 import { CONTACT_QUERY } from "@/sanity/queries/contact";
@@ -18,6 +19,7 @@ import {
   POSTS_QUERYResult,
   POSTS_SLUGS_QUERYResult,
   NAVIGATION_QUERYResult,
+  BANNER_QUERYResult,
   SETTINGS_QUERYResult,
   CONTACT_QUERYResult,
   CHANGELOGS_QUERYResult,
@@ -32,6 +34,13 @@ export const fetchSanityNavigation =
 
     return data;
   };
+
+export const fetchSanityBanner = async (): Promise<BANNER_QUERYResult> => {
+  const { data } = await sanityFetch({
+    query: BANNER_QUERY,
+  });
+  return data;
+};
 
 export const fetchSanityPageBySlug = async ({
   slug,

@@ -8,6 +8,7 @@ import {
   Settings,
   PhoneCall,
   Users,
+  Info,
 } from "lucide-react";
 import { defaultDocumentNode } from "./defaultDocumentNode";
 
@@ -75,6 +76,18 @@ export const structure = (S: any, context: any) =>
         context,
       }),
       S.divider(),
+      S.listItem()
+        .title("Banner")
+        .icon(Info)
+        .child(
+          (
+            defaultDocumentNode(S, { ...context, schemaType: "banner" }) ||
+            S.document()
+          )
+            .id("banner")
+            .schemaType("banner")
+            .documentId("banner")
+        ),
       S.listItem()
         .title("Contact")
         .icon(PhoneCall)
