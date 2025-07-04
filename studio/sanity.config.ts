@@ -17,7 +17,12 @@ import { defaultDocumentNode } from "./defaultDocumentNode";
 import { codeInput } from "@sanity/code-input";
 
 // Define the actions that should be available for singleton documents
-const singletonActions = new Set(["publish", "discardChanges", "restore"]);
+const singletonActions = new Set([
+  "publish",
+  "discardChanges",
+  "restore",
+  "unpublish",
+]);
 
 // Define the singleton document types
 const singletonTypes = new Set(["settings", "contact", "banner"]);
