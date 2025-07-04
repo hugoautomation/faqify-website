@@ -1,6 +1,6 @@
 {
   "name": "sanityblocks",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "SanityBlocks: Next.js + Sanity + shadcnblocks.com",
   "scripts": {
     "dev": "pnpm --parallel -r run dev",
@@ -10,10 +10,5 @@
     "typecheck": "cd frontend && pnpm typecheck",
     "export": "cd studio && sanity dataset export production sample-data.tar.gz"
   },
-  "homepage": "https://www.shadcnblocks.com/",
-  "pnpm": {
-    "overrides": {
-      "@babel/types": "7.27.7"
-    }
-  }
+  "homepage": "https://www.shadcnblocks.com/"
 }
