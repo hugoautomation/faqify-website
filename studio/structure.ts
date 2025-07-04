@@ -80,13 +80,7 @@ export const structure = (S: any, context: any) =>
         .title("Banner")
         .icon(Info)
         .child(
-          (
-            defaultDocumentNode(S, { ...context, schemaType: "banner" }) ||
-            S.document()
-          )
-            .id("banner")
-            .schemaType("banner")
-            .documentId("banner")
+          S.editor().id("banner").schemaType("banner").documentId("banner")
         ),
       S.listItem()
         .title("Contact")
