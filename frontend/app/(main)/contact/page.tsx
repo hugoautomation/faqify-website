@@ -3,6 +3,7 @@ import { ContactForm } from "@/components/forms/contact-form";
 import { LinkButton } from "@/components/ui/link-button";
 import { submitContactForm } from "@/app/actions/contact-form";
 import { fetchSanityContact } from "@/sanity/lib/fetch";
+import { notFound } from "next/navigation";
 import { generatePageMetadata } from "@/sanity/lib/metadata";
 import { Link as LinkType } from "@/sanity.types";
 
@@ -10,6 +11,10 @@ export async function generateMetadata(props: {
   params: Promise<{ slug: string }>;
 }) {
   const contact = await fetchSanityContact();
+
+  if (!contact) {
+    notFound();
+  }
 
   return generatePageMetadata({
     page: contact,
@@ -20,6 +25,10 @@ export async function generateMetadata(props: {
 
 export default async function ContactPage() {
   const contact = await fetchSanityContact();
+
+  if (!contact) {
+    notFound();
+  }
 
   const getIcon = (icon: string | null) => {
     switch (icon) {
