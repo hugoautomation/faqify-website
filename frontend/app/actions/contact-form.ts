@@ -1,10 +1,7 @@
 "use server";
 
 import { Resend } from "resend";
-import {
-  contactFormSchema,
-  type ContactFormValues,
-} from "@/lib/schemas/contact-form";
+import { contactFormSchema } from "@/lib/schemas/contact-form";
 import ContactFormEmail from "@/emails/contact-form";
 import { render } from "@react-email/render";
 import { z } from "zod";
@@ -58,11 +55,14 @@ export async function submitContactForm(
     return { success: true };
   } catch (error) {
     if (error instanceof z.ZodError) {
-      const errors = error.errors.reduce((acc, err) => {
-        const path = err.path[0] as string;
-        acc[path] = err.message;
-        return acc;
-      }, {} as Record<string, string>);
+      const errors = error.issues.reduce(
+        (acc: Record<string, string>, err: z.ZodIssue) => {
+          const path = err.path[0] as string;
+          acc[path] = err.message;
+          return acc;
+        },
+        {} as Record<string, string>
+      );
 
       return {
         success: false,

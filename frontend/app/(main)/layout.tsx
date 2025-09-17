@@ -4,7 +4,7 @@ import Banner from "@/components/blocks/banner";
 import Banner5 from "@/components/blocks/banner/banner5";
 import { fetchSanityBanner } from "@/sanity/lib/fetch";
 import { DisableDraftMode } from "@/components/disable-draft-mode";
-import { VisualEditing } from "next-sanity";
+import { VisualEditing } from "next-sanity/visual-editing";
 import { draftMode } from "next/headers";
 import { SanityLive } from "@/sanity/lib/live";
 
