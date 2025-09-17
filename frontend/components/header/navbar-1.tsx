@@ -24,7 +24,6 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
@@ -63,9 +62,7 @@ export default async function Navbar1({ className }: Navbar1Props) {
           <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
           <NavigationMenuContent className="bg-popover text-popover-foreground min-w-[320px]">
             {item.links?.map((subItem) => (
-              <NavigationMenuLink asChild key={subItem._key}>
-                <SubMenuLink item={subItem} />
-              </NavigationMenuLink>
+              <SubMenuLink item={subItem} key={subItem._key} />
             ))}
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -74,17 +71,20 @@ export default async function Navbar1({ className }: Navbar1Props) {
 
     return (
       <NavigationMenuItem key={item._key}>
-        <NavigationMenuLink
-          asChild
+        <Link
+          href={item.href || "#"}
           target={item.target ? "_blank" : undefined}
           className={cn(
             item.buttonVariant === "ghost"
               ? "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-              : buttonVariants({ variant: item.buttonVariant, size: "default" })
+              : buttonVariants({
+                  variant: item.buttonVariant,
+                  size: "default",
+                })
           )}
         >
-          <Link href={item.href || "#"}>{item.title}</Link>
-        </NavigationMenuLink>
+          {item.title}
+        </Link>
       </NavigationMenuItem>
     );
   };
