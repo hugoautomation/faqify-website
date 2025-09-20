@@ -1,5 +1,4 @@
-import { getNavigationItems } from "@/lib/getNavigationItems";
-import { fetchSanitySettings } from "@/sanity/lib/fetch";
+import { fetchSanitySettings, fetchSanityHeader } from "@/sanity/lib/fetch";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
@@ -52,8 +51,7 @@ const isLinkGroup = (
 
 export default async function Navbar1({ className }: Navbar1Props) {
   const settings = await fetchSanitySettings();
-  const navigationItems = await getNavigationItems("header");
-  const actionItems = await getNavigationItems("header-action");
+  const navigation = await fetchSanityHeader();
 
   const renderMenuItem = (item: NavigationItem) => {
     if (isLinkGroup(item)) {
@@ -167,7 +165,7 @@ export default async function Navbar1({ className }: Navbar1Props) {
             <div className="flex items-center">
               <NavigationMenu>
                 <NavigationMenuList>
-                  {navigationItems?.map((item) =>
+                  {navigation?.links?.map((item) =>
                     renderMenuItem(item as NavigationItem)
                   )}
                 </NavigationMenuList>
@@ -175,7 +173,7 @@ export default async function Navbar1({ className }: Navbar1Props) {
             </div>
           </div>
           <div className="flex gap-2">
-            {actionItems?.map((item) => (
+            {navigation?.ctaLinks?.map((item) => (
               <LinkButton key={item._key} size="sm" link={item as SanityLink} />
             ))}
           </div>
@@ -258,12 +256,12 @@ export default async function Navbar1({ className }: Navbar1Props) {
                     collapsible
                     className="flex w-full flex-col gap-4"
                   >
-                    {navigationItems?.map((item) =>
+                    {navigation?.links?.map((item) =>
                       renderMobileMenuItem(item as NavigationItem)
                     )}
                   </Accordion>
                   <div className="flex flex-col gap-3">
-                    {actionItems?.map((item) => (
+                    {navigation?.ctaLinks?.map((item) => (
                       <LinkButton key={item._key} link={item as SanityLink} />
                     ))}
                   </div>

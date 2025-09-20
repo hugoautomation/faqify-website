@@ -29,7 +29,7 @@ export const structure = (S: any, context: any) =>
         .child(
           S.documentTypeList("post")
             .title("Post")
-            .defaultOrdering([{ field: "_createdAt", direction: "desc" }]) // Default ordering
+            .defaultOrdering([{ field: "_createdAt", direction: "desc" }])
         ),
       S.listItem()
         .title("Changelogs")
@@ -101,6 +101,18 @@ export const structure = (S: any, context: any) =>
         S,
         context,
       }),
+      S.listItem()
+        .title("Header")
+        .icon(Menu)
+        .child(
+          S.editor().id("header").schemaType("header").documentId("header")
+        ),
+      S.listItem()
+        .title("Footer")
+        .icon(Menu)
+        .child(
+          S.editor().id("footer").schemaType("footer").documentId("footer")
+        ),
       S.listItem()
         .title("Settings")
         .icon(Settings)
