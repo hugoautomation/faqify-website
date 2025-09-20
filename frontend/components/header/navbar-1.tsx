@@ -1,5 +1,5 @@
-import { getNavigationItems } from "@/lib/getNavigationItems";
-import { fetchSanitySettings } from "@/sanity/lib/fetch";
+"use client";
+import { useState } from "react";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,6 +9,8 @@ import type {
   Link as SanityLink,
   LinkGroup as SanityLinkGroup,
   LinkIcon as SanityLinkIcon,
+  SETTINGS_QUERYResult,
+  HEADER_QUERYResult,
 } from "@/sanity.types";
 import { cn } from "@/lib/utils";
 import { DialogClose } from "@radix-ui/react-dialog";
@@ -24,7 +26,6 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
@@ -43,6 +44,8 @@ type NavigationItem = (SanityLink | SanityLinkGroup | SanityLinkIcon) & {
 
 interface Navbar1Props {
   className?: string;
+  settings: SETTINGS_QUERYResult;
+  navigation: HEADER_QUERYResult;
 }
 
 const isLinkGroup = (
@@ -51,21 +54,32 @@ const isLinkGroup = (
   return item._type === "link-group";
 };
 
-export default async function Navbar1({ className }: Navbar1Props) {
-  const settings = await fetchSanitySettings();
-  const navigationItems = await getNavigationItems("header");
-  const actionItems = await getNavigationItems("header-action");
+export default function Navbar1({
+  className,
+  settings,
+  navigation,
+}: Navbar1Props) {
+  const [desktopNavValue, setDesktopNavValue] = useState<string>("");
 
-  const renderMenuItem = (item: NavigationItem) => {
+  const closeDesktopNav = () => {
+    setDesktopNavValue("");
+  };
+
+  const renderDesktopMenuItem = (
+    item: NavigationItem,
+    closeDesktopNav: () => void
+  ) => {
     if (isLinkGroup(item)) {
       return (
         <NavigationMenuItem key={item._key}>
           <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
           <NavigationMenuContent className="bg-popover text-popover-foreground min-w-[320px]">
             {item.links?.map((subItem) => (
-              <NavigationMenuLink asChild key={subItem._key}>
-                <SubMenuLink item={subItem} />
-              </NavigationMenuLink>
+              <SubMenuLink
+                item={subItem}
+                key={subItem._key}
+                closeDesktopNav={closeDesktopNav}
+              />
             ))}
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -74,17 +88,20 @@ export default async function Navbar1({ className }: Navbar1Props) {
 
     return (
       <NavigationMenuItem key={item._key}>
-        <NavigationMenuLink
-          asChild
+        <Link
+          href={item.href || "#"}
           target={item.target ? "_blank" : undefined}
           className={cn(
             item.buttonVariant === "ghost"
               ? "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-              : buttonVariants({ variant: item.buttonVariant, size: "default" })
+              : buttonVariants({
+                  variant: item.buttonVariant,
+                  size: "default",
+                })
           )}
         >
-          <Link href={item.href || "#"}>{item.title}</Link>
-        </NavigationMenuLink>
+          {item.title}
+        </Link>
       </NavigationMenuItem>
     );
   };
@@ -165,17 +182,23 @@ export default async function Navbar1({ className }: Navbar1Props) {
               )}
             </Link>
             <div className="flex items-center">
-              <NavigationMenu>
+              <NavigationMenu
+                value={desktopNavValue}
+                onValueChange={setDesktopNavValue}
+              >
                 <NavigationMenuList>
-                  {navigationItems?.map((item) =>
-                    renderMenuItem(item as NavigationItem)
+                  {navigation?.links?.map((item) =>
+                    renderDesktopMenuItem(
+                      item as NavigationItem,
+                      closeDesktopNav
+                    )
                   )}
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
           </div>
           <div className="flex gap-2">
-            {actionItems?.map((item) => (
+            {navigation?.ctaLinks?.map((item) => (
               <LinkButton key={item._key} size="sm" link={item as SanityLink} />
             ))}
           </div>
@@ -258,12 +281,12 @@ export default async function Navbar1({ className }: Navbar1Props) {
                     collapsible
                     className="flex w-full flex-col gap-4"
                   >
-                    {navigationItems?.map((item) =>
+                    {navigation?.links?.map((item) =>
                       renderMobileMenuItem(item as NavigationItem)
                     )}
                   </Accordion>
                   <div className="flex flex-col gap-3">
-                    {actionItems?.map((item) => (
+                    {navigation?.ctaLinks?.map((item) => (
                       <LinkButton key={item._key} link={item as SanityLink} />
                     ))}
                   </div>
@@ -277,12 +300,19 @@ export default async function Navbar1({ className }: Navbar1Props) {
   );
 }
 
-const SubMenuLink = ({ item }: { item: SanityLink | SanityLinkIcon }) => {
+const SubMenuLink = ({
+  item,
+  closeDesktopNav,
+}: {
+  item: SanityLink | SanityLinkIcon;
+  closeDesktopNav?: () => void;
+}) => {
   return (
     <Link
       href={item.href || "#"}
       className="flex w-full flex-row gap-4 rounded-md p-3 text-sm font-medium no-underline transition-colors hover:bg-accent hover:text-accent-foreground"
       target={item.target ? "_blank" : undefined}
+      onClick={closeDesktopNav}
     >
       <div className="text-foreground">
         <Icon

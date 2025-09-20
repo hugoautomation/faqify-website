@@ -1,11 +1,9 @@
 import { groq } from "next-sanity";
 import { linkQuery } from "./shared/link";
 
-export const NAVIGATION_QUERY = groq`
-  *[_type == "navigation"]{
+export const HEADER_QUERY = groq`
+  *[_type == "header"][0]{
     _type,
-    _key,
-    title,
     links[]{
       ${linkQuery},
       _type == "link-group" => {
@@ -13,6 +11,9 @@ export const NAVIGATION_QUERY = groq`
           ${linkQuery}
         }
       }
-    }
+    },
+    ctaLinks[]{
+      ${linkQuery}
+    },
   }
 `;

@@ -6,7 +6,8 @@ import author from "./schemas/documents/author";
 import category from "./schemas/documents/category";
 import faq from "./schemas/documents/faq";
 import testimonial from "./schemas/documents/testimonial";
-import navigation from "./schemas/documents/navigation";
+import header from "./schemas/documents/header";
+import footer from "./schemas/documents/footer";
 import settings from "./schemas/documents/settings";
 import contact from "./schemas/documents/contact";
 import changelog from "./schemas/documents/changelog";
@@ -125,7 +126,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     category,
     faq,
     testimonial,
-    navigation,
+    header,
+    footer,
     settings,
     contact,
     changelog,

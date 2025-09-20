@@ -24,12 +24,24 @@ export const structure = (S: any, context: any) =>
         context,
       }),
       S.listItem()
+        .title("Contact")
+        .icon(PhoneCall)
+        .child(
+          (
+            defaultDocumentNode(S, { ...context, schemaType: "contact" }) ||
+            S.document()
+          )
+            .id("contact")
+            .schemaType("contact")
+            .documentId("contact")
+        ),
+      S.listItem()
         .title("Posts")
         .schemaType("post")
         .child(
           S.documentTypeList("post")
             .title("Post")
-            .defaultOrdering([{ field: "_createdAt", direction: "desc" }]) // Default ordering
+            .defaultOrdering([{ field: "_createdAt", direction: "desc" }])
         ),
       S.listItem()
         .title("Changelogs")
@@ -39,6 +51,7 @@ export const structure = (S: any, context: any) =>
             .title("Changelog")
             .defaultOrdering([{ field: "date", direction: "desc" }])
         ),
+      S.divider({ title: "References" }),
       S.listItem()
         .title("Categories")
         .schemaType("category")
@@ -75,7 +88,7 @@ export const structure = (S: any, context: any) =>
         S,
         context,
       }),
-      S.divider(),
+      S.divider({ title: "Global" }),
       S.listItem()
         .title("Banner")
         .icon(Info)
@@ -83,24 +96,17 @@ export const structure = (S: any, context: any) =>
           S.editor().id("banner").schemaType("banner").documentId("banner")
         ),
       S.listItem()
-        .title("Contact")
-        .icon(PhoneCall)
+        .title("Header")
+        .icon(Menu)
         .child(
-          (
-            defaultDocumentNode(S, { ...context, schemaType: "contact" }) ||
-            S.document()
-          )
-            .id("contact")
-            .schemaType("contact")
-            .documentId("contact")
+          S.editor().id("header").schemaType("header").documentId("header")
         ),
-      orderableDocumentListDeskItem({
-        type: "navigation",
-        title: "Navigation",
-        icon: Menu,
-        S,
-        context,
-      }),
+      S.listItem()
+        .title("Footer")
+        .icon(Menu)
+        .child(
+          S.editor().id("footer").schemaType("footer").documentId("footer")
+        ),
       S.listItem()
         .title("Settings")
         .icon(Settings)

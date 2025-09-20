@@ -1,5 +1,6 @@
 import { sanityFetch } from "@/sanity/lib/live";
-import { NAVIGATION_QUERY } from "@/sanity/queries/navigation";
+import { HEADER_QUERY } from "@/sanity/queries/header";
+import { FOOTER_QUERY } from "@/sanity/queries/footer";
 import { BANNER_QUERY } from "@/sanity/queries/banner";
 import { PAGE_QUERY, PAGES_SLUGS_QUERY } from "@/sanity/queries/page";
 import { SETTINGS_QUERY } from "@/sanity/queries/settings";
@@ -18,22 +19,28 @@ import {
   POST_QUERYResult,
   POSTS_QUERYResult,
   POSTS_SLUGS_QUERYResult,
-  NAVIGATION_QUERYResult,
+  FOOTER_QUERYResult,
   BANNER_QUERYResult,
   SETTINGS_QUERYResult,
   CONTACT_QUERYResult,
   CHANGELOGS_QUERYResult,
   TEAM_QUERYResult,
+  HEADER_QUERYResult,
 } from "@/sanity.types";
 
-export const fetchSanityNavigation =
-  async (): Promise<NAVIGATION_QUERYResult> => {
-    const { data } = await sanityFetch({
-      query: NAVIGATION_QUERY,
-    });
+export const fetchSanityHeader = async (): Promise<HEADER_QUERYResult> => {
+  const { data } = await sanityFetch({
+    query: HEADER_QUERY,
+  });
+  return data;
+};
 
-    return data;
-  };
+export const fetchSanityFooter = async (): Promise<FOOTER_QUERYResult> => {
+  const { data } = await sanityFetch({
+    query: FOOTER_QUERY,
+  });
+  return data;
+};
 
 export const fetchSanityBanner = async (): Promise<BANNER_QUERYResult> => {
   const { data } = await sanityFetch({

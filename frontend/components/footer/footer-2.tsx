@@ -1,5 +1,4 @@
-import { fetchSanitySettings } from "@/sanity/lib/fetch";
-import { getNavigationItems } from "@/lib/getNavigationItems";
+import { fetchSanitySettings, fetchSanityFooter } from "@/sanity/lib/fetch";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,8 +12,7 @@ interface Footer2Props {
 
 export default async function Footer2({ className }: Footer2Props) {
   const settings = await fetchSanitySettings();
-  const footerNavItems = await getNavigationItems("footer");
-  const bottomNavItems = await getNavigationItems("footer-bottom");
+  const footer = await fetchSanityFooter();
 
   return (
     <section className={cn("py-32", className)}>
@@ -55,7 +53,7 @@ export default async function Footer2({ className }: Footer2Props) {
               </Link>
               <p className="mt-4 font-bold">{settings?.description}</p>
             </div>
-            {footerNavItems?.map((section) => {
+            {footer?.links?.map((section) => {
               if (section._type !== "link-group") return null;
               return (
                 <div key={section._key}>
@@ -96,7 +94,7 @@ export default async function Footer2({ className }: Footer2Props) {
               )}
             </div>
             <ul className="flex gap-4">
-              {bottomNavItems?.map((link) => {
+              {footer?.bottomLinks?.map((link) => {
                 if (link._type !== "link") return null;
                 return (
                   <li key={link._key}>
