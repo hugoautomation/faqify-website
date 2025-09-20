@@ -1,4 +1,4 @@
-import Navbar1 from "@/components/header/navbar-1";
+import Header from "@/components/header";
 import Footer2 from "@/components/footer/footer-2";
 import Custom404 from "@/components/404";
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function NotFoundPage() {
   return (
     <>
-      <Navbar1 />
+      <Header />
       <Custom404 />
       <Footer2 />
     </>

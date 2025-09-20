@@ -1,4 +1,5 @@
-import { fetchSanitySettings, fetchSanityHeader } from "@/sanity/lib/fetch";
+"use client";
+import { useState } from "react";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,6 +9,8 @@ import type {
   Link as SanityLink,
   LinkGroup as SanityLinkGroup,
   LinkIcon as SanityLinkIcon,
+  SETTINGS_QUERYResult,
+  HEADER_QUERYResult,
 } from "@/sanity.types";
 import { cn } from "@/lib/utils";
 import { DialogClose } from "@radix-ui/react-dialog";
@@ -41,6 +44,8 @@ type NavigationItem = (SanityLink | SanityLinkGroup | SanityLinkIcon) & {
 
 interface Navbar1Props {
   className?: string;
+  settings: SETTINGS_QUERYResult;
+  navigation: HEADER_QUERYResult;
 }
 
 const isLinkGroup = (
@@ -49,18 +54,32 @@ const isLinkGroup = (
   return item._type === "link-group";
 };
 
-export default async function Navbar1({ className }: Navbar1Props) {
-  const settings = await fetchSanitySettings();
-  const navigation = await fetchSanityHeader();
+export default function Navbar1({
+  className,
+  settings,
+  navigation,
+}: Navbar1Props) {
+  const [desktopNavValue, setDesktopNavValue] = useState<string>("");
 
-  const renderMenuItem = (item: NavigationItem) => {
+  const closeDesktopNav = () => {
+    setDesktopNavValue("");
+  };
+
+  const renderDesktopMenuItem = (
+    item: NavigationItem,
+    closeDesktopNav: () => void
+  ) => {
     if (isLinkGroup(item)) {
       return (
         <NavigationMenuItem key={item._key}>
           <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
           <NavigationMenuContent className="bg-popover text-popover-foreground min-w-[320px]">
             {item.links?.map((subItem) => (
-              <SubMenuLink item={subItem} key={subItem._key} />
+              <SubMenuLink
+                item={subItem}
+                key={subItem._key}
+                closeDesktopNav={closeDesktopNav}
+              />
             ))}
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -163,10 +182,16 @@ export default async function Navbar1({ className }: Navbar1Props) {
               )}
             </Link>
             <div className="flex items-center">
-              <NavigationMenu>
+              <NavigationMenu
+                value={desktopNavValue}
+                onValueChange={setDesktopNavValue}
+              >
                 <NavigationMenuList>
                   {navigation?.links?.map((item) =>
-                    renderMenuItem(item as NavigationItem)
+                    renderDesktopMenuItem(
+                      item as NavigationItem,
+                      closeDesktopNav
+                    )
                   )}
                 </NavigationMenuList>
               </NavigationMenu>
@@ -275,12 +300,19 @@ export default async function Navbar1({ className }: Navbar1Props) {
   );
 }
 
-const SubMenuLink = ({ item }: { item: SanityLink | SanityLinkIcon }) => {
+const SubMenuLink = ({
+  item,
+  closeDesktopNav,
+}: {
+  item: SanityLink | SanityLinkIcon;
+  closeDesktopNav?: () => void;
+}) => {
   return (
     <Link
       href={item.href || "#"}
       className="flex w-full flex-row gap-4 rounded-md p-3 text-sm font-medium no-underline transition-colors hover:bg-accent hover:text-accent-foreground"
       target={item.target ? "_blank" : undefined}
+      onClick={closeDesktopNav}
     >
       <div className="text-foreground">
         <Icon
