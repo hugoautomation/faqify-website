@@ -1,5 +1,4 @@
 import { sanityFetch } from "@/sanity/lib/live";
-import { NAVIGATION_QUERY } from "@/sanity/queries/navigation";
 import { HEADER_QUERY } from "@/sanity/queries/header";
 import { FOOTER_QUERY } from "@/sanity/queries/footer";
 import { BANNER_QUERY } from "@/sanity/queries/banner";
@@ -20,7 +19,6 @@ import {
   POST_QUERYResult,
   POSTS_QUERYResult,
   POSTS_SLUGS_QUERYResult,
-  NAVIGATION_QUERYResult,
   FOOTER_QUERYResult,
   BANNER_QUERYResult,
   SETTINGS_QUERYResult,
@@ -29,15 +27,6 @@ import {
   TEAM_QUERYResult,
   HEADER_QUERYResult,
 } from "@/sanity.types";
-
-export const fetchSanityNavigation =
-  async (): Promise<NAVIGATION_QUERYResult> => {
-    const { data } = await sanityFetch({
-      query: NAVIGATION_QUERY,
-    });
-
-    return data;
-  };
 
 export const fetchSanityHeader = async (): Promise<HEADER_QUERYResult> => {
   const { data } = await sanityFetch({

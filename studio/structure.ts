@@ -24,6 +24,18 @@ export const structure = (S: any, context: any) =>
         context,
       }),
       S.listItem()
+        .title("Contact")
+        .icon(PhoneCall)
+        .child(
+          (
+            defaultDocumentNode(S, { ...context, schemaType: "contact" }) ||
+            S.document()
+          )
+            .id("contact")
+            .schemaType("contact")
+            .documentId("contact")
+        ),
+      S.listItem()
         .title("Posts")
         .schemaType("post")
         .child(
@@ -39,6 +51,7 @@ export const structure = (S: any, context: any) =>
             .title("Changelog")
             .defaultOrdering([{ field: "date", direction: "desc" }])
         ),
+      S.divider({ title: "References" }),
       S.listItem()
         .title("Categories")
         .schemaType("category")
@@ -75,32 +88,13 @@ export const structure = (S: any, context: any) =>
         S,
         context,
       }),
-      S.divider(),
+      S.divider({ title: "Global" }),
       S.listItem()
         .title("Banner")
         .icon(Info)
         .child(
           S.editor().id("banner").schemaType("banner").documentId("banner")
         ),
-      S.listItem()
-        .title("Contact")
-        .icon(PhoneCall)
-        .child(
-          (
-            defaultDocumentNode(S, { ...context, schemaType: "contact" }) ||
-            S.document()
-          )
-            .id("contact")
-            .schemaType("contact")
-            .documentId("contact")
-        ),
-      orderableDocumentListDeskItem({
-        type: "navigation",
-        title: "Navigation",
-        icon: Menu,
-        S,
-        context,
-      }),
       S.listItem()
         .title("Header")
         .icon(Menu)

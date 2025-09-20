@@ -91,7 +91,7 @@ export default defineType({
     },
     prepare({ title, tagline }) {
       return {
-        title: "Contact Page Settings",
+        title: "Contact Page",
         subtitle: tagline,
       };
     },
