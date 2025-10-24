@@ -1,5 +1,6 @@
 import { groq } from "next-sanity";
 import { imageQuery } from "../shared/image";
+import { videoQuery } from "../shared/video";
 
 // @sanity-typegen-ignore
 export const timeline4Query = groq`
@@ -15,8 +16,14 @@ export const timeline4Query = groq`
       title,
       description,
       iconVariant,
-      image{
-        ${imageQuery}
+      media{
+        type,
+        image{
+          ${imageQuery}
+        },
+        video{
+          ${videoQuery}
+        },
       },
     },
   }
