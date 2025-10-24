@@ -23,6 +23,7 @@ import { buttonVariant } from "./schemas/blocks/shared/button-variant";
 import sectionPadding from "./schemas/blocks/shared/section-padding";
 // Schema UI objects
 import sectionHeader from "./schemas/blocks/section-header";
+import legalSection from "./schemas/blocks/legal-section";
 import hero12 from "./schemas/blocks/hero/hero12";
 import hero13 from "./schemas/blocks/hero/hero13";
 import hero25 from "./schemas/blocks/hero/hero25";
@@ -142,6 +143,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     sectionPadding,
     // blocks
     sectionHeader,
+    legalSection,
     hero12,
     hero13,
     hero25,

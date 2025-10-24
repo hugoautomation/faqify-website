@@ -1,6 +1,7 @@
 import { groq } from "next-sanity";
 import { metaQuery } from "./shared/meta";
 import { sectionHeaderQuery } from "./section-header";
+import { legalSectionQuery } from "./legal-section";
 import { hero12Query } from "./hero/hero12";
 import { hero13Query } from "./hero/hero13";
 import { hero25Query } from "./hero/hero25";
@@ -71,6 +72,7 @@ export const PAGE_QUERY = groq`
   *[_type == "page" && slug.current == $slug][0]{
     blocks[]{
       ${sectionHeaderQuery},
+      ${legalSectionQuery},
       ${hero12Query},
       ${hero13Query},
       ${hero25Query},

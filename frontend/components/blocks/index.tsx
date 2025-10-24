@@ -1,5 +1,6 @@
 import { PAGE_QUERYResult } from "@/sanity.types";
 import SectionHeader from "@/components/blocks/section-header";
+import LegalSection from "@/components/blocks/legal-section";
 import Hero12 from "@/components/blocks/hero/hero12";
 import Hero13 from "@/components/blocks/hero/hero13";
 import Hero25 from "@/components/blocks/hero/hero25";
@@ -72,6 +73,7 @@ const componentMap: {
   [K in Block["_type"]]: React.ComponentType<Extract<Block, { _type: K }>>;
 } = {
   "section-header": SectionHeader,
+  "legal-section": LegalSection,
   "hero-12": Hero12,
   "hero-13": Hero13,
   "hero-25": Hero25,
