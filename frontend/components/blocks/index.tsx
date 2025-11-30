@@ -66,6 +66,7 @@ import Timeline3 from "@/components/blocks/timelines/timeline3";
 import Timeline4 from "@/components/blocks/timelines/timeline4";
 import Timeline5 from "@/components/blocks/timelines/timeline5";
 import Timeline6 from "@/components/blocks/timelines/timeline6";
+import Integration13 from "@/components/blocks/integration/integration13";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 
@@ -139,6 +140,7 @@ const componentMap: {
   "timeline-4": Timeline4,
   "timeline-5": Timeline5,
   "timeline-6": Timeline6,
+  "integration-13": Integration13,
 };
 
 export default function Blocks({
