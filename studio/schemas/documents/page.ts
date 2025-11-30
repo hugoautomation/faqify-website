@@ -107,6 +107,7 @@ export default defineType({
         { type: "timeline-4" },
         { type: "timeline-5" },
         { type: "timeline-6" },
+        { type: "integration-11" },
         { type: "integration-13" },
       ],
       options: {
@@ -187,7 +188,7 @@ export default defineType({
             },
             {
               name: "integration",
-              of: ["integration-13"],
+              of: ["integration-11", "integration-13"],
             },
             {
               name: "pricing",

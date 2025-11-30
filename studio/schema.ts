@@ -117,6 +117,7 @@ import timeline3 from "./schemas/blocks/timelines/timeline3";
 import timeline4 from "./schemas/blocks/timelines/timeline4";
 import timeline5 from "./schemas/blocks/timelines/timeline5";
 import timeline6 from "./schemas/blocks/timelines/timeline6";
+import integration11 from "./schemas/blocks/integration/integration11";
 import integration13 from "./schemas/blocks/integration/integration13";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -239,6 +240,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     timeline5,
     timeline6,
     // Integration
+    integration11,
     integration13,
   ],
 };

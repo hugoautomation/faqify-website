@@ -67,6 +67,7 @@ import { timeline3Query } from "./timelines/timeline3";
 import { timeline4Query } from "./timelines/timeline4";
 import { timeline5Query } from "./timelines/timeline5";
 import { timeline6Query } from "./timelines/timeline6";
+import { integration11Query } from "./integration/integration11";
 import { integration13Query } from "./integration/integration13";
 
 export const PAGE_QUERY = groq`
@@ -139,6 +140,7 @@ export const PAGE_QUERY = groq`
       ${timeline4Query},
       ${timeline5Query},
       ${timeline6Query},
+      ${integration11Query},
       ${integration13Query},
     },
     ${metaQuery},
