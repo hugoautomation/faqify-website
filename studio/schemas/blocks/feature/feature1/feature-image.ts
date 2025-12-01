@@ -55,7 +55,7 @@ export default defineType({
           type: "boolean",
           title: "Auto Play",
           description: "Automatically start playing the video when loaded",
-          initialValue: false,
+          initialValue: true,
         },
         {
           name: "loop",
