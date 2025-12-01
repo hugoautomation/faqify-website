@@ -10,6 +10,7 @@ interface VideoPlayerProps {
   autoplay?: boolean;
   loop?: boolean;
   muted?: boolean;
+  playsInline?: boolean;
   className?: string;
 }
 
@@ -21,6 +22,7 @@ export default function VideoPlayer({
   autoplay = false,
   loop = false,
   muted = false,
+  playsInline = true,
   className = "object-contain w-full h-auto",
 }: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -44,6 +46,7 @@ export default function VideoPlayer({
       autoPlay={autoplay}
       loop={loop}
       muted={muted}
+      playsInline={playsInline}
       preload="metadata"
       aria-label={alt || "Video content"}
     >
