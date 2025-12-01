@@ -16,9 +16,12 @@ export default function FeatureImage({
   video,
 }: FeatureImage) {
   if (mediaType === "video" && video?.asset?._id) {
+    const videoUrl = video.asset.url;
+    if (!videoUrl) return null;
+    
     return (
       <VideoPlayer
-        src={video.asset.url}
+        src={videoUrl}
         alt={video.alt || ""}
         showControls={false}
         autoplay={video.autoplay || false}
