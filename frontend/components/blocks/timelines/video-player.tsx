@@ -7,6 +7,7 @@ interface VideoPlayerProps {
   alt?: string;
   showControls?: boolean;
   playbackRate?: number;
+  autoplay?: boolean;
   loop?: boolean;
   muted?: boolean;
   className?: string;
@@ -17,6 +18,7 @@ export default function VideoPlayer({
   alt,
   showControls = true,
   playbackRate = 1,
+  autoplay = false,
   loop = false,
   muted = false,
   className = "object-contain w-full h-auto",
@@ -31,15 +33,15 @@ export default function VideoPlayer({
 
   // Debug logging to help troubleshoot
   useEffect(() => {
-    console.log('VideoPlayer props:', { loop, muted, showControls, playbackRate });
-  }, [loop, muted, showControls, playbackRate]);
+    console.log('VideoPlayer props:', { loop, muted, showControls, playbackRate, autoplay });
+  }, [loop, muted, showControls, playbackRate, autoplay]);
 
   return (
     <video
       ref={videoRef}
       className={className}
       controls={showControls}
-      autoPlay={!showControls}
+      autoPlay={autoplay}
       loop={loop}
       muted={muted}
       preload="metadata"

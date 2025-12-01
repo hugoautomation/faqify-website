@@ -11,6 +11,7 @@ export const videoQuery = groq`
   alt,
   showControls,
   playbackRate,
+  autoplay,
   loop,
   muted
 `;
