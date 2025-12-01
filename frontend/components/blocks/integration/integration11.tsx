@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { urlFor } from "@/sanity/lib/image";
 import SectionContainer from "@/components/ui/section-container";
 import { PAGE_QUERYResult } from "@/sanity.types";
+import slugify from "@/lib/slugify";
 
 type Integration11Props = Extract<
   NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number],
@@ -83,6 +84,42 @@ const Integration11 = ({ padding, title, categories }: Integration11Props) => {
 
   if (!categories || categories.length === 0) return null;
 
+  // Generate unique tab values for each category, ensuring no duplicates
+  const categoryTabValues = useMemo(() => {
+    const values = new Map<Category, string>();
+    const usedValues = new Set<string>();
+    
+    categories.forEach((category, index) => {
+      let tabValue: string;
+      
+      // Prefer _key if available and unique
+      if (category._key && !usedValues.has(category._key)) {
+        tabValue = category._key;
+      } else {
+        // Generate from name, ensuring uniqueness
+        const baseValue = category.name ? slugify(category.name) : `category-${index}`;
+        tabValue = baseValue;
+        
+        // If value already exists, append index to ensure uniqueness
+        let counter = 0;
+        while (usedValues.has(tabValue)) {
+          counter++;
+          tabValue = `${baseValue}-${counter}`;
+        }
+      }
+      
+      values.set(category, tabValue);
+      usedValues.add(tabValue);
+    });
+    
+    return values;
+  }, [categories]);
+
+  // Helper function to get tab value for a category
+  const getCategoryTabValue = (category: Category): string => {
+    return categoryTabValues.get(category) || `category-${Math.random().toString(36).substr(2, 9)}`;
+  };
+
   return (
     <SectionContainer padding={padding}>
       <section>
@@ -96,21 +133,24 @@ const Integration11 = ({ padding, title, categories }: Integration11Props) => {
               <TabsTrigger value="all" className="px-4 py-2 text-sm font-medium">
                 All Applications
               </TabsTrigger>
-              {categories.map((category) => (
-                <TabsTrigger
-                  key={category._key}
-                  value={category._key}
-                  className="px-4 py-2 text-sm font-medium"
-                >
-                  {category.name || "Unnamed Category"}
-                </TabsTrigger>
-              ))}
+              {categories.map((category) => {
+                const tabValue = getCategoryTabValue(category);
+                return (
+                  <TabsTrigger
+                    key={category._key || tabValue}
+                    value={tabValue}
+                    className="px-4 py-2 text-sm font-medium"
+                  >
+                    {category.name || "Unnamed Category"}
+                  </TabsTrigger>
+                );
+              })}
             </TabsList>
 
             {/* All Applications Tab */}
             <TabsContent value="all">
               {categories.map((category) => (
-                <div key={category._key} className="mb-10">
+                <div key={category._key || category.name} className="mb-10">
                   {category.name && (
                     <h2 className="mb-1 text-lg font-semibold">
                       {category.name}
@@ -136,27 +176,35 @@ const Integration11 = ({ padding, title, categories }: Integration11Props) => {
             </TabsContent>
 
             {/* Individual Category Tabs */}
-            {categories.map((category) => (
-              <TabsContent key={category._key} value={category._key}>
-                <div className="mb-10">
-                  {category.description && (
-                    <p className="text-muted-foreground mb-4 text-sm">
-                      {category.description}
-                    </p>
-                  )}
-                  {category.integrations && category.integrations.length > 0 && (
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                      {category.integrations.map((integration) => (
-                        <IntegrationCard
-                          key={integration._key}
-                          integration={integration}
-                        />
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </TabsContent>
-            ))}
+            {categories.map((category) => {
+              const tabValue = getCategoryTabValue(category);
+              return (
+                <TabsContent key={category._key || tabValue} value={tabValue}>
+                  <div className="mb-10">
+                    {category.name && (
+                      <h2 className="mb-1 text-lg font-semibold">
+                        {category.name}
+                      </h2>
+                    )}
+                    {category.description && (
+                      <p className="text-muted-foreground mb-4 text-sm">
+                        {category.description}
+                      </p>
+                    )}
+                    {category.integrations && category.integrations.length > 0 && (
+                      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                        {category.integrations.map((integration) => (
+                          <IntegrationCard
+                            key={integration._key}
+                            integration={integration}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </TabsContent>
+              );
+            })}
           </Tabs>
         </div>
       </section>
