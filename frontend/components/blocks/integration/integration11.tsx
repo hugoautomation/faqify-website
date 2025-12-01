@@ -7,7 +7,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { urlFor } from "@/sanity/lib/image";
 import SectionContainer from "@/components/ui/section-container";
 import { PAGE_QUERYResult } from "@/sanity.types";
-import slugify from "@/lib/slugify";
 
 type Integration11Props = Extract<
   NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number],
@@ -84,41 +83,14 @@ const Integration11 = ({ padding, title, categories }: Integration11Props) => {
 
   if (!categories || categories.length === 0) return null;
 
-  // Generate unique tab values for each category, ensuring no duplicates
-  const categoryTabValues = useMemo(() => {
-    const values = new Map<Category, string>();
-    const usedValues = new Set<string>();
-    
-    categories.forEach((category, index) => {
-      let tabValue: string;
-      
-      // Prefer _key if available and unique
-      if (category._key && !usedValues.has(category._key)) {
-        tabValue = category._key;
-      } else {
-        // Generate from name, ensuring uniqueness
-        const baseValue = category.name ? slugify(category.name) : `category-${index}`;
-        tabValue = baseValue;
-        
-        // If value already exists, append index to ensure uniqueness
-        let counter = 0;
-        while (usedValues.has(tabValue)) {
-          counter++;
-          tabValue = `${baseValue}-${counter}`;
-        }
-      }
-      
-      values.set(category, tabValue);
-      usedValues.add(tabValue);
+  // Compute tab values once and store them in an array by index
+  // This ensures TabsTrigger and TabsContent use exactly the same values
+  const tabValues = useMemo(() => {
+    return categories.map((category, index) => {
+      // Use _key if available (guaranteed unique by Sanity), otherwise use index
+      return category._key || `category-${index}`;
     });
-    
-    return values;
   }, [categories]);
-
-  // Helper function to get tab value for a category
-  const getCategoryTabValue = (category: Category): string => {
-    return categoryTabValues.get(category) || `category-${Math.random().toString(36).substr(2, 9)}`;
-  };
 
   return (
     <SectionContainer padding={padding}>
@@ -133,11 +105,11 @@ const Integration11 = ({ padding, title, categories }: Integration11Props) => {
               <TabsTrigger value="all" className="px-4 py-2 text-sm font-medium">
                 All Applications
               </TabsTrigger>
-              {categories.map((category) => {
-                const tabValue = getCategoryTabValue(category);
+              {categories.map((category, index) => {
+                const tabValue = tabValues[index];
                 return (
                   <TabsTrigger
-                    key={category._key || tabValue}
+                    key={category._key || `trigger-${index}`}
                     value={tabValue}
                     className="px-4 py-2 text-sm font-medium"
                   >
@@ -176,10 +148,10 @@ const Integration11 = ({ padding, title, categories }: Integration11Props) => {
             </TabsContent>
 
             {/* Individual Category Tabs */}
-            {categories.map((category) => {
-              const tabValue = getCategoryTabValue(category);
+            {categories.map((category, index) => {
+              const tabValue = tabValues[index];
               return (
-                <TabsContent key={category._key || tabValue} value={tabValue}>
+                <TabsContent key={category._key || `content-${index}`} value={tabValue}>
                   <div className="mb-10">
                     {category.name && (
                       <h2 className="mb-1 text-lg font-semibold">
