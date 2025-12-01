@@ -82,7 +82,7 @@ const Integration11 = ({ padding, title, categories }: Integration11Props) => {
                               href={integration.href}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-background flex min-h-[170px] flex-col justify-between rounded-xl border p-6 shadow-sm transition hover:shadow-md"
+                              className="bg-background flex h-fit flex-col justify-between rounded-xl border p-6 shadow-sm transition hover:shadow-md"
                             >
                               {content}
                             </Link>
@@ -92,7 +92,7 @@ const Integration11 = ({ padding, title, categories }: Integration11Props) => {
                         return (
                           <div
                             key={integration._key}
-                            className="bg-background flex min-h-[170px] flex-col justify-between rounded-xl border p-6 shadow-sm transition hover:shadow-md"
+                            className="bg-background flex h-fit flex-col justify-between rounded-xl border p-6 shadow-sm transition hover:shadow-md"
                           >
                             {content}
                           </div>
