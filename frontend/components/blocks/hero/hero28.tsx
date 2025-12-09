@@ -103,7 +103,6 @@ const Hero28 = ({ title, description, links, backgroundIcons }: Hero28Props) => 
                     y={position.imageY}
                     width={40}
                     height={40}
-                    alt={icon.image.alt || ""}
                   />
                 </g>
               );
