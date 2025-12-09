@@ -15,15 +15,13 @@ export default function FeatureImage({
   image,
   video,
 }: FeatureImage) {
-  if (mediaType === "video" && video?.asset?._id) {
-    const videoUrl = video.asset.url;
-    if (!videoUrl) return null;
-    
+  if (mediaType === "video" && video?.asset?.url) {
     return (
       <VideoPlayer
-        src={videoUrl}
+        src={video.asset.url}
         alt={video.alt || ""}
-        showControls={false}
+        showControls={video.showControls !== false}
+        playbackRate={video.playbackRate ?? 1}
         autoplay={video.autoplay || false}
         loop={video.loop || false}
         muted={video.muted !== false}

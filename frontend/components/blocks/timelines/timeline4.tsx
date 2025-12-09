@@ -119,39 +119,40 @@ export default function Timeline4({
                         <DiagonalPattern className="h-full w-6 lg:w-10" />
                         {column.media && (
                           <>
-                            {(column.media as any).type === "image" && (column.media as any).image && (column.media as any).image.asset?._id && (
+                            {column.media.type === "image" && column.media.image && column.media.image.asset?._id && (
                               <Image
-                                src={urlFor((column.media as any).image).url()}
-                                alt={(column.media as any).image.alt || ""}
+                                src={urlFor(column.media.image).url()}
+                                alt={column.media.image.alt || ""}
                                 placeholder={
-                                  (column.media as any).image?.asset?.metadata?.lqip
+                                  column.media.image?.asset?.metadata?.lqip
                                     ? "blur"
                                     : undefined
                                 }
                                 blurDataURL={
-                                  (column.media as any).image?.asset?.metadata?.lqip || ""
+                                  column.media.image?.asset?.metadata?.lqip || ""
                                 }
                                 className="object-contain"
                                 sizes="(min-width: 1024px) 33vw, 100vw"
                                 width={
-                                  (column.media as any).image.asset?.metadata?.dimensions?.width ||
+                                  column.media.image.asset?.metadata?.dimensions?.width ||
                                   500
                                 }
                                 height={
-                                  (column.media as any).image.asset?.metadata?.dimensions
+                                  column.media.image.asset?.metadata?.dimensions
                                     ?.height || 500
                                 }
                                 quality={100}
                               />
                             )}
-                            {(column.media as any).type === "video" && (column.media as any).video && (column.media as any).video.asset?._id && (
+                            {column.media.type === "video" && column.media.video && column.media.video.asset?.url && (
                               <VideoPlayer
-                                src={(column.media as any).video.asset.url}
-                                alt={(column.media as any).video.alt}
-                                showControls={(column.media as any).video.showControls !== false}
-                                playbackRate={(column.media as any).video.playbackRate}
-                                loop={(column.media as any).video.loop === true}
-                                muted={(column.media as any).video.muted === true}
+                                src={column.media.video.asset.url}
+                                alt={column.media.video.alt || ""}
+                                showControls={column.media.video.showControls !== false}
+                                playbackRate={column.media.video.playbackRate ?? 1}
+                                autoplay={column.media.video.autoplay || false}
+                                loop={column.media.video.loop === true}
+                                muted={column.media.video.muted === true}
                               />
                             )}
                           </>

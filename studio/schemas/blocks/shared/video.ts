@@ -35,5 +35,30 @@ export default defineField({
       description: "Play video without sound",
       initialValue: true,
     },
+    {
+      name: "showControls",
+      type: "boolean",
+      title: "Show Controls",
+      description: "Display video player controls",
+      initialValue: true,
+    },
+    {
+      name: "playbackRate",
+      type: "number",
+      title: "Playback Speed",
+      description: "Video playback speed multiplier",
+      options: {
+        list: [
+          { title: "0.5x (Slow)", value: 0.5 },
+          { title: "0.75x", value: 0.75 },
+          { title: "1x (Normal)", value: 1 },
+          { title: "1.25x", value: 1.25 },
+          { title: "1.5x", value: 1.5 },
+          { title: "2x (Fast)", value: 2 },
+        ],
+        layout: "radio",
+      },
+      initialValue: 1,
+    },
   ],
 });

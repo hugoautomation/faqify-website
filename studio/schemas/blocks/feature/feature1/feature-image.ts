@@ -1,5 +1,6 @@
 import { defineField, defineType } from "sanity";
 import { Image } from "lucide-react";
+import video from "../../shared/video";
 
 export default defineType({
   name: "feature-image",
@@ -37,41 +38,7 @@ export default defineType({
       hidden: ({ parent }) => parent?.mediaType !== "image",
     }),
     defineField({
-      name: "video",
-      type: "file",
-      title: "Video",
-      options: {
-        accept: ".webm",
-      },
-      fields: [
-        {
-          name: "alt",
-          type: "string",
-          title: "Alternative Text",
-          description: "Description of the video for accessibility",
-        },
-        {
-          name: "autoplay",
-          type: "boolean",
-          title: "Auto Play",
-          description: "Automatically start playing the video when loaded",
-          initialValue: true,
-        },
-        {
-          name: "loop",
-          type: "boolean",
-          title: "Loop",
-          description: "Loop the video continuously",
-          initialValue: false,
-        },
-        {
-          name: "muted",
-          type: "boolean",
-          title: "Muted",
-          description: "Play video without sound",
-          initialValue: true,
-        },
-      ],
+      ...video,
       hidden: ({ parent }) => parent?.mediaType !== "video",
     }),
   ],
