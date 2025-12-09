@@ -2,15 +2,17 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import Icon from "@/components/icon";
-import { PAGE_QUERYResult } from "@/sanity.types";
+import { PAGE_QUERYResult, LinkIcon } from "@/sanity.types";
 
 type Hero28Props = Extract<
   NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number],
   { _type: "hero-28" }
 >;
 
+type LinkWithKey = LinkIcon & { _key: string };
+
 const Hero28 = ({ title, description, links }: Hero28Props) => {
-  const linksArray = Array.isArray(links) ? links : [];
+  const linksArray: LinkWithKey[] = Array.isArray(links) ? (links as LinkWithKey[]) : [];
   
   return (
     <section className="relative py-32">
