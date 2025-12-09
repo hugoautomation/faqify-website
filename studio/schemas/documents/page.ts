@@ -85,6 +85,7 @@ export default defineType({
         { type: "hero-85" },
         { type: "hero-160" },
         { type: "hero-174" },
+        { type: "hero-28" },
         { type: "logos-1" },
         { type: "logos-2" },
         { type: "logos-4" },
@@ -180,6 +181,7 @@ export default defineType({
                 "hero-85",
                 "hero-160",
                 "hero-174",
+                "hero-28",
               ],
             },
             {

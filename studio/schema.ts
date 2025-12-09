@@ -31,6 +31,7 @@ import hero57 from "./schemas/blocks/hero/hero57";
 import hero85 from "./schemas/blocks/hero/hero85";
 import hero160 from "./schemas/blocks/hero/hero160";
 import hero174 from "./schemas/blocks/hero/hero174";
+import hero28 from "./schemas/blocks/hero/hero28";
 import faq1 from "./schemas/blocks/faq/faq1";
 import faq5 from "./schemas/blocks/faq/faq5";
 import faq8 from "./schemas/blocks/faq/faq8";
@@ -153,6 +154,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     hero85,
     hero160,
     hero174,
+    hero28,
     faq1,
     faq5,
     faq8,

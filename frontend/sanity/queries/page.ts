@@ -9,6 +9,7 @@ import { hero57Query } from "./hero/hero57";
 import { hero85Query } from "./hero/hero85";
 import { hero160Query } from "./hero/hero160";
 import { hero174Query } from "./hero/hero174";
+import { hero28Query } from "./hero/hero28";
 import { faq1Query } from "./faq/faq1";
 import { faq5Query } from "./faq/faq5";
 import { faq8Query } from "./faq/faq8";
@@ -82,6 +83,7 @@ export const PAGE_QUERY = groq`
       ${hero85Query},
       ${hero160Query},
       ${hero174Query},
+      ${hero28Query},
       ${faq1Query},
       ${faq5Query},
       ${faq8Query},
