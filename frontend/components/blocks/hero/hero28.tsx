@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import Icon from "@/components/icon";
+import { urlFor } from "@/sanity/lib/image";
 import { PAGE_QUERYResult, LinkIcon } from "@/sanity.types";
 
 type Hero28Props = Extract<
@@ -11,8 +12,21 @@ type Hero28Props = Extract<
 
 type LinkWithKey = LinkIcon & { _key: string };
 
-const Hero28 = ({ title, description, links }: Hero28Props) => {
+// Position mapping for background icons
+const positionMap: Record<
+  string,
+  { rectX: number; rectY: number; imageX: number; imageY: number }
+> = {
+  "top-left": { rectX: 140, rectY: 120, imageX: 160, imageY: 140 },
+  "middle-left": { rectX: 60, rectY: 280, imageX: 80, imageY: 300 },
+  "bottom-left": { rectX: 300, rectY: 360, imageX: 320, imageY: 380 },
+  "top-right": { rectX: 1180, rectY: 40, imageX: 1200, imageY: 60 },
+  "bottom-right": { rectX: 1260, rectY: 280, imageX: 1280, imageY: 300 },
+};
+
+const Hero28 = ({ title, description, links, backgroundIcons }: Hero28Props) => {
   const linksArray: LinkWithKey[] = Array.isArray(links) ? (links as LinkWithKey[]) : [];
+  const iconsArray = Array.isArray(backgroundIcons) ? backgroundIcons : [];
   
   return (
     <section className="relative py-32">
@@ -67,81 +81,33 @@ const Hero28 = ({ title, description, links }: Hero28Props) => {
               d="M0,40H1400M0,120H1400M0,200H1400M0,280H1400M0,360H1400M0,440H1400M60,0V520M140,0V520M220,0V520M300,0V520M380,0V520M460,0V520M540,0V520M620,0V520M700,0V520M780,0V520M860,0V520M940,0V520M1020,0V520M1100,0V520M1180,0V520M1260,0V520M1340,0V520"
               mask="url(#mask)"
             />
-            <rect
-              x={140}
-              y={120}
-              width={80}
-              height={80}
-              stroke="var(--border)"
-              fill="url(#icon-backgroud)"
-            />
-            <image
-              href="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/block-1.svg"
-              x={160}
-              y={140}
-              width={40}
-              height={40}
-            />
-            <rect
-              x={60}
-              y={280}
-              width={80}
-              height={80}
-              stroke="var(--border)"
-              fill="url(#icon-backgroud)"
-            />
-            <image
-              href="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/block-2.svg"
-              x={80}
-              y={300}
-              width={40}
-              height={40}
-            />
-            <rect
-              x={300}
-              y={360}
-              width={80}
-              height={80}
-              stroke="var(--border)"
-              fill="url(#icon-backgroud)"
-            />
-            <image
-              href="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/block-3.svg"
-              x={320}
-              y={380}
-              width={40}
-              height={40}
-            />
-            <rect
-              x={1180}
-              y={40}
-              width={80}
-              height={80}
-              stroke="var(--border)"
-              fill="url(#icon-backgroud)"
-            />
-            <image
-              href="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/block-4.svg"
-              x={1200}
-              y={60}
-              width={40}
-              height={40}
-            />
-            <rect
-              x={1260}
-              y={280}
-              width={80}
-              height={80}
-              stroke="var(--border)"
-              fill="url(#icon-backgroud)"
-            />
-            <image
-              href="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/block-5.svg"
-              x={1280}
-              y={300}
-              width={40}
-              height={40}
-            />
+            {iconsArray.map((icon) => {
+              if (!icon.position || !icon.image || !icon.image.asset?._id) return null;
+              const position = positionMap[icon.position];
+              if (!position) return null;
+              const imageUrl = urlFor(icon.image).url();
+              if (!imageUrl) return null;
+              return (
+                <g key={icon._key}>
+                  <rect
+                    x={position.rectX}
+                    y={position.rectY}
+                    width={80}
+                    height={80}
+                    stroke="var(--border)"
+                    fill="url(#icon-backgroud)"
+                  />
+                  <image
+                    href={imageUrl}
+                    x={position.imageX}
+                    y={position.imageY}
+                    width={40}
+                    height={40}
+                    alt={icon.image.alt || ""}
+                  />
+                </g>
+              );
+            })}
           </svg>
         </div>
       </div>

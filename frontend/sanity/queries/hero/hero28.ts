@@ -1,5 +1,6 @@
 import { groq } from "next-sanity";
 import { linkQuery } from "../shared/link";
+import { imageQuery } from "../shared/image";
 
 // @sanity-typegen-ignore
 export const hero28Query = groq`
@@ -10,6 +11,13 @@ export const hero28Query = groq`
     description,
     links[]{
       ${linkQuery}
+    },
+    backgroundIcons[]{
+      _key,
+      position,
+      image{
+        ${imageQuery}
+      }
     }
   }
 `;

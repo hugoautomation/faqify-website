@@ -1,4 +1,4 @@
-import { defineField, defineType } from "sanity";
+import { defineField, defineType, defineArrayMember } from "sanity";
 import { LayoutTemplate } from "lucide-react";
 
 export default defineType({
@@ -26,6 +26,65 @@ export default defineType({
       description: "Call-to-action buttons",
       of: [{ type: "link-icon" }],
       validation: (Rule) => Rule.max(2),
+    }),
+    defineField({
+      name: "backgroundIcons",
+      type: "array",
+      title: "Background Icons",
+      description: "Icons/images displayed in the background pattern rectangles",
+      of: [
+        defineArrayMember({
+          type: "object",
+          fields: [
+            defineField({
+              name: "image",
+              type: "image",
+              title: "Icon/Image",
+              description: "Image or icon to display in the rectangle",
+              options: { hotspot: true },
+              validation: (Rule) => Rule.required(),
+              fields: [
+                defineField({
+                  name: "alt",
+                  type: "string",
+                  title: "Alternative text",
+                }),
+              ],
+            }),
+            defineField({
+              name: "position",
+              type: "string",
+              title: "Position",
+              description: "Preset position for the icon",
+              options: {
+                list: [
+                  { title: "Top Left", value: "top-left" },
+                  { title: "Top Right", value: "top-right" },
+                  { title: "Middle Left", value: "middle-left" },
+                  { title: "Bottom Left", value: "bottom-left" },
+                  { title: "Bottom Right", value: "bottom-right" },
+                ],
+                layout: "radio",
+              },
+              initialValue: "top-left",
+              validation: (Rule) => Rule.required(),
+            }),
+          ],
+          preview: {
+            select: {
+              media: "image",
+              position: "position",
+            },
+            prepare({ media, position }) {
+              return {
+                title: `Icon - ${position || "No position"}`,
+                media: media,
+              };
+            },
+          },
+        }),
+      ],
+      validation: (Rule) => Rule.max(5),
     }),
   ],
   preview: {
