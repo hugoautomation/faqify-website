@@ -72,9 +72,7 @@ import Integration13 from "@/components/blocks/integration/integration13";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 
-const componentMap: {
-  [K in Block["_type"]]: React.ComponentType<Extract<Block, { _type: K }>>;
-} = {
+const componentMap = {
   "section-header": SectionHeader,
   "legal-section": LegalSection,
   "hero-12": Hero12,
@@ -145,7 +143,9 @@ const componentMap: {
   "timeline-6": Timeline6,
   "integration-11": Integration11,
   "integration-13": Integration13,
-};
+} as {
+  [K in Block["_type"]]: React.ComponentType<Extract<Block, { _type: K }>>;
+} & Record<string, React.ComponentType<any>>;
 
 export default function Blocks({
   blocks,
