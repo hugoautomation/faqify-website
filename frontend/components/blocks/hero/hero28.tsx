@@ -10,6 +10,8 @@ type Hero28Props = Extract<
 >;
 
 const Hero28 = ({ title, description, links }: Hero28Props) => {
+  const linksArray = Array.isArray(links) ? links : [];
+  
   return (
     <section className="relative py-32">
       {/* Background pattern */}
@@ -152,9 +154,9 @@ const Hero28 = ({ title, description, links }: Hero28Props) => {
             {description}
           </p>
         )}
-        {links && links.length > 0 && (
+        {linksArray.length > 0 && (
           <div className="flex gap-3">
-            {links.map((link) => (
+            {linksArray.map((link) => (
               <Link
                 key={link._key}
                 href={link.href || "#"}
