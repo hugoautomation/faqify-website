@@ -40,7 +40,5 @@ export default async function Page(props: {
     notFound();
   }
 
-  const pageParams = Promise.resolve((await props.searchParams) || {});
-
-  return <Blocks blocks={page?.blocks ?? []} searchParams={pageParams} />;
+  return <Blocks blocks={page?.blocks ?? []} searchParams={props.searchParams} />;
 }
