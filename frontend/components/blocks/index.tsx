@@ -69,6 +69,7 @@ import Timeline5 from "@/components/blocks/timelines/timeline5";
 import Timeline6 from "@/components/blocks/timelines/timeline6";
 import Integration11 from "@/components/blocks/integration/integration11";
 import Integration13 from "@/components/blocks/integration/integration13";
+import Cta12 from "@/components/blocks/cta/cta12";
 
 type Block = NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number];
 
@@ -143,6 +144,7 @@ const componentMap = {
   "timeline-6": Timeline6,
   "integration-11": Integration11,
   "integration-13": Integration13,
+  "cta-12": Cta12,
 } as {
   [K in Block["_type"]]: React.ComponentType<Extract<Block, { _type: K }>>;
 } & Record<string, React.ComponentType<any>>;

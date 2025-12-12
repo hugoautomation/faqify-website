@@ -70,6 +70,7 @@ import { timeline5Query } from "./timelines/timeline5";
 import { timeline6Query } from "./timelines/timeline6";
 import { integration11Query } from "./integration/integration11";
 import { integration13Query } from "./integration/integration13";
+import { cta12Query } from "./cta/cta12";
 
 export const PAGE_QUERY = groq`
   *[_type == "page" && slug.current == $slug][0]{
@@ -144,6 +145,7 @@ export const PAGE_QUERY = groq`
       ${timeline6Query},
       ${integration11Query},
       ${integration13Query},
+      ${cta12Query},
     },
     ${metaQuery},
   }

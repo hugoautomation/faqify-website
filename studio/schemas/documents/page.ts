@@ -110,6 +110,7 @@ export default defineType({
         { type: "timeline-6" },
         { type: "integration-11" },
         { type: "integration-13" },
+        { type: "cta-12" },
       ],
       options: {
         insertMenu: {
@@ -225,6 +226,10 @@ export default defineType({
             {
               name: "timeline",
               of: ["timeline-3", "timeline-4", "timeline-5", "timeline-6"],
+            },
+            {
+              name: "cta",
+              of: ["cta-12"],
             },
           ],
           views: [
