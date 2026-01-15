@@ -1,0 +1,786 @@
+Custom Blocks
+Sanityblocks provides a flexible block system that can be customized to your specific needs while maintaining upgradeability. The following approaches are possible:
+
+Copy an existing block from a category (like Hero, Feature, or FAQ), rename it (e.g. hero-12-custom), then extend it. (see Editing Existing Blocks)
+Create completely new blocks within existing categories by following the established patterns.
+Add your own block categories and have full control over the schema and React component.
+Updates
+For detailed information about keeping your Sanityblocks project up-to-date, including how to set up upstream remotes and merge updates while preserving your customizations, see the Updates and Upgrades guide.
+
+Following the best practices in this Custom Blocks guide helps minimize merge conflicts when updating your project.
+
+Code Structure
+The Sanityblocks system consists of two main parts:
+
+Frontend Components (/frontend)
+Block Components: frontend/components/blocks/
+Block Registry: frontend/components/blocks/index.tsx
+UI Components: frontend/components/ui/
+Utilities: frontend/lib/
+Sanity Studio (/studio)
+Block Schemas: studio/schemas/blocks/
+Schema Registry: studio/schema.ts
+Shared Objects: studio/schemas/blocks/shared/
+Block System Architecture
+frontend/components/blocks/
+├── index.tsx              # Main block renderer with componentMap
+├── section-header.tsx     # Reusable section header component
+├── hero/
+│   ├── hero12.tsx        # Hero block variant 12
+│   ├── hero13.tsx        # Hero block variant 13
+│   └── hero-custom.tsx   # Your custom hero variant
+├── feature/
+│   ├── feature1.tsx      # Feature block variant 1
+│   └── feature-custom.tsx # Your custom feature variant
+└── your-category/        # Your completely new block category
+    ├── your-block1.tsx
+    └── your-block2.tsx
+
+studio/schemas/blocks/
+├── hero/
+│   ├── hero12.ts         # Schema for hero12 block
+│   ├── hero13.ts         # Schema for hero13 block
+│   └── hero-custom.ts    # Schema for your custom hero
+├── feature/
+│   ├── feature1.ts       # Schema for feature1 block
+│   └── feature-custom.ts # Schema for your custom feature
+└── your-category/        # Schemas for your new category
+    ├── your-block1.ts
+    └── your-block2.ts
+
+Editing Existing Blocks
+To maintain upgradeability, duplicate and rename blocks before modifying them. Here’s how to create a custom variant of an existing block:
+
+Example: Creating a Custom Hero Block
+1. Create the Schema File
+
+Copy studio/schemas/blocks/hero/hero12.ts to studio/schemas/blocks/hero/hero12-custom.ts:
+
+import { defineField, defineType } from "sanity";
+import { LayoutTemplate } from "lucide-react";
+
+export default defineType({
+  name: "hero-12-custom",
+  title: "Hero 12 Custom",
+  type: "object",
+  icon: LayoutTemplate,
+  fields: [
+    // Copy existing fields from hero12.ts
+    defineField({
+      name: "title",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    }),
+    // Add your custom fields
+    defineField({
+      name: "customField",
+      type: "string",
+      title: "Your Custom Field",
+    }),
+    // ... other fields
+  ],
+  preview: {
+    select: {
+      title: "title",
+    },
+    prepare({ title }) {
+      return {
+        title: "Hero 12 Custom",
+        subtitle: title,
+      };
+    },
+  },
+});
+
+2. Create the React Component
+
+Copy frontend/components/blocks/hero/hero12.tsx to frontend/components/blocks/hero/hero12-custom.tsx:
+
+import { PAGE_QUERYResult } from "@/sanity.types";
+// ... other imports
+
+type Hero12CustomProps = Extract<
+  NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number],
+  { _type: "hero-12-custom" }
+>;
+
+const Hero12Custom = ({
+  title,
+  customField,
+}: // ... other props
+Hero12CustomProps) => {
+  return (
+    <section className="py-32">
+      {/* Your custom implementation */}
+      <h1>{title}</h1>
+      <p>{customField}</p>
+    </section>
+  );
+};
+
+export default Hero12Custom;
+
+3. Register the Schema
+
+Add your schema to studio/schema.ts:
+
+// Import your custom schema
+import hero12Custom from "./schemas/blocks/hero/hero12-custom";
+
+export const schema: { types: SchemaTypeDefinition[] } = {
+  types: [
+    // ... existing schemas
+    hero12Custom,
+    // ... rest of schemas
+  ],
+};
+
+4. Register the Component
+
+Add your component to frontend/components/blocks/index.tsx:
+
+// Import your custom component
+import Hero12Custom from "@/components/blocks/hero/hero12-custom";
+
+const componentMap: {
+  [K in Block["_type"]]: React.ComponentType<Extract<Block, { _type: K }>>;
+} = {
+  // ... existing components
+  "hero-12-custom": Hero12Custom,
+  // ... rest of components
+};
+
+5. Generate Types
+
+Run the type generation command:
+
+Terminal window
+pnpm typegen
+
+By following this naming pattern with -custom suffix, you’ll avoid conflicts with future updates.
+
+Using Shadcnblocks.com Components
+All Sanityblocks components are based on the incredible UI components from shadcnblocks.com, which offers 771 blocks for shadcn/ui built with Tailwind CSS and React.
+
+If you find a component you like on shadcnblocks.com, you can easily integrate it into your Sanityblocks project by following the same pattern as editing existing blocks:
+
+Integration Process
+Browse the Library: Visit shadcnblocks.com/blocks to explore components by category (Hero, Feature, FAQ, Pricing, etc.)
+
+Copy the Component: Copy the React component code from shadcnblocks.com
+
+Follow the Custom Pattern: Adapt it to the Sanityblocks custom component pattern:
+
+Create the Sanity schema with appropriate fields
+Modify the component to use Sanity data types
+Add the -custom suffix to avoid conflicts with future releases
+Follow the registration steps outlined in this guide
+Why Use -custom Suffix: We recommend always adding -custom to your component names because some components from shadcnblocks.com may be added to future Sanityblocks releases. Using the -custom suffix ensures your customizations won’t conflict with official updates.
+
+Example: Adapting a Shadcnblocks Component
+If you find a testimonial component on shadcnblocks.com that you want to use:
+
+// Instead of: testimonial-1
+// Use: testimonial-1-custom
+
+export default defineType({
+  name: "testimonial-1-custom",
+  title: "Testimonial 1 Custom",
+  // ... rest of schema
+});
+
+This approach gives you access to hundreds of pre-designed, professional components while maintaining the flexibility and content management capabilities of Sanity CMS.
+
+Creating New Block Categories
+For completely new block types, create both schema and component files:
+
+Example: Creating a Testimonial Category
+1. Create Schema Directory
+
+Create studio/schemas/blocks/testimonials/testimonial1.ts:
+
+import { defineField, defineType } from "sanity";
+import { MessageCircle } from "lucide-react";
+
+export default defineType({
+  name: "testimonial-1",
+  title: "Testimonial 1",
+  type: "object",
+  icon: MessageCircle,
+  fields: [
+    defineField({
+      name: "quote",
+      type: "text",
+      title: "Quote",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "author",
+      type: "object",
+      fields: [
+        defineField({
+          name: "name",
+          type: "string",
+          validation: (Rule) => Rule.required(),
+        }),
+        defineField({
+          name: "title",
+          type: "string",
+        }),
+        defineField({
+          name: "avatar",
+          type: "image",
+          options: { hotspot: true },
+        }),
+      ],
+    }),
+  ],
+  preview: {
+    select: {
+      title: "author.name",
+      subtitle: "quote",
+    },
+  },
+});
+
+2. Create Component Directory
+
+Create frontend/components/blocks/testimonials/testimonial1.tsx:
+
+import { PAGE_QUERYResult } from "@/sanity.types";
+
+type Testimonial1Props = Extract<
+  NonNullable<NonNullable<PAGE_QUERYResult>["blocks"]>[number],
+  { _type: "testimonial-1" }
+>;
+
+const Testimonial1 = ({ quote, author }: Testimonial1Props) => {
+  return (
+    <section className="py-16">
+      <div className="container">
+        <blockquote className="text-xl italic">"{quote}"</blockquote>
+        <cite className="mt-4 block">
+          — {author.name}
+          {author.title && `, ${author.title}`}
+        </cite>
+      </div>
+    </section>
+  );
+};
+
+export default Testimonial1;
+
+3. Register Everything
+
+Follow steps 3-5 from the previous example to register your new block.
+
+Best Practices
+Naming Conventions
+Use kebab-case for schema names: hero-12-custom
+Use PascalCase for component names: Hero12Custom
+Suffix custom blocks with -custom to avoid conflicts
+Schema Design
+Always include proper TypeScript types
+Use validation rules for required fields
+Include preview configurations for better CMS experience
+Leverage shared objects from studio/schemas/blocks/shared/
+Component Development
+Extract proper TypeScript types from generated sanity.types.ts
+Use the established utility functions (urlFor, cn, etc.)
+Follow the existing component patterns for consistency
+Import shared UI components from frontend/components/ui/
+Upgradeability
+Always duplicate before modifying existing blocks
+Use consistent naming patterns with -custom suffixes
+Keep custom code in separate files
+Document your customizations
+Section Headers & Layout Pattern
+Most Sanityblocks components follow a consistent pattern using the shared section-header block for consistent headers throughout the site.
+
+Standard Pattern: Paired with Section Header
+The majority of blocks are designed to be paired with a section-header block for headers:
+
+// Most blocks focus on content and layout, not headers
+export default defineType({
+  name: "feature-1-custom",
+  title: "Feature 1 Custom",
+  fields: [
+    // No title/description fields - use section-header instead
+    defineField({
+      name: "features",
+      type: "array",
+      of: [
+        /* feature items */
+      ],
+    }),
+    // ... other content fields
+  ],
+});
+
+In Sanity Studio, content creators add blocks in this order:
+
+section-header - For the title, description, and optional CTA
+feature-1 - For the actual feature content
+This creates consistent spacing, typography, and layout across all sections.
+
+Exception: Unique Layout Blocks
+Some blocks require custom header layouts and include their own title/description fields:
+
+Hero blocks - Need unique title styling and layout
+Pricing blocks - Often have custom header arrangements
+Gallery blocks - May integrate titles with image layouts
+// Hero blocks include their own headers for unique styling
+export default defineType({
+  name: "hero-12-custom",
+  title: "Hero 12 Custom",
+  fields: [
+    defineField({
+      name: "title",
+      type: "string", // Custom title for unique hero styling
+    }),
+    defineField({
+      name: "description",
+      type: "block-content", // Custom description
+    }),
+    defineField({
+      name: "links",
+      type: "array",
+      of: [{ type: "link-icon" }], // Custom CTAs
+    }),
+    // ... other hero-specific fields
+  ],
+});
+
+When to Use Each Approach
+Use Section Header Pattern When:
+
+Your block focuses on content layout (features, testimonials, team, etc.)
+You want consistent header styling across the site
+The header doesn’t need special visual treatment
+Use Custom Headers When:
+
+Creating hero sections with unique typography
+Building blocks with integrated header layouts
+The header styling needs to be part of the block’s visual design
+Benefits of Section Header Pattern
+Consistency: Uniform header styling across all sections
+Flexibility: Content creators can easily add/remove headers
+Maintainability: Header changes apply site-wide
+SEO: Consistent heading hierarchy and structure
+Shared Objects
+Sanityblocks provides several shared objects you can reuse:
+
+block-content: Rich text content with portable text
+link: Link objects with internal/external support
+link-icon: Links with icon variants
+link-group: Groups of links
+button-variant: Button styling variants
+section-padding: Consistent section spacing
+section-header: Standardized headers for consistent layout
+Use these in your custom schemas:
+
+defineField({
+  name: "content",
+  type: "block-content",
+}),
+defineField({
+  name: "ctaButton",
+  type: "link-icon",
+}),
+
+Type Generation
+After making schema changes, always regenerate types:
+
+Terminal window
+pnpm typegen
+
+This updates:
+
+studio/schema.json - Schema definitions
+frontend/sanity.types.ts - TypeScript types
+The generated types ensure type safety between your Sanity schemas and React components.
+
+Sanity Queries
+Each block requires a corresponding query in frontend/sanity/queries/ to fetch data from Sanity. Queries are crucial for:
+
+1. Block-Specific Queries
+Every block needs its own query file that defines what data to fetch:
+
+frontend/sanity/queries/hero/hero12-custom.ts
+import { groq } from "next-sanity";
+import { linkQuery } from "../shared/link";
+import { imageQuery } from "../shared/image";
+import { bodyQuery } from "../shared/body";
+
+export const hero12CustomQuery = groq`
+  _type == "hero-12-custom" => {
+    _type,
+    _key,
+    title,
+    customField,
+    backgroundImage{
+      ${imageQuery}
+    },
+    links[]{
+      ${linkQuery}
+    },
+    body[]{
+      ${bodyQuery}
+    }
+  }
+`;
+
+2. Shared Query Objects
+Sanityblocks uses shared query fragments for consistency and reusability:
+
+linkQuery - Smart Link Resolution
+frontend/sanity/queries/shared/link.ts
+export const linkQuery = `
+    _key,
+    ...,
+    "href": select(
+      isExternal => href,
+      @.internalLink->slug.current == "index" => "/",
+      @.internalLink->_type == "post" => "/blog/" + @.internalLink->slug.current,
+      "/" + @.internalLink->slug.current
+    )
+`;
+
+Why it’s important:
+
+Automatically resolves internal links to correct URLs
+Handles different content types (pages vs blog posts)
+Manages the home page special case (index → /)
+Preserves external links as-is
+imageQuery - Optimized Image Data
+frontend/sanity/queries/shared/image.ts
+export const imageQuery = `
+  ...,
+  asset->{
+    _id,
+    url,
+    mimeType,
+    metadata {
+      lqip,
+      dimensions {
+        width,
+        height
+      }
+    }
+  }
+`;
+
+Why it’s important:
+
+Fetches low-quality image placeholders (LQIP) for better UX
+Includes dimensions for proper layout calculation
+Provides essential metadata for Next.js Image optimization
+Reduces layout shift by knowing image dimensions upfront
+3. Adding Queries to Page Query
+After creating a block query, add it to the main page query:
+
+frontend/sanity/queries/page.ts
+import { hero12CustomQuery } from "./hero/hero12-custom";
+
+export const PAGE_QUERY = groq`
+  *[_type == "page" && slug.current == $slug][0]{
+    blocks[]{
+      ${sectionHeaderQuery},
+      ${hero12Query},
+      ${hero12CustomQuery}, // Add your custom query
+      // ... other queries
+    },
+    ${metaQuery},
+  }
+`;
+
+Page Schema - The Content Foundation
+The page.ts schema in studio/schemas/documents/ is crucial because it:
+
+1. Defines Available Blocks
+The page schema controls which blocks can be used in the CMS:
+
+studio/schemas/documents/page.ts
+defineField({
+  name: "blocks",
+  type: "array",
+  of: [
+    { type: "hero-12" },
+    { type: "hero-12-custom" }, // Add your custom block here
+    { type: "feature-1" },
+    // ... other block types
+  ],
+});
+
+2. Organizes Block Menu
+The insertMenu groups blocks into categories for better UX:
+
+options: {
+  insertMenu: {
+    groups: [
+      {
+        name: "hero",
+        of: [
+          "hero-12",
+          "hero-12-custom", // Add to appropriate group
+          "hero-13",
+          // ... other hero blocks
+        ],
+      },
+      {
+        name: "feature",
+        of: ["feature-1", "feature-3", /* ... */],
+      },
+      // ... other groups
+    ],
+  },
+}
+
+3. Enables Visual Page Building
+Without being added to the page schema, your custom blocks won’t appear in the Sanity Studio page builder interface.
+
+Adding Blocks to Menus
+To make your custom blocks available in the Sanity Studio:
+
+1. Add to Block Array
+// In studio/schemas/documents/page.ts
+of: [
+  // ... existing blocks
+  { type: "your-custom-block" },
+];
+
+2. Add to Insert Menu Groups
+// In the same file, within insertMenu.groups
+{
+  name: "custom",
+  title: "Custom Blocks", // Optional: add title for group
+  of: ["your-custom-block"],
+}
+
+Or add to existing group:
+
+{
+  name: "hero",
+  of: [
+    "hero-12",
+    "hero-13",
+    "your-custom-hero", // Add to hero group
+  ],
+}
+
+Block Screenshots & Previews
+For better user experience, add visual previews of your blocks:
+
+1. Take Screenshots
+Build and run your project locally
+Navigate to a page with your custom block
+Take a screenshot of the block in action
+Crop to show just the block content
+2. Add to Static Images
+Save your screenshot to studio/static/images/preview/ with the block name:
+
+studio/static/images/preview/
+├── hero-12-custom.jpg
+├── feature-custom.jpg
+└── testimonial-1.jpg
+
+This provides visual feedback in the Sanity Studio, making it easier for content creators to choose the right block variant.
+
+Complete Workflow Checklist
+When adding a custom block, ensure you:
+
+ Create the schema file (studio/schemas/blocks/)
+ Create the React component (frontend/components/blocks/)
+ Create the query file (frontend/sanity/queries/)
+ Register schema in studio/schema.ts
+ Register component in frontend/components/blocks/index.tsx
+ Add query to frontend/sanity/queries/page.ts
+ Add block type to studio/schemas/documents/page.ts
+ Add to appropriate insert menu group
+ Take screenshot and add to studio/static/images/preview/
+ Run pnpm typegen to update types
+ Test in Sanity Studio and frontend
+Adding New Icons
+Sanityblocks uses Lucide React icons throughout the system. To add new icons, you need to update both the frontend component and the Sanity schema.
+
+1. Add Icon to Frontend Component
+Update frontend/components/icon.tsx:
+
+// Add your new icon to the imports
+import {
+  // ... existing imports
+  Calendar, // Add your new icon here
+  // ... other imports
+} from "lucide-react";
+
+// Add to the iconComponents mapping
+const iconComponents: Record<string, LucideIcon> = {
+  // ... existing icons
+  calendar: Calendar, // Add your new icon here
+  // ... other icons
+};
+
+2. Add Icon to Sanity Schema
+Update studio/schemas/blocks/shared/icon-variants.ts:
+
+export const ICON_VARIANTS = [
+  // ... existing variants
+  { title: "Calendar", value: "calendar" }, // Add your new icon here
+  // ... other variants
+];
+
+3. Icon Naming Convention
+Frontend: Use kebab-case for icon keys: calendar, arrow-right, check-circle-2
+Sanity: Use the same kebab-case value but PascalCase title: { title: "Calendar", value: "calendar" }
+Lucide: Import using PascalCase as defined by Lucide React
+4. How Icons Are Used
+Icons appear in various components through the shared link-icon schema:
+
+// In any block schema using links with icons
+defineField({
+  name: "links",
+  type: "array",
+  of: [{ type: "link-icon" }], // This includes icon selection
+}),
+
+The link-icon schema automatically includes an iconVariant field that uses your ICON_VARIANTS array, providing a dropdown of available icons in the Sanity Studio.
+
+5. Generate Types
+After adding new icons, regenerate types:
+
+Terminal window
+pnpm typegen
+
+This ensures TypeScript recognizes your new icon variants and provides proper type safety.
+
+Example: Adding a Shopping Cart Icon
+Step 1: Add to frontend/components/icon.tsx:
+
+import { ShoppingCart } from "lucide-react";
+
+const iconComponents: Record<string, LucideIcon> = {
+  // ... existing icons
+  "shopping-cart": ShoppingCart,
+};
+
+Step 2: Add to studio/schemas/blocks/shared/icon-variants.ts:
+
+export const ICON_VARIANTS = [
+  // ... existing variants
+  { title: "ShoppingCart", value: "shopping-cart" },
+];
+
+Step 3: Run pnpm typegen
+
+Your new shopping cart icon will now be available in all blocks that use the link-icon type, appearing in the icon dropdown in Sanity Studio.
+
+Block Inside Block Pattern
+Some Sanityblocks use a “block inside block” pattern where the main block contains sub-blocks that can be reordered. Feature-1 is a perfect example of this architecture.
+
+Understanding Feature-1 Structure
+Feature-1 demonstrates the sub-block pattern:
+
+Main Schema (studio/schemas/blocks/feature/feature1/index.ts):
+
+export default defineType({
+  name: "feature-1",
+  fields: [
+    defineField({
+      name: "columns",
+      type: "array",
+      of: [
+        { type: "feature-content" }, // Sub-block type 1
+        { type: "feature-image" }, // Sub-block type 2
+      ],
+      validation: (rule) => rule.max(2), // Limit to 2 items
+    }),
+  ],
+});
+
+Sub-Block Schemas:
+
+feature-content.ts - Content with title, description, links, icons
+feature-image.ts - Simple image display
+Ordering & Flexibility
+The power of this pattern is in ordering flexibility:
+
+Content → Image Layout:
+
+[feature-content] [feature-image]
+
+Image → Content Layout:
+
+[feature-image] [feature-content]
+
+Content creators can drag and drop these sub-blocks in Sanity Studio to change the layout order without developer intervention.
+
+Frontend Implementation
+The main component uses a componentMap to render sub-blocks:
+
+frontend/components/blocks/feature/feature1/index.tsx
+const componentMap = {
+  "feature-content": FeatureContent,
+  "feature-image": FeatureImage,
+};
+
+export default function Feature1({ columns }) {
+  return (
+    <div className="grid lg:grid-cols-2">
+      {columns?.map((column) => {
+        const Component = componentMap[column._type];
+        return <Component {...column} key={column._key} />;
+      })}
+    </div>
+  );
+}
+
+Advanced: Mixing Different Feature Types
+You can create powerful custom blocks by combining different feature components:
+
+// Custom block mixing different feature types
+export default defineType({
+  name: "feature-mixed-custom",
+  fields: [
+    defineField({
+      name: "columns",
+      type: "array",
+      of: [
+        { type: "feature-content" }, // Content block
+        { type: "feature3-card" }, // Card from feature-3
+        { type: "feature12-card" }, // Card from feature-12
+        { type: "gallery-slider" }, // Slider component
+      ],
+      validation: (rule) => rule.max(3),
+    }),
+  ],
+});
+
+This allows combinations like:
+
+Content + Card slider
+Image + Feature cards
+Text + Gallery + CTA
+Benefits of Block Inside Block
+Content Creator Control: Non-technical users can change layouts
+Reusable Components: Sub-blocks can be used across different main blocks
+Flexible Layouts: Same block type, multiple layout variations
+Maintainable Code: Each sub-block has focused responsibility
+Scalable System: Easy to add new sub-block types
+When to Use This Pattern
+Use Block Inside Block When:
+
+You want layout flexibility (left/right arrangements)
+Content creators need control over order
+You have reusable content patterns
+You want to combine different content types
+Use Simple Block When:
+
+Layout is fixed and doesn’t need reordering
+Content structure is always the same
+Simplicity is more important than flexibility
+Implementation Tips
+Limit Sub-Block Count: Use validation rules to prevent too many items
+Clear Naming: Use descriptive names for sub-block types
+Preview Images: Add preview images to help content creators choose
+Consistent Styling: Ensure sub-blocks work well together visually
+Component Mapping: Always include fallbacks in your componentMap
