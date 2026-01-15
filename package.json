@@ -1,7 +1,7 @@
 {
-  "name": "sanityblocks",
+  "name": "Faqify.ai",
   "version": "1.2.0",
-  "description": "SanityBlocks: Next.js + Sanity + shadcnblocks.com",
+  "description": "Faqify.ai website",
   "scripts": {
     "dev": "pnpm --parallel -r run dev",
     "dev:next": "pnpm run dev --workspace=frontend",
@@ -10,5 +10,5 @@
     "typecheck": "cd frontend && pnpm typecheck",
     "export": "cd studio && sanity dataset export production sample-data.tar.gz"
   },
-  "homepage": "https://www.shadcnblocks.com/"
+  "homepage": "https://faqify.ai/"
 }
